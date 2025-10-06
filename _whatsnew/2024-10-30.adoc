@@ -14,7 +14,7 @@
 
 === 30天免费试用
 
-您现在可以注册NetApp灾难恢复 30 天免费试用版。此前，免费试用期为 90 天。
+您现在可以注册NetApp Disaster Recovery30 天免费试用版。此前，免费试用期为 90 天。
 
 参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
 
@@ -84,6 +84,6 @@
 
 === 协调快照
 
-您现在可以协调源和目标之间不同步的快照。如果在NetApp灾难恢复之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
+您现在可以协调源和目标之间不同步的快照。如果在NetApp Disaster Recovery之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
 
 有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理复制计划"]。

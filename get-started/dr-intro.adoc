@@ -4,7 +4,7 @@ permalink: get-started/dr-intro.html
 keywords: how netapp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
 summary: 云端灾难恢复是一种具有弹性且经济高效的方式，可以保护工作负载免受站点中断和数据损坏事件的影响。借助NetApp Disaster Recovery for VMware，您可以将运行ONTAP存储的本地 VMware 工作负载复制到使用NetApp云存储的公共云中的 VMware 软件定义数据中心，或复制到另一个以ONTAP存储为灾难恢复站点的本地 VMware 环境。 
 ---
-= 了解NetApp针对 VMware 的灾难恢复
+= 了解NetApp Disaster Recovery
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,35 +14,35 @@ summary: 云端灾难恢复是一种具有弹性且经济高效的方式，可�
 [role="lead"]
 云端灾难恢复是一种具有弹性且经济高效的方式，可以保护工作负载免受站点中断和数据损坏事件的影响。借助NetApp Disaster Recovery for VMware，您可以将运行ONTAP存储的本地 VMware VM 或数据存储库工作负载复制到使用NetApp云存储的公共云中的 VMware 软件定义数据中心，或复制到另一个以ONTAP存储为灾难恢复站点的本地 VMware 环境。您还可以使用灾难恢复将虚拟机工作负载从一个站点迁移到另一个站点。
 
-NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助NetApp灾难恢复，您可以将内部基于 NFS 的工作负载和 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储（用于运行NetApp存储的 iSCSI 和 FC）保护到以下其中一项：
+NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助NetApp Disaster Recovery，您可以将内部基于 NFS 的工作负载和 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储（用于运行NetApp存储的 iSCSI 和 FC）保护到以下其中一项：
 
 * AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP
-* Amazon Elastic VMware Service (EVS) 和Amazon FSx for NetApp ONTAP有关详细信息，请参阅link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp灾难恢复"]。
+* Amazon Elastic VMware Service (EVS) 和Amazon FSx for NetApp ONTAP有关详细信息，请参阅link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp Disaster Recovery"]。
 * 带有NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware 解决方案 (AVS)（私人预览版）
 * 另一个具有ONTAP存储的本地 NFS 和/或基于 VMFS (iSCSI/FC) 的 VMware 环境
 
 
-NetApp灾难恢复使用ONTAP SnapMirror技术与集成的本机 VMware 业务流程来保护 VMware VM 及其相关的磁盘操作系统映像，同时保留ONTAP的所有存储效率优势。灾难恢复使用这些技术作为到灾难恢复站点的复制传输。这使得主站点和辅助站点能够实现业界最佳的存储效率（压缩和重复数据删除）。
+NetApp Disaster Recovery使用ONTAP SnapMirror技术与集成的本机 VMware 业务流程来保护 VMware VM 及其相关的磁盘操作系统映像，同时保留ONTAP的所有存储效率优势。灾难恢复使用这些技术作为到灾难恢复站点的复制传输。这使得主站点和辅助站点能够实现业界最佳的存储效率（压缩和重复数据删除）。
 
 image:../use/evs-bluexp-architecture.png["图表显示了NetApp Disaster Recovery for VMware 的组件"]
 
 
 
-== NetApp控制台
+== NetApp Console
 
-可通过NetApp控制台访问NetApp灾难恢复。
+可通过NetApp Console访问NetApp Disaster Recovery。
 
-NetApp控制台提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。
+NetApp Console提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。
 
-您不需要许可证或订阅即可开始使用NetApp控制台，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
+您不需要许可证或订阅即可开始使用NetApp Console，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
 
-详细了解 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp控制台"]。
+详细了解 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"]。
 
 
 
-== 使用NetApp灾难恢复 for VMware 的优势
+== 使用NetApp Disaster Recoveryfor VMware 的优势
 
-NetApp灾难恢复具有以下优势：
+NetApp Disaster Recovery具有以下优势：
 
 * 通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。 
 * 通过降低运营成本来降低总体拥有成本，并能够以最少的资源创建和调整灾难恢复计划。
@@ -54,9 +54,9 @@ NetApp灾难恢复具有以下优势：
 
 
 
-== NetApp灾难恢复 for VMware 的用途
+== NetApp Disaster Recoveryfor VMware 的功能
 
-NetApp灾难恢复让您充分利用多种NetApp技术来实现以下目标：
+NetApp Disaster Recovery让您充分利用多种NetApp技术来实现以下目标：
 
 * 使用SnapMirror复制将本地生产站点上的 VMware 应用程序复制到云端或本地的灾难恢复远程站点。
 * 将 VMware 工作负载从原始站点迁移到另一个站点。
@@ -69,18 +69,18 @@ NetApp灾难恢复让您充分利用多种NetApp技术来实现以下目标：
 image:../use/evs-use-cases.png["展示NetApp Disaster Recovery for VMware 用例的图表"]
 
 
-NOTE: vSphere 服务器的配置是在 vSphere Server 中的NetApp Disaster Recovery 之外完成的。
+NOTE: vSphere 服务器的配置是在 vSphere Server 中的NetApp Disaster Recovery之外完成的。
 
 
 
 == 成本
 
-NetApp不会向您收取使用NetApp Disaster Recovery 试用版的费用。
+NetApp不会向您收取使用NetApp Disaster Recovery试用版的费用。
 
-NetApp灾难恢复可以通过NetApp许可证或通过 Amazon Web Services 的年度订阅计划使用。
+NetApp Disaster Recovery可以通过NetApp许可证或通过 Amazon Web Services 的年度订阅计划使用。
 
 
-IMPORTANT: 一些版本包括技术预览。 NetApp不会向您收取任何预览的工作负载容量的费用。看link:../release-notes/dr-whats-new.html["NetApp灾难恢复的新功能"]了解有关最新技术预览的信息。
+IMPORTANT: 一些版本包括技术预览。 NetApp不会向您收取任何预览的工作负载容量的费用。看link:../release-notes/dr-whats-new.html["NetApp Disaster Recovery的新功能"]了解有关最新技术预览的信息。
 
 
 
@@ -88,27 +88,27 @@ IMPORTANT: 一些版本包括技术预览。 NetApp不会向您收取任何预�
 
 您可以使用以下许可证类型：
 
-* 注册 30 天免费试用。
+* 注册即可获得 30 天免费试用。
 * 通过 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 购买即用即付 (PAYGO) 订阅。此许可证使您能够购买固定保护容量许可证，而无需任何长期承诺。
-* 自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp控制台中激活 BYOL。
+* 自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console中激活 BYOL。
 
 
-所有NetApp数据服务的许可证均通过NetApp控制台中的订阅进行管理。设置 BYOL 后，您可以在控制台中看到该服务的有效许可证。
+所有NetApp数据服务的许可证均通过NetApp Console中的订阅进行管理。设置 BYOL 后，您可以在控制台中看到该服务的有效许可证。
 
 该服务根据受保护的ONTAP卷上托管的数据量进行许可。该服务通过将受保护的虚拟机映射到其 vCenter 数据存储区来确定应考虑哪些卷用于许可目的。每个数据存储库都托管在ONTAP卷或 LUN 上。  ONTAP报告的该卷或 LUN 的已用容量用于确定许可。
 
-受保护的卷可以托管许多虚拟机。有些可能不属于NetApp灾难恢复资源组。无论如何，该卷或 LUN 上所有虚拟机消耗的存储都将用于满足许可证最大容量要求。
+受保护的卷可以托管许多虚拟机。有些可能不属于NetApp Disaster Recovery资源组。无论如何，该卷或 LUN 上所有虚拟机消耗的存储都将用于满足许可证最大容量要求。
 
 
-NOTE: 当至少有一个虚拟机具有复制计划时， NetApp灾难恢复费用基于源站点上数据存储区的已用容量。故障转移数据存储区的容量不包含在容量限额内。对于 BYOL，如果数据超出允许的容量，服务中的操作将受到限制，直到您获得额外的容量许可证或在NetApp控制台中升级许可证。
+NOTE: 当至少有一个虚拟机具有复制计划时， NetApp Disaster Recovery费用基于源站点上数据存储区的已用容量。故障转移数据存储区的容量不包含在容量限额内。对于 BYOL，如果数据超出允许的容量，服务中的操作将受到限制，直到您获得额外的容量许可证或在NetApp Console中升级许可证。
 
-有关设置NetApp灾难恢复许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置NetApp灾难恢复许可"]。
+有关设置NetApp Disaster Recovery许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
 
 
 
 == 30天免费试用
 
-您可以通过 30 天免费试用版来试用NetApp Disaster Recovery。
+您可以通过 30 天免费试用版来试用NetApp Disaster Recovery 。
 
 要在 30 天试用期结束后继续使用，您需要从云提供商处获得即用即付 (PAYGO) 订阅或从NetApp购买 BYOL 许可证。
 
@@ -116,11 +116,11 @@ NOTE: 当至少有一个虚拟机具有复制计划时， NetApp灾难恢复费�
 
 
 
-== NetApp灾难恢复的工作原理
+== NetApp Disaster Recovery的工作原理
 
-NetApp灾难恢复是托管在NetApp控制台软件即服务 (SaaS) 环境中的服务。灾难恢复可以将从本地站点复制到Amazon FSx for ONTAP或其他本地站点的工作负载恢复。此服务可自动执行从SnapMirror级别的恢复，包括将虚拟机注册到 VMware Cloud on AWS，以及直接在 VMware 网络虚拟化和安全平台 NSX-T 上进行网络映射。所有虚拟机云环境均包含此功能。
+NetApp Disaster Recovery是托管在NetApp Console软件即服务 (SaaS) 环境中的服务。灾难恢复可以将从本地站点复制到Amazon FSx for ONTAP或其他本地站点的工作负载恢复。此服务可自动执行从SnapMirror级别的恢复，包括将虚拟机注册到 VMware Cloud on AWS，以及直接在 VMware 网络虚拟化和安全平台 NSX-T 上进行网络映射。所有虚拟机云环境均包含此功能。
 
-NetApp灾难恢复使用ONTAP SnapMirror技术，该技术可提供高效的复制并保留ONTAP永久增量快照的效率。  SnapMirror复制可确保应用程序一致的快照副本始终保持同步，并且数据在故障转移后可立即使用。
+NetApp Disaster Recovery使用ONTAP SnapMirror技术，该技术可提供高效的复制并保留ONTAP永久增量快照的效率。  SnapMirror复制可确保应用程序一致的快照副本始终保持同步，并且数据在故障转移后可立即使用。
 
 image:dr-architecture-diagram-70-2.png["图表展示了NetApp Disaster Recovery for VMware 服务基础架构的架构"]
 
@@ -135,8 +135,8 @@ image:dr-architecture-diagram-70-2.png["图表展示了NetApp Disaster Recovery 
 
 灾难恢复使用以下组件为 VMware 工作负载提供灾难恢复：
 
-* * NetApp Console*：用于管理灾难恢复计划的用户界面。您可以使用NetApp控制台在本地和云环境中创建和管理复制计划、资源组和故障转移操作。
-* *控制台代理*：在您的云托管网络或本地 VMware 环境中运行的轻量级软件组件。它与NetApp控制台通信并管理本地环境和灾难恢复站点之间的数据复制。控制台代理安装在 VMware 环境中的虚拟机上。
+* * NetApp Console*：用于管理灾难恢复计划的用户界面。您可以使用NetApp Console在本地和云环境中创建和管理复制计划、资源组和故障转移操作。
+* *控制台代理*：在您的云托管网络或本地 VMware 环境中运行的轻量级软件组件。它与NetApp Console通信并管理本地环境和灾难恢复站点之间的数据复制。控制台代理安装在 VMware 环境中的虚拟机上。
 * * ONTAP存储集群*： ONTAP存储集群是托管 VMware 工作负载的主要存储系统。 ONTAP存储集群为您的灾难恢复计划提供底层存储基础架构。灾难恢复使用ONTAP存储 API 来管理ONTAP存储集群（例如本地阵列）和基于云的解决方案（例如Amazon FSx for NetApp ONTAP）。
 * *vCenter 服务器*：VMware vCenter 是您的 VMware 环境的管理服务器。它管理 ESXi 主机及其相关的数据存储。控制台代理与 VMware vCenter 通信，以管理本地环境和灾难恢复站点之间的数据复制。这包括将ONTAP LUN 和卷注册为数据存储、重新配置虚拟机以及启动和停止虚拟机。
 
@@ -169,7 +169,7 @@ image:dr-architecture-diagram-70-2.png["图表展示了NetApp Disaster Recovery 
 
 == 支持的保护目标和数据存储类型
 
-*支持的数据存储类型* NetApp灾难恢复支持以下数据存储类型：
+*支持的数据存储类型* NetApp Disaster Recovery支持以下数据存储类型：
 
 * 托管在ONTAP集群上的ONTAP FlexVol卷上的 NFS 数据存储库。
 * 使用 iSCSI 或 FC 协议的 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储
@@ -185,7 +185,7 @@ image:dr-architecture-diagram-70-2.png["图表展示了NetApp Disaster Recovery 
 
 
 
-== 可能对您有帮助的NetApp灾难恢复术语
+== 可能对您有帮助的NetApp Disaster Recovery术语
 
 了解一些与灾难恢复相关的术语可能会对您有所帮助。
 

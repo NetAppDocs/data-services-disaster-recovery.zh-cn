@@ -4,7 +4,7 @@ permalink: get-started/dr-faq.html
 keywords: disaster recovery faq, disaster recovery frequently asked questions 
 summary: 如果您只是想快速找到问题的答案，此常见问题解答可以为您提供帮助。 
 ---
-= NetApp灾难恢复常见问题解答
+= NetApp Disaster Recovery常见问题解答
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,10 +14,10 @@ summary: 如果您只是想快速找到问题的答案，此常见问题解答�
 [role="lead"]
 如果您只是想快速找到问题的答案，此常见问题解答可以为您提供帮助。
 
-* NetApp灾难恢复 URL 是什么？*对于 URL，在浏览器中输入： https://console.netapp.com/["https://console.netapp.com/"^]访问NetApp控制台。
+* NetApp Disaster RecoveryURL 是什么？*对于 URL，在浏览器中输入： https://console.netapp.com/["https://console.netapp.com/"^]访问NetApp控制台。
 
-*使用NetApp灾难恢复是否需要许可证？*需要NetApp灾难恢复许可证才能获得完全访问权限。但是，您可以通过免费试用版进行尝试。
+*您需要许可证才能使用NetApp Disaster Recovery吗？*需要NetApp Disaster Recovery许可证才能获得完全访问权限。但是，您可以通过免费试用版进行尝试。
 
-有关设置NetApp灾难恢复许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置NetApp灾难恢复许可"]。
+有关设置NetApp Disaster Recovery许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
 
-*如何访问NetApp灾难恢复？* NetApp灾难恢复不需要任何启用。灾难恢复选项会自动出现在NetApp控制台左侧导航栏中。
+*如何访问NetApp Disaster Recovery？* NetApp Disaster Recovery不需要任何启用。灾难恢复选项会自动出现在NetApp Console左侧导航栏中。

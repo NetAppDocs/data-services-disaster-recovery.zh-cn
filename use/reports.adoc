@@ -4,7 +4,7 @@ permalink: use/reports.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp, protection, reports 
 summary: 查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障回复的摘要、所有站点的复制详细信息以及过去一年的作业详细信息。 
 ---
-= 创建NetApp灾难恢复报告
+= 创建NetApp Disaster Recovery报告
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,16 +12,16 @@ summary: 查看灾难恢复报告可以帮助您分析灾难恢复准备情况�
 
 
 [role="lead"]
-查看NetApp灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。
+查看NetApp Disaster Recovery报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。
 
 您可以下载 PDF、HTML 或 JSON 格式的报告。
 
 下载链接有效期为六小时。
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp控制台左侧导航栏中，选择 *复制计划*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp Console左侧导航栏中，选择 *复制计划*。
 . 选择*创建报告*。
 . 选择文件格式类型和过去 7 天内的时间段。
 . 选择“*创建*”。

@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-install-connector.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢复。虽然连接器可以安装在任何网络位置，但对于NetApp灾难恢复，我们建议您在 DR 站点安装连接器。这可确保在主站点发生故障时， NetApp控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。 
+summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。虽然连接器可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装连接器。这可确保在主站点发生故障时， NetApp控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。 
 ---
-= 安装用于NetApp灾难恢复的NetApp控制台代理
+= 安装用于NetApp Disaster Recovery的NetApp Console代理
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp控制台代理是在您的云或本地网络上运行的NetApp软件。它执行NetApp控制台管理数据基础架构所需执行的操作。控制台代理不断轮询NetApp灾难恢复软件作为服务层，以了解其需要采取的任何操作。
+NetApp Console代理是在您的云或本地网络上运行的NetApp软件。它执行NetApp Console管理数据基础架构所需执行的操作。控制台代理不断轮询NetApp Disaster Recovery软件作为服务层，以了解其需要采取的任何操作。
 
-对于NetApp灾难恢复，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp灾难恢复，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。
+对于NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。
 
-要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解NetApp控制台部署模式 | NetApp文档"^]。
+要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解NetApp Console部署模式 | NetApp文档"^]。
 
 虽然控制台代理对于使用该服务至关重要，但安装控制台代理的安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了此信息的范围。
 

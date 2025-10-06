@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference/vcenter-privileges.html 
 keywords: disaster recovery, bluexp, vcenter, 
-summary: 'vCenter 帐户必须具有一组最低限度的 vCenter 权限，以允许NetApp Disaster Recovery 执行其服务，例如注册和取消注册数据存储库、启动和停止虚拟机以及重新配置虚拟机 (VM)。下表列出了NetApp灾难恢复与 vCenter 集群连接所需的所有权限。' 
+summary: 'vCenter 帐户必须具有一组最低限度的 vCenter 权限，以允许NetApp Disaster Recovery执行其服务，例如注册和取消注册数据存储库、启动和停止虚拟机以及重新配置虚拟机 (VM)。下表列出了NetApp Disaster Recovery与 vCenter 集群连接所需的所有权限。' 
 ---
-= NetApp灾难恢复所需的 vCenter 权限
+= NetApp Disaster Recovery所需的 vCenter 权限
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 'vCenter 帐户必须具有一组最低限度的 vCenter 权限，以�
 
 
 [role="lead"]
-vCenter 帐户必须具有一组最低限度的 vCenter 权限，以允许NetApp Disaster Recovery 执行其服务，例如注册和取消注册数据存储库、启动和停止虚拟机以及重新配置虚拟机 (VM)。下表列出了NetApp灾难恢复与 vCenter 集群连接所需的所有权限。
+vCenter 帐户必须具有一组最低限度的 vCenter 权限，以允许NetApp Disaster Recovery执行其服务，例如注册和取消注册数据存储库、启动和停止虚拟机以及重新配置虚拟机 (VM)。下表列出了NetApp Disaster Recovery与 vCenter 集群连接所需的所有权限。
 
 [cols="25,35a,40a"]
 |===

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/use-overview.html 
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
-= 使用NetApp灾难恢复概述
+= 使用NetApp Disaster Recovery概述
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 
 
 [role="lead"]
-使用NetApp灾难恢复，您可以实现以下目标：
+使用NetApp Disaster Recovery，您可以实现以下目标：
 
 * link:../use/dashboard-view.html["查看灾难恢复计划的健康状况"] 。
 * link:../use/sites-add.html["添加 vCenter 站点"] 。

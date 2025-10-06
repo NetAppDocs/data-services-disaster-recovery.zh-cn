@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-config-draas.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: 安装NetApp控制台代理后，您需要集成将参与 DR 过程的所有ONTAP存储和 VMware vCenter 资源。 
+summary: 安装NetApp Console代理后，您需要集成将参与 DR 过程的所有ONTAP存储和 VMware vCenter 资源。 
 ---
-= 为 Amazon EVS 配置NetApp灾难恢复概述
+= 为 Amazon EVS 配置NetApp Disaster Recovery概述
 :allow-uri-read: 
 
 
 [role="lead"]
-安装NetApp控制台代理后，您需要将参与灾难恢复过程的所有ONTAP存储和 VMware vCenter 资源与NetApp灾难恢复集成。
+安装NetApp Console代理后，您需要将参与灾难恢复过程的所有ONTAP存储和 VMware vCenter 资源与NetApp Disaster Recovery。
 
-* link:evs-deploy-guide-config-prereqs.html["Amazon EVS 与NetApp灾难恢复的先决条件"]
-* link:evs-deploy-guide-config-add-arrays.html["将ONTAP存储阵列添加到NetApp灾难恢复"]
-* link:evs-deploy-guide-enable-draas.html["为 Amazon EVS 启用NetApp灾难恢复"]
-* link:evs-deploy-guide-config-add-arrays.html["将 vCenter 站点添加到NetApp灾难恢复"]
-* link:evs-deploy-guide-add-vcenters.html["将 vCenter 集群添加到NetApp灾难恢复"]
+* link:evs-deploy-guide-config-prereqs.html["Amazon EVS 与NetApp Disaster Recovery的先决条件"]
+* link:evs-deploy-guide-config-add-arrays.html["将ONTAP存储阵列添加到NetApp Disaster Recovery"]
+* link:evs-deploy-guide-enable-draas.html["为 Amazon EVS 启用NetApp Disaster Recovery"]
+* link:evs-deploy-guide-config-add-arrays.html["将 vCenter 站点添加到NetApp Disaster Recovery"]
+* link:evs-deploy-guide-add-vcenters.html["将 vCenter 集群添加到NetApp Disaster Recovery"]
 

@@ -2,14 +2,14 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-create-rp-wiz-03.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap,amazon elastic vmware service 
-summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢复。在您获得要保护的虚拟机列表后， NetApp灾难恢复要求您提供故障转移期间要使用的故障转移映射和虚拟机配置信息。 
+summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。在您获得要保护的虚拟机列表后， NetApp Disaster Recovery要求您提供故障转移期间要使用的故障转移映射和虚拟机配置信息。 
 ---
-= 创建复制计划：步骤 3 - 在NetApp灾难恢复中映射资源
+= 创建复制计划：步骤 3 - 在NetApp Disaster Recovery中映射资源
 :allow-uri-read: 
 
 
 [role="lead"]
-在您获得要使用NetApp灾难恢复保护的虚拟机列表后，请提供故障转移期间要使用的故障转移映射和虚拟机配置信息。
+在您获得要使用NetApp Disaster Recovery保护的虚拟机列表后，请提供故障转移期间要使用的故障转移映射和虚拟机配置信息。
 
 您需要映射四种主要类型的信息：
 
@@ -45,7 +45,7 @@ image:evs-create-rp-wiz-c0.png["创建复制计划，资源映射页面"]
 . 从所选虚拟数据中心内的集群列表中选择用于托管数据存储区和虚拟机的集群。
 . （可选）选择目标集群中的目标主机。
 +
-此步骤不是必需的，因为NetApp Disaster Recovery 会选择在 vCenter 中添加到集群的第一个主机。此时，虚拟机要么继续在该 ESXi 主机上运行，​​要么 VMware DRS 根据配置的 DRS 规则根据需要将虚拟机移动到不同的 ESXi 主机。
+此步骤不是必需的，因为NetApp Disaster Recovery会选择在 vCenter 中添加到集群的第一个主机。此时，虚拟机要么继续在该 ESXi 主机上运行，​​要么 VMware DRS 根据配置的 DRS 规则根据需要将虚拟机移动到不同的 ESXi 主机。
 
 . （可选）提供用于放置 VM 注册的顶级 vCenter 文件夹的名称。
 +
@@ -76,13 +76,13 @@ image:evs-create-rp-wiz-c-network-resources-1-2.png["创建复制计划、网络
 
 每个虚拟机可能都需要修改才能在 DR vCenter 站点中正常工作。虚拟机部分使您能够提供必要的更改。
 
-默认情况下， NetApp灾难恢复对每个虚拟机使用与源本地站点相同的设置。这假设虚拟机将使用相同的 IP 地址、虚拟 CPU 和虚拟 DRAM 配置。
+默认情况下， NetApp Disaster Recovery对每个虚拟机使用与源本地站点相同的设置。这假设虚拟机将使用相同的 IP 地址、虚拟 CPU 和虚拟 DRAM 配置。
 
 
 
 === 网络重新配置
 
-支持的 IP 地址类型为静态和 DHCP。对于静态 IP 地址，您具有以下目标 IP 设置：
+支持的 IP 地址类型为静态和 DHCP。对于静态 IP 地址，您有以下目标 IP 设置：
 
 * *与源相同*：顾名思义，该服务在目标虚拟机上使用的 IP 地址与源站点虚拟机上使用的 IP 地址相同。这要求您为上一步中映射的虚拟网络配置相同的子网设置。
 * *与源不同*：该服务为每个 VM 提供了一组 IP 地址字段，这些字段必须针对目标虚拟网络上使用的适当子网进行配置，您在上一节中已映射该子网。对于每个虚拟机，您必须提供 IP 地址、子网掩码、DNS 和默认网关值。或者，对所有虚拟机使用相同的子网掩码、DNS 和网关设置，以简化所有虚拟机连接到同一子网时的过程。
@@ -105,7 +105,7 @@ image:evs-create-rp-wiz-c-vm-resources-network-1-2.png["创建复制计划、网
 
 === VM 计算资源重新配置
 
-重新配置虚拟机计算资源有多种选择。  NetApp Disaster Recovery 支持更改虚拟 CPU 的数量、虚拟 DRAM 的数量和 VM 名称。
+重新配置虚拟机计算资源有多种选择。  NetApp Disaster Recovery支持更改虚拟 CPU 的数量、虚拟 DRAM 的数量和 VM 名称。
 
 .指定任何 VM 配置更改
 . （可选）修改每个虚拟机应使用的虚拟 CPU 数量。如果您的 DR vCenter 集群主机没有源 vCenter 集群那么多的 CPU 核心，则可能需要这样做。
@@ -119,10 +119,10 @@ image:evs-create-rp-wiz-c-vm-resources-cpu-mem-1-2.png["创建复制计划、虚
 
 === 启动顺序
 
-NetApp灾难恢复支持根据启动顺序字段有序重启虚拟机。启动顺序字段指示每个资源组中的虚拟机如何启动。启动顺序字段中具有相同值的虚拟机将并行启动。
+NetApp Disaster Recovery支持根据启动顺序字段有序重启虚拟机。启动顺序字段指示每个资源组中的虚拟机如何启动。启动顺序字段中具有相同值的虚拟机将并行启动。
 
 .修改启动顺序设置
-. （可选）修改您希望重新启动虚拟机的顺序。该字段可采用任意数值。  NetApp灾难恢复尝试并行重新启动具有相同数值的虚拟机。
+. （可选）修改您希望重新启动虚拟机的顺序。该字段可采用任意数值。  NetApp Disaster Recovery尝试并行重新启动具有相同数值的虚拟机。
 . （可选）提供每次 VM 重启之间的延迟。该时间是在该虚拟机重启完成后、具有下一个更高启动顺序号的虚拟机之前注入的。这个数字以分钟为单位。
 +
 image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["创建复制计划、启动顺序"]
@@ -133,10 +133,10 @@ image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["创建复制计划、
 
 === 自定义客户操作系统操作
 
-NetApp灾难恢复支持为每个虚拟机执行一些客户操作系统操作：
+NetApp Disaster Recovery支持为每个虚拟机执行一些客户操作系统操作：
 
-* NetApp Disaster Recovery 可以为运行 Oracle 数据库和 Microsoft SQL Server 数据库的虚拟机进行应用程序一致的备份。
-* NetApp Disaster Recovery 可以执行适合每个虚拟机的客户操作系统的自定义脚本。执行此类脚本需要客户操作系统可接受的用户凭证，并且该凭证具有足够的权限来执行脚本中列出的操作。
+* NetApp Disaster Recovery可以为运行 Oracle 数据库和 Microsoft SQL Server 数据库的虚拟机进行应用程序一致的备份。
+* NetApp Disaster Recovery可以执行适合每个虚拟机的客户操作系统的自定义脚本。执行此类脚本需要客户操作系统可接受的用户凭证，并且该凭证具有足够的权限来执行脚本中列出的操作。
 
 
 .修改每个虚拟机的自定义客户操作系统操作
@@ -158,12 +158,12 @@ image:evs-create-rp-wiz-c-vm-resources-ac-scripts-creds-1-2.png["创建复制计
 
 创建复制计划的最后一步是确定ONTAP应如何保护数据存储库。这些设置定义了复制计划恢复点目标 (RPO)、应维护多少个备份以及在何处复制每个 vCenter 数据存储区的托管ONTAP卷。
 
-默认情况下， NetApp灾难恢复管理其自己的快照复制计划；但是，您可以选择指定使用现有的SnapMirror复制策略计划来保护数据存储区。
+默认情况下， NetApp Disaster Recovery管理其自己的快照复制计划；但是，您可以选择指定使用现有的SnapMirror复制策略计划来保护数据存储区。
 
-此外，您还可以选择自定义要使用的数据 LIF（逻辑接口）和导出策略。如果您不提供这些设置， NetApp Disaster Recovery 将使用与相应协议（NFS、iSCSI 或 FC）关联的所有数据 LIF，并使用 NFS 卷的默认导出策略。
+此外，您还可以选择自定义要使用的数据 LIF（逻辑接口）和导出策略。如果您不提供这些设置， NetApp Disaster Recovery将使用与相应协议（NFS、iSCSI 或 FC）关联的所有数据 LIF，并使用 NFS 卷的默认导出策略。
 
 .配置数据存储（卷）映射
-. （可选）决定是否要使用现有的ONTAP SnapMirror复制计划或让NetApp Disaster Recovery 管理虚拟机的保护（默认）。
+. （可选）决定是否要使用现有的ONTAP SnapMirror复制计划或让NetApp Disaster Recovery管理虚拟机的保护（默认）。
 . 提供服务开始备份的起点。
 . 指定服务进行备份并将其复制到 DR 目标Amazon FSx for NetApp ONTAP集群的频率。
 . 指定应保留多少个历史备份。该服务在源和目标存储集群上维护相同数量的备份。

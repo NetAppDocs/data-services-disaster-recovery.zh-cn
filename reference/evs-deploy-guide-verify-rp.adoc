@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-verify-rp.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
-summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢复。 
+summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。 
 ---
-= 验证NetApp灾难恢复中一切正常
+= 验证NetApp Disaster Recovery中一切正常
 :allow-uri-read: 
 
 
 [role="lead"]
-在NetApp灾难恢复中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于*健康*状态。如果不是，您应该检查复制计划的状态并在继续之前纠正任何问题。
+在NetApp Disaster Recovery中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于*健康*状态。如果不是，您应该检查复制计划的状态并在继续之前纠正任何问题。
 
 图：复制计划页面image:evs-replication-plan-post-create.png["复制计划页面"]
 
-NetApp灾难恢复执行一系列测试，以验证所有组件（ONTAP集群、vCenter 集群和虚拟机）是否可访问且处于正确状态，以便服务保护虚拟机。这被称为合规性检查，并且会定期进行。
+NetApp Disaster Recovery执行一系列测试，以验证所有组件（ONTAP集群、vCenter 集群和虚拟机）是否可访问且处于正确状态，以便服务保护虚拟机。这被称为合规性检查，并且会定期进行。
 
 在复制计划页面中，您可以看到以下信息：
 

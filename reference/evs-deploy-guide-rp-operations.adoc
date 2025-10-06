@@ -2,14 +2,14 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-rp-operations.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap,amazon elastic vmware service 
-summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢复。使用NetApp Disaster Recovery 与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用或启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。 
+summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。使用NetApp Disaster Recovery与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用或启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。 
 ---
-= 使用NetApp灾难恢复执行复制计划操作
+= 使用NetApp Disaster Recovery执行复制计划操作
 :allow-uri-read: 
 
 
 [role="lead"]
-使用NetApp Disaster Recovery 与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行以下操作：故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用/启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。
+使用NetApp Disaster Recovery与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行以下操作：故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用/启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。
 
 
 
@@ -20,8 +20,8 @@ summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢�
 故障转移是一个手动启动的过程。
 
 .访问故障转移操作的步骤
-. 从NetApp控制台左侧导航栏中，选择 *保护* > *灾难恢复*。
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 从NetApp Console左侧导航栏中，选择 *保护* > *灾难恢复*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 
 
 .执行故障转移的步骤
@@ -32,8 +32,8 @@ image:evs-rp-menu-failover.png["故障转移菜单选项"]
 
 . 如果无法访问生产（受保护）站点，请选择之前创建的快照作为恢复映像。为此，请选择*选择*。
 . 选择要用于恢复的备份。
-. （可选）选择是否希望NetApp Disaster Recovery 强制执行故障转移过程，而不管复制计划的状态如何。这只能作为最后的手段。
-. （可选）选择是否希望NetApp Disaster Recovery 在生产站点恢复后自动创建反向保护关系。
+. （可选）选择是否希望NetApp Disaster Recovery强制执行故障转移过程，而不管复制计划的状态如何。这只能作为最后的手段。
+. （可选）选择是否希望NetApp Disaster Recovery在生产站点恢复后自动创建反向保护关系。
 . 输入单词“Failover”以确认您是否要继续。
 . 选择“*故障转移*”。
 +
@@ -48,7 +48,7 @@ image:evs-rp-failover-dialog.png["故障转移对话框"]
 测试故障转移与故障转移类似，但有两个区别。
 
 * 生产站点仍然处于活动状态，所有虚拟机仍在按预期运行。
-* NetApp灾难恢复对生产虚拟机的保护仍在继续。
+* NetApp Disaster Recovery对生产虚拟机的保护仍在继续。
 
 
 这是通过在目标站点使用本机ONTAP FlexClone卷来实现的。要了解有关测试故障转移的更多信息，请参阅link:../use/failover.html["将应用程序故障转移到远程站点 | NetApp文档"]。
@@ -77,19 +77,19 @@ image:evs-test-failover-dialog.png["测试故障转移对话框"]
 默认情况下，合规性检查每三小时运行一次。您可能随时想要手动运行合规性检查。
 
 .步骤
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 从复制计划的操作菜单中选择*运行合规性检查*选项：
 +
 image:evs-rp-menu-compliance-check.png["运行合规性检查菜单选项"]
 
-. 要更改NetApp Disaster Recovery 自动运行合规性检查的频率，请从复制计划的操作菜单中选择“编辑计划”选项。
+. 要更改NetApp Disaster Recovery自动运行合规性检查的频率，请从复制计划的操作菜单中选择“编辑计划”选项。
 
 
 
 
 == 刷新资源
 
-每次对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，都需要在NetApp灾难恢复服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次此操作，但手动刷新可确保最新的虚拟基础设施信息可用并考虑到 DR 保护。
+每次对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，都需要在NetApp Disaster Recovery服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次此操作，但手动刷新可确保最新的虚拟基础设施信息可用并考虑到 DR 保护。
 
 有两种情况需要刷新：
 
@@ -103,9 +103,9 @@ image::evs-rp-menu-refresh-resources.png[刷新资源菜单选项]
 
 == 迁移
 
-虽然NetApp灾难恢复主要用于灾难恢复用例，但它也可以将一组虚拟机从源站点一次性移动到目标站点。这可能是为了协调迁移到云项目，也可能是为了避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时灾难性事件。
+虽然NetApp Disaster Recovery主要用于灾难恢复用例，但它也可以将一组虚拟机从源站点一次性移动到目标站点。这可能是为了协调迁移到云项目，也可能是为了避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时灾难性事件。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要将复制计划中的虚拟机移动到目标 Amazon EVS 集群，请从复制计划的操作菜单中选择“迁移”：
 +
 image::evs-rp-menu-migrate.png[迁移菜单选项]
@@ -117,9 +117,9 @@ image::evs-rp-menu-migrate.png[迁移菜单选项]
 
 == 立即拍摄快照
 
-您可以随时立即拍摄复制计划的快照。此快照包含在复制计划的快照保留计数设置的NetApp灾难恢复考虑因素中。
+您可以随时立即拍摄复制计划的快照。此快照包含在复制计划的快照保留计数设置的NetApp Disaster Recovery考虑因素中。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要立即拍摄复制计划资源的快照，请在复制计划的操作菜单上选择*立即拍摄快照*：
 +
 image::evs-rp-menu-take-snapshot-now.png[立即拍摄快照菜单选项]
@@ -148,7 +148,7 @@ image::evs-rp-menu-disable-enable.png[禁用/启用菜单选项]
 
 您可能想要清理保留在源站点和目标站点上的旧快照。如果复制计划的快照保留计数发生改变，就会发生这种情况。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要手动删除这些旧快照，请从复制计划的操作菜单中选择*清理旧快照*。
 +
 image::evs-rp-menu-cleanup-old-snapshots.png[清理旧快照菜单选项]
@@ -161,7 +161,7 @@ image::evs-rp-menu-cleanup-old-snapshots.png[清理旧快照菜单选项]
 
 由于该服务协调ONTAP卷快照，因此ONTAP存储管理员可以在服务不知情的情况下使用ONTAP系统管理器、 ONTAP CLI 或ONTAP REST API 直接删除快照。该服务每 24 小时自动删除源上不在目标集群上的任何快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要从源集群中删除目标集群上不存在的快照，请从复制计划的操作菜单中选择*协调快照*。
 +
 image::evs-rp-menu-reconcile-snapshots.png[协调快照菜单选项]
@@ -174,7 +174,7 @@ image::evs-rp-menu-reconcile-snapshots.png[协调快照菜单选项]
 
 如果不再需要复制计划，您可以将其删除。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要删除复制计划，请从复制计划的上下文菜单中选择“*删除*”。
 +
 image::evs-rp-menu-delete.png[删除菜单选项]
@@ -187,7 +187,7 @@ image::evs-rp-menu-delete.png[删除菜单选项]
 
 两项操作会定期自动执行：测试故障转移和合规性检查。
 
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要更改这两个操作中的任一个的计划，请选择复制计划的*编辑计划*。
 +
 image::evs-rp-menu-edit-schedules.png[编辑时间表菜单选项]
@@ -211,7 +211,7 @@ image::evs-rp-edit-compliance-check-schedule.png[合规性检查时间表]
 默认情况下，测试故障转移是手动执行的。您可以安排自动测试故障转移，这有助于确保您的复制计划按预期执行。要了解有关测试故障转移过程的更多信息，请参阅link:../use/failover.html["测试故障转移过程"]。
 
 .安排测试故障转移的步骤
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]复制计划旁边。
+. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 选择*运行故障转移*。
 . 选中*按计划运行测试故障转移*复选框。
 . （可选）检查*使用按需快照进行计划测试故障转移*。

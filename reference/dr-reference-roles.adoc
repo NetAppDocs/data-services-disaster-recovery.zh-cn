@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference/dr-reference-roles.html 
 keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
-summary: NetApp灾难恢复采用角色来管理每个用户对特定功能和操作的访问权限。 
+summary: NetApp Disaster Recovery采用角色来管理每个用户对特定功能和操作的访问权限。 
 ---
-= NetApp灾难恢复基于角色的功能访问
+= NetApp Disaster Recovery基于角色的功能访问
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,19 +12,19 @@ summary: NetApp灾难恢复采用角色来管理每个用户对特定功能和�
 
 
 [role="lead"]
-NetApp灾难恢复采用角色来管理每个用户对特定功能和操作的访问权限。
+NetApp Disaster Recovery采用角色来管理每个用户对特定功能和操作的访问权限。
 
-该服务使用特定于NetApp灾难恢复的以下角色。
+该服务使用特定于NetApp Disaster Recovery的以下角色。
 
-* *灾难恢复管理员*：在NetApp灾难恢复中执行任何操作。
-* *灾难恢复故障转移管理员*：在NetApp灾难恢复中执行故障转移和迁移操作。
+* *灾难恢复管理员*：在NetApp Disaster Recovery中执行任何操作。
+* *灾难恢复故障转移管理员*：在NetApp Disaster Recovery中执行故障转移和迁移操作。
 * *灾难恢复应用程序管理员*：创建和修改复制计划并启动测试故障转移。
-* *灾难恢复查看器*：查看NetApp灾难恢复中的信息，但不能执行任何操作。
+* *灾难恢复查看器*：查看NetApp Disaster Recovery中的信息，但不能执行任何操作。
 
 
-这些角色特定于NetApp灾难恢复，与NetApp控制台中使用的平台角色不同。有关所有NetApp控制台平台角色的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp控制台设置和管理文档"^]。
+这些角色特定于NetApp Disaster Recovery，与NetApp Console中使用的平台角色不同。有关所有NetApp Console平台角色的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp Console设置和管理文档"^]。
 
-下表列出了每个NetApp灾难恢复角色可以执行的操作。
+下表列出了每个NetApp Disaster Recovery角色可以执行的操作。
 
 [cols="30,20a,20a,20a,20a"]
 |===

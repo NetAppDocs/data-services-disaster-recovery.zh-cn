@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
 keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
-summary: 要使用NetApp灾难恢复，请执行几个步骤进行设置。 
+summary: 要使用NetApp Disaster Recovery，请执行几个步骤进行设置。 
 ---
-= 为NetApp灾难恢复设置基础架构
+= 为NetApp Disaster Recovery设置基础架构
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,12 +12,12 @@ summary: 要使用NetApp灾难恢复，请执行几个步骤进行设置。
 
 
 [role="lead"]
-要使用NetApp灾难恢复，请执行几个步骤在 Amazon Web Services (AWS) 和NetApp控制台中对其进行设置。
+要使用NetApp Disaster Recovery，请执行几个步骤在 Amazon Web Services (AWS) 和NetApp Console中对其进行设置。
 
 
 TIP: 审查link:../get-started/dr-prerequisites.html["前提条件"]以确保您的系统已准备就绪。
 
-您可以在以下基础架构中使用NetApp灾难恢复：
+您可以在以下基础架构中使用NetApp Disaster Recovery：
 
 * 混合云 DR 将本地 VMware 和ONTAP数据中心复制到基于 VMware Cloud on AWS 和Amazon FSx for NetApp ONTAP 的AWS DR 基础架构。
 * 私有云 DR 将本地 VMware 和ONTAP vCenter 复制到另一个本地 VMware 和ONTAP vCenter。
@@ -43,7 +43,7 @@ AWS 支持在给定区域内的一个或多个可用区 (AZ) 中部署解决方�
 * *AWS FSx for NetApp ONTAP*：当以双可用区配置部署时，每个卷都由单个 FSx 系统拥有。每个卷由单个 FSx 系统拥有。该卷的数据被镜像到第二个 FSx 系统。 FSx for ONTAP系统可以部署在单可用区或双可用区部署中。灾难恢复支持单可用区和多可用区 FSx for ONTAP部署。
 
 
-*最佳实践*：对于 AWS DR 站点配置， NetApp建议对 VMware Cloud 和 AWS FSx for ONTAP实例使用单可用区部署。由于 AWS 用于 DR，因此引入多个 AZ 没有任何优势。多可用区会增加成本和复杂性。
+*最佳实践*：对于 AWS DR 站点配置， NetApp建议对 VMware Cloud 和 AWS FSx for ONTAP实例使用单可用区部署。由于 AWS 用于 DR，因此引入多个 AZ 没有任何优势。多可用区可能会增加成本和复杂性。
 
 
 
@@ -75,7 +75,7 @@ AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点
 
 === 使用 AWS 为本地到云端的保护做好准备
 
-要使用 AWS 设置NetApp Disaster Recovery 以实现本地到云的保护，您需要设置以下内容：
+要使用 AWS 设置NetApp Disaster Recovery以实现本地到云的保护，您需要设置以下内容：
 
 * 为NetApp ONTAP设置 AWS FSx
 * 设置 VMware Cloud on AWS SDDC
@@ -88,12 +88,12 @@ AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点
 * 创建Amazon FSx for NetApp ONTAP文件系统。
 +
 ** 为ONTAP配置 FSx。  Amazon FSx for NetApp ONTAP是一项完全托管的服务，它基于NetApp ONTAP文件系统构建，提供高度可靠、可扩展、高性能且功能丰富的文件存储。
-** 按照以下步骤操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["技术报告 4938：使用 VMware Cloud on AWS 将Amazon FSx ONTAP挂载为 NFS 数据存储"^]和 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP快速入门"]为ONTAP配置 FSx。
+** 按照以下步骤操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["技术报告 4938：使用 VMware Cloud on AWS 将Amazon FSx ONTAP挂载为 NFS 数据存储"^]和 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP快速入门"]配置和配置 FSx for ONTAP。
 
 
 * 将Amazon FSx for ONTAP添加到系统，并为 FSx for ONTAP添加 AWS 凭证。
 * 在 AWS FSx for ONTAP实例中创建或验证您的目标ONTAP SVM。
-* 在NetApp控制台中配置源本地ONTAP集群和 FSx for ONTAP实例之间的复制。
+* 在NetApp Console中配置源本地ONTAP集群和 FSx for ONTAP实例之间的复制。
 
 
 参考 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["如何设置 FSx for ONTAP系统"^]了解详细步骤。
@@ -110,7 +110,7 @@ https://www.vmware.com/products/vmc-on-aws.html["AWS 上的 VMware Cloud"^]为 A
 
 == 私有云
 
-您可以使用NetApp灾难恢复来保护托管在一个或多个 vCenter 集群上的 VMware VM，方法是将 VM 数据存储复制到同一私有数据中心或远程私有或共置数据中心的另一个 vCenter 集群。
+您可以使用NetApp Disaster Recovery来保护托管在一个或多个 vCenter 集群上的 VMware VM，方法是将 VM 数据存储复制到同一私有数据中心或远程私有或共置数据中心的另一个 vCenter 集群。
 
 对于本地到本地的情况，请在其中一个物理站点安装控制台代理。
 
@@ -120,7 +120,7 @@ https://www.vmware.com/products/vmc-on-aws.html["AWS 上的 VMware Cloud"^]为 A
 
 === 为本地到本地保护做好准备
 
-在设置NetApp灾难恢复以进行本地到本地保护之前，请确保满足以下要求：
+在设置NetApp Disaster Recovery以进行本地到本地保护之前，请确保满足以下要求：
 
 * ONTAP存储
 +
@@ -133,7 +133,7 @@ https://www.vmware.com/products/vmc-on-aws.html["AWS 上的 VMware Cloud"^]为 A
 * vCenter 集群
 +
 ** 确保要保护的虚拟机托管在 NFS 数据存储区（使用ONTAP NFS 卷）或 VMFS 数据存储区（使用NetApp iSCSI LUN）上。
-** 审查link:../reference/vcenter-privileges.html["vCenter 权限"]NetApp灾难恢复所必需的。
+** 审查link:../reference/vcenter-privileges.html["vCenter 权限"]NetApp Disaster Recovery所必需的。
 ** 创建灾难恢复用户帐户（不是默认的 vCenter 管理员帐户）并将 vCenter 权限分配给该帐户。
 
 
@@ -143,10 +143,10 @@ https://www.vmware.com/products/vmc-on-aws.html["AWS 上的 VMware Cloud"^]为 A
 
 === 智能代理支持
 
-NetApp控制台代理支持智能代理。智能代理是一种将您的内部环境连接到NetApp控制台的轻量级、安全且高效的方法。它在您的系统和控制台服务之间提供安全连接，而无需 VPN 或直接互联网访问。这种优化的代理实现可卸载本地网络内的 API 流量。
+NetApp Console代理支持智能代理。智能代理是一种将您的内部环境连接到NetApp Console的轻量级、安全且高效的方法。它在您的系统和控制台服务之间提供安全连接，而无需 VPN 或直接互联网访问。这种优化的代理实现可卸载本地网络内的 API 流量。
 
-配置代理后， NetApp Disaster Recovery 会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
+配置代理后， NetApp Disaster Recovery会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
 
-NetApp灾难恢复代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp灾难恢复代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
+NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
 
-有关NetApp控制台中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+有关在NetApp Console中设置常规代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。

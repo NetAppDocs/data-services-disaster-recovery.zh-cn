@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/dashboard-view.html 
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
-= 在仪表板上查看NetApp灾难恢复计划的运行状况
+= 在仪表板上查看NetApp Disaster Recovery计划的运行状况
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,18 +12,18 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 
 
 [role="lead"]
-使用NetApp灾难恢复仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。
+使用NetApp Disaster Recovery仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp灾难恢复菜单中，选择 *仪表板*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp Disaster Recovery菜单中，选择 *仪表板*。
 +
-image:dr-dashboard.png["NetApp灾难恢复仪表板"]
+image:dr-dashboard.png["NetApp Disaster Recovery仪表板"]
 
 . 查看仪表板上的以下信息：
 +

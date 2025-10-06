@@ -6,15 +6,15 @@
 
 === 智能代理支持
 
-NetApp控制台代理支持智能代理。智能代理是一种将您的内部系统连接到NetApp灾难恢复的轻量级、安全且高效的方法。它在您的系统和NetApp灾难恢复之间提供安全连接，而无需 VPN 或直接互联网访问。这种优化的代理实现可卸载本地网络内的 API 流量。
+NetApp Console代理支持智能代理。智能代理是一种将您的内部部署系统连接到NetApp Disaster Recovery的轻量级、安全且高效的方法。它在您的系统和NetApp Disaster Recovery之间提供安全连接，而无需 VPN 或直接互联网访问。这种优化的代理实现可卸载本地网络内的 API 流量。
 
-配置代理后， NetApp Disaster Recovery 会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
+配置代理后， NetApp Disaster Recovery会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
 
-NetApp灾难恢复代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp灾难恢复代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
+NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
 
-有关NetApp灾难恢复智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["为NetApp灾难恢复设置基础架构"]。
+有关NetApp Disaster Recovery智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
 
-有关NetApp控制台中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+有关在NetApp Console中设置常规代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
 
 
 

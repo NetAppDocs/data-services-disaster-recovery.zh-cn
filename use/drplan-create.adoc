@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/drplan-create.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 vCenter 站点后，您就可以创建灾难恢复或复制计划了。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 vCenter 站点后，您就可以创建灾难恢复或复制计划了。 
 ---
-= 在NetApp灾难恢复中创建复制计划
+= 在NetApp Disaster Recovery中创建复制计划
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,15 +14,15 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 [role="lead"]
 添加 vCenter 站点后，您就可以创建灾难恢复或_复制计划_。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 *关于此任务*
 
 您可以创建复制计划并编辑合规性和测试计划。运行虚拟机的测试故障转移而不影响生产工作负载。
 
-您可以保护多个数据存储上的多个虚拟机。  NetApp灾难恢复为托管受保护 VM 数据存储的所有ONTAP卷创建ONTAP一致性组。
+您可以保护多个数据存储上的多个虚拟机。  NetApp Disaster Recovery为托管受保护 VM 数据存储的所有ONTAP卷创建ONTAP一致性组。
 
 仅当复制计划处于以下状态之一时，虚拟机才可以受到保护：
 
@@ -54,7 +54,7 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 
 在创建SnapMirror关系之前，请在灾难恢复之外设置集群和 SVM 对等关系。
 
-*最佳实践*：在部署NetApp灾难恢复之前组织您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。
+*最佳实践*：在部署NetApp Disaster Recovery之前组织您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。
 
 
 
@@ -83,9 +83,9 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 首先，选择源 vCenter，然后选择目标 vCenter。
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp灾难恢复菜单中，选择 *复制计划*，然后选择 *添加*。或者，如果您刚开始使用该服务，请从仪表板中选择*添加复制计划*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*，然后选择 *添加*。或者，如果您刚开始使用该服务，请从仪表板中选择*添加复制计划*。
 +
 image:dr-plan-create-name2.png["屏幕截图显示了“添加复制计划”>“添加计划”页面"]
 
@@ -112,8 +112,8 @@ TIP: 每个资源组可以包含一个或多个虚拟机或数据存储区。
 * 单个数据存储区不应托管受多个复制计划保护的虚拟机。
 * 不要在同一数据存储上托管受保护和不受保护的虚拟机。如果受保护的虚拟机和不受保护的虚拟机托管在同一数据存储上，则可能会出现以下问题：
 +
-** 由于NetApp灾难恢复使用SnapMirror并且系统复制整个ONTAP卷，因此该卷的已用容量用于许可考虑。在这种情况下，受保护和不受保护的虚拟机所消耗的卷空间都将包含在此计算中。
-** 如果资源组及其关联的数据存储库需要故障转移到灾难恢复站点，则任何未受保护的虚拟机（不属于资源组但托管在ONTAP卷上的虚拟机）将在故障转移过程中不再存在于源站点上，从而导致源站点上未受保护的虚拟机发生故障。此外， NetApp灾难恢复不会在故障转移 vCenter 站点启动那些未受保护的虚拟机。
+** 由于NetApp Disaster Recovery使用SnapMirror并且系统复制整个ONTAP卷，因此该卷的已用容量用于许可考虑。在这种情况下，受保护和不受保护的虚拟机所消耗的卷空间都将包含在此计算中。
+** 如果资源组及其关联的数据存储库需要故障转移到灾难恢复站点，则任何未受保护的虚拟机（不属于资源组但托管在ONTAP卷上的虚拟机）将在故障转移过程中不再存在于源站点上，从而导致源站点上未受保护的虚拟机发生故障。此外， NetApp Disaster Recovery不会在故障转移 vCenter 站点启动那些未受保护的虚拟机。
 
 
 * 要保护虚拟机，必须将其包含在资源组中。
@@ -140,7 +140,7 @@ image:dr-plan-create-apps-vms6.png["屏幕截图显示了“添加复制计划�
 +
 image:dr-plan-create-apps-datastores.png["屏幕截图显示了“添加复制计划”>“要复制的应用程序”页面"]
 
-. 或者，执行以下操作之一：
+. 或者，执行以下任一操作：
 +
 ** 要更改群组名称，请点击群组*编辑*image:icon-pencil.png["铅笔图标"]图标。
 ** 要从组中删除资源，请选择资源旁边的 *X*。
@@ -163,7 +163,7 @@ TIP: 要将数据存储移动到不同的资源组，请取消选择不需要的
 如果您计划将测试故障转移作为 DR 计划的一部分执行，则应提供一组测试故障转移映射，以确保故障转移测试期间启动的虚拟机不会干扰生产虚拟机。您可以通过为测试虚拟机提供不同的 IP 地址，或者将测试虚拟机的虚拟 NIC 映射到与生产隔离但具有相同 IP 配置的不同网络（称为_气泡_或_测试网络_）来实现此目的。
 
 .开始之前
-如果要在此服务中创建SnapMirror关系，则集群及其 SVM 对等关系应该已经在NetApp灾难恢复之外设置。
+如果要在此服务中创建SnapMirror关系，则集群及其 SVM 对等关系应该已在NetApp Disaster Recovery之外设置。
 
 .步骤
 . 在资源映射页面中，要对故障转移和测试操作使用相同的映射，请选中该框。
@@ -198,7 +198,7 @@ image:dr-plan-resource-mapping2.png["复制计划，资源映射选项卡"]
 
 
 
-TIP: 如果 vCenter 配置了分布式资源调度程序 (DRS) 来管理集群中的多个主机，则您无需选择主机。如果您选择一个主机， NetApp Disaster Recovery 会将所有虚拟机放置在选定的主机上。  * *目标 VM 文件夹*（可选）：创建一个新的根文件夹来存储选定的 VM。
+TIP: 如果 vCenter 配置了分布式资源调度程序 (DRS) 来管理集群中的多个主机，则您无需选择主机。如果您选择一个主机， NetApp Disaster Recovery会将所有虚拟机放置在选定的主机上。  * *目标 VM 文件夹*（可选）：创建一个新的根文件夹来存储选定的 VM。
 
 
 
@@ -247,7 +247,7 @@ NOTE: 如果将设置更改为“与源不同”，则需要提供 VM 客户操�
 该服务支持虚拟机的静态或动态主机配置协议 (DHCP) IP 配置的网络设置。  DHCP 提供了一种基于标准的方法来动态配置主机网络端口的 TCP/IP 设置。  DHCP 必须至少提供一个 TCP/IP 地址，还可以提供一个默认网关地址（用于路由到外部互联网连接）、一个子网掩码和一个 DNS 服务器地址。  DHCP 通常用于最终用户计算设备，例如员工台式机、笔记本电脑和移动电话连接，同时也可用于任何网络计算设备，例如服务器。
 
 * *使用相同的子网掩码、DNS 和网关设置*选项：由于这些设置对于连接到相同虚拟网络的所有虚拟机通常都是相同的，因此您可能会发现配置一次这些设置并让灾难恢复使用复制计划保护的资源组中所有虚拟机的设置会更容易。如果某些虚拟机使用不同的设置，则需要取消选中此框并为每个虚拟机提供这些设置。
-* *IP 地址类型*：重新配置虚拟机配置以匹配目标虚拟网络要求。 NetApp灾难恢复提供两个选项：DHCP 或静态 IP。对于静态 IP，配置子网掩码、网关和 DNS 服务器。此外，输入虚拟机的凭据。
+* *IP 地址类型*：重新配置虚拟机配置以匹配目标虚拟网络要求。 NetApp Disaster Recovery提供两个选项：DHCP 或静态 IP。对于静态 IP，配置子网掩码、网关和 DNS 服务器。此外，输入虚拟机的凭据。
 +
 ** *DHCP*：如果您希望虚拟机从 DHCP 服务器获取网络配置信息，请选择此设置。如果您选择此选项，则只需提供 VM 的凭据。
 ** *静态 IP*：如果您想手动指定 IP 配置信息，请选择此设置。您可以选择以下之一：与源相同、与源不同或子网映射。如果您选择与来源相同，则无需输入凭据。另一方面，如果您选择使用来自源的不同信息，则可以提供凭据、VM 的 IP 地址、子网掩码、DNS 和网关信息。  VM 客户操作系统凭据应提供给全局级别或每个 VM 级别。
@@ -268,7 +268,7 @@ image:dr-plan-vm-subnet-option2.png["屏幕截图显示添加复制计划 > 资�
 ** 必须提供适当的用户凭据以及足够的来宾操作系统权限才能运行该脚本。
 ** （可选）包括脚本的超时值（以秒为单位）。
 +
-*运行 Microsoft Windows 的虚拟机*：可以运行 Windows 批处理 (.bat) 或 PowerShell (ps1) 脚本。 Windows 脚本可以使用命令行参数。格式化每个参数 `arg_name$value`格式，其中 `arg_name`是参数的名称， `$value`是参数的值，每个参数之间用分号分隔 `argument$value`一对。
+*运行 Microsoft Windows 的虚拟机*：可以运行 Windows 批处理 (.bat) 或 PowerShell (ps1) 脚本。 Windows 脚本可以使用命令行参数。格式化每个参数 `arg_name$value`格式，其中 `arg_name`是参数的名称， `$value`是参数的值，每个值用分号分隔 `argument$value`一对。
 
 +
 *运行 Linux 的虚拟机*：可以运行虚拟机使用的 Linux 版本支持的任何 shell 脚本 (.sh)。 Linux 脚本可以使用命令行参数。在以分号分隔的值列表中提供参数。不支持命名参数。将每个参数添加到 `Arg[x]`参数列表并使用指针引用每个值 `Arg[x]`数组，例如， `value1;value2;value3` 。
@@ -364,9 +364,9 @@ VMware 数据存储库托管在ONTAP FlexVol卷或使用 VMware VMFS 的ONTAP iS
 
 image:dr-plan-datastore-platform.png["屏幕截图显示了“添加复制计划”>“资源映射”>“数据存储区”"]
 
-* *使用平台管理的备份和保留计划*：如果您使用外部快照管理解决方案，请选中此框。 NetApp灾难恢复支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或第三方集成。如果复制计划中的每个数据存储库（卷）已经具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp灾难恢复中的恢复点。
+* *使用平台管理的备份和保留计划*：如果您使用外部快照管理解决方案，请选中此框。 NetApp Disaster Recovery支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或第三方集成。如果复制计划中的每个数据存储库（卷）都已具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp Disaster Recovery中的恢复点。
 +
-选择此选项后， NetApp Disaster Recovery 不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。
+选择此选项后， NetApp Disaster Recovery不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。
 
 +
 配置完成后，服务不会定期拍摄任何快照，而是依赖外部实体来拍摄和更新这些快照。
@@ -381,7 +381,7 @@ TIP: 保留的快照数量以及每个快照之间的数据变化率决定了源
 * *源和目标数据存储*：如果存在多个（扇出） SnapMirror关系，您可以选择要使用的目标。如果卷已建立SnapMirror关系，则会显示相应的源数据存储库和目标数据存储库。如果卷没有SnapMirror关系，您现在可以通过选择目标集群、选择目标 SVM 并提供卷名称来创建一个。该服务将创建卷和SnapMirror关系。
 +
 
-NOTE: 如果要在此服务中创建SnapMirror关系，则集群及其 SVM 对等关系应该已经在NetApp灾难恢复之外设置。
+NOTE: 如果要在此服务中创建SnapMirror关系，则集群及其 SVM 对等关系应该已在NetApp Disaster Recovery之外设置。
 
 +
 ** 如果虚拟机来自同一卷和同一 SVM，则该服务将执行标准ONTAP快照并更新辅助目标。
@@ -450,16 +450,16 @@ TIP: 您可以稍后禁用或删除复制计划。
 根据计划，故障转移测试运行并确保工作负载移动到复制计划指定的目标。
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 +
 image:dr-plan-list.png["显示复制计划列表的屏幕截图"]
 
 . 选择*操作*image:icon-horizontal-dots.png["水平点操作菜单"]图标并选择*编辑时间表*。
-. 输入您希望NetApp Disaster Recovery 检查测试合规性的频率（分钟）。
+. 输入您希望NetApp Disaster Recovery检查测试合规性的频率（分钟）。
 . 要检查您的故障转移测试是否正常，请检查*按月度计划运行故障转移*。
 +
 .. 选择您希望运行这些测试的日期和时间。
-.. 以 yyyy-mm-dd 格式输入您希望测试开始的日期。
+.. 输入您希望测试开始的日期（yyyy-mm-dd 格式）。
 +
 image:dr-plan-schedule-edit2.png["屏幕截图显示了您可以在哪里编辑时间表"]
 

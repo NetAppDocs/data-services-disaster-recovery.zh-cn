@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: NetApp灾难恢复文档
+  title: NetApp Disaster Recovery文档
   summary: 借助NetApp Disaster Recovery for VMware，您可以将运行ONTAP存储的本地 VMware 工作负载复制到公共云中的
     VMware 软件定义数据中心，并使用NetApp云存储作为灾难恢复站点。
   keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
@@ -9,19 +9,19 @@ indexpage:
   tiles:
   - title: 开始使用
     links:
-    - title: 了解NetApp灾难恢复
+    - title: 了解NetApp Disaster Recovery
       url: "/get-started/dr-intro.html"
-    - title: NetApp灾难恢复的新功能
+    - title: NetApp Disaster Recovery的新功能
       url: "/release-notes/dr-whats-new.html"
     - title: 快速启动
       url: "/get-started/dr-quick-start.html"
     - title: 前提条件
       url: "/get-started/dr-prerequisites.html"
-    - title: 访问NetApp灾难恢复
+    - title: 访问NetApp Disaster Recovery
       url: "/get-started/dr-login.html"
     - title: 常见问题解答
       url: "/get-started/dr-faq.html"
-  - title: 使用NetApp灾难恢复
+  - title: 使用NetApp Disaster Recovery
     links:
     - title: 将 vCenter 添加到站点
       url: "/use/sites-add.html"
@@ -37,15 +37,15 @@ indexpage:
       url: "/use/failback.html"
   - title: 博客和社区
     links:
-    - title: NetApp控制台
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp数据服务
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp 社区
       url: https://community.netapp.com
-    - title: NetApp灾难恢复博客
+    - title: NetApp Disaster Recovery博客
       url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-disaster-recovery-service-for-BC-with-VMware-Cloud-on-AWS-and-FSx-for/ba-p/447066
-    - title: NetApp灾难恢复即服务实验室入门指南
+    - title: NetApp Disaster Recovery即服务实验室入门指南
       url: https://labondemand.netapp.com/lab/draas
     - title: 视频
       url: https://www.youtube.com/@netapp/videos

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/resource-group.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 vCenter 站点后，您就可以创建灾难恢复或复制计划了。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 vCenter 站点后，您就可以创建灾难恢复或复制计划了。 
 ---
-= 在NetApp灾难恢复中创建资源组以组织虚拟机
+= 在NetApp Disaster Recovery中创建资源组以组织虚拟机
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,9 +14,9 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 [role="lead"]
 添加 vCenter 站点后，您可以创建资源组，以虚拟机或数据存储区作为单个单元来保护虚拟机。资源组使您能够将一组依赖的虚拟机组织成满足您要求的逻辑组。例如，您可以将与一个应用程序关联的虚拟机分组，也可以将具有相似层的应用程序分组。再举一个例子，组可以包含可以在恢复时运行的延迟启动命令。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复应用程序管理员角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 *关于此任务*
 
@@ -37,9 +37,9 @@ TIP: 每个资源组可以包含一个或多个虚拟机或数据存储区。虚
 例如，销售点应用程序可能会使用多个虚拟机来存储数据库、业务逻辑和店面。您可以使用一个资源组管理所有这些虚拟机。设置资源组以应用虚拟机启动顺序、网络连接和应用程序所需的所有虚拟机的恢复的复制计划规则。
 
 .它是如何工作的？
-NetApp灾难恢复通过复制资源组中托管虚拟机的底层ONTAP卷和 LUN 来保护虚拟机。为此，系统向 vCenter 查询资源组中托管虚拟机的每个数据存储的名称。然后， NetApp Disaster Recovery 会识别托管该数据存储的源ONTAP卷或 LUN。所有保护均使用SnapMirror复制在ONTAP卷级别执行。
+NetApp Disaster Recovery通过复制资源组中托管虚拟机的底层ONTAP卷和 LUN 来保护虚拟机。为此，系统向 vCenter 查询资源组中托管虚拟机的每个数据存储的名称。然后， NetApp Disaster Recovery会识别托管该数据存储的源ONTAP卷或 LUN。所有保护均使用SnapMirror复制在ONTAP卷级别执行。
 
-如果资源组中的虚拟机托管在不同的数据存储上， NetApp灾难恢复将使用以下方法之一来创建ONTAP卷或 LUN 的数据一致快照。
+如果资源组中的虚拟机托管在不同的数据存储上， NetApp Disaster Recovery将使用以下方法之一来创建ONTAP卷或 LUN 的数据一致快照。
 
 [cols="30,65a"]
 |===
@@ -67,19 +67,19 @@ NetApp灾难恢复通过复制资源组中托管虚拟机的底层ONTAP卷和 LU
 * 单个数据存储区不应托管受多个复制计划保护的虚拟机。
 * 不要在同一数据存储上托管受保护和不受保护的虚拟机。如果受保护的虚拟机和不受保护的虚拟机托管在同一数据存储上，则可能会出现以下问题：
 +
-** 由于NetApp灾难恢复使用SnapMirror并且系统复制整个ONTAP卷，因此该卷的已用容量用于许可考虑。在这种情况下，受保护和不受保护的虚拟机所消耗的卷空间都将包含在此计算中。
-** 如果资源组及其关联的数据存储库需要故障转移到灾难恢复站点，则任何未受保护的虚拟机（不属于资源组但托管在ONTAP卷上的虚拟机）将在故障转移过程中不再存在于源站点上，从而导致源站点上未受保护的虚拟机发生故障。此外， NetApp灾难恢复不会在故障转移 vCenter 站点启动那些未受保护的虚拟机。
+** 由于NetApp Disaster Recovery使用SnapMirror并且系统复制整个ONTAP卷，因此该卷的已用容量用于许可考虑。在这种情况下，受保护和不受保护的虚拟机所消耗的卷空间都将包含在此计算中。
+** 如果资源组及其关联的数据存储库需要故障转移到灾难恢复站点，则任何未受保护的虚拟机（不属于资源组但托管在ONTAP卷上的虚拟机）将在故障转移过程中不再存在于源站点上，从而导致源站点上未受保护的虚拟机发生故障。此外， NetApp Disaster Recovery不会在故障转移 vCenter 站点启动那些未受保护的虚拟机。
 
 
 * 要保护虚拟机，必须将其包含在资源组中。
 
 
-*最佳实践*：在部署NetApp灾难恢复之前组织您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。确保任何给定数据存储上的虚拟机不受不同的复制计划的保护。
+*最佳实践*：在部署NetApp Disaster Recovery之前组织您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。确保任何给定数据存储上的虚拟机不受不同的复制计划的保护。
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp灾难恢复菜单中，选择 *资源组*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp Disaster Recovery菜单中，选择 *资源组*。
 . 选择“*添加*”。
 . 输入资源组的名称。
 . 选择虚拟机所在的源 vCenter 集群。

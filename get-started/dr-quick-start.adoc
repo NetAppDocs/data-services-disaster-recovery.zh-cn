@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: get-started/dr-quick-start.html 
 keywords: how to get started with bluexp disaster recovery, disaster recovery quick start, failover, failback 
-summary: 只需几个步骤即可开始使用NetApp灾难恢复服务。 
+summary: 只需几个步骤即可开始使用NetApp Disaster Recovery服务。 
 ---
-= NetApp灾难恢复快速入门
+= NetApp Disaster Recovery快速入门
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,15 +12,15 @@ summary: 只需几个步骤即可开始使用NetApp灾难恢复服务。
 
 
 [role="lead"]
-以下是开始使用NetApp灾难恢复所需步骤的概述。每个步骤中的链接都会将您带到提供更多详细信息的页面。
+以下是开始使用NetApp Disaster Recovery所需步骤的概述。每个步骤中的链接都会将您带到提供更多详细信息的页面。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]审查先决条件
 [role="quick-margin-para"]
 link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"] 。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]设置NetApp灾难恢复
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]设置NetApp Disaster Recovery
 [role="quick-margin-list"]
-* link:../get-started/dr-setup.html["设置服务的基础架构"] 。
+* link:../get-started/dr-setup.html["设置服务的基础结构"] 。
 * link:../get-started/dr-licensing.html["设置许可"] 。
 
 
@@ -29,7 +29,7 @@ link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"
 设置服务后，您可以执行以下操作。
 
 [role="quick-margin-list"]
-* link:../use/sites-add.html["将您的 vCenter 站点添加到NetApp灾难恢复"] 。
+* link:../use/sites-add.html["将您的 vCenter 站点添加到NetApp Disaster Recovery"] 。
 * link:../use/manage.html#manage-resource-groups["创建第一个资源组"] 。
 * link:../use/drplan-create.html["创建您的第一个复制计划"] 。
 * link:../use/replicate.html["将应用程序复制到另一个站点"] 。

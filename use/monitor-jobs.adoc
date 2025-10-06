@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/monitor-jobs.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。您可以监控所有灾难恢复工作并确定其进度。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。您可以监控所有灾难恢复工作并确定其进度。 
 ---
-= 监控NetApp灾难恢复作业
+= 监控NetApp Disaster Recovery作业
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,19 +12,19 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 
 
 [role="lead"]
-您可以监控所有NetApp灾难恢复作业并确定其进度。
+您可以监控所有NetApp Disaster Recovery作业并确定其进度。
 
 
 
 == 查看职位
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 . 从菜单中选择*作业监控*。
 . 探索与操作相关的所有作业并查看其时间戳和状态。
 . 要查看特定作业的详细信息，请选择该行。
@@ -37,12 +37,12 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 
 如果某项工作正在进行中或处于排队状态，而您不想让它继续，则可以取消它。如果作业停留在同一状态，您可能想要取消它，并且想要释放队列中的下一个操作。您可能想在作业超时之前取消它。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 .步骤
-. 从NetApp控制台左侧导航栏中，选择 *保护* > *灾难恢复*。
+. 从NetApp Console左侧导航栏中，选择 *保护* > *灾难恢复*。
 . 从菜单中选择*作业监控*。
 . 在“作业监视器”页面中，记下要取消的作业的 ID。
 +

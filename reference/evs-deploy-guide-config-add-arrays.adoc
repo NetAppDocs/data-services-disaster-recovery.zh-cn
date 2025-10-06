@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-config-add-arrays.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
-summary: 在使用NetApp灾难恢复之前，您必须将内部部署和云托管存储实例添加到NetApp控制台系统。 
+summary: 在使用NetApp Disaster Recovery之前，您必须将内部部署和云托管存储实例添加到NetApp Console系统。 
 ---
-= 使用NetApp灾难恢复功能将本地阵列添加到适用于 Amazon EVS 的NetApp控制台系统
+= 使用NetApp Disaster Recovery功能将本地阵列添加到适用于 Amazon EVS 的NetApp Console系统
 :allow-uri-read: 
 
 
 [role="lead"]
-在使用NetApp灾难恢复之前，您必须将内部部署和云托管存储实例添加到NetApp控制台系统。
+在使用NetApp Disaster Recovery之前，您必须将内部部署和云托管存储实例添加到NetApp Console系统。
 
 您需要执行以下操作：
 
-* 将内部部署阵列添加到您的NetApp控制台系统。
-* 将Amazon FSx for NetApp ONTAP （FSx for ONTAP）实例添加到您的NetApp控制台系统。
+* 将内部部署阵列添加到您的NetApp Console系统。
+* 将Amazon FSx for NetApp ONTAP （FSx for ONTAP）实例添加到您的NetApp Console系统。
 
 
 
 
-== 将本地存储阵列添加到NetApp控制台系统
+== 将本地存储阵列添加到NetApp Console系统
 
-将本地ONTAP存储资源添加到您的NetApp控制台系统。
+将本地ONTAP存储资源添加到您的NetApp Console系统。
 
-. 在NetApp控制台系统页面中，选择“添加系统”。
+. 在NetApp Console系统页面中，选择“添加系统”。
 +
 image:evs-canvas-add-working-env-1.png["添加系统"]
 
@@ -51,11 +51,11 @@ image:evs-canvas-add-working-env-4-5.png["添加系统映像"]
 
 
 
-== 将Amazon FSx for NetApp ONTAP存储实例添加到NetApp控制台系统
+== 将Amazon FSx for NetApp ONTAP存储实例添加到NetApp Console系统
 
-接下来，将Amazon FSx for NetApp ONTAP存储资源添加到您的NetApp控制台系统。
+接下来，将Amazon FSx for NetApp ONTAP存储资源添加到您的NetApp Console系统。
 
-. 在NetApp控制台系统页面中，选择“添加系统”。
+. 在NetApp Console系统页面中，选择“添加系统”。
 +
 image:evs-canvas-add-working-env-1.png["添加系统映像"]
 

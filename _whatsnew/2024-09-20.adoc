@@ -11,6 +11,6 @@
 以下是有关 iSCSI 和 FC 协议的一些其他注意事项：
 
 * FC 支持针对客户端前端协议，而不是针对复制。
-* NetApp灾难恢复仅支持每个ONTAP卷一个 LUN。该卷不应具有多个 LUN。
+* NetApp Disaster Recovery仅支持每个ONTAP卷一个 LUN。该卷不应具有多个 LUN。
 * 对于任何复制计划，目标ONTAP卷都应使用与托管受保护虚拟机的源ONTAP卷相同的协议。例如，如果源使用 FC 协议，则目标也应该使用 FC。
 

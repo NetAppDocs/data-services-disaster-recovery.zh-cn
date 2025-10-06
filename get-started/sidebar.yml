@@ -2,15 +2,15 @@
 section: get-started
 title: 开始使用
 entries:
-- title: 了解NetApp灾难恢复
+- title: 了解NetApp Disaster Recovery
   url: "/get-started/dr-intro.html"
 - title: 前提条件
   url: "/get-started/dr-prerequisites.html"
 - title: 快速启动
   url: "/get-started/dr-quick-start.html"
-- title: 为NetApp灾难恢复设置基础架构
+- title: 为NetApp Disaster Recovery设置基础架构
   url: "/get-started/dr-setup.html"
-- title: 访问NetApp灾难恢复
+- title: 访问NetApp Disaster Recovery
   url: "/get-started/dr-login.html"
 - title: 设置许可
   url: "/get-started/dr-licensing.html"

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/failover.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
-summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
-= 使用NetApp灾难恢复将应用程序故障转移到远程站点
+= 使用NetApp Disaster Recovery将应用程序故障转移到远程站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,9 +14,9 @@ summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动�
 [role="lead"]
 如果发生灾难，请将您的主要本地 VMware 站点故障转移到另一个本地 VMware 站点或 AWS 上的 VMware Cloud。您可以测试故障转移过程以确保在需要时能够成功。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 *关于此任务*
 
@@ -26,7 +26,7 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 
 此过程会有所不同，具体取决于生产站点是否健康以及您是否由于关键基础设施故障以外的原因执行到灾难恢复站点的故障转移：
 
-* 发生严重生产站点故障，导致无法访问源 vCenter 或ONTAP集群： NetApp灾难恢复允许您选择任何可用的快照进行恢复。
+* 发生严重生产站点故障，导致无法访问源 vCenter 或ONTAP集群： NetApp Disaster Recovery允许您选择任何可用的快照进行恢复。
 * 生产环境健康：您可以“立即拍摄快照”或选择之前创建的快照。
 
 
@@ -58,11 +58,11 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]并选择*测试故障转移*。
+. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*测试故障转移*。
 . 在测试故障转移页面中，输入“测试故障转移”并选择*测试故障转移*。
 . 测试完成后，清理测试环境。
 
@@ -74,9 +74,9 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 故障转移测试完成后，您应该清理测试环境。此过程将从测试位置、FlexClone 和临时数据存储区中删除临时虚拟机。
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]并选择*清理故障转移测试*。
+. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*清理故障转移测试*。
 . 在测试故障转移页面中，输入“清理故障转移”，并选择*清理故障转移测试*。
 
 
@@ -105,9 +105,9 @@ link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户�
 TIP: 故障转移启动后，您可以在灾难恢复站点的 vCenter 中看到恢复的虚拟机（虚拟机、网络和数据存储）。默认情况下，虚拟机会恢复到 Workload 文件夹。
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]并选择*故障转移*。
+. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*故障转移*。
 +
 image:dr-plan-failover3.png["故障转移页面"]
 
@@ -116,7 +116,7 @@ image:dr-plan-failover3.png["故障转移页面"]
 在发生故障转移之前，将拍摄当前源的快照并将其复制到当前目标。
 
 . 或者，如果您希望在检测到通常会阻止故障转移发生的错误时仍进行故障转移，请选择“*强制故障转移*”。
-. 或者，如果您希望服务在复制计划故障转移后不自动创建反向SnapMirror保护关系，请选择“*跳过保护*”。如果您想在NetApp灾难恢复中将恢复的站点恢复在线之前对其执行其他操作，这将非常有用。
+. 或者，如果您希望服务在复制计划故障转移后不自动创建反向SnapMirror保护关系，请选择“*跳过保护*”。如果您希望在NetApp Disaster Recovery中将恢复的站点恢复在线之前对其执行其他操作，这将非常有用。
 +
 
 TIP: 您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。

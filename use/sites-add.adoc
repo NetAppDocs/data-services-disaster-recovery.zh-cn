@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/sites-add.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: 在创建灾难恢复计划之前，您需要在NetApp灾难恢复中添加主 vCenter 站点和目标 vCenter 灾难恢复站点。 
+summary: 在创建灾难恢复计划之前，您需要在NetApp Disaster Recovery中添加主 vCenter 站点和目标 vCenter 灾难恢复站点。 
 ---
-= 将 vCenter 添加到NetApp灾难恢复中的站点
+= 将 vCenter 添加到NetApp Disaster Recovery中的站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,23 +12,23 @@ summary: 在创建灾难恢复计划之前，您需要在NetApp灾难恢复中�
 
 
 [role="lead"]
-在创建灾难恢复计划之前，您需要在NetApp控制台中将主 vCenter 服务器添加到站点，并将目标 vCenter 灾难恢复站点添加到目标 vCenter 灾难恢复站点。
+在创建灾难恢复计划之前，您需要在NetApp Console中将主 vCenter 服务器添加到站点，并将目标 vCenter 灾难恢复站点添加到站点。
 
 
-TIP: 确保源 vCenter 和目标 vCenter 使用相同的NetApp控制台代理。
+TIP: 确保源 vCenter 和目标 vCenter 使用相同的NetApp Console代理。
 
-添加 vCenter 后， NetApp Disaster Recovery 会对 vCenter 环境进行深度发现，包括 vCenter 集群、ESXi 主机、数据存储库、存储占用空间、虚拟机详细信息、 SnapMirror副本和虚拟机网络。
+添加 vCenter 后， NetApp Disaster Recovery会对 vCenter 环境进行深度发现，包括 vCenter 集群、ESXi 主机、数据存储库、存储占用空间、虚拟机详细信息、 SnapMirror副本和虚拟机网络。
 
-*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。
+*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。
 
-link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
 
 *关于此任务*
 
 如果您在以前的版本中添加了 vCenter 并想要自定义发现计划，则必须编辑 vCenter 服务器站点并设置计划。
 
 
-TIP: NetApp灾难恢复每 24 小时执行一次发现。设置站点后，您可以稍后编辑 vCenter 以自定义满足您需求的发现计划。例如，如果您有大量虚拟机，则可以将发现计划设置为每 23 小时 59 分钟运行一次。如果您拥有的虚拟机数量较少，则可以将发现计划设置为每 12 小时运行一次。最小间隔为 30 分钟，最大间隔为 24 小时。
+TIP: NetApp Disaster Recovery每 24 小时执行一次发现。设置站点后，您可以稍后编辑 vCenter 以自定义满足您需求的发现计划。例如，如果您有大量虚拟机，则可以将发现计划设置为每 23 小时 59 分钟运行一次。如果您拥有的虚拟机数量较少，则可以将发现计划设置为每 12 小时运行一次。最小间隔为 30 分钟，最大间隔为 24 小时。
 
 您应该首先执行一些手动发现以获取有关您的环境的最新信息。之后，您可以设置计划以自动运行。
 
@@ -58,10 +58,10 @@ NOTE: 该服务支持自签名安全证书或来自中央证书颁发机构 (CA)
 
 
 .步骤
-. 登录 https://console.netapp.com/["NetApp控制台"^]。
-. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
+. 登录 https://console.netapp.com/["NetApp Console"^]。
+. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 +
-您将进入NetApp灾难恢复仪表板页面。首次启动该服务时，您需要添加 vCenter 信息。随后，仪表板会显示有关您的站点和复制计划的数据。
+您将进入NetApp Disaster Recovery仪表板页面。首次启动该服务时，您需要添加 vCenter 信息。随后，仪表板会显示有关您的站点和复制计划的数据。
 
 +
 
@@ -78,7 +78,7 @@ TIP: 如果一些 vCenter 站点已经存在并且您想要添加更多，请从
 image:vcenter-add.png["添加 vCenter 服务器屏幕截图"]
 
 +
-** 选择一个站点，选择NetApp控制台代理，并提供 vCenter 凭据。
+** 选择一个站点，选择NetApp Console代理，并提供 vCenter 凭据。
 ** （仅适用于本地站点）要接受源 vCenter 的自签名证书，请选中该框。
 +
 
@@ -97,7 +97,7 @@ NOTE: 自签名证书不如其他证书安全。如果您的 vCenter *未*配置
 .. 选择目标站点和位置。如果目标是云，请选择*AWS*。
 +
 *** （仅适用于云站点）*API 令牌*：输入 API 令牌以授权您的组织访问服务。通过提供特定的组织和服务角色来创建 API 令牌。
-*** （仅适用于云站点）*长组织 ID*：输入组织的唯一 ID。您可以通过单击NetApp控制台的“帐户”部分中的用户名来识别此 ID。
+*** （仅适用于云站点）*长组织 ID*：输入组织的唯一 ID。您可以通过单击NetApp Console的“帐户”部分中的用户名来识别此 ID。
 
 
 .. 选择“*添加*”。
@@ -118,7 +118,7 @@ image:sites-list2.png["网站页面截图"]
 
 您可以使用子网映射来管理故障转移操作中的 IP 地址，这使您能够为每个 vCenter 添加子网。当您这样做时，您需要为每个虚拟网络定义 IPv4 CIDR、默认网关和 DNS。
 
-故障转移时， NetApp Disaster Recovery 使用映射网络的 CIDR 为每个 vNIC 分配一个新的 IP 地址。
+故障转移时， NetApp Disaster Recovery使用映射网络的 CIDR 为每个 vNIC 分配一个新的 IP 地址。
 
 例如：
 
@@ -128,7 +128,7 @@ image:sites-list2.png["网站页面截图"]
 
 VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置中，NetworkA 映射到 NetworkB。
 
-故障转移时， NetApp Disaster Recovery 会替换原始 IP 地址 (10.1.1) 的网络部分，并保留原始 IP 地址 (10.1.1.50) 的主机地址 (.50)。对于 VM1， NetApp灾难恢复查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分 (.50) 来为 VM1 创建新的 IP 地址。新的IP变为192.168.1.50。
+故障转移时， NetApp Disaster Recovery会替换原始 IP 地址 (10.1.1) 的网络部分，并保留原始 IP 地址 (10.1.1.50) 的主机地址 (.50)。对于 VM1， NetApp Disaster Recovery查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分 (.50) 来为 VM1 创建新的 IP 地址。新的IP变为192.168.1.50。
 
 总之，主机地址保持不变，而网络地址则被站点子网映射中配置的地址替换。这使您能够更轻松地管理故障转移时的 IP 地址重新分配，特别是当您需要管理数百个网络和数千个虚拟机时。
 
@@ -139,7 +139,7 @@ VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置�
 
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *站点*。
+. 从NetApp Disaster Recovery菜单中，选择 *站点*。
 . 从行动image:icon-vertical-dots.png["操作图标"]右侧图标，选择*添加子网*。
 +
 image:dr-sites-subnet-menu.png["添加子网菜单截图"]
@@ -177,7 +177,7 @@ TIP: CIDR 表示法是一种指定 IP 地址及其网络掩码的方法。 /24 �
 
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择*添加*以添加复制计划。
 . 通过添加 vCenter 服务器、选择资源组或应用程序并完成映射，以通常的方式填写字段。
 . 在复制计划 > 资源映射页面中，选择 *虚拟机* 部分。
@@ -203,7 +203,7 @@ NOTE: 如果有两个虚拟机（例如，一个是 Linux，另一个是 Windows
 如果您不想安排发现，您可以禁用计划发现选项并随时手动刷新发现。
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *站点*。
+. 从NetApp Disaster Recovery菜单中，选择 *站点*。
 . 选择您要编辑的站点。
 . 选择操作image:icon-vertical-dots.png["操作图标"]右侧的图标并选择*编辑*。
 . 在编辑 vCenter 服务器页面中，根据需要编辑字段。
@@ -218,10 +218,10 @@ image:sites-edit-schedule.png["编辑发现计划截图"]
 
 == 手动刷新发现
 
-您可以随时手动刷新发现。如果您添加或删除了虚拟机并想要更新NetApp灾难恢复中的信息，这将非常有用。
+您可以随时手动刷新发现。如果您添加或删除了虚拟机并想要更新NetApp Disaster Recovery中的信息，这将非常有用。
 
 .步骤
-. 从NetApp灾难恢复菜单中，选择 *站点*。
+. 从NetApp Disaster Recovery菜单中，选择 *站点*。
 . 选择您想要刷新的站点。
-. 选择操作image:icon-vertical-dots.png["操作图标"]图标并选择*刷新*。
+. 选择操作image:icon-vertical-dots.png["操作图标"]右侧的图标并选择*刷新*。
 
