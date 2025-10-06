@@ -1,0 +1,50 @@
+= NetApp灾难恢复中的用户角色
+:allow-uri-read: 
+
+
+
+
+=== NetApp灾难恢复中的用户角色
+
+NetApp灾难恢复现在采用角色来管理每个用户对特定功能和操作的访问权限。
+
+该服务使用特定于NetApp灾难恢复的以下角色。
+
+* *灾难恢复管理员*：在NetApp灾难恢复中执行任何操作。
+* *灾难恢复故障转移管理员*：在NetApp灾难恢复中执行故障转移和迁移操作。
+* *灾难恢复应用程序管理员*：创建和修改复制计划并启动测试故障转移。
+* *灾难恢复查看器*：查看NetApp灾难恢复中的信息，但不能执行任何操作。
+
+
+如果您单击NetApp灾难恢复服务并首次对其进行配置，则必须具有 *SnapCenterAdmin* 权限或具有 *Organization Admin* 角色。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp灾难恢复中的用户角色和权限"] 。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^] 。
+
+
+
+=== NetApp灾难恢复中的其他更新
+
+* 增强网络发现
+* 可扩展性改进：
++
+** 过滤所需的元数据而不是所有细节
+** 发现改进，以更快地检索和更新虚拟机资源
+** 数据检索和数据更新的内存优化和性能优化
+** vCenter SDK 客户端创建和池管理改进
+
+
+* 下次计划或手动发现时的陈旧数据管理：
++
+** 当在 vCenter 中删除虚拟机时， NetApp Disaster Recovery 现在会自动将其从复制计划中删除。
+** 当 vCenter 中删除数据存储区或网络时， NetApp Disaster Recovery 现在会将其从复制计划和资源组中删除。
+** 当在 vCenter 中删除集群、主机或数据中心时， NetApp Disaster Recovery 现在会将其从复制计划和资源组中删除。
+
+
+* 您现在可以在浏览器的隐身模式下访问 Swagger 文档。您可以从NetApp灾难恢复中的“设置”选项 >“API 文档”中访问它，也可以在浏览器的隐身模式下直接通过以下 URL 访问它： https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swagger 文档"^] 。
+* 在某些情况下，故障回复操作完成后，iGroup 会被遗留下来。如果 iGroup 已过时，则此更新会将其删除。
+* 如果在复制计划中使用了 NFS FQDN， NetApp Disaster Recovery 现在会将其解析为 IP 地址。如果灾难恢复站点中无法解析 FQDN，则此更新很有用。
+* UI 对齐改进
+* 成功发现后，记录捕获 vCenter 大小详细信息的日志改进
+

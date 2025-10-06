@@ -1,0 +1,771 @@
+---
+sidebar: sidebar 
+permalink: release-notes/dr-whats-new.html 
+keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas, disaster 
+summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助NetApp Disaster Recovery for VMware，您可以将运行ONTAP存储的本地 VMware 工作负载复制到公共云中的 VMware 软件定义数据中心，作为使用NetApp云存储的灾难恢复站点。 
+---
+= NetApp灾难恢复的新功能
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解NetApp灾难恢复的新功能。
+
+
+
+== 2025年10月6日
+
+
+
+=== BlueXP disaster recovery现已更名为NetApp灾难恢复
+
+BlueXP disaster recovery已重命名为NetApp灾难恢复。
+
+
+
+=== BlueXP现在是NetApp控制台
+
+NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。
+
+有关更改的详细信息，请参阅link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp控制台发行说明"]。
+
+
+
+=== 其他更新
+
+* Amazon Elastic VMware Service (EVS) 与Amazon FSx for NetApp ONTAP的支持已公开预览。随着此版本的发布，它现已普遍可用。有关详细信息，请参阅link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp灾难恢复"]。
+* 存储发现改进，包括减少本地部署的发现时间
+* 身份和访问管理 (IAM) 支持，包括基于角色的访问控制 (RBAC) 和增强的用户权限
+* 对 Azure VMware 解决方案和Cloud Volumes ONTAP 的私人预览支持。有了此支持，您现在可以使用Cloud Volumes ONTAP存储配置从本地到 Azure VMware 解决方案的灾难恢复保护。
+
+
+
+
+== 2025年8月4日
+
+版本 4.2.5P2
+
+
+
+=== NetApp灾难恢复更新
+
+此版本包括以下更新：
+
+* 改进了 VMFS 支持，以处理来自多个存储虚拟机的相同 LUN。
+* 改进了测试拆卸清理以处理已被卸载或删除的数据存储。
+* 改进了子网映射，以便现在可以验证输入的网关是否包含在提供的网络中。
+* 解决了虚拟机名称包含“.com”时可能导致复制计划失败的问题。
+* 在创建复制计划的过程中，删除了阻止目标卷与源卷相同的限制。
+* 在 Azure 市场中添加了对NetApp智能服务的即用即付 (PAYGO) 订阅支持，并在免费试用对话框中添加了 Azure 市场的链接。
++
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp灾难恢复许可"]和 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置NetApp灾难恢复许可"]。
+
+
+
+
+
+== 2025年7月14日
+
+版本 4.2.5
+
+
+
+=== NetApp灾难恢复中的用户角色
+
+NetApp灾难恢复现在采用角色来管理每个用户对特定功能和操作的访问权限。
+
+该服务使用特定于NetApp灾难恢复的以下角色。
+
+* *灾难恢复管理员*：在NetApp灾难恢复中执行任何操作。
+* *灾难恢复故障转移管理员*：在NetApp灾难恢复中执行故障转移和迁移操作。
+* *灾难恢复应用程序管理员*：创建和修改复制计划并启动测试故障转移。
+* *灾难恢复查看器*：查看NetApp灾难恢复中的信息，但不能执行任何操作。
+
+
+如果您单击NetApp灾难恢复服务并首次对其进行配置，则必须具有 *SnapCenterAdmin* 权限或具有 *Organization Admin* 角色。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp灾难恢复中的用户角色和权限"] 。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^] 。
+
+
+
+=== NetApp灾难恢复中的其他更新
+
+* 增强网络发现
+* 可扩展性改进：
++
+** 过滤所需的元数据而不是所有细节
+** 发现改进，以更快地检索和更新虚拟机资源
+** 数据检索和数据更新的内存优化和性能优化
+** vCenter SDK 客户端创建和池管理改进
+
+
+* 下次计划或手动发现时的陈旧数据管理：
++
+** 当在 vCenter 中删除虚拟机时， NetApp Disaster Recovery 现在会自动将其从复制计划中删除。
+** 当 vCenter 中删除数据存储区或网络时， NetApp Disaster Recovery 现在会将其从复制计划和资源组中删除。
+** 当在 vCenter 中删除集群、主机或数据中心时， NetApp Disaster Recovery 现在会将其从复制计划和资源组中删除。
+
+
+* 您现在可以在浏览器的隐身模式下访问 Swagger 文档。您可以从NetApp灾难恢复中的“设置”选项 >“API 文档”中访问它，也可以在浏览器的隐身模式下直接通过以下 URL 访问它： https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swagger 文档"^] 。
+* 在某些情况下，故障回复操作完成后，iGroup 会被遗留下来。如果 iGroup 已过时，则此更新会将其删除。
+* 如果在复制计划中使用了 NFS FQDN， NetApp Disaster Recovery 现在会将其解析为 IP 地址。如果灾难恢复站点中无法解析 FQDN，则此更新很有用。
+* UI 对齐改进
+* 成功发现后，记录捕获 vCenter 大小详细信息的日志改进
+
+
+
+
+== 2025年6月30日
+
+版本 4.2.4P2
+
+
+
+=== 发现改进
+
+此更新改进了发现过程，从而减少了发现所需的时间。
+
+
+
+== 2025年6月23日
+
+版本 4.2.4P1
+
+
+
+=== 子网映射改进
+
+此更新通过新的搜索功能增强了“添加和编辑子网映射”对话框。现在您可以通过输入搜索词快速找到特定子网，从而更轻松地管理子网映射。
+
+
+
+== 2025年6月9日
+
+版本 4.2.4
+
+
+
+=== Windows 本地管理员密码解决方案 (LAPS) 支持
+
+Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项功能，可自动管理和备份 Active Directory 上本地管理员帐户的密码。
+
+您现在可以通过提供域控制器详细信息来选择子网映射选项并检查 LAPS 选项。使用此选项，您不需要为每个虚拟机提供密码。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+== 2025年5月13日
+
+版本 4.2.3
+
+
+
+=== 子网映射
+
+在此版本中，您可以使用子网映射以新的方式管理故障转移时的 IP 地址，这使您能够为每个 vCenter 添加子网。当您这样做时，您需要为每个虚拟网络定义 IPv4 CIDR、默认网关和 DNS。
+
+故障转移时， NetApp Disaster Recovery 通过查看为映射的虚拟网络提供的 CIDR 来确定每个 vNIC 的适当 IP 地址，并使用它来派生新的 IP 地址。
+
+例如：
+
+* 网络A = 10.1.1.0/24
+* 网络B = 192.168.1.0/24
+
+
+VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置中，NetworkA 映射到 NetworkB。
+
+故障转移时， NetApp Disaster Recovery 会替换原始 IP 地址 (10.1.1) 的网络部分，并保留原始 IP 地址 (10.1.1.50) 的主机地址 (.50)。对于 VM1， NetApp灾难恢复查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分 (.50) 来为 VM1 创建新的 IP 地址。新的IP变为192.168.1.50。
+
+总之，主机地址保持不变，而网络地址则被站点子网映射中配置的地址替换。这使您能够更轻松地管理故障转移时的 IP 地址重新分配，特别是当您需要管理数百个网络和数千个虚拟机时。
+
+有关在站点中包含子网映射的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
+
+
+
+=== 跳过保护
+
+您现在可以跳过保护，以便服务在复制计划故障转移后不会自动创建反向保护关系。如果您想在NetApp灾难恢复中将恢复的站点恢复在线之前对其执行其他操作，这将非常有用。
+
+当您启动故障转移时，如果原始源站点处于在线状态，则默认情况下服务会自动为复制计划中的每个卷创建反向保护关系。这意味着该服务创建从目标站点到源站点的SnapMirror关系。当您启动故障恢复时，该服务还会自动逆转SnapMirror关系。
+
+启动故障转移时，您现在可以选择“跳过保护”选项。这样，服务就不会自动逆转SnapMirror关系。相反，它将可写卷留在复制计划的两侧。
+
+原始源站点恢复在线后，您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。
+
+有关跳过保护的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+
+
+
+=== 复制计划中的SnapMirror计划更新
+
+NetApp灾难恢复现在支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或与ONTAP 的第三方集成。如果复制计划中的每个数据存储库（卷）已经具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp灾难恢复中的恢复点。
+
+要进行配置，请在复制计划 > 资源映射部分中，在配置数据存储映射时选中 *使用平台管理的备份和保留计划* 复选框。
+
+选择该选项后， NetApp Disaster Recovery 不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。
+
+配置完成后，服务不会定期拍摄任何快照，而是依赖外部实体来拍摄和更新这些快照。
+
+有关在复制计划中使用外部快照解决方案的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+== 2025年4月16日
+
+版本 4.2.2
+
+
+
+=== 虚拟机的计划发现
+
+NetApp灾难恢复每 24 小时执行一次发现。通过此版本，您现在可以自定义发现计划以满足您的需求并在需要时减少对性能的影响。例如，如果您有大量虚拟机，则可以将发现计划设置为每 48 小时运行一次。如果您拥有的虚拟机数量较少，则可以将发现计划设置为每 12 小时运行一次。
+
+如果您不想安排发现，您可以禁用计划发现选项并随时手动刷新发现。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
+
+
+
+=== 资源组数据存储支持
+
+以前，您只能通过虚拟机创建资源组。在此版本中，您可以按数据存储创建资源组。当您创建复制计划并为该计划创建资源组时，数据存储区中的所有虚拟机都将被列出。如果您有大量虚拟机并希望按数据存储对它们进行分组，这将非常有用。
+
+您可以通过以下方式创建具有数据存储区的资源组：
+
+* 当您使用数据存储区添加资源组时，您可以看到数据存储区的列表。您可以选择一个或多个数据存储来创建资源组。
+* 当您创建复制计划并在计划内创建资源组时，您可以在数据存储区中看到虚拟机。
+
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 免费试用或许可证到期通知
+
+此版本提供免费试用将在 60 天后到期的通知，以确保您有时间获得许可证。此版本还在许可证到期当天提供通知。
+
+
+
+=== 服务更新通知
+
+在此版本中，顶部会出现一个横幅，表明服务正在升级并且服务处于维护模式。服务升级时横幅出现，升级完成后横幅消失。虽然您可以在升级过程中继续在 UI 中工作，但您无法提交新作业。更新完成后，计划作业将运行，服务将返回生产模式。
+
+
+
+== 2025年3月10日
+
+版本 4.2.1
+
+
+
+=== 智能代理支持
+
+NetApp控制台代理支持智能代理。智能代理是一种将您的内部系统连接到NetApp灾难恢复的轻量级、安全且高效的方法。它在您的系统和NetApp灾难恢复之间提供安全连接，而无需 VPN 或直接互联网访问。这种优化的代理实现可卸载本地网络内的 API 流量。
+
+配置代理后， NetApp Disaster Recovery 会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
+
+NetApp灾难恢复代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp灾难恢复代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
+
+有关NetApp灾难恢复智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["为NetApp灾难恢复设置基础架构"]。
+
+有关NetApp控制台中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+
+
+
+=== 随时结束免费试用
+
+您可以随时停止免费试用，也可以等到试用期结束。
+
+看 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["结束免费试用"]。
+
+
+
+== 2025年2月19日
+
+4.2 版
+
+
+
+=== ASA r2 支持 VMFS 存储上的虚拟机和数据存储
+
+此版本的NetApp灾难恢复为 VMFS 存储上的虚拟机和数据存储区提供ASA r2 支持。在ASA r2 系统上， ONTAP软件支持基本的 SAN 功能，同时删除 SAN 环境中不支持的功能。
+
+此版本支持ASA r2 的以下功能：
+
+* 主存储的一致性组配置（仅限平面一致性组，即只有一个级别，没有层次结构）
+* 备份（一致性组）操作，包括SnapMirror自动化
+
+
+NetApp灾难恢复中对ASA r2 的支持使用ONTAP 9.16.1。
+
+虽然数据存储库可以挂载在ONTAP卷或ASA r2 存储单元上，但NetApp灾难恢复中的资源组不能同时包含来自ONTAP的数据存储库和来自ASA r2 的数据存储库。您可以从ONTAP中选择一个数据存储区，也可以从资源组中的ASA r2 中选择一个数据存储区。
+
+
+
+== 2024年10月30日
+
+
+
+=== 报告
+
+您现在可以生成和下载报告来帮助您分析您的景观。预先设计的报告总结了故障转移和故障回复，显示了所有站点上的复制详细信息，并显示了过去七天的作业详细信息。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/reports.html["创建灾难恢复报告"]。
+
+
+
+=== 30天免费试用
+
+您现在可以注册NetApp灾难恢复 30 天免费试用版。此前，免费试用期为 90 天。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+
+
+
+=== 禁用和启用复制计划
+
+先前的版本包括对故障转移测试计划结构的更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有的复制计划，以便您能够使用新的每日和每周故障转移测试计划。这是一次性要求。
+
+方法如下：
+
+. 从菜单中选择*复制计划*。
+. 选择一个计划并选择操作图标以显示下拉菜单。
+. 选择*禁用*。
+. 几分钟后，选择*启用*。
+
+
+
+
+=== 文件夹映射
+
+当您创建复制计划并映射计算资源时，您现在可以映射文件夹，以便在您为数据中心、集群和主机指定的文件夹中恢复虚拟机。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 可用于故障转移、故障回复和测试故障转移的虚拟机详细信息
+
+当发生故障并且您正在启动故障转移、执行故障回复或测试故障转移时，您现在可以查看虚拟机的详细信息并确定哪些虚拟机未重新启动。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+
+
+
+=== 具有有序启动顺序的 VM 启动延迟
+
+创建复制计划时，您现在可以为计划中的每个 VM 设置启动延迟。这使您可以设置虚拟机的启动顺序，以确保所有优先级为一的虚拟机都在后续优先级虚拟机启动之前运行。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 虚拟机操作系统信息
+
+创建复制计划时，您现在可以看到计划中每个虚拟机的操作系统。这有助于决定如何将虚拟机分组到资源组中。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== VM 名称别名
+
+创建复制计划时，您现在可以在灾难恢复站点上为虚拟机名称添加前缀和后缀。这使您能够为计划中的虚拟机使用更具描述性的名称。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 清理旧快照
+
+您可以删除超出指定保留数量的不再需要的快照。当您降低快照保留计数时，快照可能会随着时间的推移而累积，现在您可以删除它们以释放空间。您可以随时根据需要或在删除复制计划时执行此操作。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理站点、资源组、复制计划、数据存储和虚拟机信息"]。
+
+
+
+=== 协调快照
+
+您现在可以协调源和目标之间不同步的快照。如果在NetApp灾难恢复之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理复制计划"]。
+
+
+
+== 2024年9月20日
+
+
+
+=== 支持本地到本地 VMware VMFS 数据存储区
+
+此版本支持安装在 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机，用于受 iSCSI 和 FC 保护的本地存储。此前，该服务提供了支持 iSCSI 和 FC 的 VMFS 数据存储的_技术预览_。
+
+以下是有关 iSCSI 和 FC 协议的一些其他注意事项：
+
+* FC 支持针对客户端前端协议，而不是针对复制。
+* NetApp灾难恢复仅支持每个ONTAP卷一个 LUN。该卷不应具有多个 LUN。
+* 对于任何复制计划，目标ONTAP卷都应使用与托管受保护虚拟机的源ONTAP卷相同的协议。例如，如果源使用 FC 协议，则目标也应该使用 FC。
+
+
+
+
+== 2024年8月2日
+
+
+
+=== 支持 FC 的本地到本地 VMware VMFS 数据存储区
+
+此版本包括对安装在 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机的支持的_技术预览_，用于对本地存储进行 FC 保护。此前，该服务提供了支持 iSCSI VMFS 数据存储的技术预览。
+
+
+NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
+
+
+
+=== 取消作业
+
+在此版本中，您现在可以在作业监视器 UI 中取消作业。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控作业"]。
+
+
+
+== 2024年7月17日
+
+
+
+=== 故障转移测试计划
+
+此版本包括对故障转移测试计划结构的更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有的复制计划，以便您能够使用新的每日和每周故障转移测试计划。这是一次性要求。
+
+方法如下：
+
+. 从菜单中选择*复制计划*。
+. 选择一个计划并选择操作图标以显示下拉菜单。
+. 选择*禁用*。
+. 几分钟后，选择*启用*。
+
+
+
+
+=== 复制计划更新
+
+此版本包括复制计划数据的更新，解决了“未找到快照”的问题。这要求您将所有复制计划中的保留计数更改为 1 并启动按需快照。此过程会创建一个新的备份并删除所有旧备份。
+
+方法如下：
+
+. 从菜单中选择*复制计划*。
+. 选择复制计划，单击“*故障转移映射*”选项卡，然后单击“*编辑*”铅笔图标。
+. 单击“*数据存储*”箭头将其展开。
+. 请注意复制计划中的保留计数的值。完成这些步骤后，您将需要恢复此原始值。
+. 将计数减少到 1。
+. 启动按需快照。为此，在复制计划页面上，选择该计划，单击操作图标，然后选择*立即拍摄快照*。
+. 快照作业成功完成后，将复制计划中的计数增加回您在第一步中记下的原始值。
+. 对所有现有的复制计划重复这些步骤。
+
+
+
+
+== 2024年7月5日
+
+此NetApp灾难恢复版本包括以下更新：
+
+
+
+=== 支持AFF A 系列
+
+此版本支持NetApp AFF A 系列硬件平台。
+
+
+
+=== 支持本地到本地 VMware VMFS 数据存储区
+
+此版本包括对安装在受本地存储保护的 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机的支持的_技术预览_。在此版本中，技术预览版支持将本地 VMware 工作负载灾难恢复到具有 VMFS 数据存储的本地 VMware 环境。
+
+
+NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
+
+
+
+=== 复制计划更新
+
+您可以通过在“应用程序”页面上按数据存储过滤虚拟机以及在“资源映射”页面上选择更多目标详细信息来更轻松地添加复制计划。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 编辑复制计划
+
+在此版本中，故障转移映射页面得到了增强，更加清晰。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理计划"]。
+
+
+
+=== 编辑虚拟机
+
+在此版本中，计划中编辑虚拟机的过程包含一些小的 UI 改进。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理虚拟机"]。
+
+
+
+=== 故障转移更新
+
+在启动故障转移之前，您现在可以确定虚拟机的状态以及它们是已打开还是已关闭。故障转移过程现在使您能够立即拍摄快照或选择快照。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+
+
+
+=== 故障转移测试计划
+
+您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月的计划。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理计划"]。
+
+
+
+=== 先决条件信息的更新
+
+NetApp灾难恢复前提条件信息已更新。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["NetApp灾难恢复前提条件"]。
+
+
+
+== 2024年5月15日
+
+此NetApp灾难恢复版本包括以下更新：
+
+
+
+=== 将 VMware 工作负载从本地复制到本地
+
+现在，此功能已作为一项通用功能发布。以前，它是一个功能有限的技术预览版。
+
+
+
+=== 许可更新
+
+借助NetApp灾难恢复，您可以注册 90 天免费试用版、通过 Amazon Marketplace 购买即用即付 (PAYGO) 订阅或自带许可证 (BYOL)，后者是您从NetApp销售代表或NetApp支持站点 (NSS) 获得的NetApp许可证文件 (NLF)。
+
+有关设置NetApp灾难恢复许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置许可"]。
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp灾难恢复的更多信息"] 。
+
+
+
+== 2024年3月5日
+
+这是NetApp灾难恢复的通用版本，其中包括以下更新。
+
+
+
+=== 许可更新
+
+使用NetApp灾难恢复，您可以注册 90 天免费试用或自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp控制台订阅中激活 BYOL。  NetApp灾难恢复费用基于数据存储区的配置容量。
+
+有关设置NetApp灾难恢复许可的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+
+有关管理所有NetApp控制台数据服务的许可证的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["管理所有NetApp控制台数据服务的许可证"^]。
+
+
+
+=== 编辑时间表
+
+在此版本中，您现在可以设置计划来测试合规性和故障转移测试，以确保它们在您需要时能够正常工作。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+== 2024年2月1日
+
+此NetApp灾难恢复预览版包括以下更新：
+
+
+
+=== 网络增强
+
+在此版本中，您现在可以调整 VM CPU 和 RAM 值的大小。您现在还可以为 VM 选择网络 DHCP 或静态 IP 地址。
+
+* DHCP：如果选择此选项，则需要为 VM 提供凭据。
+* 静态IP：您可以选择与源VM相同或不同的信息。如果您选择与来源相同，则无需输入凭据。另一方面，如果您选择使用来自源的不同信息，您可以提供凭据、IP 地址、子网掩码、DNS 和网关信息。
+
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 自定义脚本
+
+现在可以将其作为故障转移后流程包括在内。使用自定义脚本，您可以让NetApp Disaster Recovery 在故障转移过程后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["故障转移到远程站点"]。
+
+
+
+=== SnapMirror 关系
+
+您现在可以在制定复制计划时创建SnapMirror关系。以前，您必须在NetApp灾难恢复之外创建关系。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 一致性组
+
+创建复制计划时，您可以包含来自不同卷和不同 SVM 的 VM。  NetApp灾难恢复通过包含所有卷来创建一致性组快照并更新所有辅助位置。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== VM 开机延迟选项
+
+创建复制计划时，您可以将虚拟机添加到资源组。使用资源组，您可以在每个虚拟机上设置延迟，以便它们按照延迟的顺序启动。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 应用程序一致的 Snapshot 副本
+
+您可以指定创建应用程序一致的 Snapshot 副本。该服务将使应用程序静止，然后拍摄快照以获得应用程序的一致状态。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+== 2024年1月11日
+
+NetApp灾难恢复的预览版本包括以下更新：
+
+
+
+=== 更快速地查看仪表板
+
+通过此版本，您可以更快地从仪表板访问其他页面上的信息。
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解NetApp灾难恢复"] 。
+
+
+
+== 2023年10月20日
+
+NetApp Disaster Recovery 的预览版本包括以下更新。
+
+
+
+=== 保护本地基于 NFS 的 VMware 工作负载
+
+现在，借助NetApp灾难恢复，您可以保护本地基于 NFS 的 VMware 工作负载，使其免受公共云之外的另一个本地基于 NFS 的 VMware 环境的灾难影响。  NetApp灾难恢复负责协调灾难恢复计划的完成。
+
+
+NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp灾难恢复的更多信息"] 。
+
+
+
+== 2023年9月27日
+
+NetApp灾难恢复的预览版本包括以下更新：
+
+
+
+=== 仪表板更新
+
+您现在可以单击仪表板上的选项，从而更轻松快速地查看信息。此外，仪表板现在显示故障转移和迁移的状态。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/dashboard-view.html["在仪表板上查看灾难恢复计划的运行状况"]。
+
+
+
+=== 复制计划更新
+
+* *RPO*：您现在可以在复制计划的数据存储部分输入恢复点目标 (RPO) 和保留计数。这表示必须存在且不早于设定时间的数据量。例如，如果将其设置为 5 分钟，则在发生灾难时系统可能会丢失最多 5 分钟的数据，而不会影响关键业务需求。
++
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+* *网络增强功能*：当您在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时， NetApp Disaster Recovery 现在提供两个选项：DHCP 或静态 IP。以前，仅支持 DHCP。对于静态 IP，您可以配置子网、网关和 DNS 服务器。此外，您现在可以输入虚拟机的凭据。
++
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+* *编辑时间表*：您现在可以更新复制计划时间表。
++
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理资源"]。
+
+* * SnapMirror自动化*：在此版本中创建复制计划时，您可以在以下配置之一中定义源卷和目标卷之间的SnapMirror关系：
++
+** 1 至 1
+** 扇出架构中的一对多
+** 多对一作为一致性组
+** 多对多
++
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+
+
+
+
+== 2023年8月1日
+
+
+
+=== NetApp灾难恢复预览
+
+NetApp灾难恢复预览版是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp灾难恢复预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。
+
+
+NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp灾难恢复的更多信息"] 。
+
+此版本包括以下更新：
+
+
+
+=== 资源组更新启动顺序
+
+创建灾难恢复或复制计划时，您可以将虚拟机添加到功能资源组中。资源组使您能够将一组依赖的虚拟机放入满足您要求的逻辑组中。例如，组可以包含恢复时可以执行的启动顺序。在此版本中，每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在计划中包含的顺序启动。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["选择要复制的应用程序并分配资源组"]。
+
+
+
+=== 复制验证
+
+创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery 每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/replicate.html["将应用程序复制到另一个站点"] 。
+
+
+
+=== 复制计划显示恢复点目标（RPO）传输时间表
+
+创建灾难恢复或复制计划时，您需要选择虚拟机。在此版本中，您现在可以查看与数据存储区或虚拟机关联的每个卷关联的SnapMirror 。您还可以查看与SnapMirror计划关联的 RPO 传输计划。RPO 可帮助您确定备份计划是否足以在灾难后恢复。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 作业监视器更新
+
+作业监视器页面现在包含刷新选项，以便您可以获得最新的操作状态。请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控灾难恢复作业"] 。
+
+
+
+== 2023年5月18日
+
+这是NetApp灾难恢复的初始版本。
+
+
+
+=== 基于云的灾难恢复服务
+
+NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp灾难恢复预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。
+
+link:https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp灾难恢复的更多信息"] 。

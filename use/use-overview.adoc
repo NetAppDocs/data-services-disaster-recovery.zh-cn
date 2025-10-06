@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: use/use-overview.html 
+keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
+summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+---
+= 使用NetApp灾难恢复概述
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+使用NetApp灾难恢复，您可以实现以下目标：
+
+* link:../use/dashboard-view.html["查看灾难恢复计划的健康状况"] 。
+* link:../use/sites-add.html["添加 vCenter 站点"] 。
+* link:../use/resource-group.html["创建资源组以将虚拟机组织在一起"]
+* link:../use/drplan-create.html["制定灾难恢复计划"] 。
+* link:../use/replicate.html["复制 VMware 应用程序"]使用SnapMirror复制将主站点上的数据迁移到云中的灾难恢复远程站点。
+* link:../use/migrate.html["迁移 VMware 应用程序"]从您的主站点到另一个站点。
+* link:../use/failover.html["测试故障转移"]而不会破坏原始虚拟机。
+* 一旦发生灾害，link:../use/failover.html["故障转移您的主站点"]使用 FSx for NetApp ONTAP迁移到 AWS 上的 VMware Cloud。
+* 灾难解除后，link:../use/failback.html["故障恢复"]从灾难恢复站点到主站点。
+* link:../use/monitor-jobs.html["监控灾难恢复操作"]在作业监控页面上。
+

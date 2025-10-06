@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: reference/dr-reference-roles.html 
+keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
+summary: NetApp灾难恢复采用角色来管理每个用户对特定功能和操作的访问权限。 
+---
+= NetApp灾难恢复基于角色的功能访问
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use
+
+
+[role="lead"]
+NetApp灾难恢复采用角色来管理每个用户对特定功能和操作的访问权限。
+
+该服务使用特定于NetApp灾难恢复的以下角色。
+
+* *灾难恢复管理员*：在NetApp灾难恢复中执行任何操作。
+* *灾难恢复故障转移管理员*：在NetApp灾难恢复中执行故障转移和迁移操作。
+* *灾难恢复应用程序管理员*：创建和修改复制计划并启动测试故障转移。
+* *灾难恢复查看器*：查看NetApp灾难恢复中的信息，但不能执行任何操作。
+
+
+这些角色特定于NetApp灾难恢复，与NetApp控制台中使用的平台角色不同。有关所有NetApp控制台平台角色的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp控制台设置和管理文档"^]。
+
+下表列出了每个NetApp灾难恢复角色可以执行的操作。
+
+[cols="30,20a,20a,20a,20a"]
+|===
+| 特征和动作 | 灾难恢复管理员 | 灾难恢复故障转移管理员 | 灾难恢复应用程序管理员 | 灾难恢复查看器 
+
+
+| 查看仪表板和所有选项卡  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 开始免费试用  a| 
+是
+ a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 启动工作负载发现  a| 
+是
+ a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 查看许可证信息  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 激活许可证  a| 
+是
+ a| 
+否
+ a| 
+是
+ a| 
+否
+
+
+
+5+| *在站点选项上*： 
+
+
+| 查看网站  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 添加、修改或删除站点  a| 
+是
+ a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+5+| *关于复制计划选项*： 
+
+
+| 查看复制计划  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 查看复制计划详细信息  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 创建或修改复制计划  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+| 创建报告  a| 
+是
+ a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 查看快照  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 执行故障转移测试  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+| 执行故障转移  a| 
+是
+ a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+| 执行故障回复  a| 
+是
+ a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+| 执行迁移  a| 
+是
+ a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+5+| *关于资源组选项*： 
+
+
+| 查看资源组  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 创建、修改或删除资源组  a| 
+是
+ a| 
+否
+ a| 
+是
+ a| 
+否
+
+
+
+5+| *在职监控选项*： 
+
+
+| 查看职位  a| 
+是
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+| 取消作业  a| 
+是
+ a| 
+是
+ a| 
+是
+ a| 
+否
+
+|===

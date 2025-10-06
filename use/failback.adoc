@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: use/failback.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+---
+= 使用NetApp灾难恢复将应用程序故障恢复到原始源
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+灾难解决后，从灾难恢复站点故障回复到源站点以恢复正常运行。您可以选择要恢复的快照。
+
+*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
+
+link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+
+*关于此任务*
+
+在此工作流程中， NetApp Disaster Recovery 会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。此过程从已完成故障转移到目标的关系开始，并涉及以下步骤：
+
+* 对恢复的站点执行合规性检查。
+* 刷新已确定位于恢复站点中的每个 vCenter 群集的 vCenter 信息。
+* 在目标站点上，关闭并取消注册虚拟机，然后卸载卷。
+* 打破原始源上的SnapMirror关系以使其可读/写。
+* 重新同步SnapMirror关系以逆转复制。
+* 启动并注册源虚拟机，并在源上挂载卷。
+
+
+.步骤
+. 登录 https://console.netapp.com/["NetApp控制台"^]。
+. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp灾难恢复菜单中，选择 *复制计划*。
+. 选择复制计划。
+. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]并选择*故障恢复*。
+. 输入复制计划名称确认并开始故障回复。
+. 选择要从中恢复的数据存储的快照。默认是最新的。
+. 要检查进度，请在菜单中选择*作业监控*。
+

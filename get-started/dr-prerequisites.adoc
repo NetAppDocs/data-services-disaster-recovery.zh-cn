@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-prerequisites.html 
+keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery 
+summary: 在使用NetApp灾难恢复之前，您应该确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp控制台要求。 
+---
+= NetApp灾难恢复前提条件
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+在使用NetApp灾难恢复之前，您应该确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp控制台要求。
+
+
+
+== 软件版本
+
+[cols="35,55a"]
+|===
+| 组件 | 最低版本 
+
+
+| ONTAP 软件  a| 
+ONTAP 9.10.0 或更高版本
+
+
+
+| VMware 本地 vCenter  a| 
+7.0u3 或更高版本
+
+
+
+| 适用于 AWS 的 VMware Cloud  a| 
+最新可用版本
+
+
+
+| Amazon FSx for NetApp ONTAP  a| 
+最新可用版本
+
+|===
+
+
+== ONTAP存储前提条件
+
+这些先决条件适用于ONTAP或 Amazon FSX for NetApp ONTAP实例。
+
+* 源集群和目标集群必须具有对等关系。
+* 目标集群上必须存在将托管灾难恢复卷的 SVM。
+* 源 SVM 和目标 SVM 必须具有对等关系。
+* 如果使用Amazon FSx for NetApp ONTAP进行部署，则适用以下先决条件：
++
+** 您的 VPC 中必须存在用于托管 VMware DR 数据存储区的 Amazon FSx for NetApp ONTAP实例。请参阅Amazon FSx for ONTAP文档 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["如何开始"^]。
+
+
+
+
+
+
+== VMware vCenter 集群先决条件
+
+这些先决条件适用于本地 vCenter 集群和 VMware Cloud for AWS 软件定义数据中心 (SDDC)。
+
+* 审查link:../reference/vcenter-privileges.html["vCenter 权限"]NetApp灾难恢复所必需的。
+* 您希望NetApp Disaster Recovery 管理的所有 VMware 集群都使用ONTAP卷来托管您想要保护的任何虚拟机。
+* NetApp灾难恢复要管理的所有 VMware 数据存储库都必须使用以下协议之一：
++
+** NFS
+** 使用 iSCSI 或 FC 协议的 VMFS
+
+
+* VMware vSphere 版本 7.0 Update 3 (7.0v3) 或更高版本
+* 如果您使用的是 VMware Cloud SDDC，则这些先决条件适用。
++
+** 在 VMware Cloud Console 中，使用管理员和 NSX Cloud 管理员的服务角色。还可以使用组织所有者作为组织角色。参考 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["将 VMware Cloud Foundations 与 AWS FSx for NetApp ONTAP文档结合使用"^]。
+** 将 VMware Cloud SDDC 与Amazon FSx for NetApp ONTAP实例链接。参考 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS 与Amazon FSx for NetApp ONTAP集成部署信息"^]。
+
+
+
+
+
+
+== NetApp控制台前提条件
+
+
+
+=== 开始使用NetApp控制台
+
+如果你还没有这样做， https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["注册NetApp控制台并创建组织"^] 。
+
+
+
+=== 收集ONTAP和 VMware 的凭证
+
+* 必须将Amazon FSx for ONTAP和 AWS 凭证添加到NetApp控制台项目中的系统，用于管理NetApp灾难恢复。
+* NetApp灾难恢复需要 vCenter 凭据。在NetApp灾难恢复中添加站点时，您需要输入 vCenter 凭据。
++
+有关所需 vCenter 权限的列表，请参阅link:../reference/vcenter-privileges.html["NetApp灾难恢复所需的 vCenter 权限"]。有关如何添加站点的说明，请参阅link:../use/sites-add.html["添加站点"]。
+
+
+
+
+
+=== 创建NetApp控制台代理
+
+控制台代理是一个软件组件，它使控制台能够与您的ONTAP存储和 VMware vCenter 集群进行通信。它是灾难恢复正常运行所必需的。该代理驻留在您的私有网络中（位于本地数据中心或云 VPC 中），并与您的ONTAP存储实例以及任何其他服务器和应用程序组件进行通信。对于灾难恢复，这是对您管理的 vCenter 集群的访问。
+
+必须在NetApp控制台中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。
+
+* NetApp灾难恢复仅适用于标准模式代理部署。看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["在标准模式下开始使用NetApp控制台"^]。
+* 确保源 vCenter 和目标 vCenter 使用相同的控制台代理。
+* 所需的控制台代理类型：
++
+** *本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在本地安装并设置控制台代理"^]。
+** *本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["AWS 中的控制台代理安装选项"^]。
++
+
+TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AWS，使用 AWS 控制台代理，它可以访问源本地 vCenter 和目标本地 vCenter。
+
+** 已安装的控制台代理必须能够访问NetApp Disaster Recovery 将管理的任何 VMware 集群。
+
+
+* 所有由NetApp灾难恢复管理的ONTAP阵列都必须添加到NetApp控制台项目内用于管理NetApp灾难恢复的任何系统中。
++
+看 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["发现本地ONTAP集群"^]。
+
+* 有关为NetApp灾难恢复设置智能代理的信息，请参阅link:../get-started/dr-setup.html["为NetApp灾难恢复设置基础架构"]。
+
+
+
+
+== 工作负载先决条件
+
+为了确保应用程序一致性流程成功，请满足以下先决条件：
+
+* 确保 VMware 工具（或 Open VM 工具）正在要保护的虚拟机上运行。
+* 对于运行 Microsoft SQL Server 或 Oracle 数据库或两者的 Windows VM，数据库应启用其 VSS 编写器。
+* 在 Linux 操作系统上运行的 Oracle 数据库应该为 Oracle 数据库 SYSDBA 角色启用操作系统用户身份验证。
+

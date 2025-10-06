@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: use/dashboard-view.html 
+keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
+summary: NetApp灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
+---
+= 在仪表板上查看NetApp灾难恢复计划的运行状况
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+使用NetApp灾难恢复仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。
+
+*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
+
+link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+
+.步骤
+. 登录 https://console.netapp.com/["NetApp控制台"^]。
+. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
+. 从NetApp灾难恢复菜单中，选择 *仪表板*。
++
+image:dr-dashboard.png["NetApp灾难恢复仪表板"]
+
+. 查看仪表板上的以下信息：
++
+** *站点*：查看站点的健康状况。站点可以具有以下状态之一：
++
+*** *正在运行*：vCenter 已连接、健康且正在运行。
+*** *关闭*：vCenter 无法访问或存在连接问题。
+*** *问题*：vCenter 无法访问或存在连接问题。
++
+要查看站点详细信息，请选择“查看全部”查看状态或选择“查看站点”查看全部。
+
+
+
+** *复制计划*：查看计划的健康状况。计划可以具有以下状态之一：
++
+*** *准备好*
+*** *失败的*
++
+要查看复制计划的详细信息，请选择“查看全部”查看状态或选择“查看复制计划”查看全部。
+
+
+
+** *资源组*：查看资源组的健康状况。资源组可以具有以下状态之一：
+** *受保护的虚拟机*：虚拟机是资源组的一部分。
+** *未受保护的虚拟机*：虚拟机不属于资源组的一部分。
++
+要查看详细信息，请选择每个下方的“查看”链接。
+
+** 故障转移、测试故障转移和迁移的次数。例如，如果您创建了两个计划并迁移到目标，则迁移计数显示为“2”。
+
+
+. 查看活动窗格中的所有操作。要查看作业监视器上的所有操作，请选择“查看所有作业”。
+

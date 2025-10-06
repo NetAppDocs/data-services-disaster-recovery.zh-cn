@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-add-sites.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: 在您保护虚拟机基础架构之前， NetApp灾难恢复服务需要知道哪些 VMware vCenter 集群托管着要保护的虚拟机以及这些 vCenter 位于何处。第一步是创建一个站点来代表源数据中心和目标数据中心。站点是故障域或恢复域。 
+---
+= 在NetApp灾难恢复中为 Amazon EVS 添加站点
+:allow-uri-read: 
+
+
+[role="lead"]
+在保护虚拟机基础架构之前，请确定哪些 VMware vCenter 群集托管着要保护的虚拟机以及这些 vCenter 位于何处。第一步是创建一个站点来代表源数据中心和目标数据中心。站点是故障域或恢复域。
+
+您需要创建以下内容：
+
+* 代表生产 vCenter 集群所在的每个生产数据中心的站点
+* Amazon FSx for NetApp ONTAP站点
+
+
+
+
+== 创建本地站点
+
+创建生产 vCenter 站点。
+
+.步骤
+. 从NetApp控制台左侧导航栏中，选择 *保护* > *灾难恢复*。
+. 在NetApp灾难恢复中的任何页面中，选择“*站点*”选项。
++
+image:evs-create-site-op-1.png["站点选项"]
+
+. 从站点选项中，选择*添加*。
++
+image:evs-create-site-op-2.png["在站点选项中添加选项"]
+
+. 在添加站点对话框中，提供站点名称。
+. 选择“On-prem”作为位置。
+. 选择“*添加*”。
++
+image:evs-create-site-op-3-5.png["创建站点对话框"]
+
+
+
+如果您有其他生产 vCenter 站点，则可以使用相同的步骤添加它们。
+
+
+
+== 创建亚马逊云站点
+
+使用Amazon FSx for NetApp ONTAP存储为 Amazon EVS 创建 DR 站点。
+
+. 在NetApp灾难恢复中的任何页面中，选择“*站点*”选项。
++
+image:evs-create-site-op-1.png["站点选项"]
+
+. 从站点选项中，选择*添加*。
++
+image:evs-create-site-aws-2.png["在站点页面上添加选项"]
+
+. 在添加站点对话框中，提供站点名称。
+. 选择“AWS-EVS”作为位置。
+. 选择“*添加*”。
++
+image:evs-create-site-aws-3-5.png["添加对话框"]
+
+
+
+.结果
+现在您已经创建了一个生产（源）站点和一个 DR（目标）站点。

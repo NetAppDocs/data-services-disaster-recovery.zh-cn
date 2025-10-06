@@ -1,0 +1,20 @@
+= NetApp灾难恢复更新
+:allow-uri-read: 
+
+
+
+
+=== NetApp灾难恢复更新
+
+此版本包括以下更新：
+
+* 改进了 VMFS 支持，以处理来自多个存储虚拟机的相同 LUN。
+* 改进了测试拆卸清理以处理已被卸载或删除的数据存储。
+* 改进了子网映射，以便现在可以验证输入的网关是否包含在提供的网络中。
+* 解决了虚拟机名称包含“.com”时可能导致复制计划失败的问题。
+* 在创建复制计划的过程中，删除了阻止目标卷与源卷相同的限制。
+* 在 Azure 市场中添加了对NetApp智能服务的即用即付 (PAYGO) 订阅支持，并在免费试用对话框中添加了 Azure 市场的链接。
++
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp灾难恢复许可"]和 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置NetApp灾难恢复许可"]。
+
+

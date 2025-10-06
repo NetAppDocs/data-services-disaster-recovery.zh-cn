@@ -1,0 +1,20 @@
+= 支持 FC 的本地到本地 VMware VMFS 数据存储区
+:allow-uri-read: 
+
+
+
+
+=== 支持 FC 的本地到本地 VMware VMFS 数据存储区
+
+此版本包括对安装在 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机的支持的_技术预览_，用于对本地存储进行 FC 保护。此前，该服务提供了支持 iSCSI VMFS 数据存储的技术预览。
+
+
+NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
+
+
+
+=== 取消作业
+
+在此版本中，您现在可以在作业监视器 UI 中取消作业。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控作业"]。

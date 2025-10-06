@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-create-rp-wiz-02.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap,amazon elastic vmware service 
+summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp灾难恢复。选择要使用NetApp灾难恢复保护的虚拟机。 
+---
+= 创建复制计划：步骤 2 - 在NetApp灾难恢复中选择虚拟机资源
+:allow-uri-read: 
+
+
+[role="lead"]
+选择要使用NetApp灾难恢复保护的虚拟机。
+
+有多种方法可以选择要保护的虚拟机：
+
+* *选择单个虚拟机*：单击“*虚拟机*”按钮，您可以选择要保护的单个虚拟机。当您选择每个虚拟机时，服务会将其添加到位于屏幕右侧的默认资源组中。
+* *选择先前创建的资源组*：您可以使用NetApp灾难恢复菜单中的资源组选项预先创建自定义资源组。这不是必需的，因为您可以使用其他两种方法来创建资源组作为复制计划过程的一部分。有关详细信息，请参阅link:../use/drplan-create.html["创建复制计划"] 。
+* *选择整个 vCenter 数据存储*：如果您有大量虚拟机需要使用此复制计划保护，则选择单个虚拟机可能效率不高。由于NetApp灾难恢复使用基于卷的SnapMirror复制来保护虚拟机，因此驻留在数据存储区上的所有虚拟机都将作为卷的一部分进行复制。大多数情况下，您应该使用NetApp Disaster Recovery 保护并重新启动数据存储区上的所有虚拟机。使用此选项可以告诉服务将选定数据存储上托管的任何虚拟机添加到受保护虚拟机列表中。
+
+
+对于本指导说明，我们选择整个 vCenter 数据存储。
+
+.访问此页面的步骤
+. 从“*复制计划*”页面继续到“*应用程序*”部分。
+. 查看打开的“*应用程序*”页面中的信息。
++
+image:evs-create-rp-wiz-b-1-4.png["复制计划，应用程序页面"]
+
+
+
+.选择数据存储区的步骤：
+. 选择*数据存储*。
+. 选中您想要保护的每个数据存储旁边的复选框。
+. （可选）通过选择资源组名称旁边的铅笔图标，将资源组重命名为合适的名称。
+. 选择“下一步”。
+
+
+继续link:evs-deploy-guide-create-rp-wiz-03.html["创建复制计划向导步骤3"]。

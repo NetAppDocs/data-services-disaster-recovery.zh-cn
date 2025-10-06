@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-add-vcenters.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: 使用 Amazon EVS 和 Amazon FSxN 介绍NetApp灾难恢复。创建站点后，您现在可以将 vCenter 集群添加到NetApp灾难恢复中的每个站点。当我们创建每个站点时，我们都会指出每个站点的类型。这会告诉NetApp Disaster Recovery 每种站点类型中托管的 vCenter 需要什么类型的访问。 Amazon EVS 的优势之一是 Amazon EVS vCenter 和本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。 
+---
+= 在NetApp灾难恢复中添加本地和 Amazon EVS vCenter 集群
+:allow-uri-read: 
+
+
+[role="lead"]
+创建站点后，您现在可以将 vCenter 集群添加到NetApp灾难恢复中的每个站点。当我们创建每个站点时，我们都会指出每种站点的类型。这会告诉NetApp Disaster Recovery 每种站点类型中托管的 vCenter 需要什么类型的访问。 Amazon EVS 的优势之一是 Amazon EVS vCenter 和本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。
+
+.向每个站点添加 vCenter 的步骤
+. 从“*站点*”选项中，选择所需站点的“*添加 vCenter*”。
++
+image:evs-add-vcenter-1.png["添加 vCenter 选项"]
+
+. 在添加 vCenter 服务器对话框中，选择或提供以下信息：
++
+.. 托管在您的 AWS VPC 内的NetApp控制台代理。
+.. 要添加的 vCenter 的 IP 地址或 FQDN。
+.. 如果不同，请将端口值更改为 vCenter 集群管理器使用的 TCP 端口。
+.. 先前创建的帐户的 vCenter 用户名， NetApp Disaster Recovery 将使用该用户名来管理 vCenter。
+.. 所提供用户名的 vCenter 密码。
+.. 如果您的公司使用外部证书颁发机构 (CA) 或 vCenter Endpoint 证书存储来访问您的 vCenter，请取消选中 *使用自签名证书* 复选框。否则，请保留此框的选中状态。
+
+
+. 选择“*添加*”。
++
+image:evs-add-vcenter-2-3.png["添加 vCenter 对话框"]
+
+

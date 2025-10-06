@@ -1,0 +1,8 @@
+---
+section: release-notes
+title: 发行说明
+entries:
+- title: 什么是新的
+  url: "/release-notes/dr-whats-new.html"
+- title: 限制
+  url: "/release-notes/dr-limitations.html"

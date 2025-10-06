@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-config-prereqs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 在继续使用NetApp灾难恢复配置 Amazon EVS 之前，您应该确保满足几个先决条件。 
+---
+= Amazon EVS 与NetApp灾难恢复的先决条件
+:allow-uri-read: 
+
+
+[role="lead"]
+在继续使用NetApp灾难恢复配置 Amazon EVS 之前，您应该确保满足几个先决条件。
+
+具体来说，请执行以下操作：
+
+* 创建一个 vCenter 用户帐户，该帐户具有NetApp灾难恢复所需的特定 VMware 权限，以执行必要的操作。
++
+
+NOTE: 我们不建议使用默认的“\administrator@vsphere.com”管理员帐户。相反，您应该在将参与 DR 过程的所有 vCenter 集群上创建一个NetApp灾难恢复特定的用户帐户。有关所需特定权限的列表，请参阅link:vcenter-privileges.html["NetApp灾难恢复所需的 vCenter 权限"]。
+
+* 确保将托管受NetApp灾难恢复保护的虚拟机的所有 vCenter 数据存储区都位于NetApp ONTAP存储资源上。
++
+在NetApp ONTAP上使用Amazon FSx时，该服务支持 iSCSI（而非 FC）上的 NFS 和 VMFS。虽然该服务支持 FC，Amazon FSx for NetApp ONTAP不支持。
+
+* 确保您的 Amazon EVS vCenter 已连接到Amazon FSx for NetApp ONTAP存储集群。
+* 确保所有受保护的虚拟机上都安装了 VMware 工具。
+* 确保您的本地网络使用 Amazon 认可的连接方法连接到您的 AWS VPC 网络。我们建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。
+

@@ -1,0 +1,28 @@
+---
+section: use
+title: 使用NetApp灾难恢复
+entries:
+- title: 使用NetApp灾难恢复概述
+  url: "/use/use-overview.html"
+- title: 在仪表板上查看灾难恢复计划的运行状况
+  url: "/use/dashboard-view.html"
+- title: 将 vCenter 添加到站点
+  url: "/use/sites-add.html"
+- title: 创建资源组
+  url: "/use/resource-group.html"
+- title: 创建复制计划
+  url: "/use/drplan-create.html"
+- title: 复制到另一个站点
+  url: "/use/replicate.html"
+- title: 迁移至其他站点
+  url: "/use/migrate.html"
+- title: 故障转移到远程站点
+  url: "/use/failover.html"
+- title: 将应用程序故障恢复到原始源站点
+  url: "/use/failback.html"
+- title: 管理站点、计划、数据存储和虚拟机信息
+  url: "/use/manage.html"
+- title: 监控灾难恢复作业
+  url: "/use/monitor-jobs.html"
+- title: 创建灾难恢复报告
+  url: "/use/reports.html"

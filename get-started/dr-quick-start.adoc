@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-quick-start.html 
+keywords: how to get started with bluexp disaster recovery, disaster recovery quick start, failover, failback 
+summary: 只需几个步骤即可开始使用NetApp灾难恢复服务。 
+---
+= NetApp灾难恢复快速入门
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+以下是开始使用NetApp灾难恢复所需步骤的概述。每个步骤中的链接都会将您带到提供更多详细信息的页面。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]审查先决条件
+[role="quick-margin-para"]
+link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]设置NetApp灾难恢复
+[role="quick-margin-list"]
+* link:../get-started/dr-setup.html["设置服务的基础架构"] 。
+* link:../get-started/dr-licensing.html["设置许可"] 。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]下一步是什么？
+[role="quick-margin-para"]
+设置服务后，您可以执行以下操作。
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["将您的 vCenter 站点添加到NetApp灾难恢复"] 。
+* link:../use/manage.html#manage-resource-groups["创建第一个资源组"] 。
+* link:../use/drplan-create.html["创建您的第一个复制计划"] 。
+* link:../use/replicate.html["将应用程序复制到另一个站点"] 。
+* link:../use/failover.html["将应用程序故障转移到远程站点"] 。
+* link:../use/failback.html["将应用程序故障恢复到原始源站点"] 。
+* link:../use/manage.html["管理站点、资源组和复制计划"] 。
+* link:../use/monitor-jobs.html["监控灾难恢复操作"] 。
+

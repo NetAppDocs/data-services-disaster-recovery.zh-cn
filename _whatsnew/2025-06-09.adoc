@@ -1,0 +1,13 @@
+= Windows 本地管理员密码解决方案 (LAPS) 支持
+:allow-uri-read: 
+
+
+
+
+=== Windows 本地管理员密码解决方案 (LAPS) 支持
+
+Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项功能，可自动管理和备份 Active Directory 上本地管理员帐户的密码。
+
+您现在可以通过提供域控制器详细信息来选择子网映射选项并检查 LAPS 选项。使用此选项，您不需要为每个虚拟机提供密码。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。

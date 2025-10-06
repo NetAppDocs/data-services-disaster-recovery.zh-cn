@@ -1,0 +1,89 @@
+= 报告
+:allow-uri-read: 
+
+
+
+
+=== 报告
+
+您现在可以生成和下载报告来帮助您分析您的景观。预先设计的报告总结了故障转移和故障回复，显示了所有站点上的复制详细信息，并显示了过去七天的作业详细信息。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/reports.html["创建灾难恢复报告"]。
+
+
+
+=== 30天免费试用
+
+您现在可以注册NetApp灾难恢复 30 天免费试用版。此前，免费试用期为 90 天。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+
+
+
+=== 禁用和启用复制计划
+
+先前的版本包括对故障转移测试计划结构的更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有的复制计划，以便您能够使用新的每日和每周故障转移测试计划。这是一次性要求。
+
+方法如下：
+
+. 从菜单中选择*复制计划*。
+. 选择一个计划并选择操作图标以显示下拉菜单。
+. 选择*禁用*。
+. 几分钟后，选择*启用*。
+
+
+
+
+=== 文件夹映射
+
+当您创建复制计划并映射计算资源时，您现在可以映射文件夹，以便在您为数据中心、集群和主机指定的文件夹中恢复虚拟机。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 可用于故障转移、故障回复和测试故障转移的虚拟机详细信息
+
+当发生故障并且您正在启动故障转移、执行故障回复或测试故障转移时，您现在可以查看虚拟机的详细信息并确定哪些虚拟机未重新启动。
+
+参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+
+
+
+=== 具有有序启动顺序的 VM 启动延迟
+
+创建复制计划时，您现在可以为计划中的每个 VM 设置启动延迟。这使您可以设置虚拟机的启动顺序，以确保所有优先级为一的虚拟机都在后续优先级虚拟机启动之前运行。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 虚拟机操作系统信息
+
+创建复制计划时，您现在可以看到计划中每个虚拟机的操作系统。这有助于决定如何将虚拟机分组到资源组中。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== VM 名称别名
+
+创建复制计划时，您现在可以在灾难恢复站点上为虚拟机名称添加前缀和后缀。这使您能够为计划中的虚拟机使用更具描述性的名称。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
+
+=== 清理旧快照
+
+您可以删除超出指定保留数量的不再需要的快照。当您降低快照保留计数时，快照可能会随着时间的推移而累积，现在您可以删除它们以释放空间。您可以随时根据需要或在删除复制计划时执行此操作。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理站点、资源组、复制计划、数据存储和虚拟机信息"]。
+
+
+
+=== 协调快照
+
+您现在可以协调源和目标之间不同步的快照。如果在NetApp灾难恢复之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
+
+有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理复制计划"]。

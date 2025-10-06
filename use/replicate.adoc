@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: use/replicate.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 使用NetApp灾难恢复，您可以使用SnapMirror复制将源站点上的 VMware 应用程序复制到云中的灾难恢复远程站点。 
+---
+= 使用NetApp灾难恢复将应用程序复制到另一个站点
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+使用NetApp灾难恢复，您可以使用SnapMirror复制将源站点上的 VMware 应用程序复制到云中的灾难恢复远程站点。
+
+
+TIP: 创建灾难恢复计划、在向导中确定重复并启动到灾难恢复站点的复制后， NetApp Disaster Recovery 每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。
+
+*所需的NetApp控制台角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
+
+link:../reference/dr-reference-roles.html["了解NetApp灾难恢复中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp控制台访问角色"^] 。
+
+.开始之前
+在启动复制之前，您应该创建复制计划并选择复制应用程序。然后，“操作”菜单中会出现“*复制*”选项。
+
+.步骤
+. 登录 https://console.netapp.com/["NetApp控制台"^]。
+. 从NetApp控制台左侧导航中，选择 *保护* > *灾难恢复*。
+. 从菜单中选择*复制计划*。
+. 选择复制计划。
+. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp灾难恢复服务中的操作菜单图标"]并选择*复制*。
+
