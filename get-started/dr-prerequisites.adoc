@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
 keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery 
-summary: 在使用NetApp Disaster Recovery之前，您应该确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console要求。 
+summary: 在使用NetApp Disaster Recovery之前，请确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console的要求。 
 ---
 = NetApp Disaster Recovery前提条件
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: 在使用NetApp Disaster Recovery之前，您应该确保您的环境�
 
 
 [role="lead"]
-在使用NetApp Disaster Recovery之前，您应该确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console要求。
+在使用NetApp Disaster Recovery之前，请确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console的要求。
 
 
 
@@ -49,11 +49,11 @@ ONTAP 9.10.0 或更高版本
 这些先决条件适用于ONTAP或 Amazon FSX for NetApp ONTAP实例。
 
 * 源集群和目标集群必须具有对等关系。
-* 目标集群上必须存在将托管灾难恢复卷的 SVM。
+* 承载灾难恢复卷的 SVM 必须存在于目标集群上。
 * 源 SVM 和目标 SVM 必须具有对等关系。
 * 如果使用Amazon FSx for NetApp ONTAP进行部署，则适用以下先决条件：
 +
-** 您的 VPC 中必须存在用于托管 VMware DR 数据存储区的Amazon FSx for NetApp ONTAP实例。请参阅Amazon FSx for ONTAP文档 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["如何开始"^]。
+** 您的 VPC 中必须存在用于托管 VMware DR 数据存储区的Amazon FSx for NetApp ONTAP实例。首先，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Amazon FSx for ONTAP文档"^]。
 
 
 
@@ -95,7 +95,7 @@ ONTAP 9.10.0 或更高版本
 
 === 收集ONTAP和 VMware 的凭证
 
-* 必须将Amazon FSx for ONTAP和 AWS 凭证添加到NetApp Console项目中的系统，用于管理NetApp Disaster Recovery。
+* 必须将Amazon FSx for ONTAP和 AWS 凭证添加到管理NetApp Disaster Recovery的NetApp Console项目中的系统中。
 * NetApp Disaster Recovery需要 vCenter 凭据。在NetApp Disaster Recovery中添加站点时，您需要输入 vCenter 凭据。
 +
 有关所需 vCenter 权限的列表，请参阅link:../reference/vcenter-privileges.html["NetApp Disaster Recovery所需的 vCenter 权限"]。有关如何添加站点的说明，请参阅link:../use/sites-add.html["添加站点"]。
@@ -106,7 +106,7 @@ ONTAP 9.10.0 或更高版本
 
 === 创建NetApp Console代理
 
-控制台代理是一个软件组件，它使控制台能够与您的ONTAP存储和 VMware vCenter 集群进行通信。它是灾难恢复正常运行所必需的。该代理驻留在您的私有网络中（位于本地数据中心或云 VPC 中），并与您的ONTAP存储实例以及任何其他服务器和应用程序组件进行通信。对于灾难恢复，这是对您管理的 vCenter 集群的访问。
+控制台代理是一个软件组件，它使控制台能够与您的ONTAP存储和 VMware vCenter 集群进行通信。它是灾难恢复正常运行所必需的。代理程序驻留在您的私有网络（本地数据中心或云 VPC）中，并与您的ONTAP存储实例以及任何其他服务器和应用程序组件进行通信。对于灾难恢复，这是对您管理的 vCenter 集群的访问。
 
 必须在NetApp Console中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。
 
@@ -120,7 +120,7 @@ ONTAP 9.10.0 或更高版本
 
 TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AWS，使用 AWS 控制台代理，它可以访问源本地 vCenter 和目标本地 vCenter。
 
-** 已安装的控制台代理必须能够访问NetApp Disaster Recovery将管理的任何 VMware 集群。
+** 已安装的控制台代理必须能够访问灾难恢复将要管理的任何 VMware vCenter 集群实例和由这些 vCenter 集群管理的 ESXi 主机。
 
 
 * 所有由NetApp Disaster Recovery管理的ONTAP阵列都必须添加到NetApp Console项目内用于管理NetApp Disaster Recovery的任何系统中。
@@ -137,6 +137,6 @@ TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AW
 为了确保应用程序一致性流程成功，请满足以下先决条件：
 
 * 确保 VMware 工具（或 Open VM 工具）正在要保护的虚拟机上运行。
-* 对于运行 Microsoft SQL Server 或 Oracle Database 或两者的 Windows VM，数据库应启用其 VSS Writer。
-* 在 Linux 操作系统上运行的 Oracle 数据库应该为 Oracle 数据库 SYSDBA 角色启用操作系统用户身份验证。
+* 对于运行 Microsoft SQL Server、Oracle 数据库或两者的 Windows 虚拟机，必须启用数据库的 VSS 写入器。
+* 在 Linux 操作系统上运行的 Oracle 数据库必须为 Oracle 数据库 SYSDBA 角色启用操作系统用户身份验证。
 
