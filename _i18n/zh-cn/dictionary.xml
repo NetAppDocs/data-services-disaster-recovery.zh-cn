@@ -1510,7 +1510,6 @@
   <block id="10c490bdf4b14320b22d49a659b33c9b" category="list-text">*首选 NFS LIF* 和 *导出策略*：通常，让服务选择首选 NFS LIF 和导出策略。如果要使用特定的 NFS LIF 或导出策略，请选择每个字段旁边的向下箭头并选择相应的选项。</block>
   <block id="3a34b1c612fbfa5151b5f75fa3b7f4d8" category="paragraph">您可以选择在故障转移事件后为卷使用特定的数据接口 (LIF)。如果目标 SVM 有多个 LIF，这对于数据流量平衡很有用。</block>
   <block id="80b4d61db95d764d9478be9bd5dce2ba" category="paragraph">为了进一步控制 NAS 数据访问安全性，该服务可以为不同的数据存储卷分配特定的 NAS 导出策略。导出策略定义访问数据存储卷的 NFS 客户端的访问控制规则。如果您未指定导出策略，则服务将使用 SVM 的默认导出策略。</block>
-  <block id="c1010e08c79f29288805732c914b88b2" category="paragraph">*最佳实践*：我们强烈建议您创建一个专用的导出策略，将卷访问限制为仅托管受保护虚拟机的源和目标 vCenter ESXi 主机。这有助于确保外部实体无法访问 NFS 导出。</block>
   <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">添加测试故障转移映射</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择“*测试映射*”选项卡。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">像以前一样浏览每个选项卡，但这次针对测试环境。</block>
@@ -1915,4 +1914,16 @@
   <block id="c17db388b1bce3930a27ba26379fd97f" category="list-text">选择站点，然后选择NetApp Console代理，并提供 vCenter 凭据。</block>
   <block id="51f46f78f8aed3edc5be5baa188edfc3" category="list-text">**仅限本地站点：** 要接受源 vCenter 的自签名证书，请选中该复选框。</block>
   <block id="3197d20854469510f60e5d3f44b0db4d" category="paragraph">接下来添加目标 vCenter。</block>
+  <block id="5b5de768a01e088dbab56f46d97b5a38" category="doc">级联故障转移支持</block>
+  <block id="8115dd8449bd907d08f3347f6d04324a" category="paragraph">现在您可以在ONTAP中配置级联关系，并使用该复制关系的任何分支进行灾难恢复。</block>
+  <block id="eb2fa9dcb8eaa46c82c070f8bbe8418a" category="section-title">注册期间降低 VMware 硬件支持级别</block>
+  <block id="f83d7a6597b186db7483e2f478aeb8fa" category="paragraph">灾难恢复功能现在支持在注册过程中将 VMware 硬件降级到早期版本的 vSphere。当源 ESX 主机运行的版本比灾难恢复站点的版本更新时，这非常有用。</block>
+  <block id="a412b7de9758b999e39beb6a86f38803" category="paragraph">有关详细信息，请参阅 <block ref="3b88d2273f8f2a777f18a77cece1dbb2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="bcf697aa5ef7fc37fba63ce6d2bf0e43" category="section-title">优雅关机</block>
+  <block id="9437b903cdafc2fdfce3c66af80b97f0" category="paragraph">灾难恢复现在会优雅地关闭虚拟机，而不是直接断电。如果某个虚拟机关机时间超过十分钟，灾难恢复功能会将其关闭。</block>
+  <block id="9b9e3165f7ecae3e2e3b2c795e562976" category="section-title">备份前脚本支持</block>
+  <block id="bb05f5a972177b632dbf8088c480f305" category="paragraph">现在您可以将自定义脚本注入到故障转移工作流程中，以便在创建备份之前运行。备份前脚本允许您在复制快照之前控制虚拟机的状态，并为虚拟机的转换做好准备。例如，您可以注入一个脚本来卸载 NFS 挂载点，然后在故障转移后使用另一个脚本重新挂载该挂载点。</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
+  <block id="67d901d806b31ec45748075cf6b4b785" category="list-text">*降级虚拟机硬件版本并注册*：如果目标 ESX 主机版本早于源版本，请选择此项，以便在注册期间匹配。</block>
+  <block id="c41917a6c517c418de809b1e4f43f537" category="admonition">建议您创建一个专门的导出策略，将卷访问权限限制为_仅_将托管受保护虚拟机的源 vCenter ESXi 主机和目标 vCenter ESXi 主机。这样可以确保外部实体无法访问 NFS 导出内容。</block>
 </blocks>

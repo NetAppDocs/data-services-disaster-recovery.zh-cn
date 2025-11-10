@@ -1,0 +1,31 @@
+= 级联故障转移支持
+:allow-uri-read: 
+
+
+
+
+=== 级联故障转移支持
+
+现在您可以在ONTAP中配置级联关系，并使用该复制关系的任何分支进行灾难恢复。
+
+
+
+=== 注册期间降低 VMware 硬件支持级别
+
+灾难恢复功能现在支持在注册过程中将 VMware 硬件降级到早期版本的 vSphere。当源 ESX 主机运行的版本比灾难恢复站点的版本更新时，这非常有用。
+
+有关详细信息，请参阅 xref:drplan-create.html#map-resources-virtual-machines-section[在NetApp Disaster Recovery中创建复制计划]。
+
+
+
+=== 优雅关机
+
+灾难恢复现在会优雅地关闭虚拟机，而不是直接断电。如果某个虚拟机关机时间超过十分钟，灾难恢复功能会将其关闭。
+
+
+
+=== 备份前脚本支持
+
+现在您可以将自定义脚本注入到故障转移工作流程中，以便在创建备份之前运行。备份前脚本允许您在复制快照之前控制虚拟机的状态，并为虚拟机的转换做好准备。例如，您可以注入一个脚本来卸载 NFS 挂载点，然后在故障转移后使用另一个脚本重新挂载该挂载点。
+
+有关详细信息，请参阅 xref:drplan-create.html#map-resources-virtual-machines-section[在NetApp Disaster Recovery中创建复制计划]。
