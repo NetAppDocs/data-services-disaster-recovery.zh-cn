@@ -30,7 +30,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 灾难恢复功能现在支持在注册过程中将 VMware 硬件降级到早期版本的 vSphere。当源 ESX 主机运行的版本比灾难恢复站点的版本更新时，这非常有用。
 
-有关详细信息，请参阅 xref:drplan-create.html#map-resources-virtual-machines-section[在NetApp Disaster Recovery中创建复制计划]。
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["在NetApp Disaster Recovery中创建复制计划"]。
 
 
 
@@ -44,7 +44,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 现在您可以将自定义脚本注入到故障转移工作流程中，以便在创建备份之前运行。备份前脚本允许您在复制快照之前控制虚拟机的状态，并为虚拟机的转换做好准备。例如，您可以注入一个脚本来卸载 NFS 挂载点，然后在故障转移后使用另一个脚本重新挂载该挂载点。
 
-有关详细信息，请参阅 xref:drplan-create.html#map-resources-virtual-machines-section[在NetApp Disaster Recovery中创建复制计划]。
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["在NetApp Disaster Recovery中创建复制计划"]。
 
 
 

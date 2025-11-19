@@ -1918,7 +1918,6 @@
   <block id="8115dd8449bd907d08f3347f6d04324a" category="paragraph">现在您可以在ONTAP中配置级联关系，并使用该复制关系的任何分支进行灾难恢复。</block>
   <block id="eb2fa9dcb8eaa46c82c070f8bbe8418a" category="section-title">注册期间降低 VMware 硬件支持级别</block>
   <block id="f83d7a6597b186db7483e2f478aeb8fa" category="paragraph">灾难恢复功能现在支持在注册过程中将 VMware 硬件降级到早期版本的 vSphere。当源 ESX 主机运行的版本比灾难恢复站点的版本更新时，这非常有用。</block>
-  <block id="a412b7de9758b999e39beb6a86f38803" category="paragraph">有关详细信息，请参阅 <block ref="3b88d2273f8f2a777f18a77cece1dbb2" category="inline-xref-macro-rx"></block>。</block>
   <block id="bcf697aa5ef7fc37fba63ce6d2bf0e43" category="section-title">优雅关机</block>
   <block id="9437b903cdafc2fdfce3c66af80b97f0" category="paragraph">灾难恢复现在会优雅地关闭虚拟机，而不是直接断电。如果某个虚拟机关机时间超过十分钟，灾难恢复功能会将其关闭。</block>
   <block id="9b9e3165f7ecae3e2e3b2c795e562976" category="section-title">备份前脚本支持</block>
@@ -1926,4 +1925,5 @@
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
   <block id="67d901d806b31ec45748075cf6b4b785" category="list-text">*降级虚拟机硬件版本并注册*：如果目标 ESX 主机版本早于源版本，请选择此项，以便在注册期间匹配。</block>
   <block id="c41917a6c517c418de809b1e4f43f537" category="admonition">建议您创建一个专门的导出策略，将卷访问权限限制为_仅_将托管受保护虚拟机的源 vCenter ESXi 主机和目标 vCenter ESXi 主机。这样可以确保外部实体无法访问 NFS 导出内容。</block>
+  <block id="11decf8e913c8fbeb5d947338d43e3b0" category="paragraph">有关详细信息，请参阅 <block ref="bf6dbdf786c7323ca961bfd2e12103c6" category="inline-link-macro-rx"></block>。</block>
 </blocks>
