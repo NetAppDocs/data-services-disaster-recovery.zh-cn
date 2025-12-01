@@ -20,7 +20,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 *所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 .步骤
 . 登录 https://console.netapp.com/["NetApp Console"^]。
@@ -39,7 +39,7 @@ link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的�
 
 *所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 .步骤
 . 从NetApp Console左侧导航栏中，选择 *保护* > *灾难恢复*。

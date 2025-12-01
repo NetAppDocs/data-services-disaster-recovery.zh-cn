@@ -23,13 +23,18 @@ summary: 在使用NetApp Disaster Recovery之前，请确保您的环境满足ON
 | 组件 | 最低版本 
 
 
+| Amazon FSx for NetApp ONTAP  a| 
+最新可用版本
+
+
+
+| 使用Google Cloud NetApp Volumes 的Google Cloud VMware Engine  a| 
+最新可用版本
+
+
+
 | ONTAP 软件  a| 
 ONTAP 9.10.0 或更高版本
-
-
-
-| VMware 本地 vCenter  a| 
-7.0u3 或更高版本
 
 
 
@@ -38,10 +43,64 @@ ONTAP 9.10.0 或更高版本
 
 
 
-| Amazon FSx for NetApp ONTAP  a| 
-最新可用版本
+| VMware 本地 vCenter  a| 
+7.0u3 或更高版本
 
 |===
+
+
+== Google Cloud 的先决条件和注意事项
+
+使用 Google Google Cloud NetApp Volumes VMware Engine 上进行灾难恢复时，请确保配置正确的权限并遵守以下注意事项。
+
+* 请联系 Google SRE 团队，将以下服务添加到允许列表中：
++
+** 同步 API，用于将快照从本地存储传输到Google Cloud NetApp Volumes。
+** Google 与 VMware 引擎合作的项目，用于创建、挂载和卸载数据存储。
+
+
+* 你必须link:https://docs.google.com/forms/d/1zuaHu437MNpUf8i5oByK-OTLWXcNIg0es9t036riYRc/viewform?edit_requested=true["提交请求，将您的卷添加到混合复制允许列表中"^]。
+* 注意link:https://docs.cloud.google.com/netapp/volumes/docs/quotas["Google Cloud NetApp Volumes配额和限制"^]。
+* 一个复制计划只能添加一个卷或数据存储。
+* 复习link:../release-notes/dr-limitations.html#limitations-with-google-cloud-netapp-volumes["限制"]。
+
+
+故障转移注意事项
+
+* 故障转移仅支持使用最新快照版本。如有必要，您可以在创建快照期间创建新快照（即必须禁用选择性快照选项）。
+* 故障转移后无法创建新的快照。
+* 故障转移后无法保留和协调快照。
+
+
+**故障恢复考虑因素**
+
+* 只有在启用选择性快照选项的情况下才能进行故障恢复。您无法通过创建新快照来执行故障恢复。
+* 如果删除本地存储和Google Cloud NetApp Volumes存储集群之间的集群对等连接，则必须手动从本地集群中清除集群和存储 VM 对等连接条目。有关详细信息，请参阅 link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-delete.html["删除虚拟服务器对等关系"^]。
+
+
+
+
+=== Google Cloud 权限
+
+应为 Google Cloud 中的服务主体分配以下角色或等效权限：
+
+* link:https://docs.cloud.google.com/compute/docs/access/iam["计算管理员角色"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["NetApp Console的 Google Cloud 权限"^]
+* link:https://docs.cloud.google.com/iam/docs/roles-permissions/netapp["Google Cloud NetApp Volumes管理员"]
+* link:https://docs.cloud.google.com/vmware-engine/docs/iam#vmware-engine-roles["VMware Engine 服务管理员"^]
+
+
+
+
+=== NetApp Console权限
+
+NetApp Console用户必须具有以下角色：
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理员"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["SnapCenter管理员"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["灾难恢复故障转移管理员"^]
+
+
 
 
 == ONTAP存储前提条件
@@ -89,7 +148,7 @@ ONTAP 9.10.0 或更高版本
 
 === 开始使用NetApp Console
 
-如果你还没有这样做， https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["注册NetApp Console并创建组织"^] 。
+如果你还没有这样做的话， https://docs.netapp.com/us-en/console-setup-admin/task-sign-up-saas.html["注册NetApp Console并创建组织"^] 。
 
 
 
@@ -110,12 +169,12 @@ ONTAP 9.10.0 或更高版本
 
 必须在NetApp Console中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。
 
-* NetApp Disaster Recovery仅适用于标准模式代理部署。看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["在标准模式下开始使用NetApp Console"^]。
+* NetApp Disaster Recovery仅适用于标准模式代理部署。看 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["在标准模式下开始使用NetApp Console"^]。
 * 确保源 vCenter 和目标 vCenter 使用相同的控制台代理。
 * 所需的控制台代理类型：
 +
-** *本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在本地安装并设置控制台代理"^]。
-** *本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["AWS 中的控制台代理安装选项"^]。
+** *本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本地安装并设置控制台代理"^]。
+** *本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["AWS 中的控制台代理安装选项"^]。
 +
 
 TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AWS，使用 AWS 控制台代理，它可以访问源本地 vCenter 和目标本地 vCenter。
@@ -125,7 +184,7 @@ TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AW
 
 * 所有由NetApp Disaster Recovery管理的ONTAP阵列都必须添加到NetApp Console项目内用于管理NetApp Disaster Recovery的任何系统中。
 +
-看 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["发现本地ONTAP集群"^]。
+看 https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["发现本地ONTAP集群"^]。
 
 * 有关为NetApp Disaster Recovery设置智能代理的信息，请参阅link:../get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
 

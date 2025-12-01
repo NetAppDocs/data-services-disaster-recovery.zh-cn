@@ -12,9 +12,9 @@ NetApp Console代理支持智能代理。智能代理是一种将您的内部部
 
 NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
 
-有关NetApp Disaster Recovery智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
+有关NetApp Disaster Recovery智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
 
-有关在NetApp Console中设置常规代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+有关NetApp Console中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
 
 
 
@@ -22,4 +22,4 @@ NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理�
 
 您可以随时停止免费试用，也可以等到试用期结束。
 
-看 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["结束免费试用"]。
+看 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["结束免费试用"]。

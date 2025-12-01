@@ -16,6 +16,18 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 
+== 2025年12月1日
+
+
+
+=== 支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine。
+
+NetApp Disaster Recovery现在支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine 进行迁移、故障转移、故障恢复和测试操作。这种集成实现了本地环境和 Google Cloud 之间的无缝灾难恢复工作流程。
+
+请务必仔细阅读。link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["前提条件"]和link:https://docs.netapp.com/us-en/data-services-disaster-recovery/release-notes/dr-limitations.adoc["限制"]适用于谷歌云。
+
+
+
 == 2025年11月10日
 
 
@@ -62,7 +74,7 @@ BlueXP disaster recovery已重命名为NetApp Disaster Recovery。
 
 NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp Data Services，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。
 
-有关更改的详细信息，请参阅link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp Console发行说明"]。
+有关具体变更内容，请参阅…… link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Console发行说明"]。
 
 
 
@@ -93,7 +105,7 @@ NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内
 * 在创建复制计划的过程中，删除了阻止目标卷与源卷相同的限制。
 * 在 Azure 市场中添加了对NetApp智能服务的即用即付 (PAYGO) 订阅支持，并在免费试用对话框中添加了 Azure 市场的链接。
 +
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recovery许可"]和 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
+详情请见 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recovery许可"]和 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
 
 
 
@@ -119,9 +131,9 @@ NetApp Disaster Recovery现在采用角色来管理每个用户对特定功能�
 
 如果您单击NetApp Disaster Recovery服务并首次对其进行配置，则必须具有 *SnapCenterAdmin* 权限或具有 *Organization Admin* 角色。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp Disaster Recovery中的用户角色和权限"] 。
+有关详细信息，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recovery中的用户角色和权限"]。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^]。
 
 
 
@@ -188,7 +200,7 @@ Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项�
 
 您现在可以通过提供域控制器详细信息来选择子网映射选项并检查 LAPS 选项。使用此选项，您不需要为每个虚拟机提供密码。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -216,7 +228,7 @@ VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置�
 
 总之，主机地址保持不变，而网络地址则被站点子网映射中配置的地址替换。这使您能够更轻松地管理故障转移时的 IP 地址重新分配，特别是当您需要管理数百个网络和数千个虚拟机时。
 
-有关在站点中包含子网映射的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
+有关如何在站点中包含子网映射的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
 
 
 
@@ -230,7 +242,7 @@ VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置�
 
 原始源站点恢复在线后，您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。
 
-有关跳过保护的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+有关跳过保护的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
 
 
 
@@ -244,7 +256,7 @@ NetApp Disaster Recovery现在支持使用外部快照管理解决方案，例�
 
 配置完成后，服务不会定期拍摄任何快照，而是依赖外部实体来拍摄和更新这些快照。
 
-有关在复制计划中使用外部快照解决方案的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关在复制计划中使用外部快照解决方案的详细信息，请参阅： https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"] 。
 
 
 
@@ -260,7 +272,7 @@ NetApp Disaster Recovery每 24 小时执行一次发现。通过此版本，您�
 
 如果您不想安排发现，您可以禁用计划发现选项并随时手动刷新发现。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html["添加 vCenter 服务器站点"]。
 
 
 
@@ -274,7 +286,7 @@ NetApp Disaster Recovery每 24 小时执行一次发现。通过此版本，您�
 * 当您创建复制计划并在计划内创建资源组时，您可以在数据存储区中看到虚拟机。
 
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -304,9 +316,9 @@ NetApp Console代理支持智能代理。智能代理是一种将您的内部部
 
 NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
 
-有关NetApp Disaster Recovery智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
+有关NetApp Disaster Recovery智能代理的更多信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
 
-有关在NetApp Console中设置常规代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+有关NetApp Console中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
 
 
 
@@ -314,7 +326,7 @@ NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理�
 
 您可以随时停止免费试用，也可以等到试用期结束。
 
-看 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["结束免费试用"]。
+看 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["结束免费试用"]。
 
 
 
@@ -348,7 +360,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 您现在可以生成和下载报告来帮助您分析您的景观。预先设计的报告总结了故障转移和故障回复，显示了所有站点上的复制详细信息，并显示了过去七天的作业详细信息。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/reports.html["创建灾难恢复报告"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/reports.html["创建灾难恢复报告"]。
 
 
 
@@ -356,7 +368,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 您现在可以注册NetApp Disaster Recovery30 天免费试用版。此前，免费试用期为 90 天。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
 
 
 
@@ -378,7 +390,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 当您创建复制计划并映射计算资源时，您现在可以映射文件夹，以便在您为数据中心、集群和主机指定的文件夹中恢复虚拟机。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -386,7 +398,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 当发生故障并且您正在启动故障转移、执行故障回复或测试故障转移时，您现在可以查看虚拟机的详细信息并确定哪些虚拟机未重新启动。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
 
 
 
@@ -394,7 +406,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 创建复制计划时，您现在可以为计划中的每个 VM 设置启动延迟。这使您可以设置虚拟机的启动顺序，以确保所有优先级为一的虚拟机都在后续优先级虚拟机启动之前运行。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -402,7 +414,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 创建复制计划时，您现在可以看到计划中每个虚拟机的操作系统。这有助于决定如何将虚拟机分组到资源组中。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -410,7 +422,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 创建复制计划时，您现在可以在灾难恢复站点上为虚拟机名称添加前缀和后缀。这使您能够为计划中的虚拟机使用更具描述性的名称。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -418,7 +430,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 您可以删除超出指定保留数量的不再需要的快照。当您降低快照保留计数时，快照可能会随着时间的推移而累积，现在您可以删除它们以释放空间。您可以随时根据需要或在删除复制计划时执行此操作。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理站点、资源组、复制计划、数据存储和虚拟机信息"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理站点、资源组、复制计划、数据存储和虚拟机信息"]。
 
 
 
@@ -426,7 +438,7 @@ NetApp Disaster Recovery中对ASA r2 的支持使用ONTAP 9.16.1。
 
 您现在可以协调源和目标之间不同步的快照。如果在NetApp Disaster Recovery之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理复制计划"]。
 
 
 
@@ -464,7 +476,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 在此版本中，您现在可以在作业监视器 UI 中取消作业。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控作业"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["监控作业"]。
 
 
 
@@ -527,7 +539,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 === 复制计划更新
 
-您可以通过在“应用程序”页面上按数据存储过滤虚拟机以及在“资源映射”页面上选择更多目标详细信息来更轻松地添加复制计划。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+您可以通过在“应用程序”页面上按数据存储过滤虚拟机以及在“资源映射”页面上选择更多目标详细信息来更轻松地添加复制计划。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -535,7 +547,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 在此版本中，故障转移映射页面得到了增强，更加清晰。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理计划"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理计划"]。
 
 
 
@@ -543,7 +555,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 在此版本中，计划中编辑虚拟机的过程包含一些小的 UI 改进。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理虚拟机"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理虚拟机"]。
 
 
 
@@ -551,7 +563,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 在启动故障转移之前，您现在可以确定虚拟机的状态以及它们是已打开还是已关闭。故障转移过程现在使您能够立即拍摄快照或选择快照。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
 
 
 
@@ -559,7 +571,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月的计划。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理计划"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理计划"]。
 
 
 
@@ -567,7 +579,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 NetApp Disaster Recovery前提条件信息已更新。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recovery前提条件"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recovery前提条件"]。
 
 
 
@@ -589,7 +601,7 @@ NetApp Disaster Recovery前提条件信息已更新。
 
 有关设置NetApp Disaster Recovery许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置许可"]。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
 
 
 
@@ -603,9 +615,9 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 使用NetApp Disaster Recovery，您可以注册 90 天免费试用或自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console订阅中激活 BYOL。  NetApp Disaster Recovery费用基于数据存储区的配置容量。
 
-有关设置NetApp Disaster Recovery许可的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+有关设置NetApp Disaster Recovery许可的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
 
-有关管理所有NetApp Console数据服务的许可证的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["管理所有NetApp Console数据服务的许可证"^]。
+有关管理*所有* NetApp Console数据服务的许可证的详细信息，请参阅： https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["管理所有NetApp Console数据服务的许可证"^] 。
 
 
 
@@ -613,7 +625,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 在此版本中，您现在可以设置计划来测试合规性和故障转移测试，以确保它们在您需要时能够正常工作。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -631,7 +643,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 * 静态IP：您可以选择与源VM相同或不同的信息。如果您选择与来源相同，则无需输入凭据。另一方面，如果您选择使用来自源的不同信息，您可以提供凭据、IP 地址、子网掩码、DNS 和网关信息。
 
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -639,7 +651,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 现在可以将其作为故障转移后流程包括在内。使用自定义脚本，您可以让NetApp Disaster Recovery在故障转移过程后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["故障转移到远程站点"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移到远程站点"]。
 
 
 
@@ -647,7 +659,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 您现在可以在制定复制计划时创建SnapMirror关系。以前，您必须在NetApp Disaster Recovery之外创建关系。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -655,7 +667,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 创建复制计划时，您可以包含来自不同卷和不同 SVM 的 VM。  NetApp Disaster Recovery通过包含所有卷来创建一致性组快照并更新所有辅助位置。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -663,7 +675,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 创建复制计划时，您可以将虚拟机添加到资源组。使用资源组，您可以在每个虚拟机上设置延迟，以便它们按照延迟的顺序启动。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -671,7 +683,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 您可以指定创建应用程序一致的 Snapshot 副本。该服务将使应用程序静止，然后拍摄快照以获得应用程序的一致状态。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -685,7 +697,7 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 
 通过此版本，您可以更快地从仪表板访问其他页面上的信息。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解NetApp Disaster Recovery"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解NetApp Disaster Recovery"]。
 
 
 
@@ -702,7 +714,7 @@ NetApp Disaster Recovery的预览版本包括以下更新。
 
 NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
 
 
 
@@ -716,7 +728,7 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 
 现在您可以在仪表盘上选择选项，从而更轻松地快速查看信息。此外，仪表板现在显示故障转移和迁移的状态。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/dashboard-view.html["在仪表板上查看灾难恢复计划的运行状况"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["在仪表板上查看灾难恢复计划的运行状况"]。
 
 
 
@@ -724,15 +736,15 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 
 * *RPO*：您现在可以在复制计划的数据存储部分输入恢复点目标 (RPO) 和保留计数。这表示必须存在且不早于设定时间的数据量。例如，如果将其设置为 5 分钟，则在发生灾难时系统可能会丢失最多 5 分钟的数据，而不会影响关键业务需求。
 +
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 * *网络增强功能*：当您在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时， NetApp Disaster Recovery现在提供两个选项：DHCP 或静态 IP。以前，仅支持 DHCP。对于静态 IP，您可以配置子网、网关和 DNS 服务器。此外，您现在可以输入虚拟机的凭据。
 +
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 * *编辑时间表*：您现在可以更新复制计划时间表。
 +
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理资源"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理资源"]。
 
 * * SnapMirror自动化*：在此版本中创建复制计划时，您可以在以下配置之一中定义源卷和目标卷之间的SnapMirror关系：
 +
@@ -741,7 +753,7 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 ** 多对一作为一致性组
 ** 多对多
 +
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
@@ -760,7 +772,7 @@ NetApp Disaster Recovery预览版是一种基于云的灾难恢复服务，可�
 
 NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
 
 此版本包括以下更新：
 
@@ -768,25 +780,25 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 === 资源组更新启动顺序
 
-创建灾难恢复或复制计划时，您可以将虚拟机添加到功能资源组中。资源组使您能够将一组依赖的虚拟机放入满足您要求的逻辑组中。例如，组可以包含恢复时可以执行的启动顺序。在此版本中，每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在计划中包含的顺序启动。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["选择要复制的应用程序并分配资源组"]。
+创建灾难恢复或复制计划时，您可以将虚拟机添加到功能资源组中。资源组使您能够将一组依赖的虚拟机放入满足您要求的逻辑组中。例如，组可以包含恢复时可以执行的启动顺序。在此版本中，每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在计划中包含的顺序启动。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["选择要复制的应用程序并分配资源组"]。
 
 
 
 === 复制验证
 
-创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/replicate.html["将应用程序复制到另一个站点"] 。
+创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["将应用程序复制到另一个站点"]。
 
 
 
 === 复制计划显示恢复点目标（RPO）传输时间表
 
-创建灾难恢复或复制计划时，您需要选择虚拟机。在此版本中，您现在可以查看与数据存储区或虚拟机关联的每个卷关联的SnapMirror 。您还可以查看与SnapMirror计划关联的 RPO 传输计划。RPO 可帮助您确定备份计划是否足以在灾难后恢复。参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+创建灾难恢复或复制计划时，您需要选择虚拟机。在此版本中，您现在可以查看与数据存储区或虚拟机关联的每个卷关联的SnapMirror 。您还可以查看与SnapMirror计划关联的 RPO 传输计划。RPO 可帮助您确定备份计划是否足以在灾难后恢复。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
 === 作业监视器更新
 
-作业监视器页面现在包含刷新选项，以便您可以获得最新的操作状态。请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控灾难恢复作业"] 。
+作业监视器页面现在包含刷新选项，以便您可以获得最新的操作状态。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["监控灾难恢复作业"]。
 
 
 
@@ -800,4 +812,4 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。
 
-link:https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"] 。
+link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。

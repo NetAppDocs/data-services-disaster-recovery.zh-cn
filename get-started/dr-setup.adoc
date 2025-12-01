@@ -88,7 +88,7 @@ AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点
 * 创建Amazon FSx for NetApp ONTAP文件系统。
 +
 ** 为ONTAP配置 FSx。  Amazon FSx for NetApp ONTAP是一项完全托管的服务，它基于NetApp ONTAP文件系统构建，提供高度可靠、可扩展、高性能且功能丰富的文件存储。
-** 按照以下步骤操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["技术报告 4938：使用 VMware Cloud on AWS 将Amazon FSx ONTAP挂载为 NFS 数据存储"^]和 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP快速入门"]配置和配置 FSx for ONTAP。
+** 按照以下步骤操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["技术报告 4938：使用 VMware Cloud on AWS 将Amazon FSx ONTAP挂载为 NFS 数据存储"^]和 https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP快速入门"]为ONTAP配置和部署 FSx。
 
 
 * 将Amazon FSx for ONTAP添加到系统，并为 FSx for ONTAP添加 AWS 凭证。
@@ -149,4 +149,4 @@ NetApp Console代理支持智能代理。智能代理是一种将您的内部环
 
 NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
 
-有关在NetApp Console中设置常规代理的更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。
+有关NetApp Console中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。

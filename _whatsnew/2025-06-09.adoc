@@ -10,4 +10,4 @@ Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项�
 
 您现在可以通过提供域控制器详细信息来选择子网映射选项并检查 LAPS 选项。使用此选项，您不需要为每个虚拟机提供密码。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。

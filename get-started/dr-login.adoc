@@ -16,7 +16,7 @@ summary: 通过访问NetApp Console中的服务开始使用NetApp Disaster Recov
 
 要登录，您可以使用您的NetApp支持站点凭证，也可以使用您的电子邮件和密码注册NetApp云登录。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["了解有关登录的更多信息"^] 。
 
-特定任务需要特定的用户角色。link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
+特定任务需要特定的用户角色。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 .步骤
 . 打开 Web 浏览器并转到 https://console.netapp.com/["NetApp Console"^]。
@@ -35,7 +35,7 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recovery的登录页面屏�
 否则，将出现NetApp Disaster Recovery仪表板。
 
 +
-** 如果您尚未添加NetApp Console代理，则需要添加一个。要添加代理，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解控制台代理"^]。
+** 如果您尚未添加NetApp Console代理，则需要添加一个。要添加代理，请参阅 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]。
 ** 如果您是具有现有代理的NetApp Console用户，当您选择“灾难恢复”时，会出现一条有关注册的消息。
 ** 如果您已经在使用该服务，当您选择“灾难恢复”时，就会出现仪表板。
 

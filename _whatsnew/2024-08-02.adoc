@@ -17,4 +17,4 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 
 在此版本中，您现在可以在作业监视器 UI 中取消作业。
 
-参考 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控作业"]。
+参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["监控作业"]。

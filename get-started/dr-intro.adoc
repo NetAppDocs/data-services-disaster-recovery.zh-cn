@@ -16,9 +16,10 @@ summary: 云端灾难恢复是一种具有弹性且经济高效的方式，可�
 
 NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助NetApp Disaster Recovery，您可以将内部基于 NFS 的工作负载和 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储（用于运行NetApp存储的 iSCSI 和 FC）保护到以下其中一项：
 
-* AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP
 * Amazon Elastic VMware Service (EVS) 和Amazon FSx for NetApp ONTAP有关详细信息，请参阅link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp Disaster Recovery"]。
+* AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP
 * 带有NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware 解决方案 (AVS)（私人预览版）
+* Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes
 * 另一个具有ONTAP存储的本地 NFS 和/或基于 VMFS (iSCSI/FC) 的 VMware 环境
 
 
@@ -36,7 +37,7 @@ NetApp Console提供企业级跨本地和云环境的NetApp存储和数据服务
 
 您不需要许可证或订阅即可开始使用NetApp Console，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
 
-详细了解 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"]。
+详细了解 https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"]。
 
 
 
@@ -44,7 +45,7 @@ NetApp Console提供企业级跨本地和云环境的NetApp存储和数据服务
 
 NetApp Disaster Recovery具有以下优势：
 
-* 通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。 
+* 通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。
 * 通过降低运营成本来降低总体拥有成本，并能够以最少的资源创建和调整灾难恢复计划。
 * 通过虚拟故障转移测试持续做好灾难恢复准备，不会中断运营。您可以定期测试 DR 故障转移计划，而不会影响生产工作负载。
 * 通过 IT 环境的动态变化和在灾难恢复计划中解决该问题的能力来更快地实现价值。
@@ -75,7 +76,7 @@ NOTE: vSphere 服务器的配置是在 vSphere Server 中的NetApp Disaster Reco
 
 == 成本
 
-NetApp不会向您收取使用NetApp Disaster Recovery试用版的费用。
+NetApp不会向您收取NetApp Disaster Recovery试用版的费用。
 
 NetApp Disaster Recovery可以通过NetApp许可证或通过 Amazon Web Services 的年度订阅计划使用。
 
@@ -181,6 +182,7 @@ image:dr-architecture-diagram-70-2.png["图表展示了NetApp Disaster Recovery 
 * 另一个本地、基于 NFS 的 VMware 环境，具有ONTAP存储或本地 FC/iSCSI VMSF
 * Amazon Elastic VMware 服务
 * 带有NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware 解决方案 (AVS)（私人预览版）
+* Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes
 
 
 

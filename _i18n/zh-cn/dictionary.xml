@@ -6,7 +6,6 @@
   <block id="8b0a520b04093a504975b99493c33a06" category="section-title">取消作业</block>
   <block id="e37d535f557154a6dd6ed413e0e7782c" category="paragraph">在此版本中，您现在可以在作业监视器 UI 中取消作业。</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="inline-link">监控作业</block>
-  <block id="5ef55533619d84d0298304b37a76eeff" category="paragraph">参考<block ref="786959fe8223b685d5c08f8e62246672" category="inline-link-rx"></block>。</block>
   <block id="5d95f17e7ddbf703465910039fd80c35" category="doc">支持本地到本地 VMware VMFS 数据存储区</block>
   <block id="089160f6b14935d2f39adf9a95c5da5a" category="paragraph">此版本支持安装在 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机，用于受 iSCSI 和 FC 保护的本地存储。此前，该服务提供了支持 iSCSI 和 FC 的 VMFS 数据存储的_技术预览_。</block>
   <block id="0eb65976c0b0c5ffa90b07d4a062e509" category="paragraph">以下是有关 iSCSI 和 FC 协议的一些其他注意事项：</block>
@@ -16,11 +15,9 @@
   <block id="c5562ce2e22a86c247849904ecef3dc8" category="doc">报告</block>
   <block id="5139de9c5a9b2b36569213d7e9b32f21" category="paragraph">您现在可以生成和下载报告来帮助您分析您的景观。预先设计的报告总结了故障转移和故障回复，显示了所有站点上的复制详细信息，并显示了过去七天的作业详细信息。</block>
   <block id="054b753af44fc4eeee43c9ba6037caaa" category="inline-link">创建灾难恢复报告</block>
-  <block id="023cf8170104660fc796a64fdad98afa" category="paragraph">参考<block ref="cca93cc3cfc082fe882eefc731706487" category="inline-link-rx"></block>。</block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30天免费试用</block>
   <block id="63bc53d085ebccb62249a2a375a45db0" category="paragraph">您现在可以注册NetApp Disaster Recovery30 天免费试用版。此前，免费试用期为 90 天。</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="inline-link">设置许可</block>
-  <block id="1cb57fbf1f1452e87f62dd668ea03759" category="paragraph">参考<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
   <block id="3d1d28bb2a74cb6e16888dd71e05374a" category="section-title">禁用和启用复制计划</block>
   <block id="6f963c01bb5a207fe21d3d9137892d53" category="paragraph">先前的版本包括对故障转移测试计划结构的更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有的复制计划，以便您能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
   <block id="7043d4fb27c94bc9a206c106cef9d80c" category="paragraph">方法如下：</block>
@@ -31,11 +28,9 @@
   <block id="2c4b676c68e03ba0114109310daeb0bb" category="section-title">文件夹映射</block>
   <block id="3bdb4d4a16c6f952e581bc706b1882f1" category="paragraph">当您创建复制计划并映射计算资源时，您现在可以映射文件夹，以便在您为数据中心、集群和主机指定的文件夹中恢复虚拟机。</block>
   <block id="64bbb11437b30da2acf631c36bd785dd" category="inline-link">创建复制计划</block>
-  <block id="1a390a4e18b059462c8f07ea2ea02106" category="paragraph">有关详细信息，请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="ddf914c371b7feb4383b7444a99b5fd7" category="section-title">可用于故障转移、故障回复和测试故障转移的虚拟机详细信息</block>
   <block id="363712ac31c5614bfddfdcfad95b6a12" category="paragraph">当发生故障并且您正在启动故障转移、执行故障回复或测试故障转移时，您现在可以查看虚拟机的详细信息并确定哪些虚拟机未重新启动。</block>
   <block id="b1fb5b4805d079fc23dedcbe4848437e" category="inline-link">将应用程序故障转移到远程站点</block>
-  <block id="ab132121a366abdd7667443cc98f3a69" category="paragraph">参考<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
   <block id="5f20b8908706e397cd745a0bb1264de2" category="section-title">具有有序启动顺序的 VM 启动延迟</block>
   <block id="7e15dbae84fa8dee12ba906ffe20a1d1" category="paragraph">创建复制计划时，您现在可以为计划中的每个 VM 设置启动延迟。这使您可以设置虚拟机的启动顺序，以确保所有优先级为一的虚拟机都在后续优先级虚拟机启动之前运行。</block>
   <block id="bb121112267374f0e2c29742b8091ab6" category="section-title">虚拟机操作系统信息</block>
@@ -45,11 +40,9 @@
   <block id="126e7b7b7fdb43e70f3e1542c1f0b51a" category="section-title">清理旧快照</block>
   <block id="61a7f53a93554e648fe2eb9ad8dd6468" category="paragraph">您可以删除超出指定保留数量的不再需要的快照。当您降低快照保留计数时，快照可能会随着时间的推移而累积，现在您可以删除它们以释放空间。您可以随时根据需要或在删除复制计划时执行此操作。</block>
   <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">管理站点、资源组、复制计划、数据存储和虚拟机信息</block>
-  <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参阅<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="8cd43e146a4fc163d690bdc8bdc47fc6" category="section-title">协调快照</block>
   <block id="f5bc06f43acbf838e0aae7e4aa0c2734" category="paragraph">您现在可以协调源和目标之间不同步的快照。如果在NetApp Disaster Recovery之外的目标上删除快照，则可能会发生这种情况。该服务每 24 小时自动删除源上的快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。</block>
   <block id="07851e0287e57a794c18de627c09e0e7" category="inline-link">管理复制计划</block>
-  <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参阅<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
   <block id="ca716ff875c64c5d237c8e862b62065c" category="doc">ASA r2 支持 VMFS 存储上的虚拟机和数据存储</block>
   <block id="e4aaffdd5c2b681bfd77c1e96ef49a64" category="paragraph">此版本的NetApp Disaster Recovery为 VMFS 存储上的虚拟机和数据存储区提供ASA r2 支持。在ASA r2 系统上， ONTAP软件支持基本的 SAN 功能，同时删除 SAN 环境中不支持的功能。</block>
   <block id="d154d7f159ffe4fedd65f7894a405e59" category="paragraph">此版本支持ASA r2 的以下功能：</block>
@@ -62,18 +55,14 @@
   <block id="22bdd006372a21a7421e91ec3c961b0e" category="paragraph">配置代理后， NetApp Disaster Recovery会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。</block>
   <block id="31b4d4ad3330a84784c410994b607584" category="paragraph">NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。</block>
   <block id="cdded4964ab567a69437e4b83477d88d" category="inline-link">为NetApp Disaster Recovery设置基础架构</block>
-  <block id="dd5f5cfa205cad4099eefbde65163d32" category="paragraph">有关NetApp Disaster Recovery智能代理的更多信息，请参阅<block ref="b2454abe2d583a64564ed9c56d71bd98" category="inline-link-rx"></block>。</block>
   <block id="77cd07a93b2ed6d0bf84ea310225e9ff" category="inline-link">配置控制台代理以使用代理服务器</block>
-  <block id="bd0927696cdca2c1fd79c12dfd68bcb8" category="paragraph">有关在NetApp Console中设置常规代理的更多信息，请参阅<block ref="55ea0b68cc88cfb5c3d0ec03eec1b711" category="inline-link-rx"></block>。</block>
   <block id="7469dc0d82ce9411c03b852f2163d515" category="section-title">随时结束免费试用</block>
   <block id="859b0ef2563ddd8c6712d419656bde38" category="paragraph">您可以随时停止免费试用，也可以等到试用期结束。</block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="inline-link">结束免费试用</block>
-  <block id="b618f30aeca114d464120de119b19ced" category="paragraph">看<block ref="5f37f8bd4230e4b629c60b7dc23a5850" category="inline-link-rx"></block>。</block>
   <block id="f2265cb494c0b6dc346cf3703718b766" category="doc">虚拟机的计划发现</block>
   <block id="4d7081c65e57893409340c222c85b903" category="paragraph">NetApp Disaster Recovery每 24 小时执行一次发现。通过此版本，您现在可以自定义发现计划以满足您的需求并在需要时减少对性能的影响。例如，如果您有大量虚拟机，则可以将发现计划设置为每 48 小时运行一次。如果您拥有的虚拟机数量较少，则可以将发现计划设置为每 12 小时运行一次。</block>
   <block id="7e2d4377602fe8c7a718d5ef8759c008" category="paragraph">如果您不想安排发现，您可以禁用计划发现选项并随时手动刷新发现。</block>
   <block id="d04fa3ae362a3ea46fde26bdba81b204" category="inline-link">添加 vCenter 服务器站点</block>
-  <block id="0002b275859484d6cdca867fbab8e165" category="paragraph">有关详细信息，请参阅<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
   <block id="84307a139104b06aba6c6de9c728b2ff" category="section-title">资源组数据存储支持</block>
   <block id="ed0d134f0d7b751b80633ad848722c7a" category="paragraph">以前，您只能通过虚拟机创建资源组。在此版本中，您可以按数据存储创建资源组。当您创建复制计划并为该计划创建资源组时，数据存储区中的所有虚拟机都将被列出。如果您有大量虚拟机并希望按数据存储对它们进行分组，这将非常有用。</block>
   <block id="84ae8aaf40a4b59fed9a4fa741ccf225" category="paragraph">您可以通过以下方式创建具有数据存储区的资源组：</block>
@@ -92,19 +81,16 @@
   <block id="c8512209d54525f96f71aef40bda4d89" category="paragraph">VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置中，NetworkA 映射到 NetworkB。</block>
   <block id="02f256cabc4b808f99fb2f9cf4cac302" category="paragraph">故障转移时， NetApp Disaster Recovery会替换原始 IP 地址 (10.1.1) 的网络部分，并保留原始 IP 地址 (10.1.1.50) 的主机地址 (.50)。对于 VM1， NetApp Disaster Recovery查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分 (.50) 来为 VM1 创建新的 IP 地址。新的IP变为192.168.1.50。</block>
   <block id="726a53952ba1f868d3ec9d1d32a62b2e" category="paragraph">总之，主机地址保持不变，而网络地址则被站点子网映射中配置的地址替换。这使您能够更轻松地管理故障转移时的 IP 地址重新分配，特别是当您需要管理数百个网络和数千个虚拟机时。</block>
-  <block id="e28871dd1f9f31bb54d653e42ab61487" category="paragraph">有关在站点中包含子网映射的详细信息，请参阅<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
   <block id="a16eb72c6e9708bc4bdfd310db9a1760" category="section-title">跳过保护</block>
   <block id="75fb2c4bb71a53fe34a3f858c72ed11d" category="paragraph">您现在可以跳过保护，以便服务在复制计划故障转移后不会自动创建反向保护关系。如果您希望在NetApp Disaster Recovery中将恢复的站点恢复在线之前对其执行其他操作，这将非常有用。</block>
   <block id="83f2c5047d69bb49c6372714354b223e" category="paragraph">当您启动故障转移时，如果原始源站点处于在线状态，则默认情况下服务会自动为复制计划中的每个卷创建反向保护关系。这意味着该服务创建从目标站点到源站点的SnapMirror关系。当您启动故障恢复时，该服务还会自动逆转SnapMirror关系。</block>
   <block id="39adaab4c8da99c378ac7814cd837b82" category="paragraph">启动故障转移时，您现在可以选择“跳过保护”选项。这样，服务就不会自动逆转SnapMirror关系。相反，它将可写卷留在复制计划的两侧。</block>
   <block id="0ed1a7f2cfa308cb3f608d5a24b47b8f" category="paragraph">原始源站点恢复在线后，您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。</block>
-  <block id="981aed0e5104e08339386a1c5379d13f" category="paragraph">有关跳过保护的详细信息，请参阅<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
   <block id="bc1bbd522e7b060cf5530955a21a60e0" category="section-title">复制计划中的SnapMirror计划更新</block>
   <block id="31f2424ab39d905440864b490816c13a" category="paragraph">NetApp Disaster Recovery现在支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或与ONTAP 的第三方集成。如果复制计划中的每个数据存储库（卷）都已具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp Disaster Recovery中的恢复点。</block>
   <block id="51b94dd4c3836facc3789590ed219960" category="paragraph">要进行配置，请在复制计划 &gt; 资源映射部分中，在配置数据存储映射时选中 *使用平台管理的备份和保留计划* 复选框。</block>
   <block id="7e96824a61349784cf4806c066d89fc9" category="paragraph">选择该选项后， NetApp Disaster Recovery不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。</block>
   <block id="84c71600543673f6d7dd403d3e7a164a" category="paragraph">配置完成后，服务不会定期拍摄任何快照，而是依赖外部实体来拍摄和更新这些快照。</block>
-  <block id="05861d9bf485f3b7dc6f56871ad28892" category="paragraph">有关在复制计划中使用外部快照解决方案的详细信息，请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="97d3a415f1d32e0fd7045cf243744acd" category="doc">Windows 本地管理员密码解决方案 (LAPS) 支持</block>
   <block id="016381830d7dd927c4b8504121b26175" category="paragraph">Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项功能，可自动管理和备份 Active Directory 上本地管理员帐户的密码。</block>
   <block id="33e3d20ad0d71e75d746da0b85431750" category="paragraph">您现在可以通过提供域控制器详细信息来选择子网映射选项并检查 LAPS 选项。使用此选项，您不需要为每个虚拟机提供密码。</block>
@@ -121,9 +107,7 @@
   <block id="919421d556cf702a4e06810fc276b335" category="list-text">*灾难恢复查看器*：查看NetApp Disaster Recovery中的信息，但不能执行任何操作。</block>
   <block id="eeacd7a9a09a00a4f78e8e20c24b39e4" category="paragraph">如果您单击NetApp Disaster Recovery服务并首次对其进行配置，则必须具有 *SnapCenterAdmin* 权限或具有 *Organization Admin* 角色。</block>
   <block id="228f454cf16a61507e28cfb734b215ab" category="inline-link">NetApp Disaster Recovery中的用户角色和权限</block>
-  <block id="044ee78e955ad31e7cec671d271aff49" category="paragraph">有关详细信息，请参阅<block ref="064655cf5aa70bddc10e05f71e3f59a1" category="inline-link-rx"></block> 。</block>
   <block id="9e51129a710cb333676e7ff392c0610c" category="inline-link">了解所有服务的访问角色</block>
-  <block id="d0f140b1f3426612fda3714d998f3232" category="paragraph"><block ref="ea112d812fe0cc251b9a8c88105fdf11" category="inline-link-rx"></block> 。</block>
   <block id="1e9f4844ea9e9792cbb09aa643cdd0b9" category="section-title">NetApp Disaster Recovery中的其他更新</block>
   <block id="982f7e3070a4d65cdf30b78b12adb75b" category="list-text">增强网络发现</block>
   <block id="3b5745c72d48a29358cef7c9db7cd826" category="list-text">可扩展性改进：</block>
@@ -151,13 +135,11 @@
   <block id="4de413f6189881cc6b259fb6e68df02c" category="list-text">在 Azure 市场中添加了对NetApp智能服务的即用即付 (PAYGO) 订阅支持，并在免费试用对话框中添加了 Azure 市场的链接。</block>
   <block id="2987548294e292332cf7adcf36589fc5" category="inline-link">NetApp Disaster Recovery许可</block>
   <block id="ee93b1d439ecea7d556ad659d00a499f" category="inline-link">设置NetApp Disaster Recovery许可</block>
-  <block id="66987db2f4ddc01df2f2608d224490a6" category="paragraph">有关详细信息，请参阅<block ref="daf049a4e68b2c2a66995f2733e6d093" category="inline-link-rx"></block>和<block ref="502b84db50f651e0d1e6368db24aec66" category="inline-link-rx"></block>。</block>
   <block id="bdffab7d1fc5c739af6bcacd7556d32b" category="doc">BlueXP disaster recovery现已更名为NetApp Disaster Recovery</block>
   <block id="b8479b63a059f61189d191d9d8206a0e" category="paragraph">BlueXP disaster recovery已重命名为NetApp Disaster Recovery。</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="section-title">BlueXP现在是NetApp Console</block>
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp Data Services，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetApp Console发行说明</block>
-  <block id="9fad6bb6d30ac060d7377371e39b12c0" category="paragraph">有关更改的详细信息，请参阅<block ref="a3987562479f1a66db4eec298b79e00c" category="inline-link-macro-rx"></block>。</block>
   <block id="74ec2cbf7ad010d86af9ea5f2d47ee39" category="section-title">其他更新</block>
   <block id="77ce624f79cabd64ddedccf3196e9b1a" category="inline-link-macro">使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp Disaster Recovery</block>
   <block id="e6b27502ab6a46e1039ef9e004cb65ff" category="list-text">Amazon Elastic VMware Service (EVS) 与Amazon FSx for NetApp ONTAP的支持已公开预览。随着此版本的发布，它现已普遍可用。有关详细信息，请参阅<block ref="d77dcab16ff9979356836b689cffd0ee" category="inline-link-macro-rx"></block>。</block>
@@ -188,10 +170,8 @@
   <block id="616ce84bf378a10ce41492e7361102ce" category="paragraph">可通过NetApp Console访问NetApp Disaster Recovery。</block>
   <block id="0a0979a6d279475a420ea5c279943daa" category="paragraph">NetApp Console提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。</block>
   <block id="7118a6b22768dabe4720d84710ea1e43" category="paragraph">您不需要许可证或订阅即可开始使用NetApp Console，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。</block>
-  <block id="4d0bb76e32bfe205406b10f5dfa9d47b" category="paragraph">详细了解<block ref="e6368f2dd82be1e975475a1098863578" category="inline-link-rx"></block>。</block>
   <block id="93f490f610bd41da6de2c611374d8ef0" category="section-title">使用NetApp Disaster Recoveryfor VMware 的优势</block>
   <block id="9c8909695d59c2331ebbd096a98be570" category="paragraph">NetApp Disaster Recovery具有以下优势：</block>
-  <block id="1ab9c5b68f0adcc2d61e5b57e92ca144" category="list-text">通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。 </block>
   <block id="093e9c8a453c519550f226d3d29e9b37" category="list-text">通过降低运营成本来降低总体拥有成本，并能够以最少的资源创建和调整灾难恢复计划。</block>
   <block id="d3a13ad4dd1e4d628df918e874d5e8c8" category="list-text">通过虚拟故障转移测试持续做好灾难恢复准备，不会中断运营。您可以定期测试 DR 故障转移计划，而不会影响生产工作负载。</block>
   <block id="01077bfd931662ce1ab00a202e5bf919" category="list-text">通过 IT 环境的动态变化和在灾难恢复计划中解决该问题的能力来更快地实现价值。</block>
@@ -209,7 +189,6 @@
   <block id="018263fa29e11b076aa94025f663d232" category="paragraph"><block ref="018263fa29e11b076aa94025f663d232" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1c4fe9c45ef78c85146c600da191efec" category="admonition">vSphere 服务器的配置是在 vSphere Server 中的NetApp Disaster Recovery之外完成的。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
-  <block id="155a12b9dc701f5b67925b9ebfab8702" category="paragraph">NetApp不会向您收取使用NetApp Disaster Recovery试用版的费用。</block>
   <block id="1052dee9d95f73d0a99fb04f5d6fbf58" category="paragraph">NetApp Disaster Recovery可以通过NetApp许可证或通过 Amazon Web Services 的年度订阅计划使用。</block>
   <block id="d91f8d9cdc7fc66a71d44f83fa879b24" category="inline-link-macro">NetApp Disaster Recovery的新功能</block>
   <block id="651317bb11a538ba9d919edf1e5c7c09" category="admonition">一些版本包括技术预览。 NetApp不会向您收取任何预览的工作负载容量的费用。看<block ref="fb27637493881b877668c566a2759a9e" category="inline-link-macro-rx"></block>了解有关最新技术预览的信息。</block>
@@ -271,7 +250,6 @@
   <block id="be2e75d3289741b6da261571f9377091" category="summary">使用NetApp Disaster Recovery，您可以使用不同的许可计划，包括免费试用、按需付费订阅或自带许可证。</block>
   <block id="aceeb447f410f96a1ea84c7aa3d50b31" category="paragraph">*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复应用程序管理员角色。</block>
   <block id="6fb21aa5ad614d3da3c4d910339be1a1" category="inline-link-macro">了解NetApp Disaster Recovery中的用户角色和权限</block>
-  <block id="47e01dd360601fde5edb4844bb11f563" category="paragraph"><block ref="5ee95b9951a403f3ce8a1382578a4abd" category="inline-link-macro-rx"></block> 。<block ref="ea112d812fe0cc251b9a8c88105fdf11" category="inline-link-rx"></block> 。</block>
   <block id="caf89067dc5383afa96e1ac3e7c34bb7" category="paragraph">*许可选项* 您可以使用以下许可选项：</block>
   <block id="7f2210756be2a83d832be1ebb9b06adf" category="list-text">购买 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 的即用即付 (PAYGO) 订阅。</block>
   <block id="4e33b7dde110d702aea770ac0e58ff70" category="inline-link-macro">了解有关订阅的更多信息</block>
@@ -292,7 +270,6 @@
   <block id="c3b1bb824e3213d8d78d521e17427748" category="paragraph"><block ref="c3b1bb824e3213d8d78d521e17427748" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d2898ede4dd2058939d6e98d118ac9fa" category="list-text">如果您尚未为其他服务添加控制台代理，请添加一个。</block>
   <block id="91e534d044a3d9c6a1c8575f89e73c9b" category="inline-link">了解控制台代理</block>
-  <block id="9b7bf35ae667c8a62a18b2a57d0f5ad5" category="paragraph">要添加控制台代理，请参阅<block ref="be47360914e9c5a32b9a06216cb3cec0" category="inline-link-rx"></block>。</block>
   <block id="611f4cdd6f9e4edab1d69e8c49266816" category="list-text">设置代理后，在NetApp Disaster Recovery登录页面中，添加代理的按钮将更改为开始免费试用的按钮。选择*开始免费试用*。</block>
   <block id="4701248bbe25ed364a5f0c79467e9f29" category="list-text">首先添加 vCenter。</block>
   <block id="5be11c5dad3dd5860416e2978e91dae5" category="inline-link-macro">添加 vCenter 站点</block>
@@ -307,19 +284,15 @@
   <block id="635721e85cf2d7f2354041b84719041b" category="list-text">使用 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 * NetApp Disaster Recovery*。</block>
   <block id="8b38749ddf0f3f839f250b143af17447" category="list-text">当您返回到NetApp Disaster Recovery时，会出现一条消息表明您已订阅。</block>
   <block id="69351db009ad4b6cb7d230b4c8b9fe27" category="inline-link-macro">详细了解如何使用NetApp Console管理订阅</block>
-  <block id="f55f69e6af9c722dad2c5788b736fd1e" category="paragraph">您可以在NetApp Console订阅页面查看订阅详细信息。<block ref="09f2644e75f3042514a84dc8b1a01afc" category="inline-link-macro-rx"></block> 。</block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">试用结束后，通过NetApp购买 BYOL 许可证</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">试用结束后，您可以通过NetApp销售代表购买许可证。</block>
   <block id="6c91d60fe9654fb65360592ac8d4e690" category="paragraph">如果您自带许可证 (BYOL)，则设置包括购买许可证、获取NetApp许可证文件 (NLF) 以及将许可证添加到NetApp Console。</block>
   <block id="23e142acdeae4b23dc9fb6130ca0ad30" category="paragraph">*将许可证添加到NetApp Console** 从NetApp销售代表处购买NetApp Disaster Recovery许可证后，您可以在控制台中管理该许可证。</block>
   <block id="6a2741e1bf15e5399236487df9335e92" category="inline-link">了解如何使用NetApp Console添加许可证</block>
-  <block id="2d43b73e7aed092eb0fb0574fb205032" category="paragraph"><block ref="b0facba4ec49a882a302df2a1250fcb5" category="inline-link-rx"></block> 。</block>
   <block id="756a96ce8c3b6dda4a9b7e72f55d1e13" category="section-title">许可证到期时更新</block>
   <block id="1e7287db172afab2eb39a0b47d6223d6" category="paragraph">如果您的许可期限即将到期，或者您的许可容量已达到限制，您将在NetApp Disaster RecoveryUI 中收到通知。您可以在 NetApp Disaster Recovery许可证到期之前进行更新，这样您访问扫描数据的能力就不会中断。</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">通知</block>
-  <block id="9d92c8559332c66d99641a3997de0fc9" category="admonition">此消息也出现在NetApp Console和<block ref="b553b83f4f3ab8ad7adf12f36cefd6a6" category="inline-link-rx"></block>。</block>
   <block id="d328601196a0fd3429ae19dd5f6b8276" category="inline-link">了解如何使用NetApp Console更新许可证</block>
-  <block id="f34adee0ab981df83e661e268bca62a5" category="paragraph"><block ref="a6dcec154594f1929509877ce5add3fb" category="inline-link-rx"></block> 。</block>
   <block id="9fdb268fb3ed8768b1c5bc407d4422ba" category="list-text">在NetApp Disaster Recovery中，选择 *免费试用 - 查看详细信息*。</block>
   <block id="2c6b9011807f7d1e8a37a31be26bb7c0" category="list-text">在下拉详细信息中，选择*结束免费试用*。</block>
   <block id="fc145d0284ba4e60c3b5f315355ac505" category="inline-image-macro">结束免费试用页面</block>
@@ -335,13 +308,11 @@
   <block id="8e917942a77709dfd28c155f42a97553" category="inline-link">了解有关登录的更多信息</block>
   <block id="2b7ccab8331ca8f22c1a0f67ad9bbf1f" category="paragraph">要登录，您可以使用您的NetApp支持站点凭证，也可以使用您的电子邮件和密码注册NetApp云登录。<block ref="83012c4a40bb3321733997744c83daa9" category="inline-link-rx"></block> 。</block>
   <block id="a5999c1155de9850d34ba60075be7171" category="inline-link">了解所有服务的NetApp Console访问角色</block>
-  <block id="80527cc30678739efc866ebecf8c3794" category="paragraph">特定任务需要特定的用户角色。<block ref="5ee95b9951a403f3ce8a1382578a4abd" category="inline-link-macro-rx"></block> 。<block ref="f3890bd69b65a6b74a515e7372dba6f8" category="inline-link-rx"></block> 。</block>
   <block id="6a65fb509b9c682f9df5eb122484e2f7" category="list-text">打开 Web 浏览器并转到<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
   <block id="0daac1b9cd4c3a240bf2f6b44ba178a1" category="paragraph">出现NetApp Console登录页面。</block>
   <block id="83046549bdfbacafb1888d0467d8acc4" category="list-text">登录到NetApp Console。</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">如果这是您第一次登录此服务，则会出现登录页面，您可以注册免费试用。</block>
   <block id="60df1204aca74059babd44a247508093" category="paragraph">否则，将出现NetApp Disaster Recovery仪表板。</block>
-  <block id="b2bcab299136c201d7ae31d721b106aa" category="list-text">如果您尚未添加NetApp Console代理，则需要添加一个。要添加代理，请参阅<block ref="be47360914e9c5a32b9a06216cb3cec0" category="inline-link-rx"></block>。</block>
   <block id="617ffa21588a547140fa18404ccc6c3d" category="list-text">如果您是具有现有代理的NetApp Console用户，当您选择“灾难恢复”时，会出现一条有关注册的消息。</block>
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">如果您已经在使用该服务，当您选择“灾难恢复”时，就会出现仪表板。</block>
   <block id="41fc27202bd95bf86c36faca5aa2292a" category="inline-image-macro">NetApp Disaster Recovery仪表板</block>
@@ -379,7 +350,6 @@
   <block id="ddf3847f7872b5880bf48b3bc2295516" category="section-title">NetApp Console前提条件</block>
   <block id="831ceac8c52f9043ae3044fe65d3762a" category="section-title">开始使用NetApp Console</block>
   <block id="924c58a8fd83feffaf2992bcfe6747f1" category="inline-link">注册NetApp Console并创建组织</block>
-  <block id="a365735407987353fb0d409038d3fcd5" category="paragraph">如果你还没有这样做，<block ref="d976bcdfe98c8a7f3f75b182d4034c67" category="inline-link-rx"></block> 。</block>
   <block id="2111321b91f7f03ee0c9d795126e728d" category="section-title">收集ONTAP和 VMware 的凭证</block>
   <block id="d70a6a4283fe47d23c6adff45d1620fb" category="list-text">NetApp Disaster Recovery需要 vCenter 凭据。在NetApp Disaster Recovery中添加站点时，您需要输入 vCenter 凭据。</block>
   <block id="0f0ee2397f9657d6f4e252d0c2f19706" category="inline-link-macro">NetApp Disaster Recovery所需的 vCenter 权限</block>
@@ -388,17 +358,13 @@
   <block id="04611b209933eb29e1f8fdaec6553eaa" category="section-title">创建NetApp Console代理</block>
   <block id="9703473550a81b3fd3679dafa7c81b5c" category="paragraph">必须在NetApp Console中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。</block>
   <block id="c8838dcf38d330918fef4cc55c1d8bda" category="inline-link">在标准模式下开始使用NetApp Console</block>
-  <block id="51dd3d7e28a72cf0fdec6a253e1d1518" category="list-text">NetApp Disaster Recovery仅适用于标准模式代理部署。看<block ref="5a1f12b31848038fb05bcfabb59a655f" category="inline-link-rx"></block>。</block>
   <block id="60fef96933d93f92aac90515fdde5cdb" category="list-text">确保源 vCenter 和目标 vCenter 使用相同的控制台代理。</block>
   <block id="15d628067243085634a88cba0c9fd55b" category="list-text">所需的控制台代理类型：</block>
   <block id="6e45b3ccf0fe4c67d798d465f04ffc2b" category="inline-link">在本地安装并设置控制台代理</block>
-  <block id="9af57f30498413181424b17fb0ae6171" category="list-text">*本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考<block ref="df0d648eb79542cf15dcde842108f68f" category="inline-link-rx"></block>。</block>
   <block id="7ff9f8e2467774df163161a38d2d5040" category="inline-link">AWS 中的控制台代理安装选项</block>
-  <block id="14fe150f182f90b42cc29c3f50abaade" category="list-text">*本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考<block ref="70bdc3086a31c8e9f05388b39311f274" category="inline-link-rx"></block>。</block>
   <block id="24b5be8f6df5fb021eca578769b77774" category="admonition">对于本地到本地，请使用本地控制台代理。对于本地到 AWS，使用 AWS 控制台代理，它可以访问源本地 vCenter 和目标本地 vCenter。</block>
   <block id="ab3c83e3945cd7f2df0456e2d8f83bb0" category="list-text">所有由NetApp Disaster Recovery管理的ONTAP阵列都必须添加到NetApp Console项目内用于管理NetApp Disaster Recovery的任何系统中。</block>
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">发现本地ONTAP集群</block>
-  <block id="c99bafeb844cf906e2f562103d12d623" category="paragraph">看<block ref="8cab2f9c49f209aeaa6ba3d7ce4342f6" category="inline-link-rx"></block>。</block>
   <block id="fbd9e0d462c5faca3f694e91b0c91c11" category="list-text">有关为NetApp Disaster Recovery设置智能代理的信息，请参阅<block ref="cf59e5634dbfec3a92f4b44d96581d59" category="inline-link-macro-rx"></block>。</block>
   <block id="9d5cd03b2fcfbe5b4558a93d2fd07ca2" category="section-title">工作负载先决条件</block>
   <block id="6a84d76f499de61c5fe29550fe09a932" category="paragraph">为了确保应用程序一致性流程成功，请满足以下先决条件：</block>
@@ -469,7 +435,6 @@
   <block id="f83af651f99faebce61bfdb7abb0dbf5" category="list-text">为ONTAP配置 FSx。  Amazon FSx for NetApp ONTAP是一项完全托管的服务，它基于NetApp ONTAP文件系统构建，提供高度可靠、可扩展、高性能且功能丰富的文件存储。</block>
   <block id="ecd0c703f047cbcdb8259fca7001cb0a" category="inline-link">技术报告 4938：使用 VMware Cloud on AWS 将Amazon FSx ONTAP挂载为 NFS 数据存储</block>
   <block id="c2ca61cdaafcad548af5836df039fcb3" category="inline-link">Amazon FSx for NetApp ONTAP快速入门</block>
-  <block id="a692fa8adfb1c24fd08861d585caf255" category="list-text">按照以下步骤操作<block ref="69ac71aae3c3019102e9a90ab4fd3799" category="inline-link-rx"></block>和<block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block>配置和配置 FSx for ONTAP。</block>
   <block id="b38adb57818f48bf3fbe345eb697fb5b" category="list-text">将Amazon FSx for ONTAP添加到系统，并为 FSx for ONTAP添加 AWS 凭证。</block>
   <block id="45e9eff03edaa58cd4676220141041d3" category="list-text">在 AWS FSx for ONTAP实例中创建或验证您的目标ONTAP SVM。</block>
   <block id="292073f6feb975d74898ace0eb43eb36" category="list-text">在NetApp Console中配置源本地ONTAP集群和 FSx for ONTAP实例之间的复制。</block>
@@ -514,42 +479,9 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关NetApp软件中使用的第三方版权和许可的信息。</block>
   <block id="23b519c50f06635f068893b1eddfed44" category="inline-link-macro">NetApp Disaster Recovery通知</block>
   <block id="d6f198e1fd40f77c71448afefa59375d" category="paragraph"><block ref="d6f198e1fd40f77c71448afefa59375d" category="inline-link-macro-rx"></block></block>
-  <block id="8897262f762ec38be4b38bc404edb37a" category="summary">NetApp Disaster Recovery采用角色来管理每个用户对特定功能和操作的访问权限。</block>
-  <block id="da747fe03b7ce6abb6e4945b29f9b33a" category="doc">NetApp Disaster Recovery基于角色的功能访问</block>
-  <block id="5d7e9e8d1aca33f32d8b3e76ee577b18" category="inline-link">NetApp Console设置和管理文档</block>
-  <block id="b65a6a0a8ac5b6abe5977c07a83407e0" category="paragraph">这些角色特定于NetApp Disaster Recovery，与NetApp Console中使用的平台角色不同。有关所有NetApp Console平台角色的详细信息，请参阅<block ref="92063e3b7898c4338162ac5828bd75d7" category="inline-link-rx"></block>。</block>
-  <block id="c2eaa90f744f0eb1a3fb6e93642e69d2" category="paragraph">下表列出了每个NetApp Disaster Recovery角色可以执行的操作。</block>
-  <block id="4420e7353184ac575b539cdce1b991db" category="cell">特征和动作</block>
-  <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">灾难恢复管理员</block>
-  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">灾难恢复故障转移管理员</block>
-  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">灾难恢复应用程序管理员</block>
-  <block id="ba4b33592d18613c28d684c20110e152" category="cell">灾难恢复查看器</block>
-  <block id="b60c44c6bbbb3793d0c08c34cd6e2382" category="cell">查看仪表板和所有选项卡</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">是</block>
-  <block id="78c7efbfa07116553a52f59800129dde" category="cell">开始免费试用</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">否</block>
-  <block id="42174d568723a8694dc7e6dfd143cb12" category="cell">启动工作负载发现</block>
-  <block id="666d2ef63ada639c9aafe5a0d4332126" category="cell">查看许可证信息</block>
-  <block id="9ea1b41f4c4dc25b684804b2da7fcf2d" category="cell">激活许可证</block>
-  <block id="b4c13a3706e6e457a99621f49562dbb4" category="cell">*在站点选项上*：</block>
-  <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">查看网站</block>
-  <block id="3e8a9a8e5a257cee36226ed2012c6b3c" category="cell">添加、修改或删除站点</block>
-  <block id="7e17d197edb7cef21770cc85d8a04a55" category="cell">*关于复制计划选项*：</block>
-  <block id="735da8d6e9fa3b588537574c24f9dcf0" category="cell">查看复制计划</block>
-  <block id="7b84a7ee34168bfbf6886ef0061658cc" category="cell">查看复制计划详细信息</block>
-  <block id="baee89c048bf90468e3ec3f5606cf60b" category="cell">创建或修改复制计划</block>
-  <block id="ef7a7b1bec08bef324977926c1fc910c" category="cell">创建报告</block>
-  <block id="d31af31443f48fa119d00d0bba8ea175" category="cell">查看快照</block>
-  <block id="db3c6b3ab5f4657dbde3dec8ccb9ecc0" category="cell">执行故障转移测试</block>
-  <block id="c5bcd887212759ab57c8af218b99eb31" category="cell">执行故障转移</block>
-  <block id="322e135616f19e459c874a724520fa1e" category="cell">执行故障回复</block>
-  <block id="8b72223aa730d2269a7ba95f83cef65e" category="cell">执行迁移</block>
-  <block id="47a0aeeab608b6f655379332ffde4c66" category="cell">*关于资源组选项*：</block>
-  <block id="e413f3ae098a2b13a5631e34e8843bd1" category="cell">查看资源组</block>
-  <block id="007c91bf4efbb78277d4ee064ec28f3a" category="cell">创建、修改或删除资源组</block>
-  <block id="e44c0a4c6e6fd6b34debdde149ce767a" category="cell">*在职监控选项*：</block>
   <block id="c6b984bc2ca856b4291f8e64fa30cd9a" category="cell">查看职位</block>
-  <block id="295cc024728a10becfec47e1d454c4f9" category="cell">取消作业</block>
   <block id="e4b7e270395bc221a701179b864d6a13" category="summary">在您保护虚拟机基础架构之前， NetApp Disaster Recovery服务需要知道哪些 VMware vCenter 集群托管着要保护的虚拟机以及这些 vCenter 位于何处。第一步是创建一个站点来代表源数据中心和目标数据中心。站点是故障域或恢复域。</block>
   <block id="47dd3699625ecdc0896312a37b176e82" category="doc">在NetApp Disaster Recovery中为 Amazon EVS 添加站点</block>
   <block id="59cabc3db90da0724955c7298ca562a1" category="paragraph">在保护虚拟机基础架构之前，请确定哪些 VMware vCenter 群集托管着要保护的虚拟机以及这些 vCenter 位于何处。第一步是创建一个站点来代表源数据中心和目标数据中心。站点是故障域或恢复域。</block>
@@ -818,10 +750,8 @@
   <block id="fc4a391c0a58b66db6357158ead085ca" category="paragraph">NetApp Console代理是在您的云或本地网络上运行的NetApp软件。它执行NetApp Console管理数据基础架构所需执行的操作。控制台代理不断轮询NetApp Disaster Recovery软件作为服务层，以了解其需要采取的任何操作。</block>
   <block id="44c1129cf47adfaefa0605f58d53c810" category="paragraph">对于NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。</block>
   <block id="f495e7db7cb2a546534fe711f0127e3d" category="inline-link">了解NetApp Console部署模式 | NetApp文档</block>
-  <block id="f9fa4561c3d49a82314f4ce6da327db1" category="paragraph">要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问<block ref="ffaebef1f61408e524b472a9e02a3f1a" category="inline-link-rx"></block>。</block>
   <block id="dd0b929797a2918fb91fe0b43cb02f42" category="paragraph">虽然控制台代理对于使用该服务至关重要，但安装控制台代理的安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了此信息的范围。</block>
   <block id="ed8f1435250d71b466ec4682ae30820f" category="inline-link">从 AWS Marketplace 创建控制台代理 | NetApp文档</block>
-  <block id="bc13da23c488c673a73f5ef16e3b6333" category="paragraph">使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅<block ref="98d23ab2624d522fe7ad97fbdecc430f" category="inline-link-rx"></block>。</block>
   <block id="06034a243ae2009d8ded7acc9689b052" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。</block>
   <block id="562ef4025c5a60ba97f47d8285729a0b" category="paragraph">客户越来越依赖虚拟化基础架构来处理生产计算工作负载，例如基于 VMware vSphere 的工作负载。由于这些虚拟机 (VM) 对业务变得越来越重要，客户需要保护这些 VM 免受与物理计算资源相同类型的灾难的影响。目前提供的灾难恢复 (DR) 解决方案复杂、昂贵且资源密集。 NetApp是用于虚拟化基础架构的最大存储提供商，它有既得利益确保其客户的虚拟机受到保护，就像我们保护任何类型的ONTAP存储托管数据一样。为了实现这一目标， NetApp创建了NetApp Disaster Recovery服务。</block>
   <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">任何 DR 解决方案面临的主要挑战之一是管理购买、配置和维护额外计算、网络和存储资源的增量成本，以提供 DR 复制和恢复基础设施。保护关键内部虚拟资源的一个流行选择是使用云托管虚拟资源作为 DR 复制和恢复基础设施。亚马逊就是此类解决方案的一个例子，它可以提供与NetApp ONTAP托管 VM 基础架构兼容的经济高效的资源。</block>
@@ -1017,7 +947,6 @@
   <block id="4abf0577f3f5e02a03a3f7f622f92917" category="paragraph">如果需要从NetApp Disaster Recovery中删除ONTAP FSx 集群，请完成以下步骤：</block>
   <block id="30c421e393d5aa57d14a1f76bca8f48f" category="list-text">在NetApp Console代理中，使用云提供商的连接选项，连接到控制台代理运行的 Linux VM，使用<block ref="8a101e578f40cd60390b7bf862cd4130" prefix=" " category="inline-code"></block>命令。</block>
   <block id="9f4c815c2ac6282475b2ac5c847609a7" category="inline-link">管理现有的控制台代理</block>
-  <block id="9e6e8191a56ec085f482cb72d32c1f52" category="paragraph">参考<block ref="ad7875d90798448fe1006e8d322c3a99" category="inline-link-rx"></block>。</block>
   <block id="96aeb70e42c22a98a839a95da74bd7cb" category="list-text">在NetApp Console系统页面中，再次添加Amazon FSx for ONTAP系统并提供 FSx 凭证。</block>
   <block id="827b8bb0e0d78845a402f73585acad5c" category="inline-link">创建Amazon FSx for NetApp ONTAP文件系统</block>
   <block id="39fb83aee67d4723e4f71102667f9390" category="paragraph">参考<block ref="be032c15c845f0ce5587a4047eb0721a" category="inline-link-rx"></block>。</block>
@@ -1061,21 +990,17 @@
   <block id="dd201962e893b06992d33a2eaba2ffb4" category="section-title">支持AFF A 系列</block>
   <block id="7e074b8e5be6e37ff994dec8db0daff1" category="paragraph">此版本支持NetApp AFF A 系列硬件平台。</block>
   <block id="04865156d99b396070246fd919c01f72" category="paragraph">此版本包括对安装在受本地存储保护的 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机的支持的_技术预览_。在此版本中，技术预览版支持将本地 VMware 工作负载灾难恢复到具有 VMFS 数据存储的本地 VMware 环境。</block>
-  <block id="0f9f40db25fcedefd723c0bb676ca1ed" category="paragraph">您可以通过在“应用程序”页面上按数据存储过滤虚拟机以及在“资源映射”页面上选择更多目标详细信息来更轻松地添加复制计划。参考<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="243b4ade55314e7ac41d77333eebc25c" category="section-title">编辑复制计划</block>
   <block id="8fba0556e394667a98e03ac72f0425c1" category="paragraph">在此版本中，故障转移映射页面得到了增强，更加清晰。</block>
   <block id="e9558a079e21d43034f54a99b19f2ad7" category="inline-link">管理计划</block>
-  <block id="583edef1d12ac8fcf925b864da2d76c6" category="paragraph">参考<block ref="a8a4a23c947d3e2e3dc169027b7cac12" category="inline-link-rx"></block>。</block>
   <block id="ef7d051518cc0e9d684615d2573a82f1" category="section-title">编辑虚拟机</block>
   <block id="abbe3932aad6fdc33c1f5375a61f5b50" category="paragraph">在此版本中，计划中编辑虚拟机的过程包含一些小的 UI 改进。</block>
   <block id="5f1df9fa6d6ce95c36680ae870250af7" category="inline-link">管理虚拟机</block>
-  <block id="f7e4cafc0e54e03cc0ff738b39e333cb" category="paragraph">参考<block ref="1d44a072309f2a4f38fd6e17ed7eb631" category="inline-link-rx"></block>。</block>
   <block id="dc1e07a914c069a9af948be662e1eee8" category="section-title">故障转移更新</block>
   <block id="30de1fbee43629f7336cc76e23ad2d9b" category="paragraph">在启动故障转移之前，您现在可以确定虚拟机的状态以及它们是已打开还是已关闭。故障转移过程现在使您能够立即拍摄快照或选择快照。</block>
   <block id="7a432f13dc69203884162d5181283bdd" category="paragraph">您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月的计划。</block>
   <block id="9223735a44654f830630e16621e06b02" category="section-title">先决条件信息的更新</block>
   <block id="750e75f4bc3220deaf846d6eb5623184" category="paragraph">NetApp Disaster Recovery前提条件信息已更新。</block>
-  <block id="fa0a452397a5b717659a39f9a2242a1b" category="paragraph">参考<block ref="28b78deb4ab1b3278a24f4182eede0b4" category="inline-link-rx"></block>。</block>
   <block id="93716955add4f66b2af685a33bac4789" category="section-title">2024年5月15日</block>
   <block id="dfc3ff60c25f075fd5633bb257473951" category="section-title">将 VMware 工作负载从本地复制到本地</block>
   <block id="675fb6431a706ae38f335d519b868c98" category="paragraph">现在，此功能已作为一项通用功能发布。以前，它是一个功能有限的技术预览版。</block>
@@ -1083,16 +1008,12 @@
   <block id="aab207fabbdc24c537203a4c7e93b911" category="paragraph">借助NetApp Disaster Recovery，您可以注册 90 天免费试用版、通过 Amazon Marketplace 购买即用即付 (PAYGO) 订阅或自带许可证 (BYOL)，后者是您从NetApp销售代表或NetApp支持站点 (NSS) 获得的NetApp许可证文件 (NLF)。</block>
   <block id="a07f121ce6bc9bf06d9deb38742dcdeb" category="paragraph">有关设置NetApp Disaster Recovery许可的详细信息，请参阅<block ref="eaa54a57026891d12cbf928afd176564" category="inline-link-macro-rx"></block>。</block>
   <block id="4d1ce2c89b354fabfe77d96169345b5a" category="inline-link">了解有关NetApp Disaster Recovery的更多信息</block>
-  <block id="689e18051213a05c9520e0a9fcc69484" category="paragraph"><block ref="a0bad0821bfb422cb5e382a4c83c1cad" category="inline-link-rx"></block> 。</block>
   <block id="c3084a9e2d458e9a14fb0606a505126d" category="section-title">2024年3月5日</block>
   <block id="f8640dd898f95d34767690049d6f8e0d" category="paragraph">这是NetApp Disaster Recovery的通用版本，其中包括以下更新。</block>
   <block id="4f5e9dc667fbe953a0afd3cae9f276c2" category="paragraph">使用NetApp Disaster Recovery，您可以注册 90 天免费试用或自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console订阅中激活 BYOL。  NetApp Disaster Recovery费用基于数据存储区的配置容量。</block>
-  <block id="a15996c9641c7ea366712495aca0eed2" category="paragraph">有关设置NetApp Disaster Recovery许可的详细信息，请参阅<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
   <block id="181fd78fab840533bb083eb8db997093" category="inline-link">管理所有NetApp Console数据服务的许可证</block>
-  <block id="6d04ed5410c3d0c09747a2a37dd0ef12" category="paragraph">有关管理所有NetApp Console数据服务的许可证的详细信息，请参阅<block ref="744a59c0ce69bebd5c267903a51b6473" category="inline-link-rx"></block>。</block>
   <block id="382435e4c4253ed5f6764c8ef821291f" category="paragraph">在此版本中，您现在可以设置计划来测试合规性和故障转移测试，以确保它们在您需要时能够正常工作。</block>
   <block id="4b2bfa262e877a668b7102f58d207f63" category="inline-link">创建复制计划</block>
-  <block id="976dcedce9d4c9dc14db60abc49c5867" category="paragraph">有关详细信息，请参阅<block ref="8026234d3eaba16fdffb266108c2804b" category="inline-link-rx"></block>。</block>
   <block id="4e1f7d458412b18adef0e5ff0db2eee8" category="section-title">2024年2月1日</block>
   <block id="e211fea12586855383b68b15d395bc8e" category="paragraph">此NetApp Disaster Recovery预览版包括以下更新：</block>
   <block id="39fbd21560b88d32b617eacef07d54ae" category="section-title">网络增强</block>
@@ -1102,7 +1023,6 @@
   <block id="083d10ed5645a35b897f5756cc2b537c" category="section-title">自定义脚本</block>
   <block id="57bdc23b2e7b4eb42e2fef1cbb444ca9" category="paragraph">现在可以将其作为故障转移后流程包括在内。使用自定义脚本，您可以让NetApp Disaster Recovery在故障转移过程后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="2652fb9c2d661c6e545a590071ac6a1f" category="inline-link">故障转移到远程站点</block>
-  <block id="162522900f68ffca5220e53ec0e2c907" category="paragraph">有关详细信息，请参阅<block ref="7cdfded96340b83fb1e5d3c286b13377" category="inline-link-rx"></block>。</block>
   <block id="cd6e9b8dd5b2724c597265c71ef73b68" category="section-title">SnapMirror 关系</block>
   <block id="a8ed02d504bcc692995ea3653abefc1a" category="paragraph">您现在可以在制定复制计划时创建SnapMirror关系。以前，您必须在NetApp Disaster Recovery之外创建关系。</block>
   <block id="6165c4352e1504dbaeef34d0cc50c187" category="section-title">一致性组</block>
@@ -1116,7 +1036,6 @@
   <block id="a19c46c941eaff1f6354bcd13c9d8e31" category="section-title">更快速地查看仪表板</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="paragraph">通过此版本，您可以更快地从仪表板访问其他页面上的信息。</block>
   <block id="47f06bba899dca6455909cab1702b2dc" category="inline-link">了解NetApp Disaster Recovery</block>
-  <block id="5cb24560c114ec0c10242c6ce975edde" category="paragraph"><block ref="50b3d3aab406b6f5099f437c56071b5b" category="inline-link-rx"></block> 。</block>
   <block id="2971377ab46c11db3998ef23731b52cf" category="section-title">2023年10月20日</block>
   <block id="3b0ed19f82866f402e194fbaed90a1a4" category="paragraph">NetApp Disaster Recovery的预览版本包括以下更新。</block>
   <block id="3faa7f320285eae50e4b897f584c4219" category="section-title">保护本地基于 NFS 的 VMware 工作负载</block>
@@ -1125,13 +1044,10 @@
   <block id="0d2ad64b559232943585fd7b1d8a6a97" category="section-title">2023年9月27日</block>
   <block id="de9bf2b4fc18ad740d18dc573f01d00d" category="section-title">仪表板更新</block>
   <block id="be74a2f8b73ed15a46d21c202566b3bb" category="inline-link">在仪表板上查看灾难恢复计划的运行状况</block>
-  <block id="d1181cbae4acc0d9feb9f608b3ee586f" category="paragraph">参考<block ref="cdc1638a4873b7c2cfc1c5962a5d03ab" category="inline-link-rx"></block>。</block>
   <block id="056f6fba19f65e991a1c38d676e1c20d" category="list-text">*RPO*：您现在可以在复制计划的数据存储部分输入恢复点目标 (RPO) 和保留计数。这表示必须存在且不早于设定时间的数据量。例如，如果将其设置为 5 分钟，则在发生灾难时系统可能会丢失最多 5 分钟的数据，而不会影响关键业务需求。</block>
-  <block id="6b4866d6790f0b6c044df7d2894f1313" category="paragraph">参考<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="d547a941d090b496bcc4b6e7e5b8b1eb" category="list-text">*网络增强功能*：当您在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时， NetApp Disaster Recovery现在提供两个选项：DHCP 或静态 IP。以前，仅支持 DHCP。对于静态 IP，您可以配置子网、网关和 DNS 服务器。此外，您现在可以输入虚拟机的凭据。</block>
   <block id="fe329f91281efd1c71c4145c82444ecd" category="list-text">*编辑时间表*：您现在可以更新复制计划时间表。</block>
   <block id="ecd36d02576c4fe28ab61b5c14fa69c4" category="inline-link">管理资源</block>
-  <block id="4cfb152ee6cdcd5bb952055f0451eb1e" category="paragraph">参考<block ref="62052e6a6f987a8752e8d90cacdd602d" category="inline-link-rx"></block>。</block>
   <block id="58adec32627fd44ceeefdcc62aeec6fc" category="list-text">* SnapMirror自动化*：在此版本中创建复制计划时，您可以在以下配置之一中定义源卷和目标卷之间的SnapMirror关系：</block>
   <block id="92b7daac1d86d399dc5b1e009d09f0f5" category="list-text">1 至 1</block>
   <block id="352d4f9f99cbd649fab2edc17c761e66" category="list-text">扇出架构中的一对多</block>
@@ -1142,19 +1058,14 @@
   <block id="82f57a2f06f1514742a4ca1c0dcc31e4" category="paragraph">NetApp Disaster Recovery预览版是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。</block>
   <block id="380047022cd9a81208dbad36b7a00acb" category="section-title">资源组更新启动顺序</block>
   <block id="08e4438284e48b3ad77e9a0d04037ea7" category="inline-link">选择要复制的应用程序并分配资源组</block>
-  <block id="d6eda1ee7ba9b0544b3abd0dd59e5711" category="paragraph">创建灾难恢复或复制计划时，您可以将虚拟机添加到功能资源组中。资源组使您能够将一组依赖的虚拟机放入满足您要求的逻辑组中。例如，组可以包含恢复时可以执行的启动顺序。在此版本中，每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在计划中包含的顺序启动。参考<block ref="290954acdd6fc55b493b2726d4197a5a" category="inline-link-rx"></block>。</block>
   <block id="2eadbfcbf9d76cb330a79283e42ad557" category="section-title">复制验证</block>
-  <block id="69798e58eff764573bf07442d9318dbc" category="paragraph">创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。请参阅<block ref="e2d34ab7e7f8a76fb6ba2dcd38a58bb2" category="inline-link-rx"></block> 。</block>
   <block id="095782ee526b72c68df8646a5900ccd1" category="section-title">复制计划显示恢复点目标（RPO）传输时间表</block>
-  <block id="19662e7ad081cbe9f63cfc0504f0e369" category="paragraph">创建灾难恢复或复制计划时，您需要选择虚拟机。在此版本中，您现在可以查看与数据存储区或虚拟机关联的每个卷关联的SnapMirror 。您还可以查看与SnapMirror计划关联的 RPO 传输计划。RPO 可帮助您确定备份计划是否足以在灾难后恢复。参考<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="f0d8fca280d8272d1fbf03bd197dc6c6" category="section-title">作业监视器更新</block>
   <block id="7fad1567be7a7caec7818041fdf4a9c6" category="inline-link">监控灾难恢复作业</block>
-  <block id="aee89117776781844e5694928335b749" category="paragraph">作业监视器页面现在包含刷新选项，以便您可以获得最新的操作状态。请参阅<block ref="701085704c7bdf4268d7fbe3111fe8b9" category="inline-link-rx"></block> 。</block>
   <block id="405e835e0544bb4cc8bbd26a2c840b54" category="section-title">2023年5月18日</block>
   <block id="46aae999fad517a75f0ccba3b71bd481" category="paragraph">这是NetApp Disaster Recovery的初始版本。</block>
   <block id="2f2414748c5c55333b00da7bf5d583fc" category="section-title">基于云的灾难恢复服务</block>
   <block id="0be6cabb97a73364c0da66cecb2442e8" category="paragraph">NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。</block>
-  <block id="196909d2916d81a00e084955535bfd0b" category="paragraph"><block ref="4ed50d9c464b3a958f9ede72e812cfcf" category="inline-link-macro-rx"></block> 。</block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp以多种方式为BlueXP提供支持。全天候提供广泛的免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单获取的远程技术支持。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">获取云提供商文件服务的支持</block>
@@ -1257,7 +1168,6 @@
   <block id="d1a664c22b47275444c9a34501c2aac2" category="doc">在仪表板上查看NetApp Disaster Recovery计划的运行状况</block>
   <block id="f236d43ec0e67c4b89d0afe52b6b6a75" category="paragraph">使用NetApp Disaster Recovery仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。</block>
   <block id="ab5b32e2ccac1c245a804a25ba2d8a6c" category="paragraph">*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。</block>
-  <block id="e0e54fc9987960916f31ec7bec988ba1" category="paragraph"><block ref="5ee95b9951a403f3ce8a1382578a4abd" category="inline-link-macro-rx"></block> 。<block ref="f3890bd69b65a6b74a515e7372dba6f8" category="inline-link-rx"></block> 。</block>
   <block id="f23e4fbac73cf601cee1add8b6e11922" category="list-text">从NetApp Disaster Recovery菜单中，选择 *仪表板*。</block>
   <block id="04edaa59dc99bd9193a5ad37083cc900" category="list-text">查看仪表板上的以下信息：</block>
   <block id="b845a02ab309809100805f1256a064e8" category="list-text">*站点*：查看站点的健康状况。站点可以具有以下状态之一：</block>
@@ -1277,7 +1187,6 @@
   <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">查看活动窗格中的所有操作。要查看作业监视器上的所有操作，请选择“查看所有作业”。</block>
   <block id="9299519b5b784ca0a2d9fd13dcb23201" category="summary">NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 vCenter 站点后，您就可以创建灾难恢复或复制计划了。</block>
   <block id="d15994bcf2411bb66762cdf4c58704b3" category="doc">在NetApp Disaster Recovery中创建复制计划</block>
-  <block id="11d903b00511c1f0113eab049c611065" category="paragraph">添加 vCenter 站点后，您就可以创建灾难恢复或_复制计划_。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。</block>
   <block id="5d69fbf6172766c9a9f097615bf01170" category="paragraph">*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*关于此任务*</block>
   <block id="978c7c7ea4c54312c02456ee28acd332" category="paragraph">您可以创建复制计划并编辑合规性和测试计划。运行虚拟机的测试故障转移而不影响生产工作负载。</block>
@@ -1797,7 +1706,6 @@
   <block id="07aa9d3d6d093cd998a453815b1b718f" category="sidebar">NetApp Disaster Recovery文档</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="0ac57782b45d2b5a287308d71b382a58" category="sidebar">NetApp Disaster Recovery所需的 vCenter 权限</block>
-  <block id="f3dfbaa5da1f39e5d7de7846034dc5fe" category="sidebar">NetApp Disaster Recovery角色和权限</block>
   <block id="58d06f6d0c071d1a9211629997a6fb0d" category="sidebar">将NetApp Disaster Recovery与 Amazon EVS 结合使用</block>
   <block id="bd599b695632fefb842a7a4afc918840" category="sidebar">NetApp Disaster Recovery与 Amazon EVS 概述</block>
   <block id="c0c4b60d27032c028c91440e9d3be949" category="sidebar">解决方案概述</block>
@@ -1915,4 +1823,110 @@
   <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">将 NSS 凭据与您的NetApp Console帐户关联与将 NSS 帐户与控制台用户登录关联不同。</block>
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">这些 NSS 凭证与您的特定控制台帐户 ID 相关联。属于控制台组织的用户可以从*支持 &gt; NSS 管理*访问这些凭据。</block>
   <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">这些操作使控制台能够使用您的 NSS 帐户进行许可证下载、软件升级验证和未来支持注册等操作。</block>
+  <block id="7ca099323edf71b926fc9164cd6dcb98" category="paragraph">参考<block ref="0a2897e75205749364bfed93d3636453" category="inline-link-rx"></block>。</block>
+  <block id="b71720246684e5a9cba49f80952de19b" category="paragraph">参考<block ref="19734f32800b77f80c48c6717b016804" category="inline-link-rx"></block>。</block>
+  <block id="fc00d1eb9f65781e23eb29e05e16f837" category="paragraph">参考<block ref="fc64bd880d64e61d0dbe79a637246086" category="inline-link-rx"></block>。</block>
+  <block id="3748c3bb5f6a3e18e8791cfe63ac90ed" category="paragraph">有关详细信息，请参阅<block ref="0f45a25cd76aba04e0b1a3268dc19f1d" category="inline-link-rx"></block>。</block>
+  <block id="f919fb3669b4f95fd99d2925ae7cf012" category="paragraph">参考<block ref="c2e2735f5609b13c3e77b7f1dd3c4dad" category="inline-link-rx"></block>。</block>
+  <block id="c140aa662ebc9f67c4fdea4bd57be0e2" category="paragraph">有关详细信息，请参阅<block ref="cfcdee33513d18f6855d2d753dc01df1" category="inline-link-rx"></block>。</block>
+  <block id="e64b87421bcdfea630f17affd0f556c0" category="paragraph">有关详细信息，请参阅<block ref="3e814dc0810571f12f20160040a8a04b" category="inline-link-rx"></block>。</block>
+  <block id="21ec54e8fa286f966369a08c489ae5fa" category="paragraph">有关NetApp Disaster Recovery智能代理的更多信息，请参阅<block ref="820c3eb457916fa58a4c11f592fa4b9c" category="inline-link-rx"></block>。</block>
+  <block id="6cdbb0f5e24518e290be78d5087326d9" category="paragraph">有关NetApp Console中常规代理设置的更多信息，请参阅<block ref="ee748f633e32a464408350c15b5a4a4d" category="inline-link-rx"></block>。</block>
+  <block id="6fb6ea5db25971f01c5b56b2d1293a99" category="paragraph">看<block ref="5a3087a2b114066de4e4955d8182a972" category="inline-link-rx"></block>。</block>
+  <block id="ebb3e9d9870ecf428a0b48a6447c51af" category="paragraph">有关详细信息，请参阅<block ref="3699cc08be4a1997a50967db5ff8a709" category="inline-link-rx"></block>。</block>
+  <block id="3964efa0939093eca0bac611eeb1782b" category="paragraph">有关如何在站点中包含子网映射的详细信息，请参阅<block ref="3699cc08be4a1997a50967db5ff8a709" category="inline-link-rx"></block>。</block>
+  <block id="7429a4296bdaa8beacce19bbe1ee25ad" category="paragraph">有关跳过保护的详细信息，请参阅<block ref="c2e2735f5609b13c3e77b7f1dd3c4dad" category="inline-link-rx"></block>。</block>
+  <block id="73186230192d25a414390478c44bd34f" category="paragraph">有关在复制计划中使用外部快照解决方案的详细信息，请参阅：<block ref="0f45a25cd76aba04e0b1a3268dc19f1d" category="inline-link-rx"></block> 。</block>
+  <block id="d95f27e12b72826e0000aff7eb4934ca" category="paragraph">有关详细信息，请参阅<block ref="5b36581a8c5714c490f4a04bda49832a" category="inline-link-macro-rx"></block>。</block>
+  <block id="05e04f0a4cee848be9555214d6a9a0eb" category="paragraph"><block ref="900bb528e3d03c800725eef508ff790f" category="inline-link-rx"></block>。</block>
+  <block id="19c500c3c2adf84e8ebbabf4b17c0a08" category="paragraph">详情请见<block ref="2d6eef6191819db2b4455acbd8ebc7a8" category="inline-link-rx"></block>和<block ref="28b3e4280c0ca3a3af1ee0d05785e9b6" category="inline-link-rx"></block>。</block>
+  <block id="800c173937521899b70a4ab5d735d3d7" category="paragraph">有关具体变更内容，请参阅…… <block ref="b78e17cf58c4e309929c8d6a69594c7d" category="inline-link-macro-rx"></block>。</block>
+  <block id="cab2138409405e17442c0b2913348b5c" category="doc">支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine。</block>
+  <block id="eccf4b156fba5109ca6b1ef2be2fd64e" category="paragraph">NetApp Disaster Recovery现在支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine 进行迁移、故障转移、故障恢复和测试操作。这种集成实现了本地环境和 Google Cloud 之间的无缝灾难恢复工作流程。</block>
+  <block id="7984e947265cc8b94c06702adbf28865" category="inline-link-macro">限制</block>
+  <block id="4fae34c4a960e8f2c583a66a68cf6fdc" category="paragraph">请务必仔细阅读。<block ref="0b97dbd151642cb26d83aa16e8ffd9ce" category="inline-link-macro-rx"></block>和<block ref="86229131b08ad70f4dd9ffc7440523ad" category="inline-link-macro-rx"></block>适用于谷歌云。</block>
+  <block id="3c56503a9f48478890ac41e17395c762" category="list-text">Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes</block>
+  <block id="1a90436cad6b2c834a6f0bf4b63bb676" category="paragraph">详细了解<block ref="185be9890bef04443cd0fba90b4aff11" category="inline-link-rx"></block>。</block>
+  <block id="9ad4327ee2b15571b0ae33cd44518465" category="list-text">通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。</block>
+  <block id="9c1f27493de915ea446fcd10980fb25b" category="paragraph">NetApp不会向您收取NetApp Disaster Recovery试用版的费用。</block>
+  <block id="f4f7d6aee50e35b48e1594126cdb4f78" category="paragraph"><block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>。<block ref="900bb528e3d03c800725eef508ff790f" category="inline-link-rx"></block>。</block>
+  <block id="395a0c83d18cd49c5468e19cda311fa7" category="paragraph">要添加控制台代理，请参阅<block ref="552a7d66ccd9c93a9dbc55fd8ef74d52" category="inline-link-rx"></block>。</block>
+  <block id="eb90be323cff385f058b6740db7ea9b1" category="paragraph">您可以在NetApp Console订阅页面查看订阅详细信息。<block ref="cfbd6da620b5229d14162ae0313e9c37" category="inline-link-macro-rx"></block>。</block>
+  <block id="8a6e25252289a1daedac4f0edba496da" category="paragraph"><block ref="d5b487b8647d589ee708465fa8f6ee1a" category="inline-link-rx"></block>。</block>
+  <block id="6b12a212016aaf0720b69178e6a86c8c" category="admonition">此消息也会出现在NetApp Console和<block ref="2355a5350c49a10d2ea41458fca03a98" category="inline-link-rx"></block>。</block>
+  <block id="5ac6ac982b7e70ea7339a4a3b33bf830" category="paragraph"><block ref="e9f92cb99927db4b051f21efde07f04c" category="inline-link-rx"></block>。</block>
+  <block id="b94b95cfe5aca58d64e6ae08bf0d9e9d" category="paragraph">特定任务需要特定的用户角色。<block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>。<block ref="e704c98551e5f8acdbf19af28a86dcf3" category="inline-link-rx"></block>。</block>
+  <block id="82a261e8102a004fba23416c32d2396d" category="list-text">如果您尚未添加NetApp Console代理，则需要添加一个。要添加代理，请参阅<block ref="552a7d66ccd9c93a9dbc55fd8ef74d52" category="inline-link-rx"></block>。</block>
+  <block id="58da51d642fdf90e20b6bc81ffd17071" category="cell">使用Google Cloud NetApp Volumes 的Google Cloud VMware Engine</block>
+  <block id="c16627d554485432d2c775a2396d8ad6" category="section-title">Google Cloud 的先决条件和注意事项</block>
+  <block id="0dd6c8c9ea64057d5ec7128ee39d5a87" category="paragraph">使用 Google Google Cloud NetApp Volumes VMware Engine 上进行灾难恢复时，请确保配置正确的权限并遵守以下注意事项。</block>
+  <block id="971d1063ce9247fe87bcb8988cc17ed7" category="list-text">请联系 Google SRE 团队，将以下服务添加到允许列表中：</block>
+  <block id="8c9cabeb12945e6dfce2d25647e6e557" category="list-text">同步 API，用于将快照从本地存储传输到Google Cloud NetApp Volumes。</block>
+  <block id="e215e3a3a25c1736152f94b148654580" category="list-text">Google 与 VMware 引擎合作的项目，用于创建、挂载和卸载数据存储。</block>
+  <block id="2fe0fe58c3081588c23e7aea159284a8" category="inline-link-macro">提交请求，将您的卷添加到混合复制允许列表中</block>
+  <block id="4d0b4a091845c1ceedd7eaaf10f375e9" category="list-text">你必须<block ref="89efbf554bc5bcf96584e459dff96620" category="inline-link-macro-rx"></block>。</block>
+  <block id="d49cee722b8a66a3a05375a228d31190" category="inline-link-macro">Google Cloud NetApp Volumes配额和限制</block>
+  <block id="d149f68cfd2937d2e8d871dbfb0cbedb" category="list-text">注意<block ref="3af07db1cb91b7e60ad6672ea4bc6781" category="inline-link-macro-rx"></block>。</block>
+  <block id="8086884cdea0ea24d9f6308a19cdf043" category="list-text">一个复制计划只能添加一个卷或数据存储。</block>
+  <block id="0cad1bab03dc44ec351d2de019d82607" category="list-text">复习<block ref="8f7fb2d6ad43669f8a59b96f07943aee" category="inline-link-macro-rx"></block>。</block>
+  <block id="b6c17338accc8d99b423f332451f50ad" category="paragraph">故障转移注意事项</block>
+  <block id="f8772b1ca9ad18417bf5318a8f27afba" category="list-text">故障转移仅支持使用最新快照版本。如有必要，您可以在创建快照期间创建新快照（即必须禁用选择性快照选项）。</block>
+  <block id="242733299daaca561039b733176ac1b7" category="list-text">故障转移后无法创建新的快照。</block>
+  <block id="c05df755e6c0a942398c7fcd1eb14679" category="list-text">故障转移后无法保留和协调快照。</block>
+  <block id="a6b1001c218e39c86bcccb2fe9813de3" category="paragraph">**故障恢复考虑因素**</block>
+  <block id="3758fe71aaf9a0852333acda31fa116f" category="list-text">只有在启用选择性快照选项的情况下才能进行故障恢复。您无法通过创建新快照来执行故障恢复。</block>
+  <block id="1f76d7f030886fb987cb91dedab13a5a" category="inline-link-macro">删除虚拟服务器对等关系</block>
+  <block id="96f91091a82bd278b7b54aa4310778fc" category="list-text">如果删除本地存储和Google Cloud NetApp Volumes存储集群之间的集群对等连接，则必须手动从本地集群中清除集群和存储 VM 对等连接条目。有关详细信息，请参阅 <block ref="c9d19940a40c6ca284ada61c82d06836" category="inline-link-macro-rx"></block>。</block>
+  <block id="d3846482b7a5f3467b05518965422219" category="section-title">Google Cloud 权限</block>
+  <block id="f4332067bbf3d864649a2f8ff6f383af" category="paragraph">应为 Google Cloud 中的服务主体分配以下角色或等效权限：</block>
+  <block id="46bfb0b6a950e491727cd7b9952be257" category="inline-link-macro">计算管理员角色</block>
+  <block id="6b2faa962f7aef2275d1a23970007e90" category="list-text"><block ref="6b2faa962f7aef2275d1a23970007e90" category="inline-link-macro-rx"></block></block>
+  <block id="638eb41402d462f2afaf2a4e6e47f93e" category="inline-link-macro">NetApp Console的 Google Cloud 权限</block>
+  <block id="b790e791f550336125079c0f9b6a19be" category="list-text"><block ref="b790e791f550336125079c0f9b6a19be" category="inline-link-macro-rx"></block></block>
+  <block id="436bff0805748a902328fcc07cf013a5" category="inline-link-macro">Google Cloud NetApp Volumes管理员</block>
+  <block id="a24314b6c16689ddf141ffe22d96d229" category="list-text"><block ref="a24314b6c16689ddf141ffe22d96d229" category="inline-link-macro-rx"></block></block>
+  <block id="a436e2bcc90e8b16f95397aa0884cf4d" category="inline-link-macro">VMware Engine 服务管理员</block>
+  <block id="f11373266f0d280d006bef83dd7e9ca8" category="list-text"><block ref="f11373266f0d280d006bef83dd7e9ca8" category="inline-link-macro-rx"></block></block>
+  <block id="655a4a62c68d50b259a7df6d586552fb" category="section-title">NetApp Console权限</block>
+  <block id="f92d96a49c616edb63fefcdc05a06cdf" category="paragraph">NetApp Console用户必须具有以下角色：</block>
+  <block id="077ceb8a17d475a37128a6986bf1819f" category="inline-link-macro">Google Cloud NetApp Volumes管理员</block>
+  <block id="9bdd703d68516c0b5901287aed3fd299" category="list-text"><block ref="9bdd703d68516c0b5901287aed3fd299" category="inline-link-macro-rx"></block></block>
+  <block id="36910b765d93c29f4611f725c05faabe" category="inline-link-macro">SnapCenter管理员</block>
+  <block id="670f1aa1b0f3517b704b1e0bbfc5bb78" category="list-text"><block ref="670f1aa1b0f3517b704b1e0bbfc5bb78" category="inline-link-macro-rx"></block></block>
+  <block id="c6990b299c4b29696e405251db7539ca" category="inline-link-macro">灾难恢复故障转移管理员</block>
+  <block id="94c02ddd984f67eb8b79c11dbd8b654a" category="list-text"><block ref="94c02ddd984f67eb8b79c11dbd8b654a" category="inline-link-macro-rx"></block></block>
+  <block id="4dc42c993e8bd7091a49f3fe75b4cc7f" category="paragraph">如果你还没有这样做的话，<block ref="94e30243c99a58315474317c40996996" category="inline-link-rx"></block> 。</block>
+  <block id="c6d4ec9aebbd9adbd6cd055b1e2ef0b4" category="list-text">NetApp Disaster Recovery仅适用于标准模式代理部署。看<block ref="1dca0eb7ce67e238dc32613ea2fd1e70" category="inline-link-rx"></block>。</block>
+  <block id="d79ddc5d144ac6cb3cc81d1fd8bbf16b" category="list-text">*本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考<block ref="aa1d5488876933382cbfe9d426d413f9" category="inline-link-rx"></block>。</block>
+  <block id="229e27e5e98d46ffabb19ff45325734b" category="list-text">*本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考<block ref="1169d6a654f5038ebfa8fc4462054b47" category="inline-link-rx"></block>。</block>
+  <block id="db93e33cfb5094bef5af78afec2a318a" category="paragraph">看<block ref="7710287f166c6260d467d0ffbd4c652b" category="inline-link-rx"></block>。</block>
+  <block id="9fb45d8b59f2c406ddf7a9711c1391c2" category="list-text">按照以下步骤操作<block ref="69ac71aae3c3019102e9a90ab4fd3799" category="inline-link-rx"></block>和<block ref="3f510c006b92994b3ccaf7ccb9cc0351" category="inline-link-rx"></block>为ONTAP配置和部署 FSx。</block>
+  <block id="5280fea1000838e74051510a8adb21e9" category="paragraph">要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问<block ref="e87d59187940f672670f4b294a02b363" category="inline-link-rx"></block>。</block>
+  <block id="b567b746a04d21aaaa45a342f69073cb" category="paragraph">使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅<block ref="7f4733cc86c855f6efc0e6a18921c741" category="inline-link-rx"></block>。</block>
+  <block id="52f0067dfdeb72bf780f9e3a808fbb01" category="paragraph">参考<block ref="d83a9ddc5356a460fd8c8bdc5b02cf7f" category="inline-link-rx"></block>。</block>
+  <block id="ea22e49b05f0c437898dd362ac3cb582" category="section-title">Google Cloud NetApp Volumes的局限性</block>
+  <block id="0b3bf876c8f0155fffe01bfe66919ae7" category="list-text">运行故障转移测试后，至少需要等待 52 小时才能删除克隆卷。您必须手动删除该卷。  52 小时后，您可以再次测试故障转移。</block>
+  <block id="7b968ed584e6ac7fc895a20d4c4e19e6" category="list-text">如果挂载操作的任何部分失败，故障转移将不会成功，作业将超时。  Google 最多需要三天时间来调查该问题，在此期间，vCenter 上所有与数据存储相关的操作都会被阻止。</block>
+  <block id="b0cddd5e1e4185232bf6d1fb2418ed79" category="section-title">2025年12月1日</block>
+  <block id="a59dc75ba3acb75a76892cc518033bf2" category="paragraph">您可以通过在“应用程序”页面上按数据存储过滤虚拟机以及在“资源映射”页面上选择更多目标详细信息来更轻松地添加复制计划。参考<block ref="0f45a25cd76aba04e0b1a3268dc19f1d" category="inline-link-rx"></block>。</block>
+  <block id="dec8bee8343c6d117f63ae394850253f" category="paragraph">参考<block ref="b19db5f70a49f12a345f60ed67ac796b" category="inline-link-rx"></block>。</block>
+  <block id="f846876bddc172040b4b43e5a785c530" category="paragraph">参考<block ref="890d7063dc9de57ba2bcf88f9266693d" category="inline-link-rx"></block>。</block>
+  <block id="b2d5f1c59a3bea052f379bdc27494bcc" category="paragraph">参考<block ref="af17dd838b93f65aaed7f355089a6a52" category="inline-link-rx"></block>。</block>
+  <block id="845eaf23d1b45041c6f0657e886d391e" category="paragraph"><block ref="b60b5c6bd90c6adf0ff4939b80ae6f1f" category="inline-link-rx"></block>。</block>
+  <block id="2c8bcb491668d28b6eba5cce3541ef3e" category="paragraph">有关设置NetApp Disaster Recovery许可的详细信息，请参阅<block ref="fc64bd880d64e61d0dbe79a637246086" category="inline-link-rx"></block>。</block>
+  <block id="b0bbeee8e580e57328dc54758ad05415" category="paragraph">有关管理*所有* NetApp Console数据服务的许可证的详细信息，请参阅：<block ref="260681515c15b3ca1586b5059c0196d2" category="inline-link-rx"></block> 。</block>
+  <block id="0adaadb84969a574419502132b942f31" category="paragraph">有关详细信息，请参阅<block ref="1eedc685a089def20e2f9a421813a733" category="inline-link-rx"></block>。</block>
+  <block id="fc20a50b039b8d99c2b0cd66e0d23ce2" category="paragraph">有关详细信息，请参阅<block ref="b23e600e479112761333de8c4f7b2fd9" category="inline-link-rx"></block>。</block>
+  <block id="ba8fe6f6789e5f7199519941aefafefb" category="paragraph"><block ref="6d1992c3ae7ff61967726232cb57483c" category="inline-link-rx"></block>。</block>
+  <block id="248f029169ae1dc7e09893ffc08dc712" category="paragraph">参考<block ref="0807a737bd78695b4a254e4d38c54d1a" category="inline-link-rx"></block>。</block>
+  <block id="4b3c6cbf4a48d0bd709bc99a41eaf5c4" category="paragraph">参考<block ref="0f45a25cd76aba04e0b1a3268dc19f1d" category="inline-link-rx"></block>。</block>
+  <block id="5231740592cdd924e6fd895d6bf9f92a" category="paragraph">参考<block ref="fdfc4e9bafc2bb55b4145b1390d051cc" category="inline-link-rx"></block>。</block>
+  <block id="db4b2a2fab0c7502080a219b908784ae" category="paragraph">创建灾难恢复或复制计划时，您可以将虚拟机添加到功能资源组中。资源组使您能够将一组依赖的虚拟机放入满足您要求的逻辑组中。例如，组可以包含恢复时可以执行的启动顺序。在此版本中，每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在计划中包含的顺序启动。参考<block ref="ee1fea06d7478ebea6a6c5ae2d2b4dd8" category="inline-link-rx"></block>。</block>
+  <block id="647d9243c873ee85a5b5ef91c0cde1be" category="paragraph">创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。参考<block ref="467be6b72bdf445e572b40cb9aef5aef" category="inline-link-rx"></block>。</block>
+  <block id="db57896cfd5fc20498a884f5493db9e2" category="paragraph">创建灾难恢复或复制计划时，您需要选择虚拟机。在此版本中，您现在可以查看与数据存储区或虚拟机关联的每个卷关联的SnapMirror 。您还可以查看与SnapMirror计划关联的 RPO 传输计划。RPO 可帮助您确定备份计划是否足以在灾难后恢复。参考<block ref="0f45a25cd76aba04e0b1a3268dc19f1d" category="inline-link-rx"></block>。</block>
+  <block id="727d2884239e62cf5ec5d59f2ae538a1" category="paragraph">作业监视器页面现在包含刷新选项，以便您可以获得最新的操作状态。参考<block ref="45f7b5a446086d3a895fd4d6d899ff32" category="inline-link-rx"></block>。</block>
+  <block id="e6a35b0cc097a073b142d2f77dd698c4" category="paragraph"><block ref="5b01ddd771a87fa6b71f782d09b9b7b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="bae7a0a97273516d5296fb983700a411" category="paragraph"><block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>。<block ref="e704c98551e5f8acdbf19af28a86dcf3" category="inline-link-rx"></block>。</block>
+  <block id="a805fee248bed5144adc2fef83e46569" category="paragraph">添加 vCenter 站点后，就可以创建灾难恢复或复制计划了。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。</block>
+  <block id="3cd914b858fef92fe1881cac0800b73b" category="paragraph">&gt;[!重要] &gt;使用 Google Cloud，您只能向复制计划添加一个卷或数据存储。</block>
 </blocks>

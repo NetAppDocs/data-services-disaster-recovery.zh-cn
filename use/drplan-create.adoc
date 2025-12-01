@@ -12,11 +12,11 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-添加 vCenter 站点后，您就可以创建灾难恢复或_复制计划_。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。
+添加 vCenter 站点后，就可以创建灾难恢复或复制计划了。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。
 
 *所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 *关于此任务*
 
@@ -55,6 +55,8 @@ link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的�
 在创建SnapMirror关系之前，请在灾难恢复之外设置集群和 SVM 对等关系。
 
 *最佳实践*：在部署NetApp Disaster Recovery之前组织您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。
+
+>[!重要] >使用 Google Cloud，您只能向复制计划添加一个卷或数据存储。
 
 
 

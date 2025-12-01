@@ -16,7 +16,7 @@ summary: 使用NetApp Disaster Recovery，您可以使用不同的许可计划�
 
 *所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复应用程序管理员角色。
 
-link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的访问角色"^]。
 
 *许可选项* 您可以使用以下许可选项：
 
@@ -61,7 +61,7 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recovery的登录页面屏�
 
 . 如果您尚未为其他服务添加控制台代理，请添加一个。
 +
-要添加控制台代理，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解控制台代理"^]。
+要添加控制台代理，请参阅 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]。
 
 . 设置代理后，在NetApp Disaster Recovery登录页面中，添加代理的按钮将更改为开始免费试用的按钮。选择*开始免费试用*。
 . 首先添加 vCenter。
@@ -88,7 +88,7 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recovery付款方式页�
 . 使用 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 * NetApp Disaster Recovery*。
 . 当您返回到NetApp Disaster Recovery时，会出现一条消息表明您已订阅。
 +
-您可以在NetApp Console订阅页面查看订阅详细信息。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["详细了解如何使用NetApp Console管理订阅"^] 。
+您可以在NetApp Console订阅页面查看订阅详细信息。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-homepage.html["详细了解如何使用NetApp Console管理订阅"^]。
 
 
 
@@ -102,7 +102,7 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recovery付款方式页�
 
 *将许可证添加到NetApp Console** 从NetApp销售代表处购买NetApp Disaster Recovery许可证后，您可以在控制台中管理该许可证。
 
-https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用NetApp Console添加许可证"^] 。
+https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何使用NetApp Console添加许可证"^]。
 
 
 
@@ -111,9 +111,9 @@ https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-li
 如果您的许可期限即将到期，或者您的许可容量已达到限制，您将在NetApp Disaster RecoveryUI 中收到通知。您可以在 NetApp Disaster Recovery许可证到期之前进行更新，这样您访问扫描数据的能力就不会中断。
 
 
-TIP: 此消息也出现在NetApp Console和 https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
+TIP: 此消息也会出现在NetApp Console和 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
 
-https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用NetApp Console更新许可证"^] 。
+https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何使用NetApp Console更新许可证"^]。
 
 
 

@@ -13,8 +13,8 @@ NetApp Console代理是在您的云或本地网络上运行的NetApp软件。它
 
 对于NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。
 
-要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解NetApp Console部署模式 | NetApp文档"^]。
+要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解NetApp Console部署模式 | NetApp文档"^]。
 
 虽然控制台代理对于使用该服务至关重要，但安装控制台代理的安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了此信息的范围。
 
-使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-marketplace.html["从 AWS Marketplace 创建控制台代理 | NetApp文档"^]。
+使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["从 AWS Marketplace 创建控制台代理 | NetApp文档"^]。

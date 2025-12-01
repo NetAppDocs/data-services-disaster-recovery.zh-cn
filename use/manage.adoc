@@ -23,7 +23,7 @@ NetApp Disaster Recovery提供所有资源的概览和更详细的视角：
 
 任务需要不同的NetApp Console角色。有关详细信息，请参阅每个任务中的“所需的NetApp Console角色”部分。
 
-link:../reference/dr-reference-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 
 
