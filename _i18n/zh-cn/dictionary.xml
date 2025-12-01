@@ -1844,7 +1844,6 @@
   <block id="cab2138409405e17442c0b2913348b5c" category="doc">支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine。</block>
   <block id="eccf4b156fba5109ca6b1ef2be2fd64e" category="paragraph">NetApp Disaster Recovery现在支持使用Google Cloud NetApp Volumes的 Google Cloud VMware Engine 进行迁移、故障转移、故障恢复和测试操作。这种集成实现了本地环境和 Google Cloud 之间的无缝灾难恢复工作流程。</block>
   <block id="7984e947265cc8b94c06702adbf28865" category="inline-link-macro">限制</block>
-  <block id="4fae34c4a960e8f2c583a66a68cf6fdc" category="paragraph">请务必仔细阅读。<block ref="0b97dbd151642cb26d83aa16e8ffd9ce" category="inline-link-macro-rx"></block>和<block ref="86229131b08ad70f4dd9ffc7440523ad" category="inline-link-macro-rx"></block>适用于谷歌云。</block>
   <block id="3c56503a9f48478890ac41e17395c762" category="list-text">Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes</block>
   <block id="1a90436cad6b2c834a6f0bf4b63bb676" category="paragraph">详细了解<block ref="185be9890bef04443cd0fba90b4aff11" category="inline-link-rx"></block>。</block>
   <block id="9ad4327ee2b15571b0ae33cd44518465" category="list-text">通过多个时间点恢复操作简化 vCenter 发现和应用程序恢复的用户体验。</block>
@@ -1929,4 +1928,5 @@
   <block id="bae7a0a97273516d5296fb983700a411" category="paragraph"><block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>。<block ref="e704c98551e5f8acdbf19af28a86dcf3" category="inline-link-rx"></block>。</block>
   <block id="a805fee248bed5144adc2fef83e46569" category="paragraph">添加 vCenter 站点后，就可以创建灾难恢复或复制计划了。复制计划管理 VMware 基础架构的数据保护。选择源和目标 vCenter，挑选资源组，并对应用程序的恢复和启动方式进行分组。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有相似层的应用程序进行分组。此类计划有时被称为_蓝图_。</block>
   <block id="3cd914b858fef92fe1881cac0800b73b" category="paragraph">&gt;[!重要] &gt;使用 Google Cloud，您只能向复制计划添加一个卷或数据存储。</block>
+  <block id="8497094e0d678632f29aeaad49708682" category="paragraph">请务必仔细阅读。<block ref="0b97dbd151642cb26d83aa16e8ffd9ce" category="inline-link-macro-rx"></block>和<block ref="9bbaf1e88d2981b5294528496eff27bf" category="inline-link-macro-rx"></block>适用于谷歌云。</block>
 </blocks>
