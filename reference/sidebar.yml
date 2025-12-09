@@ -2,8 +2,10 @@
 section: reference
 title: 参考
 entries:
-- title: NetApp Disaster Recovery所需的 vCenter 权限
+- title: 灾难恢复需要 vCenter 权限
   url: "/reference/vcenter-privileges.html"
+- title: 切换控制台代理
+  url: "/reference/switch-console-agent.html"
 - title: 将NetApp Disaster Recovery与 Amazon EVS 结合使用
   entries:
   - title: NetApp Disaster Recovery与 Amazon EVS 概述

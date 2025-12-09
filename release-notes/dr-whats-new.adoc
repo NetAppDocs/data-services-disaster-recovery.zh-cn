@@ -16,7 +16,33 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 
+== 2025年12月9日
+
+版本 4.2.8P1
+
+
+
+=== 文件夹层级结构保留
+
+默认情况下，灾难恢复会在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标中没有所需的文件夹，灾难恢复功能会创建该文件夹。
+
+现在您可以通过指定新的父 VM 文件夹或取消选中“保留原始文件夹层次结构”选项来覆盖此设置。
+
+有关详细信息，请参阅 link:../use/drplan-create.adoc["创建复制计划"]。
+
+
+
+=== 简化控制台代理更新
+
+灾难恢复现在支持在工作环境中使用多个控制台代理的简化流程。要在控制台代理之间切换，您必须编辑 vCenter 配置，重新发现凭据，并刷新复制计划以使用新的控制台代理。
+
+有关详细信息，请参阅 link:../reference/switch-console-agent.html["切换控制台代理"]。
+
+
+
 == 2025年12月1日
+
+版本 4.2.8
 
 
 
@@ -29,6 +55,8 @@ NetApp Disaster Recovery现在支持使用Google Cloud NetApp Volumes的 Google 
 
 
 == 2025年11月10日
+
+版本 4.2.7
 
 
 
@@ -61,6 +89,8 @@ NetApp Disaster Recovery现在支持使用Google Cloud NetApp Volumes的 Google 
 
 
 == 2025年10月6日
+
+版本 4.2.6
 
 
 
