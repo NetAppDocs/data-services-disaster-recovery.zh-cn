@@ -10,7 +10,7 @@
 
 现在您可以通过指定新的父 VM 文件夹或取消选中“保留原始文件夹层次结构”选项来覆盖此设置。
 
-有关详细信息，请参阅 link:../use/drplan-create.adoc["创建复制计划"]。
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.adoc["创建复制计划"]。
 
 
 
@@ -18,4 +18,4 @@
 
 灾难恢复现在支持在工作环境中使用多个控制台代理的简化流程。要在控制台代理之间切换，您必须编辑 vCenter 配置，重新发现凭据，并刷新复制计划以使用新的控制台代理。
 
-有关详细信息，请参阅 link:../reference/switch-console-agent.html["切换控制台代理"]。
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/reference/switch-console-agents.html["切换控制台代理"]。
