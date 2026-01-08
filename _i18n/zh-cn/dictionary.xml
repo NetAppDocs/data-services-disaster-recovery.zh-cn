@@ -1959,10 +1959,9 @@
   <block id="7bcd913022459926bf1a00069a8fb8f6" category="admonition">在部署NetApp Disaster Recovery之前整理您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。</block>
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">为故障转移测试创建一套单独的专用映射，以防止 VMS 使用相同的 IP 地址连接到生产网络。</block>
   <block id="5f4825a97c910dc2ee0d9eb1107f19d9" category="section-title">地图资源 &gt; 虚拟机部分</block>
-  <block id="782a5bda639e031f83212ac3e8bdb777" category="list-text">*保留原始文件夹层次结构*：选中此选项后，灾难恢复将在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标_不_具有原始文件夹层次结构，则灾难恢复会创建它。</block>
-  <block id="ed5adefa93ed81ded190826eed4455dd" category="paragraph">取消选中此框可忽略原始文件夹层次结构。</block>
   <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">灾难恢复需要 vCenter 权限</block>
   <block id="2b1806d17c0606f8caa4232aa6a3c113" category="sidebar">切换控制台代理</block>
-  <block id="98ade846ffa73dc9c6bcd3e3e84c38b7" category="paragraph">有关详细信息，请参阅 <block ref="1762f821178ef43810c03e86465a946d" category="inline-link-macro-rx"></block>。</block>
-  <block id="1df351797bd2540f3ec41bc24e67bf1f" category="paragraph">有关详细信息，请参阅 <block ref="2631c62a2ac2ec2e6a0ebc0352319a2c" category="inline-link-macro-rx"></block>。</block>
+  <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">有关详细信息，请参阅 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
+  <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">有关详细信息，请参阅 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
+  <block id="200e6bbe1011559dc78706a398152267" category="list-text">*保留原始文件夹层次结构*：选中此选项后，灾难恢复将在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标_不_具有原始文件夹层次结构，则灾难恢复会创建它。选中此框可保留文件夹层次结构；取消选中此框可忽略原始文件夹层次结构。</block>
 </blocks>
