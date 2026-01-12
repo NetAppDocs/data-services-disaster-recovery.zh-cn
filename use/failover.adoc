@@ -20,9 +20,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 *关于此任务*
 
-在故障转移期间，灾难恢复使用最新的SnapMirror快照副本。或者，您可以从时间点快照中选择特定快照（根据SnapMirror的保留策略）。
-
-如果最近的副本受到威胁（例如在勒索软件攻击期间），请使用时间点选项。  BlueXP disaster recovery显示所有可用的时间点。
+在故障转移期间，灾难恢复默认使用最新的SnapMirror快照副本，但您可以从某个时间点快照中选择特定的快照（根据SnapMirror的保留策略）。如果最新副本遭到破坏（例如在勒索软件攻击期间），请使用时间点选项。
 
 此过程会有所不同，具体取决于生产站点是否健康以及您是否由于关键基础设施故障以外的原因执行到灾难恢复站点的故障转移：
 
@@ -38,9 +36,9 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 在开始故障转移之前，您可以测试该过程。测试不会使虚拟机脱机。
 
-在故障转移测试期间， BlueXP disaster recovery会临时创建虚拟机。  BlueXP disaster recovery将支持FlexClone卷的临时数据存储映射到 ESXi 主机。
+在故障转移测试期间，灾难恢复功能会临时创建虚拟机。灾难恢复将支持FlexClone卷的临时数据存储映射到 ESXi 主机。
 
-此过程不会消耗本地ONTAP存储或 AWS 中 FSx for NetApp ONTAP存储的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续。
+此过程不会占用本地ONTAP存储或 AWS 中NetApp ONTAP存储的 FSx 的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续进行。
 
 完成测试后，您应该使用*清理测试*选项重置虚拟机。虽然建议这样做，但这不是必需的。
 
@@ -76,8 +74,8 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 .步骤
 . 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*清理故障转移测试*。
-. 在测试故障转移页面中，输入“清理故障转移”，并选择*清理故障转移测试*。
+. 在右侧，选择“操作”选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"] 然后*清理故障转移测试*。
+. 在“测试故障转移”页面中，输入“清理故障转移”，然后选择“清理故障转移测试”。
 
 
 
@@ -102,6 +100,9 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 
 
+NOTE: 对于基于数据存储的复制计划，如果您已添加并发现了任何虚拟机，但未提供映射详细信息，则这些虚拟机将包含在故障转移中。故障转移失败后，作业中会发出通知。您必须提供映射详细信息才能成功完成故障转移。
+
+
 TIP: 故障转移启动后，您可以在灾难恢复站点的 vCenter 中看到恢复的虚拟机（虚拟机、网络和数据存储）。默认情况下，虚拟机会恢复到 Workload 文件夹。
 
 .步骤
@@ -111,7 +112,7 @@ TIP: 故障转移启动后，您可以在灾难恢复站点的 vCenter 中看到
 +
 image:dr-plan-failover3.png["故障转移页面"]
 
-. 在故障转移页面中，立即启动快照或选择要从中恢复的数据存储的快照。默认是最新的。
+. 在故障转移页面中，您可以立即创建一个新的快照，或者选择一个现有的快照作为数据存储的恢复基础。默认值为最新版本。
 +
 在发生故障转移之前，将拍摄当前源的快照并将其复制到当前目标。
 

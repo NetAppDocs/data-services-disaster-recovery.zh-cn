@@ -1066,7 +1066,6 @@
   <block id="46aae999fad517a75f0ccba3b71bd481" category="paragraph">这是NetApp Disaster Recovery的初始版本。</block>
   <block id="2f2414748c5c55333b00da7bf5d583fc" category="section-title">基于云的灾难恢复服务</block>
   <block id="0be6cabb97a73364c0da66cecb2442e8" category="paragraph">NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。</block>
-  <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp以多种方式为BlueXP提供支持。全天候提供广泛的免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单获取的远程技术支持。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">获取云提供商文件服务的支持</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">适用于ONTAP 的Amazon FSx</block>
@@ -1116,7 +1115,6 @@
   <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*查看案例*：查看有关特定案例的完整详细信息。</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例说明*：提供有关您的问题的更多详细信息，或选择*上传文件*以附加最多五个文件。</block>
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*结案*：提供有关结案原因的详细信息，然后选择*结案*。</block>
-  <block id="243263104c829e77835d632f591230d5" category="summary">在向NetApp技术支持部门提交支持案例之前，您需要向BlueXP添加一个NetApp支持站点帐户，然后注册以获得支持。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">注册以获得支持</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支持注册概述</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">激活支持权利的注册方式有两种：</block>
@@ -1239,7 +1237,6 @@
   <block id="6f9c40e36ae73e33332b46ebad53611b" category="list-text">选择“虚拟机”或“数据存储”。</block>
   <block id="1e37304672f6f6f473c93804e891eacb" category="list-text">可选择按名称搜索特定的虚拟机或数据存储。</block>
   <block id="b3736de6232ff120d2109e988d051825" category="list-text">在“应用程序”页面的左侧，选择要保护并分配到所选组的虚拟机或数据存储区。</block>
-  <block id="e03d53e52bffebf4bf8dea47e4bc3ab4" category="paragraph">源 vCenter 必须位于本地 vCenter 上。目标 vCenter 可以是同一站点或远程站点中的第二个本地 vCenter，也可以是基于云的软件定义数据中心 (SDDC)，例如 AWS 上的 VMware Cloud。这两个 vCenter 都应该已添加到您的BlueXP disaster recovery工作环境中。</block>
   <block id="08c396946743aa0cf55cd76038c264b7" category="paragraph">所选资源将自动添加到组 1，并启动新的组 2。每次向最后一个组添加资源时，都会添加另一个组。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">屏幕截图显示了“添加复制计划”&gt;“要复制的应用程序”页面</block>
   <block id="0f71807fe3313792a56d8deaefc042cd" category="paragraph"><block ref="fe2b15a06d13ce51dd26ce76b278185c" category="inline-image-macro-rx" type="image"></block></block>
@@ -1256,7 +1253,6 @@
   <block id="8347a9e8f0404960a1eb7ad71a74e635" category="paragraph">如果您计划将测试故障转移作为 DR 计划的一部分执行，则应提供一组测试故障转移映射，以确保故障转移测试期间启动的虚拟机不会干扰生产虚拟机。您可以通过为测试虚拟机提供不同的 IP 地址，或者将测试虚拟机的虚拟 NIC 映射到与生产隔离但具有相同 IP 配置的不同网络（称为_气泡_或_测试网络_）来实现此目的。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
   <block id="009689baead8ab26037799440fbb68e2" category="paragraph">如果要在此服务中创建SnapMirror关系，则集群及其 SVM 对等关系应该已在NetApp Disaster Recovery之外设置。</block>
-  <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">在资源映射页面中，要对故障转移和测试操作使用相同的映射，请选中该框。</block>
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">复制计划，资源映射选项卡</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="671f7938870f01967b2e491f4c0ea912" category="list-text">在故障转移映射选项卡中，选择每个资源右侧的向下箭头并映射每个部分中的资源：</block>
@@ -1299,7 +1295,6 @@
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">当将大型环境恢复到较小的目标集群或进行灾难恢复测试而无需配置一对一的物理 VMware 基础架构时，这会非常有用。</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">屏幕截图显示添加复制计划 &amp;gt; 资源映射 &amp;gt; 虚拟机</block>
   <block id="1883274b7afbbc2357cb15c15a1af17e" category="paragraph"><block ref="a690938170d1fae8a1d7e7ed3a6d014f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8c22a4ff8c6f3059c2b8833172ac8439" category="list-text">*脚本*：您可以将自定义客户操作系统托管脚本以 .sh、.bat 或 .ps1 格式包含在后期处理中。使用自定义脚本， BlueXP disaster recovery可以在故障转移、故障回复和迁移过程之后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。该服务可以在运行 Microsoft Windows 或任何受支持的 Linux 变体的虚拟机中运行脚本，并支持命令行参数。您可以将脚本分配给复制计划中的单个虚拟机或所有虚拟机。</block>
   <block id="0285fd1b2f51318cc8adfeb8002249a7" category="paragraph">要使用 VM 客户操作系统启用脚本执行，必须满足以下条件：</block>
   <block id="c2ffebe75df83d8a5e4d0ab089e544e3" category="list-text">必须在虚拟机上安装 VMware Tools。</block>
   <block id="3bec001de0817436d65092198756c8eb" category="list-text">必须提供适当的用户凭据以及足够的来宾操作系统权限才能运行该脚本。</block>
@@ -1312,7 +1307,6 @@
   <block id="cd9b7d7dfe576f566d279960505b56d9" category="admonition">您可以以千兆字节 (GiB) 或兆字节 (MiB) 为单位配置 DRAM。虽然每个虚拟机至少需要 1MiB 的 RAM，但实际数量必须确保虚拟机来宾操作系统和任何正在运行的应用程序能够高效运行。</block>
   <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="983a4203041e2ae3715f09be44011da8" category="list-text">*启动顺序*：您可以修改跨资源组的所有选定虚拟机的故障转移后的启动顺序。默认情况下，所有虚拟机同时并行启动；但是，您可以在此阶段进行更改。这有助于确保在启动后续优先级虚拟机之前，所有优先级为第一的虚拟机都在运行。</block>
-  <block id="c045eb8d9232fbd14c7433efdb50d036" category="paragraph">BlueXP disaster recovery启动具有相同启动顺序号的任何虚拟机。</block>
   <block id="354a69710d188806a2240038216a8fe4" category="list-text">顺序启动：为每个虚拟机分配一个唯一的编号，以按指定的顺序启动，例如 1、2、3、4、5。</block>
   <block id="917743345c16934d4f46d0d5f7c82682" category="list-text">同时启动：为任何虚拟机分配相同的编号，以便同时启动它们，例如 1,1,1,1,2,2,3,4,4。</block>
   <block id="8a1eaa44f33649f4a55add8e5df848ec" category="list-text">*启动延迟*：调整启动操作的延迟时间（分钟），表示虚拟机在启动过程之前等待的时间。输入 0 到 10 分钟之间的值。</block>
@@ -1391,7 +1385,6 @@
   <block id="91489d092184bfc755448f244680bba7" category="doc">使用NetApp Disaster Recovery将应用程序故障恢复到原始源</block>
   <block id="f644f24f13324a7f89c132498723a6bc" category="paragraph">灾难解决后，从灾难恢复站点故障回复到源站点以恢复正常运行。您可以选择要恢复的快照。</block>
   <block id="358dd4a1f198e0fd5a1f38641410f5bd" category="paragraph">*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。</block>
-  <block id="c263b99cae683817ea0de7b97febbef5" category="paragraph">在此工作流程中， NetApp Disaster Recovery会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。此过程从已完成故障转移到目标的关系开始，并涉及以下步骤：</block>
   <block id="89c264ecf8c1aae2c7902f0d4ce033e4" category="list-text">对恢复的站点执行合规性检查。</block>
   <block id="d5d9cec5d4cc26badad6b1b4c595325e" category="list-text">刷新已确定位于恢复站点中的每个 vCenter 群集的 vCenter 信息。</block>
   <block id="f064ccaae58d6fda11f3f5249381ffc3" category="list-text">在目标站点上，关闭并取消注册虚拟机，然后卸载卷。</block>
@@ -1400,20 +1393,14 @@
   <block id="18675ae1b474c7c2e2d455f021125cef" category="list-text">启动并注册源虚拟机，并在源上挂载卷。</block>
   <block id="e95b50cfb71995cd2a2c4c00f88795c2" category="list-text">选择复制计划。</block>
   <block id="5b249efe090f5ab9439bcf685291f25a" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*故障恢复*。</block>
-  <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">输入复制计划名称确认并开始故障回复。</block>
-  <block id="55d7313e1fd3e987d9d8070f2418d3a0" category="list-text">选择要从中恢复的数据存储的快照。默认是最新的。</block>
   <block id="f5e8243ebb81b755b8553e29863f3183" category="list-text">要检查进度，请在菜单中选择*作业监控*。</block>
   <block id="c9ef31ddb0e164476a6e84e4781b7af3" category="doc">使用NetApp Disaster Recovery将应用程序故障转移到远程站点</block>
   <block id="74ba4c0b5e2da8a64b8dee1c0d8ba2eb" category="paragraph">如果发生灾难，请将您的主要本地 VMware 站点故障转移到另一个本地 VMware 站点或 AWS 上的 VMware Cloud。您可以测试故障转移过程以确保在需要时能够成功。</block>
-  <block id="8093871fd388d60c13b43e795ff95ca9" category="paragraph">在故障转移期间，灾难恢复使用最新的SnapMirror快照副本。或者，您可以从时间点快照中选择特定快照（根据SnapMirror的保留策略）。</block>
-  <block id="12c160f2498ad9d752394704d91b04a8" category="paragraph">如果最近的副本受到威胁（例如在勒索软件攻击期间），请使用时间点选项。  BlueXP disaster recovery显示所有可用的时间点。</block>
   <block id="1770bdbefb7e2bbdf6308648d1575a65" category="paragraph">此过程会有所不同，具体取决于生产站点是否健康以及您是否由于关键基础设施故障以外的原因执行到灾难恢复站点的故障转移：</block>
   <block id="7e0794f8e08750d2985bf8a42c37e0c0" category="list-text">发生严重生产站点故障，导致无法访问源 vCenter 或ONTAP集群： NetApp Disaster Recovery允许您选择任何可用的快照进行恢复。</block>
   <block id="5c23500391ed1ff22df3528a468b5a9e" category="list-text">生产环境健康：您可以“立即拍摄快照”或选择之前创建的快照。</block>
   <block id="45412678755135d74955408e5c42d8aa" category="paragraph">此过程会中断复制关系，将 vCenter 源虚拟机置于脱机状态，将卷注册为灾难恢复 vCenter 中的数据存储区，使用计划中的故障转移规则重新启动受保护的虚拟机，并在目标站点上启用读/写功能。</block>
   <block id="386733f1fba6df33919f466a94320062" category="paragraph">在开始故障转移之前，您可以测试该过程。测试不会使虚拟机脱机。</block>
-  <block id="9132b8aeef05d70146c6c5e2950c780a" category="paragraph">在故障转移测试期间， BlueXP disaster recovery会临时创建虚拟机。  BlueXP disaster recovery将支持FlexClone卷的临时数据存储映射到 ESXi 主机。</block>
-  <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">此过程不会消耗本地ONTAP存储或 AWS 中 FSx for NetApp ONTAP存储的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续。</block>
   <block id="41d102e0aefecc8e8cf5fb028eebff10" category="paragraph">完成测试后，您应该使用*清理测试*选项重置虚拟机。虽然建议这样做，但这不是必需的。</block>
   <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。</block>
   <block id="2c9a87c2b3a393867fe2b3a4d024f0d5" category="paragraph">对于测试故障转移，灾难恢复执行以下操作：</block>
@@ -1429,8 +1416,6 @@
   <block id="625033464ccff58d2815930ae362a422" category="list-text">测试完成后，清理测试环境。</block>
   <block id="302bf3ef5d8e942b185e4b4d03884ff4" category="section-title">故障转移测试后清理测试环境</block>
   <block id="b22e9cc3eebab01136ffe8d3f7e201ca" category="paragraph">故障转移测试完成后，您应该清理测试环境。此过程将从测试位置、FlexClone 和临时数据存储区中删除临时虚拟机。</block>
-  <block id="7f3fe0fe4edea0449450cded32e9d6b7" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*清理故障转移测试*。</block>
-  <block id="036828752e0e356c83a2f88c3a26b344" category="list-text">在测试故障转移页面中，输入“清理故障转移”，并选择*清理故障转移测试*。</block>
   <block id="ce68649418f9a08c1ca788541d81a5fc" category="section-title">将源站点故障转移到灾难恢复站点</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">如果发生灾难，您可以根据需要将主要本地 VMware 站点故障转移到另一个本地 VMware 站点或使用 FSx for NetApp ONTAP 的AWS 上的 VMware Cloud。</block>
   <block id="f5a93054f0d69f6d7904ca9d2efa38f0" category="paragraph">故障转移过程涉及以下操作：</block>
@@ -1448,7 +1433,6 @@
   <block id="2daf88e8e899eb0e79ca31b1325a8026" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*故障转移*。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
   <block id="746c84b1b109b4fcfeb29ff36be21f14" category="paragraph"><block ref="746c84b1b109b4fcfeb29ff36be21f14" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c05fbe62f8e4ec67f1b21ca8610fda50" category="list-text">在故障转移页面中，立即启动快照或选择要从中恢复的数据存储的快照。默认是最新的。</block>
   <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">在发生故障转移之前，将拍摄当前源的快照并将其复制到当前目标。</block>
   <block id="7d0da89e5c4df500c537ba4145ed8fae" category="list-text">或者，如果您希望在检测到通常会阻止故障转移发生的错误时仍进行故障转移，请选择“*强制故障转移*”。</block>
   <block id="50af42d54cb7a9dbbde8e8274cb00e99" category="list-text">或者，如果您希望服务在复制计划故障转移后不自动创建反向SnapMirror保护关系，请选择“*跳过保护*”。如果您希望在NetApp Disaster Recovery中将恢复的站点恢复在线之前对其执行其他操作，这将非常有用。</block>
@@ -1963,5 +1947,51 @@
   <block id="2b1806d17c0606f8caa4232aa6a3c113" category="sidebar">切换控制台代理</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">有关详细信息，请参阅 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">有关详细信息，请参阅 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
-  <block id="200e6bbe1011559dc78706a398152267" category="list-text">*保留原始文件夹层次结构*：选中此选项后，灾难恢复将在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标_不_具有原始文件夹层次结构，则灾难恢复会创建它。选中此框可保留文件夹层次结构；取消选中此框可忽略原始文件夹层次结构。</block>
+  <block id="6da53899225555a506524070f96e33df" category="doc">支持本地环境中的多个控制台代理</block>
+  <block id="8a702621d5f54ca1c7d25a86b7e3f774" category="paragraph">如果您在本地使用灾难恢复，现在可以为每个 vCenter 实例部署控制台代理，从而提高恢复能力。</block>
+  <block id="4cb7bcc4077d7b471c915dace37d3111" category="paragraph">例如，如果您有两个站点（站点 A 和 B），则站点 A 可以将控制台代理 A 连接到 vCenter 1、 ONTAP部署 1 和ONTAP部署 2。站点 B 可以将控制台代理 B 连接到 vCenter 2 和ONTAP部署 3 和 4。</block>
+  <block id="0382d445298ad46bfe9bb89d2b1bbc4a" category="inline-link-macro">创建控制台代理</block>
+  <block id="31f61ac5920cfdf4b1428392c106e013" category="paragraph">有关灾难恢复中的控制台代理的信息，请参阅 <block ref="c6314de739d0ca77819b65e8d83a54dc" category="inline-link-macro-rx"></block>。</block>
+  <block id="4de9da4a5acec3c25ad553d7f1a89484" category="section-title">使用基于数据存储的保护机制，在故障转移后为复制计划添加虚拟机</block>
+  <block id="31c59621442d91b173b5c05f7fe7f5ba" category="paragraph">当故障转移被触发时，任何使用基于数据存储的保护的复制计划都会包含已添加到数据存储中的虚拟机，前提是这些虚拟机已被发现。故障转移完成前，您必须提供新增虚拟机的映射详细信息。</block>
+  <block id="01808e57843d81464069fd6222b42dc5" category="inline-link-macro">故障转移应用程序</block>
+  <block id="210c07d14f371d34616f90780c809d7d" category="paragraph">有关详细信息，请参阅 <block ref="10ad778ec26a5abb07ecd723807494c7" category="inline-link-macro-rx"></block>。</block>
+  <block id="0fdf1f7467d148d6f8e6edea53e3bba1" category="section-title">新邮件通知</block>
+  <block id="f3815b37b633b3691ad8c2d3a2aeec1b" category="paragraph">灾难恢复功能现在会针对以下事件发送电子邮件通知：</block>
+  <block id="92522c3fbfb92373bdaceab2b1ec2db4" category="list-text">接近容量使用极限</block>
+  <block id="722ef45b415368a656fe90463206ae2e" category="list-text">报告生成完成</block>
+  <block id="3097f5b876f89e830b96175a17c6ee35" category="list-text">工作失败</block>
+  <block id="8d6a4ba10a10e8034a89ce1a5220c738" category="list-text">许可证到期或违规</block>
+  <block id="489ad675e0724931adc834fbc59bdeec" category="section-title">Swagger 改进</block>
+  <block id="1749ad8b4bb22a316407bcdb543d7aeb" category="inline-link-macro"><block ref="1749ad8b4bb22a316407bcdb543d7aeb" category="inline-link-rx"></block></block>
+  <block id="0a476aea9bd42d70a5e646a38f779187" category="paragraph">现在您可以从灾难恢复中访问 Swagger 文档。在灾难恢复中，选择**设置**，然后选择**API 文档**以链接到 Swagger，或者在浏览器的隐身/隐私模式下访问此 URL： <block ref="dcecb9493ce135a9d2a96f8693efd425" category="inline-link-macro-rx"></block>。</block>
+  <block id="df6f21ef230478b0b817e1303ba53264" category="section-title">改进的用户界面</block>
+  <block id="ce620672d96c9599e9bfaa409968c7a6" category="paragraph">灾难恢复功能现在提供更完善的警告和错误解决方法。此版本修复了导致已取消的作业无法在用户界面中显示的错误。已取消的职位现在可以查看了。当同一个目标网络映射到多个不同的源网络时，还会发出新的警告。</block>
+  <block id="edd2f7fa340d3324747878ea3a531288" category="section-title">保留复制计划中默认添加的 VM 文件夹结构</block>
+  <block id="2295e48d8abb5539689fac23d785e1cd" category="paragraph">创建复制时，新的默认设置是保留 VM 文件夹结构。如果恢复目标没有原始文件夹层次结构，灾难恢复程序会创建它。您可以取消选择此选项以忽略原始文件夹层次结构。</block>
+  <block id="2ab0f27f92b633596464651c85366a28" category="paragraph">有关详细信息，请参阅 <block ref="5e71e4e6b8c5e7bff47e3e8fc9f8f4a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="2aa03a2f6536e9af2f778eef56fdc3e3" category="paragraph">灾难恢复还支持使用多个本地配置的控制台代理。在这种情况下，控制台代理会将操作定向到 vCenter 和ONTAP阵列集群，源和目标各自拥有自己的控制台代理。建议使用多个控制台代理，以减少延迟并缩短控制台代理或站点发生故障时的恢复时间。</block>
+  <block id="667dffcf5676fe0bd645082d2a512fef" category="section-title">2026年1月12日</block>
+  <block id="2a5d29dc0e8c9fb1d01f9e388b1b0b74" category="paragraph">版本 4.2.9</block>
+  <block id="0c798cc11f8ddc52d0bd3006eaa122fc" category="summary">NetApp以多种方式为控制台提供支持。我们提供全天候 (24x7) 的丰富免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单系统提供的远程技术支持。</block>
+  <block id="512fd5eb37bb5d3f000a423886a72dd0" category="summary">在向NetApp技术支持部门提交支持案例之前，您需要将NetApp支持站点帐户添加到NetApp Console，然后注册以获得支持。</block>
+  <block id="71e1bea6c178dd06aa64cb971b0a7ab6" category="paragraph">源 vCenter 必须位于本地 vCenter 上。目标 vCenter 可以是同一站点或远程站点中的第二个本地 vCenter，也可以是基于云的软件定义数据中心 (SDDC)，例如 VMware Cloud on AWS。这两个 vCenter 都应该已经添加到您的灾难恢复工作环境中。</block>
+  <block id="5ac1f8de819731380d7b9bbae3ae1d60" category="list-text">在“资源映射”页面中，选中该复选框，以便对故障转移和测试操作使用相同的映射。</block>
+  <block id="b48e099c4fc62f3d87b3ba0f45c91635" category="list-text">*脚本*：您可以将自定义的访客操作系统托管脚本（.sh、.bat 或 .ps1 格式）作为后处理程序包含在内。借助自定义脚本，灾难恢复可以在故障转移、故障恢复和迁移过程之后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。该服务可以在运行 Microsoft Windows 或任何受支持的 Linux 变体的虚拟机中运行脚本，并支持命令行参数。您可以将脚本分配给单个虚拟机，也可以分配给复制计划中的所有虚拟机。</block>
+  <block id="beab47c47d07d73986a2773b714728e8" category="list-text">*保留原始文件夹层次结构*：默认情况下，灾难恢复会在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标_不_具有原始文件夹层次结构，则灾难恢复功能会创建它。</block>
+  <block id="ed5adefa93ed81ded190826eed4455dd" category="paragraph">取消选中此框可忽略原始文件夹层次结构。</block>
+  <block id="d9c419dc60455382d1e8d66e3d328c63" category="paragraph">灾难恢复会并行启动所有启动顺序号相同的虚拟机。</block>
+  <block id="9cabdbcec5dfdf1db5d332b3393b17ad" category="section-title">关于故障恢复</block>
+  <block id="85f4aa2693f893749b5fa2f3aa02c3c9" category="paragraph">在故障恢复过程中， NetApp Disaster Recovery会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。这个过程始于一段已经完成失败转移至目标的关系，并包括以下步骤：</block>
+  <block id="bb0ed7710e90e0c4808f99282563a54a" category="paragraph">如果您使用的是基于数据存储的保护，则已添加到数据存储中的虚拟机可能会在故障转移过程中添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的附加映射信息。要编辑资源映射，请参阅 <block ref="aae3ec9b67319c36c78ebcd18b670ec7" category="inline-link-macro-rx"></block>。</block>
+  <block id="faf21c316f92f3c1e63ff7bafbe90825" category="list-text">输入复制计划名称以启动故障恢复。</block>
+  <block id="32f24d9757a23193daf94210aff80ab1" category="list-text">选择要从中恢复的数据存储的快照。默认是最新的。</block>
+  <block id="dd2b5eb32ae25f6832f202f5bce3d3b8" category="list-text">要监控作业进度，请在灾难恢复菜单中选择“作业监控”。</block>
+  <block id="2e5d1936159a61f54effa4f1e367698f" category="paragraph">在故障转移期间，灾难恢复默认使用最新的SnapMirror快照副本，但您可以从某个时间点快照中选择特定的快照（根据SnapMirror的保留策略）。如果最新副本遭到破坏（例如在勒索软件攻击期间），请使用时间点选项。</block>
+  <block id="2b2603c90757a8830e140aed4b4d6ecd" category="paragraph">在故障转移测试期间，灾难恢复功能会临时创建虚拟机。灾难恢复将支持FlexClone卷的临时数据存储映射到 ESXi 主机。</block>
+  <block id="d6e117113c3c735bb59d2f9765c1f8b2" category="paragraph">此过程不会占用本地ONTAP存储或 AWS 中NetApp ONTAP存储的 FSx 的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续进行。</block>
+  <block id="1e42cd2ab50cb43033ac96845f0cbcbf" category="list-text">在右侧，选择“操作”选项 <block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block> 然后*清理故障转移测试*。</block>
+  <block id="a6701b6b4f098b920e9ad613536f4135" category="list-text">在“测试故障转移”页面中，输入“清理故障转移”，然后选择“清理故障转移测试”。</block>
+  <block id="e27d8a06ee52d6dc3adabdbe1c4e94a7" category="admonition">对于基于数据存储的复制计划，如果您已添加并发现了任何虚拟机，但未提供映射详细信息，则这些虚拟机将包含在故障转移中。故障转移失败后，作业中会发出通知。您必须提供映射详细信息才能成功完成故障转移。</block>
+  <block id="3bb0ada53df5172b3b5e85e4ac853ba0" category="list-text">在故障转移页面中，您可以立即创建一个新的快照，或者选择一个现有的快照作为数据存储的恢复基础。默认值为最新版本。</block>
 </blocks>

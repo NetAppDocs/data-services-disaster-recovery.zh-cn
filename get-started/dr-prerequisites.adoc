@@ -174,6 +174,9 @@ NetApp Console用户必须具有以下角色：
 * 所需的控制台代理类型：
 +
 ** *本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本地安装并设置控制台代理"^]。
++
+灾难恢复还支持使用多个本地配置的控制台代理。在这种情况下，控制台代理会将操作定向到 vCenter 和ONTAP阵列集群，源和目标各自拥有自己的控制台代理。建议使用多个控制台代理，以减少延迟并缩短控制台代理或站点发生故障时的恢复时间。
+
 ** *本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["AWS 中的控制台代理安装选项"^]。
 +
 

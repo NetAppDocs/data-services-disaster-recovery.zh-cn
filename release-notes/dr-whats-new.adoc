@@ -16,6 +16,62 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 
+== 2026年1月12日
+
+版本 4.2.9
+
+
+
+=== 支持本地环境中的多个控制台代理
+
+如果您在本地使用灾难恢复，现在可以为每个 vCenter 实例部署控制台代理，从而提高恢复能力。
+
+例如，如果您有两个站点（站点 A 和 B），则站点 A 可以将控制台代理 A 连接到 vCenter 1、 ONTAP部署 1 和ONTAP部署 2。站点 B 可以将控制台代理 B 连接到 vCenter 2 和ONTAP部署 3 和 4。
+
+有关灾难恢复中的控制台代理的信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html#netapp-console-prerequisites["创建控制台代理"^]。
+
+
+
+=== 使用基于数据存储的保护机制，在故障转移后为复制计划添加虚拟机
+
+当故障转移被触发时，任何使用基于数据存储的保护的复制计划都会包含已添加到数据存储中的虚拟机，前提是这些虚拟机已被发现。故障转移完成前，您必须提供新增虚拟机的映射详细信息。
+
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移应用程序"^]。
+
+
+
+=== 新邮件通知
+
+灾难恢复功能现在会针对以下事件发送电子邮件通知：
+
+* 接近容量使用极限
+* 报告生成完成
+* 工作失败
+* 许可证到期或违规
+
+
+
+
+=== Swagger 改进
+
+现在您可以从灾难恢复中访问 Swagger 文档。在灾难恢复中，选择**设置**，然后选择**API 文档**以链接到 Swagger，或者在浏览器的隐身/隐私模式下访问此 URL： link:https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas"^]。
+
+
+
+=== 改进的用户界面
+
+灾难恢复功能现在提供更完善的警告和错误解决方法。此版本修复了导致已取消的作业无法在用户界面中显示的错误。已取消的职位现在可以查看了。当同一个目标网络映射到多个不同的源网络时，还会发出新的警告。
+
+
+
+=== 保留复制计划中默认添加的 VM 文件夹结构
+
+创建复制时，新的默认设置是保留 VM 文件夹结构。如果恢复目标没有原始文件夹层次结构，灾难恢复程序会创建它。您可以取消选择此选项以忽略原始文件夹层次结构。
+
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"^]。
+
+
+
 == 2025年12月9日
 
 版本 4.2.8P1

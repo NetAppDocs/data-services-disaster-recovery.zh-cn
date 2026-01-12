@@ -18,9 +18,11 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
-*关于此任务*
 
-在此工作流程中， NetApp Disaster Recovery会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。此过程从已完成故障转移到目标的关系开始，并涉及以下步骤：
+
+== 关于故障恢复
+
+在故障恢复过程中， NetApp Disaster Recovery会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。这个过程始于一段已经完成失败转移至目标的关系，并包括以下步骤：
 
 * 对恢复的站点执行合规性检查。
 * 刷新已确定位于恢复站点中的每个 vCenter 群集的 vCenter 信息。
@@ -30,13 +32,21 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 * 启动并注册源虚拟机，并在源上挂载卷。
 
 
-.步骤
-. 登录 https://console.netapp.com/["NetApp Console"^]。
+
+
+== 开始之前
+
+如果您使用的是基于数据存储的保护，则已添加到数据存储中的虚拟机可能会在故障转移过程中添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的附加映射信息。要编辑资源映射，请参阅 link:manage.html#manage-replication-plans["管理复制计划"]。
+
+
+
+== 步骤
+
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 . 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
 . 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*故障恢复*。
-. 输入复制计划名称确认并开始故障回复。
+. 输入复制计划名称以启动故障恢复。
 . 选择要从中恢复的数据存储的快照。默认是最新的。
-. 要检查进度，请在菜单中选择*作业监控*。
+. 要监控作业进度，请在灾难恢复菜单中选择“作业监控”。
 
