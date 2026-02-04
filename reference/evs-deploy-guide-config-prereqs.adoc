@@ -9,20 +9,41 @@ summary: 在继续使用NetApp Disaster Recovery配置 Amazon EVS 之前，您�
 
 
 [role="lead"]
-在继续使用NetApp Disaster Recovery配置 Amazon EVS 之前，您应该确保满足几个先决条件。
+确保您查看并满足使用 NetApp Disaster Recovery 配置 Amazon EVS 的要求。
 
-具体来说，请执行以下操作：
-
+.前提条件
+* 请查看 link:../get-started/dr-prerequisites["灾难恢复的一般先决条件"]。
 * 创建一个 vCenter 用户帐户，该帐户具有NetApp Disaster Recovery所需的特定 VMware 权限，以执行必要的操作。
 +
 
-NOTE: 我们不建议使用默认的“\administrator@vsphere.com”管理员帐户。相反，您应该在将参与 DR 过程的所有 vCenter 集群上创建一个NetApp Disaster Recovery特定的用户帐户。有关所需特定权限的列表，请参阅link:vcenter-privileges.html["NetApp Disaster Recovery所需的 vCenter 权限"]。
+NOTE: 建议您**不要**使用默认的“\administrator@vsphere.com”管理员账户。相反，您应在所有将参与灾难恢复流程的 vCenter 集群上创建一个专用于 NetApp Disaster Recovery 的用户账户。有关所需具体权限列表，请参见 link:vcenter-privileges.html["NetApp Disaster Recovery所需的 vCenter 权限"]。
 
-* 确保将托管受NetApp Disaster Recovery保护的虚拟机的所有 vCenter 数据存储区都位于NetApp ONTAP存储资源上。
+* 确保将承载受 Disaster Recovery 保护的虚拟机的所有 vCenter 数据存储区都位于 NetApp ONTAP 存储资源上。
 +
-在NetApp ONTAP上使用Amazon FSx时，该服务支持 iSCSI（而非 FC）上的 NFS 和 VMFS。虽然该服务支持 FC，Amazon FSx for NetApp ONTAP不支持。
+在使用 Amazon FSx for NetApp ONTAP 时，Disaster Recovery 支持 NFS 和基于 iSCSI（而非 FC）的 VMFS。虽然 Disaster Recovery 支持 FC，但 Amazon FSx for NetApp ONTAP 不支持。
 
-* 确保您的 Amazon EVS vCenter 已连接到Amazon FSx for NetApp ONTAP存储集群。
-* 确保所有受保护的虚拟机上都安装了 VMware 工具。
-* 确保您的本地网络使用 Amazon 认可的连接方法连接到您的 AWS VPC 网络。我们建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。
+* 确保您的 Amazon EVS vCenter 已连接到 Amazon FSx for NetApp ONTAP 存储集群。
+* 确保在所有受保护的虚拟机上安装 VMware 工具。
+* 确保使用 Amazon 批准的连接方法将您的本地网络连接到 AWS VPC 网络。建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。
+* 检查并确保符合具有 Disaster Recovery 功能的 EVS 的连接和端口要求：
++
+[cols="4"]
+|===
+| 源 | 目标 | 端口 | 详细信息 
+
+
+| Amazon FSxN | 本地 ONTAP | TCP 11104、11105、ICMP | SnapMirror 
+
+
+| 本地 ONTAP | Amazon FSxN | TCP 11104、11105、ICMP | SnapMirror 
+
+
+| NetApp Console 代理 | 本地 ONTAP | TCP 443，仅 ICMP | API 调用 
+
+
+| NetApp Console 代理 | Amazon FSxN | TCP 441，仅 ICMP | API 调用 
+
+
+| NetApp Console 代理 | vCenter（本地、EVS）、ESXi 主机（本地、EVS） | 443 | API 调用、脚本执行 
+|===
 

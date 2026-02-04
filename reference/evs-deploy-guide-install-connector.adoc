@@ -2,19 +2,25 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-install-connector.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。虽然连接器可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装连接器。这可确保在主站点发生故障时， NetApp控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。 
+summary: NetApp Console 代理协调 NetApp Console 与云或本地存储资源之间的连接和管理。 
 ---
 = 安装用于NetApp Disaster Recovery的NetApp Console代理
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Console代理是在您的云或本地网络上运行的NetApp软件。它执行NetApp Console管理数据基础架构所需执行的操作。控制台代理不断轮询NetApp Disaster Recovery软件作为服务层，以了解其需要采取的任何操作。
+NetApp Console 代理使您能够将 NetApp Console 部署连接到基础架构，以便在 AWS、Azure、Google Cloud 或本地环境中安全地编排解决方案。Console 代理执行 NetApp Console 需要执行的操作，以管理您的数据基础架构。Console 代理会不断轮询 NetApp Disaster Recovery 软件作为服务层，以了解需要采取的任何操作。
 
-对于NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。
+对于 NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 群集和 ONTAP 存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然可以在任何网络位置安装 Console 代理，但建议您在灾难恢复站点中安装 Console 代理以进行 NetApp Disaster Recovery。在 DR 站点中安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与 Console 代理的连接，并可以在该 DR 站点中协调恢复过程。
 
-要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解NetApp Console部署模式 | NetApp文档"^]。
 
-虽然控制台代理对于使用该服务至关重要，但安装控制台代理的安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了此信息的范围。
 
-使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["从 AWS Marketplace 创建控制台代理 | NetApp文档"^]。
+== 安装
+
+* 要使用 Disaster Recovery，请在标准模式下安装 Console 代理。要了解有关 Console 代理安装类型的更多信息，请访问 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解 NetApp Console 部署模式"^]。
+
+
+Console 代理的具体安装步骤取决于您的部署类型。有关详细信息，请参见 link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["了解控制台代理"^]。
+
+
+TIP: 使用 Amazon AWS 安装 Console 代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装 Console 代理的详细信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["从 AWS Marketplace 创建 Console 代理"^]。

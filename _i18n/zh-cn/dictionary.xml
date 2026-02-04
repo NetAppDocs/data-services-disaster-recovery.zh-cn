@@ -357,7 +357,6 @@
   <block id="04611b209933eb29e1f8fdaec6553eaa" category="section-title">创建NetApp Console代理</block>
   <block id="9703473550a81b3fd3679dafa7c81b5c" category="paragraph">必须在NetApp Console中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。</block>
   <block id="c8838dcf38d330918fef4cc55c1d8bda" category="inline-link">在标准模式下开始使用NetApp Console</block>
-  <block id="60fef96933d93f92aac90515fdde5cdb" category="list-text">确保源 vCenter 和目标 vCenter 使用相同的控制台代理。</block>
   <block id="15d628067243085634a88cba0c9fd55b" category="list-text">所需的控制台代理类型：</block>
   <block id="6e45b3ccf0fe4c67d798d465f04ffc2b" category="inline-link">在本地安装并设置控制台代理</block>
   <block id="7ff9f8e2467774df163161a38d2d5040" category="inline-link">AWS 中的控制台代理安装选项</block>
@@ -576,14 +575,7 @@
   <block id="370a8ca7e6b2cca92199c233522a1698" category="inline-link-macro">将 vCenter 集群添加到NetApp Disaster Recovery</block>
   <block id="80b788a7dab3609635ead698a8ecf978" category="list-text"><block ref="80b788a7dab3609635ead698a8ecf978" category="inline-link-macro-rx"></block></block>
   <block id="6345fa92d7a42c074c54b52f4c7ab432" category="summary">在继续使用NetApp Disaster Recovery配置 Amazon EVS 之前，您应该确保满足几个先决条件。</block>
-  <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体来说，请执行以下操作：</block>
   <block id="c054f75f836c29b129413caadf92e76a" category="list-text">创建一个 vCenter 用户帐户，该帐户具有NetApp Disaster Recovery所需的特定 VMware 权限，以执行必要的操作。</block>
-  <block id="b7d4f3a752a8b38de81fde9de63da3a5" category="admonition">我们不建议使用默认的“\administrator@vsphere.com”管理员帐户。相反，您应该在将参与 DR 过程的所有 vCenter 集群上创建一个NetApp Disaster Recovery特定的用户帐户。有关所需特定权限的列表，请参阅<block ref="efdd112b209053b66d06020632d7d4cc" category="inline-link-macro-rx"></block>。</block>
-  <block id="c637df77242838dd7768d498b05c71d0" category="list-text">确保将托管受NetApp Disaster Recovery保护的虚拟机的所有 vCenter 数据存储区都位于NetApp ONTAP存储资源上。</block>
-  <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">在NetApp ONTAP上使用Amazon FSx时，该服务支持 iSCSI（而非 FC）上的 NFS 和 VMFS。虽然该服务支持 FC，Amazon FSx for NetApp ONTAP不支持。</block>
-  <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">确保您的 Amazon EVS vCenter 已连接到Amazon FSx for NetApp ONTAP存储集群。</block>
-  <block id="9709c4e90ccd66fb37391b201a587f74" category="list-text">确保所有受保护的虚拟机上都安装了 VMware 工具。</block>
-  <block id="77bc05bf2afea788cd5090d62741ed3d" category="list-text">确保您的本地网络使用 Amazon 认可的连接方法连接到您的 AWS VPC 网络。我们建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。</block>
   <block id="17c945d2315cf61f16352ef1cfbd5558" category="summary">首先，使用NetApp Disaster Recovery提供复制计划名称并选择复制的源和目标 vCenter。</block>
   <block id="528a5f3a334edc5d0050d997c54ff6d3" category="doc">创建复制计划：步骤 1 - 在NetApp Disaster Recovery中选择 vCenter</block>
   <block id="4b7711bd320359bdedba0eba611c4063" category="paragraph">首先，使用NetApp Disaster Recovery，提供复制计划名称并选择复制的源和目标 vCenter。</block>
@@ -744,13 +736,7 @@
   <block id="1ff9a32fef93210368127dde7732e38d" category="paragraph">这对您有利，因为在应用所有ONTAP存储效率之后， NetApp Disaster Recovery会计算许可容量。例如，假设您在 vCenter 中配置了一个 100 TB (TiB) NFS 数据存储区来托管您想要使用该服务保护的 100 台虚拟机。此外，假设当数据写入ONTAP卷时，自动应用的存储效率技术会导致这些虚拟机仅消耗 33TiB（3：1 的存储效率）。 NetApp Disaster Recovery仅需要获得 33TiB 的许可，而不是 100TiB。与其他 DR 解决方案相比，这对于您的 DR 解决方案的总体拥有成本来说是一个非常大的好处。</block>
   <block id="1cac620f7757c79970587895922abdb9" category="list-text">要确定托管要保护的 VMware 数据存储库的每个卷上消耗的数据量，请通过对每个卷运行ONTAP CLI 命令来确定磁盘容量消耗：<block ref="5dcefe180a68e24e1f2547c10ed74406" prefix=" " category="inline-code"></block> 。</block>
   <block id="cdda12340d624273bd9002f62fb54d72" category="list-text">注意每个卷的“总物理使用量”值。这是NetApp Disaster Recovery需要保护的数据量，也是您将用来确定需要许可多少容量的值。</block>
-  <block id="ba836a901514bb33e4b8e439edfc9553" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。虽然连接器可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装连接器。这可确保在主站点发生故障时， NetApp控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。</block>
   <block id="eafff2953feecf7337f42b0ed8618a50" category="doc">安装用于NetApp Disaster Recovery的NetApp Console代理</block>
-  <block id="fc4a391c0a58b66db6357158ead085ca" category="paragraph">NetApp Console代理是在您的云或本地网络上运行的NetApp软件。它执行NetApp Console管理数据基础架构所需执行的操作。控制台代理不断轮询NetApp Disaster Recovery软件作为服务层，以了解其需要采取的任何操作。</block>
-  <block id="44c1129cf47adfaefa0605f58d53c810" category="paragraph">对于NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 集群和ONTAP存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然控制台代理可以安装在任何网络位置，但对于NetApp Disaster Recovery，我们建议您在 DR 站点安装控制台代理。这可确保在主站点发生故障时，基于NetApp云的控制台 UI 能够继续与控制台代理保持联系，并可以协调该 DR 站点内的恢复过程。</block>
-  <block id="f495e7db7cb2a546534fe711f0127e3d" category="inline-link">了解NetApp Console部署模式 | NetApp文档</block>
-  <block id="dd0b929797a2918fb91fe0b43cb02f42" category="paragraph">虽然控制台代理对于使用该服务至关重要，但安装控制台代理的安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了此信息的范围。</block>
-  <block id="ed8f1435250d71b466ec4682ae30820f" category="inline-link">从 AWS Marketplace 创建控制台代理 | NetApp文档</block>
   <block id="06034a243ae2009d8ded7acc9689b052" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。</block>
   <block id="562ef4025c5a60ba97f47d8285729a0b" category="paragraph">客户越来越依赖虚拟化基础架构来处理生产计算工作负载，例如基于 VMware vSphere 的工作负载。由于这些虚拟机 (VM) 对业务变得越来越重要，客户需要保护这些 VM 免受与物理计算资源相同类型的灾难的影响。目前提供的灾难恢复 (DR) 解决方案复杂、昂贵且资源密集。 NetApp是用于虚拟化基础架构的最大存储提供商，它有既得利益确保其客户的虚拟机受到保护，就像我们保护任何类型的ONTAP存储托管数据一样。为了实现这一目标， NetApp创建了NetApp Disaster Recovery服务。</block>
   <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">任何 DR 解决方案面临的主要挑战之一是管理购买、配置和维护额外计算、网络和存储资源的增量成本，以提供 DR 复制和恢复基础设施。保护关键内部虚拟资源的一个流行选择是使用云托管虚拟资源作为 DR 复制和恢复基础设施。亚马逊就是此类解决方案的一个例子，它可以提供与NetApp ONTAP托管 VM 基础架构兼容的经济高效的资源。</block>
@@ -1798,7 +1784,6 @@
   <block id="8086884cdea0ea24d9f6308a19cdf043" category="list-text">一个复制计划只能添加一个卷或数据存储。</block>
   <block id="0cad1bab03dc44ec351d2de019d82607" category="list-text">复习<block ref="8f7fb2d6ad43669f8a59b96f07943aee" category="inline-link-macro-rx"></block>。</block>
   <block id="b6c17338accc8d99b423f332451f50ad" category="paragraph">故障转移注意事项</block>
-  <block id="f8772b1ca9ad18417bf5318a8f27afba" category="list-text">故障转移仅支持使用最新快照版本。如有必要，您可以在创建快照期间创建新快照（即必须禁用选择性快照选项）。</block>
   <block id="242733299daaca561039b733176ac1b7" category="list-text">故障转移后无法创建新的快照。</block>
   <block id="c05df755e6c0a942398c7fcd1eb14679" category="list-text">故障转移后无法保留和协调快照。</block>
   <block id="a6b1001c218e39c86bcccb2fe9813de3" category="paragraph">**故障恢复考虑因素**</block>
@@ -1825,12 +1810,9 @@
   <block id="94c02ddd984f67eb8b79c11dbd8b654a" category="list-text"><block ref="94c02ddd984f67eb8b79c11dbd8b654a" category="inline-link-macro-rx"></block></block>
   <block id="4dc42c993e8bd7091a49f3fe75b4cc7f" category="paragraph">如果你还没有这样做的话，<block ref="94e30243c99a58315474317c40996996" category="inline-link-rx"></block> 。</block>
   <block id="c6d4ec9aebbd9adbd6cd055b1e2ef0b4" category="list-text">NetApp Disaster Recovery仅适用于标准模式代理部署。看<block ref="1dca0eb7ce67e238dc32613ea2fd1e70" category="inline-link-rx"></block>。</block>
-  <block id="d79ddc5d144ac6cb3cc81d1fd8bbf16b" category="list-text">*本地到本地灾难恢复*：在灾难恢复站点安装控制台本地代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。参考<block ref="aa1d5488876933382cbfe9d426d413f9" category="inline-link-rx"></block>。</block>
   <block id="229e27e5e98d46ffabb19ff45325734b" category="list-text">*本地到 AWS*：在您的 AWS VPC 中安装 AWS 的控制台代理。参考<block ref="1169d6a654f5038ebfa8fc4462054b47" category="inline-link-rx"></block>。</block>
   <block id="db93e33cfb5094bef5af78afec2a318a" category="paragraph">看<block ref="7710287f166c6260d467d0ffbd4c652b" category="inline-link-rx"></block>。</block>
   <block id="9fb45d8b59f2c406ddf7a9711c1391c2" category="list-text">按照以下步骤操作<block ref="69ac71aae3c3019102e9a90ab4fd3799" category="inline-link-rx"></block>和<block ref="3f510c006b92994b3ccaf7ccb9cc0351" category="inline-link-rx"></block>为ONTAP配置和部署 FSx。</block>
-  <block id="5280fea1000838e74051510a8adb21e9" category="paragraph">要使用该服务，请以标准模式安装控制台代理。要了解有关控制台代理安装类型的更多信息，请访问<block ref="e87d59187940f672670f4b294a02b363" category="inline-link-rx"></block>。</block>
-  <block id="b567b746a04d21aaaa45a342f69073cb" category="paragraph">使用 Amazon AWS 安装控制台代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装控制台代理的详细信息，请参阅<block ref="7f4733cc86c855f6efc0e6a18921c741" category="inline-link-rx"></block>。</block>
   <block id="52f0067dfdeb72bf780f9e3a808fbb01" category="paragraph">参考<block ref="d83a9ddc5356a460fd8c8bdc5b02cf7f" category="inline-link-rx"></block>。</block>
   <block id="ea22e49b05f0c437898dd362ac3cb582" category="section-title">Google Cloud NetApp Volumes的局限性</block>
   <block id="0b3bf876c8f0155fffe01bfe66919ae7" category="list-text">运行故障转移测试后，至少需要等待 52 小时才能删除克隆卷。您必须手动删除该卷。  52 小时后，您可以再次测试故障转移。</block>
@@ -1893,7 +1875,6 @@
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">为故障转移测试创建一套单独的专用映射，以防止 VMS 使用相同的 IP 地址连接到生产网络。</block>
   <block id="5f4825a97c910dc2ee0d9eb1107f19d9" category="section-title">地图资源 &gt; 虚拟机部分</block>
   <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">灾难恢复需要 vCenter 权限</block>
-  <block id="2b1806d17c0606f8caa4232aa6a3c113" category="sidebar">切换控制台代理</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">有关详细信息，请参阅 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">有关详细信息，请参阅 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
   <block id="6da53899225555a506524070f96e33df" category="doc">支持本地环境中的多个控制台代理</block>
@@ -2086,4 +2067,44 @@
   <block id="e09864970107f53b95b27d59844fe8a3" category="cell">VirtualMachine.State.RevertToSnapshot</block>
   <block id="e2a5f777b44916836fdc3739a3964e98" category="cell">还原为快照</block>
   <block id="f82e780d3c4a5f7f4bf54aabdabdd223" category="cell">允许将虚拟机恢复到给定快照的状态。</block>
+  <block id="d2dcf6ed6e5c29ab53931601f3745b58" category="list-text">仅使用最新快照支持故障转移。如果需要，可以在故障转移期间创建新快照（即必须禁用选择性快照选项）。</block>
+  <block id="95857ccbc14e3129d72a5e3b2a9ea093" category="list-text">确保源和目标 vCenter 集群都使用相同的 Console 代理。</block>
+  <block id="e7c6b03acd24bdb46e3ebc9db2271af4" category="list-text">*本地到本地灾难恢复*：在灾难恢复站点中安装本地 Console 代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。请参阅<block ref="aa1d5488876933382cbfe9d426d413f9" category="inline-link-rx"></block>。</block>
+  <block id="0993f38ff744157834a941d4a95a1c9b" category="inline-xref-macro">所需 vCenter 权限</block>
+  <block id="e5687f2773f6f6b8a300b70ff0ed5f08" category="list-text"><block ref="e5687f2773f6f6b8a300b70ff0ed5f08" category="inline-xref-macro-rx"></block></block>
+  <block id="3c596c027e95d93780e84a69b6da660a" category="list-text"><block ref="3c596c027e95d93780e84a69b6da660a" category="inline-xref-macro-rx"></block></block>
+  <block id="c4342fa27fe9324eb1ac1c89b0f10923" category="paragraph">确保您查看并满足使用 NetApp Disaster Recovery 配置 Amazon EVS 的要求。</block>
+  <block id="c9eefbd632f55f15922ec2a67ceecd81" category="inline-link-macro">灾难恢复的一般先决条件</block>
+  <block id="8bc4be62934b53e69c9b81bff1de1f0d" category="list-text">请查看 <block ref="99d15c44c2397213a4572e5e72b0ce99" category="inline-link-macro-rx"></block>。</block>
+  <block id="b232b2686ea4af18cdf799d03f5c0709" category="admonition">建议您**不要**使用默认的“\administrator@vsphere.com”管理员账户。相反，您应在所有将参与灾难恢复流程的 vCenter 集群上创建一个专用于 NetApp Disaster Recovery 的用户账户。有关所需具体权限列表，请参见 <block ref="efdd112b209053b66d06020632d7d4cc" category="inline-link-macro-rx"></block>。</block>
+  <block id="76c4a74ea7e2c38908b8f0de658cdf2c" category="list-text">确保将承载受 Disaster Recovery 保护的虚拟机的所有 vCenter 数据存储区都位于 NetApp ONTAP 存储资源上。</block>
+  <block id="fccca3a5829253b726912e9af8eccf51" category="paragraph">在使用 Amazon FSx for NetApp ONTAP 时，Disaster Recovery 支持 NFS 和基于 iSCSI（而非 FC）的 VMFS。虽然 Disaster Recovery 支持 FC，但 Amazon FSx for NetApp ONTAP 不支持。</block>
+  <block id="6683d3fd667353df6eb18d8c37a59d26" category="list-text">确保您的 Amazon EVS vCenter 已连接到 Amazon FSx for NetApp ONTAP 存储集群。</block>
+  <block id="a3f678b7d2f048c131821a342cf0bb33" category="list-text">确保在所有受保护的虚拟机上安装 VMware 工具。</block>
+  <block id="5cf3ae319de1b41c84ea40a888e16487" category="list-text">确保使用 Amazon 批准的连接方法将您的本地网络连接到 AWS VPC 网络。建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。</block>
+  <block id="10baca09fc866108786c7a0324846bcb" category="list-text">检查并确保符合具有 Disaster Recovery 功能的 EVS 的连接和端口要求：</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">源</block>
+  <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">目标</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">端口</block>
+  <block id="3ec365dd533ddb7ef3d1c111186ce872" category="cell">详细信息</block>
+  <block id="86b0c8b8054d40bc89481fe7a497df7e" category="cell">Amazon FSxN</block>
+  <block id="10eaa67ba3824a947cec2803e682249a" category="cell">本地 ONTAP</block>
+  <block id="c077081eae33eee10e1ba19434e1c515" category="cell">TCP 11104、11105、ICMP</block>
+  <block id="794cb725c5631ad99b5b7c000307f0df" category="cell">SnapMirror</block>
+  <block id="9d7ef2f46b4da993716f9b0b9bdfc399" category="cell">NetApp Console 代理</block>
+  <block id="03510cbdbd6e9e3e6b1f72a763c1337f" category="cell">TCP 443，仅 ICMP</block>
+  <block id="22043367a89ddcf3eb99eec509a967ba" category="cell">API 调用</block>
+  <block id="ef250585f20688efb904641e7a1780df" category="cell">TCP 441，仅 ICMP</block>
+  <block id="d07940c9cf4f1ef1b3c28d3f960170da" category="cell">vCenter（本地、EVS）、ESXi 主机（本地、EVS）</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="e3685e9b39c4dbfec3a5462455b43f7d" category="cell">API 调用、脚本执行</block>
+  <block id="ca5d68ad717b18cefbfd5ba03db7fc9c" category="summary">NetApp Console 代理协调 NetApp Console 与云或本地存储资源之间的连接和管理。</block>
+  <block id="54c585a071d1c4db16522ba27cc6a191" category="paragraph">NetApp Console 代理使您能够将 NetApp Console 部署连接到基础架构，以便在 AWS、Azure、Google Cloud 或本地环境中安全地编排解决方案。Console 代理执行 NetApp Console 需要执行的操作，以管理您的数据基础架构。Console 代理会不断轮询 NetApp Disaster Recovery 软件作为服务层，以了解需要采取的任何操作。</block>
+  <block id="0ed93f213541543ce11a5a41955fdb61" category="paragraph">对于 NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 群集和 ONTAP 存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然可以在任何网络位置安装 Console 代理，但建议您在灾难恢复站点中安装 Console 代理以进行 NetApp Disaster Recovery。在 DR 站点中安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与 Console 代理的连接，并可以在该 DR 站点中协调恢复过程。</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">安装</block>
+  <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">了解 NetApp Console 部署模式</block>
+  <block id="9787e79ead7b319f8e8361fc7821dd0c" category="list-text">要使用 Disaster Recovery，请在标准模式下安装 Console 代理。要了解有关 Console 代理安装类型的更多信息，请访问<block ref="176f6de3ac91258383588e87ceb2df5f" category="inline-link-rx"></block>。</block>
+  <block id="29526e6f5f21e46912fe5e749afaadeb" category="paragraph">Console 代理的具体安装步骤取决于您的部署类型。有关详细信息，请参见 <block ref="60ce1b0a0c322e03a03b2c2641ba72c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="1515391ee07716093ddb994cd9906006" category="inline-link">从 AWS Marketplace 创建 Console 代理</block>
+  <block id="7f9f446a286afe8acb3ad25ae1a89a13" category="admonition">使用 Amazon AWS 安装 Console 代理的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装 Console 代理的详细信息，请参阅<block ref="f267bc5cc8f7e48efa7f9b5434e2039f" category="inline-link-rx"></block>。</block>
 </blocks>
