@@ -1,0 +1,15 @@
+= 改进的用户界面
+:allow-uri-read: 
+
+
+
+
+=== 改进的用户界面
+
+已刷新 Disaster Recovery UI，以根据反馈提高性能和用户体验。
+
+
+
+=== API Swagger 文档
+
+灾难恢复 API Swagger 文档现在可以在常规浏览器中访问；不再需要隐身模式。要访问 API 文档，请浏览到灾难恢复仪表板，选择右上角的上下文菜单 image:../media/use/icon-vertical-dots.png["操作图标"] 然后选择 **API Documentation** 以打开 Swagger 文档。您也可以 link:https://api.bluexp.netapp.com/v1/services/draas/api/api-doc/draas["将 URL 加入书签"^]。
