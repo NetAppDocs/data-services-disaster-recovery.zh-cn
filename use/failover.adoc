@@ -36,7 +36,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 在开始故障转移之前，您可以测试该过程。测试不会使虚拟机脱机。
 
-在故障转移测试期间，灾难恢复功能会临时创建虚拟机。灾难恢复将支持FlexClone卷的临时数据存储映射到 ESXi 主机。
+在故障转移测试期间，灾难恢复会暂时创建虚拟机。灾难恢复将备份 FlexClone 卷的临时数据存储区映射到 ESXi 主机。
 
 此过程不会占用本地ONTAP存储或 AWS 中NetApp ONTAP存储的 FSx 的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续进行。
 

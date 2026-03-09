@@ -61,7 +61,7 @@ NOTE: 该服务支持自签名安全证书或来自中央证书颁发机构 (CA)
 . 登录 https://console.netapp.com/["NetApp Console"^]。
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 +
-如果您是第一次使用NetApp灾难恢复，则需要添加 vCenter 信息。如果您已经添加了 vCenter 信息，您将看到仪表板。
+如果这是您第一次使用 NetApp Disaster recovery，则需要添加 vCenter 信息。如果您已添加 vCenter 信息，则会看到控制面板。
 
 +
 

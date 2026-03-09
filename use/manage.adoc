@@ -95,7 +95,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 
 . 通过选择左侧面包屑中的“复制计划”返回计划列表。
-. 要使用该计划执行操作，请从复制计划列表中选择“*操作*”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]在计划右侧，选择任意选项，例如*编辑计划*、*测试故障转移*、*故障转移*、*故障回复*、*迁移*、*立即拍摄快照*、*清理旧快照*、*禁用*、*启用*或*删除*。
+. 要使用计划执行操作，请从复制计划列表中选择计划右侧的 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，然后选择一个操作：*Edit schedules*、*Test failover*、*Fail over*、*Fail back*、*Migrate*、*Take snapshot now*、*Clean up old snapshots*、*Disable*、*Enable* 或 *Delete*。
 . 要设置或更改测试故障转移计划或设置合规性频率检查，请选择“*操作*”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]在计划右侧，选择“编辑时间表”。
 +
 .. 在“编辑计划”页面中，输入您希望故障转移合规性检查发生的频率（分钟）。

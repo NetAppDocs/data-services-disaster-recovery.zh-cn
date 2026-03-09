@@ -1,0 +1,33 @@
+= 从复制计划中排除数据存储库
+:allow-uri-read: 
+
+
+
+
+=== 从复制计划中排除数据存储库
+
+现在，在 Disaster 中创建复制计划时，可以从复制中排除特定的数据存储区。对于将 VM 配置为使用多个数据存储区的情况，这允许您限制要复制的数据存储区。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.adoc["创建复制计划"^]。
+
+
+
+=== 已从 vCenter 密码中删除密码验证
+
+灾难恢复删除了对 vCenter 密码的密码限制，以允许包含空格的密码。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/reference/evs-deploy-guide-add-vcenters.html["在NetApp Disaster Recovery中添加本地和 Amazon EVS vCenter 集群"^]。
+
+
+
+=== 新复制计划子菜单
+
+灾难恢复现在包括新的菜单选项，以从复制计划仪表板触发 vCenter 刷新。您可以从复制计划仪表板的操作菜单访问子菜单：选择 **Plan Health**，然后选择 **Refresh Source vCenter / Refresh Target vCenter**。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#modify-a-replication-plan["修改复制计划"^]。
+
+
+
+=== 改进的网络发现
+
+Disaster Recovery 现在包括改进的网络发现，以支持更广泛的网络配置。
