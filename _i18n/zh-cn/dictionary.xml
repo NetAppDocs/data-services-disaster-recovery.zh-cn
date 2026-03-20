@@ -119,8 +119,6 @@
   <block id="2b077b3d88dcc4adb54c2a11c5463fae" category="list-text">当在 vCenter 中删除虚拟机时， NetApp Disaster Recovery现在会自动将其从复制计划中删除。</block>
   <block id="7fb8e5a4929cd35fd131ad1f5533d144" category="list-text">当 vCenter 中删除数据存储区或网络时， NetApp Disaster Recovery现在会将其从复制计划和资源组中删除。</block>
   <block id="1b838198508b4c30761cfb90615db038" category="list-text">当在 vCenter 中删除集群、主机或数据中心时， NetApp Disaster Recovery现在会将其从复制计划和资源组中删除。</block>
-  <block id="24ed933119d9ba78138d2119f9ebbdac" category="inline-link">Swagger 文档</block>
-  <block id="cec5123afb166f0c68f7ddc85e5b41e4" category="list-text">您现在可以在浏览器的隐身模式下访问 Swagger 文档。您可以从NetApp Disaster Recovery中的“设置”选项 &gt;“API 文档”中访问它，也可以在浏览器的隐身模式下直接通过以下 URL 访问它：<block ref="fbeb63b8afb1564cb8457db3650e3513" category="inline-link-rx"></block> 。</block>
   <block id="07249132999164b31d31db024261d558" category="list-text">在某些情况下，故障回复操作完成后，iGroup 会被遗留下来。如果 iGroup 已过时，则此更新会将其删除。</block>
   <block id="5b6034f39325a10d9f5315c86847a208" category="list-text">如果在复制计划中使用了 NFS FQDN， NetApp Disaster Recovery现在会将其解析为 IP 地址。如果灾难恢复站点中无法解析 FQDN，则此更新很有用。</block>
   <block id="bd9a0211a986e2ba720cbe54530cd5c5" category="list-text">UI 对齐改进</block>
@@ -1146,42 +1144,23 @@
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">映射资源如何从源环境映射到目标。</block>
   <block id="5971ed413328372ff42391caae30a427" category="list-text">设置计划运行的频率、运行客户托管脚本、设置启动顺序并选择恢复点目标。</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">审查计划。</block>
-  <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">制定计划时，您应该遵循以下准则：</block>
   <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">对计划中的所有虚拟机使用相同的凭据。</block>
   <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">对计划中的所有虚拟机使用相同的脚本。</block>
   <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">对计划中的所有虚拟机使用相同的子网、DNS 和网关。</block>
   <block id="8705d6076cb452e919a6e22862427440" category="section-title">选择 vCenter 服务器</block>
   <block id="c456b58190fd5c21d84750f126197baf" category="paragraph">首先，选择源 vCenter，然后选择目标 vCenter。</block>
-  <block id="e7110f21716af9e270340e4ab663e36c" category="list-text">从NetApp Disaster Recovery菜单中，选择 *复制计划*，然后选择 *添加*。或者，如果您刚开始使用该服务，请从仪表板中选择*添加复制计划*。</block>
-  <block id="d72f4a94d857178ae5cb1420995137e4" category="inline-image-macro">屏幕截图显示了“添加复制计划”&gt;“添加计划”页面</block>
-  <block id="1f0f1a8ff517bead0b08cc0da5d50e4f" category="paragraph"><block ref="58b57a8b9c6929a404002fa01b315144" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">为复制计划创建一个名称。</block>
-  <block id="ad05d9be76290e8ea731306ed4911c41" category="list-text">从源和目标 vCenter 列表中选择源 vCenter 和目标 vCenter。</block>
   <block id="f17de33c8bac2ab69dd89149aac16c6c" category="paragraph">下一步是将所需的虚拟机或数据存储分组到功能资源组中。资源组使您能够使用公共快照保护一组虚拟机或数据存储区。</block>
-  <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">当您在复制计划中选择应用程序时，您可以看到计划中每个虚拟机或数据存储区的操作系统。这有助于决定如何将虚拟机或数据存储分组到资源组中。</block>
   <block id="516dbf8e2c43d00664357bb38d1575a6" category="admonition">每个资源组可以包含一个或多个虚拟机或数据存储区。</block>
   <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">创建资源组时，请考虑以下问题：</block>
   <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">在将数据存储区添加到资源组之前，请先启动虚拟机的手动发现或计划发现。这可确保虚拟机被发现并列在资源组中。如果您不触发手动发现，虚拟机可能不会列在资源组中。</block>
-  <block id="312258bdb1152123e04c06cf90952de2" category="list-text">确保数据存储区中至少有一个虚拟机。如果数据存储中没有虚拟机，则不会发现该数据存储。</block>
   <block id="9fa2d89f680762c7614753f04e0aad6b" category="list-text">单个数据存储区不应托管受多个复制计划保护的虚拟机。</block>
   <block id="dfbb0d3c710884104551edbd929afe76" category="list-text">不要在同一数据存储上托管受保护和不受保护的虚拟机。如果受保护的虚拟机和不受保护的虚拟机托管在同一数据存储上，则可能会出现以下问题：</block>
   <block id="84c62302deac0be1dd475a0a0a91a4fa" category="list-text">由于NetApp Disaster Recovery使用SnapMirror并且系统复制整个ONTAP卷，因此该卷的已用容量用于许可考虑。在这种情况下，受保护和不受保护的虚拟机所消耗的卷空间都将包含在此计算中。</block>
   <block id="4e7a12dab0e91d1fb0221d782eacf1e5" category="list-text">如果资源组及其关联的数据存储库需要故障转移到灾难恢复站点，则任何未受保护的虚拟机（不属于资源组但托管在ONTAP卷上的虚拟机）将在故障转移过程中不再存在于源站点上，从而导致源站点上未受保护的虚拟机发生故障。此外， NetApp Disaster Recovery不会在故障转移 vCenter 站点启动那些未受保护的虚拟机。</block>
   <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">要保护虚拟机，必须将其包含在资源组中。</block>
-  <block id="6f9c40e36ae73e33332b46ebad53611b" category="list-text">选择“虚拟机”或“数据存储”。</block>
-  <block id="1e37304672f6f6f473c93804e891eacb" category="list-text">可选择按名称搜索特定的虚拟机或数据存储。</block>
-  <block id="b3736de6232ff120d2109e988d051825" category="list-text">在“应用程序”页面的左侧，选择要保护并分配到所选组的虚拟机或数据存储区。</block>
-  <block id="08c396946743aa0cf55cd76038c264b7" category="paragraph">所选资源将自动添加到组 1，并启动新的组 2。每次向最后一个组添加资源时，都会添加另一个组。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">屏幕截图显示了“添加复制计划”&gt;“要复制的应用程序”页面</block>
   <block id="0f71807fe3313792a56d8deaefc042cd" category="paragraph"><block ref="fe2b15a06d13ce51dd26ce76b278185c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9614731ca9a6da0007a983f0a2437843" category="paragraph">或者，对于数据存储：</block>
   <block id="07445ca0ae375259d669e5ff34c73c99" category="paragraph"><block ref="0900e5e3c0a693c1efb9cc1c9f020053" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">或者，执行以下任一操作：</block>
-  <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">铅笔图标</block>
-  <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">要更改群组名称，请点击群组*编辑*<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>图标。</block>
-  <block id="8d2514ca702dd19c69d05151f9ca0dde" category="list-text">要从组中删除资源，请选择资源旁边的 *X*。</block>
-  <block id="f0a0692b11f1b8e73cde7a3fa59cce87" category="list-text">要将资源移动到不同的组，请将其拖放到新组中。</block>
-  <block id="d92fbdb4e21242a727db9edab622f2e7" category="admonition">要将数据存储移动到不同的资源组，请取消选择不需要的数据存储并提交复制计划。然后，创建或编辑其他复制计划并重新选择数据存储。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">将源资源映射到目标</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">在资源映射步骤中，指定源环境中的资源应如何映射到目标。创建复制计划时，您可以为计划中的每个虚拟机设置启动延迟和顺序。这使您可以设置虚拟机的启动顺序。</block>
   <block id="8347a9e8f0404960a1eb7ad71a74e635" category="paragraph">如果您计划将测试故障转移作为 DR 计划的一部分执行，则应提供一组测试故障转移映射，以确保故障转移测试期间启动的虚拟机不会干扰生产虚拟机。您可以通过为测试虚拟机提供不同的 IP 地址，或者将测试虚拟机的虚拟 NIC 映射到与生产隔离但具有相同 IP 配置的不同网络（称为_气泡_或_测试网络_）来实现此目的。</block>
@@ -1192,7 +1171,6 @@
   <block id="671f7938870f01967b2e491f4c0ea912" category="list-text">在故障转移映射选项卡中，选择每个资源右侧的向下箭头并映射每个部分中的资源：</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">虚拟机</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">数据存储库</block>
-  <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">地图资源 &gt; 计算资源部分</block>
   <block id="7cf17a4502ca68d3226875e2a729fc55" category="paragraph">计算资源部分定义了故障转移后虚拟机的恢复位置。将源 vCenter 数据中心和集群映射到目标数据中心和集群。</block>
   <block id="5e076e09da1cdcb61e77ca7391027eed" category="paragraph">或者，可以在特定的 vCenter ESXi 主机上重新启动虚拟机。如果启用了 VMWare DRS，您可以根据需要自动将 VM 移动到备用主机以满足 DR 配置的策略。</block>
   <block id="08f13ccfaa019ccfc0c98a80108c779a" category="paragraph">或者，您可以将此复制计划中的所有虚拟机放入 vCenter 的唯一文件夹中。这提供了一种在 vCenter 内快速组织故障转移虚拟机的简便方法。</block>
@@ -1201,7 +1179,6 @@
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*目标集群*</block>
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*目标主机*（可选）：选择集群后，您可以设置此信息。</block>
   <block id="4cf53d6d28e4261f2397f16ccd7a5a18" category="admonition">如果 vCenter 配置了分布式资源调度程序 (DRS) 来管理集群中的多个主机，则您无需选择主机。如果您选择一个主机， NetApp Disaster Recovery会将所有虚拟机放置在选定的主机上。  * *目标 VM 文件夹*（可选）：创建一个新的根文件夹来存储选定的 VM。</block>
-  <block id="74b0088eeb9a4fc43afd0ad0e9f1ef57" category="section-title">地图资源 &gt; 虚拟网络部分</block>
   <block id="d757ba122f1f3d62b9a13da2a3e1b64c" category="admonition">您可以将多个源虚拟网络分配给同一个目标虚拟网络。但这可能会造成 IP 网络配置冲突。您可以将多个源网络映射到单个目标网络，以确保所有源网络具有相同的配置。</block>
   <block id="21538d8465027f7c4a2d65593552875c" category="paragraph">在故障转移映射选项卡中，选择“*虚拟网络*”旁边的向下箭头。选择源虚拟局域网和目标虚拟局域网。</block>
   <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">选择映射到适当虚拟 LAN 的网络。虚拟 LAN 应该已经配置好了，因此请选择适当的虚拟 LAN 来映射 VM。</block>
@@ -1236,17 +1213,11 @@
   <block id="642ce7c45318092be76df71ca359c694" category="paragraph">*运行 Linux 的虚拟机*：可以运行虚拟机使用的 Linux 版本支持的任何 shell 脚本 (.sh)。 Linux 脚本可以使用命令行参数。在以分号分隔的值列表中提供参数。不支持命名参数。将每个参数添加到<block ref="cc0acde0fc5708ea40075a08730fb2e7" prefix=" " category="inline-code"></block>参数列表并使用指针引用每个值<block ref="cc0acde0fc5708ea40075a08730fb2e7" prefix=" " category="inline-code"></block>数组，例如，<block ref="08af2426c7af475c1f6703fed4ed1dd0" prefix=" " category="inline-code"></block> 。</block>
   <block id="6cc5c6ac8b3db105ac7cb142b8d8b7b2" category="list-text">*目标 VM 前缀和后缀*：在虚拟机详细信息下，您可以选择为每个故障转移的 VM 名称添加前缀和后缀。这有助于区分故障转移的虚拟机和在同一 vCenter 集群上运行的生产虚拟机。例如，您可以向虚拟机名称添加前缀“DR-”和后缀“-failover”。有些人会添加第二个生产 vCenter，以便在发生灾难时临时在不同站点托管虚拟机。添加前缀或后缀可以帮助您快速识别故障转移的虚拟机。您还可以在自定义脚本中使用前缀或后缀。</block>
   <block id="fc8e3522d10b0e18c7fc7763ef0789a1" category="paragraph">您可以使用在计算资源部分设置目标 VM 文件夹的替代方法。</block>
-  <block id="230dc85a08275a2466390ae799703f92" category="list-text">*源 VM CPU 和 RAM*：在虚拟机详细信息下，您可以选择调整 VM CPU 和 RAM 参数的大小。</block>
   <block id="cd9b7d7dfe576f566d279960505b56d9" category="admonition">您可以以千兆字节 (GiB) 或兆字节 (MiB) 为单位配置 DRAM。虽然每个虚拟机至少需要 1MiB 的 RAM，但实际数量必须确保虚拟机来宾操作系统和任何正在运行的应用程序能够高效运行。</block>
-  <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="983a4203041e2ae3715f09be44011da8" category="list-text">*启动顺序*：您可以修改跨资源组的所有选定虚拟机的故障转移后的启动顺序。默认情况下，所有虚拟机同时并行启动；但是，您可以在此阶段进行更改。这有助于确保在启动后续优先级虚拟机之前，所有优先级为第一的虚拟机都在运行。</block>
   <block id="354a69710d188806a2240038216a8fe4" category="list-text">顺序启动：为每个虚拟机分配一个唯一的编号，以按指定的顺序启动，例如 1、2、3、4、5。</block>
   <block id="917743345c16934d4f46d0d5f7c82682" category="list-text">同时启动：为任何虚拟机分配相同的编号，以便同时启动它们，例如 1,1,1,1,2,2,3,4,4。</block>
   <block id="8a1eaa44f33649f4a55add8e5df848ec" category="list-text">*启动延迟*：调整启动操作的延迟时间（分钟），表示虚拟机在启动过程之前等待的时间。输入 0 到 10 分钟之间的值。</block>
-  <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">要将启动顺序重置为默认值，请选择“将 VM 设置重置为默认值”，然后选择要更改回默认值的设置。</block>
-  <block id="ac8444310c066ee8f680bbbaddb637cb" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的快照副本。该服务将使应用程序静止，然后拍摄快照以获取应用程序的一致状态。在 Windows 和 Linux 上运行的 Oracle 以及在 Windows 上运行的 SQL Server 支持此功能。接下来查看更多详细信息。</block>
-  <block id="6262500729b6f197aa6e4ad6b2b8e85e" category="list-text">*使用 Windows LAPS*：如果您使用 Windows 本地管理员密码解决方案（Windows LAPS），请选中此框。仅当您选择了“*静态 IP*”选项时，此选项才可用。选中此框后，您不需要为每个虚拟机提供密码。相反，您提供域控制器详细信息。</block>
-  <block id="4fd3e179011cd215b45b25dbfb0cc8d2" category="paragraph">如果您不使用 Windows LAPS，则该 VM 是 Windows VM，并且 VM 行上的凭据选项已启用。您可以提供虚拟机的凭据。</block>
   <block id="085a5b8a90c0ae4c360aae1b0abff664" category="section-title">创建应用程序一致的副本</block>
   <block id="141df2d4721129ff39a3558ae90deae3" category="paragraph">许多虚拟机托管数据库服务器，例如 Oracle 或 Microsoft SQL Server。这些数据库服务器需要应用程序一致的快照，以确保在拍摄快照时数据库处于一致状态。</block>
   <block id="a4b7a096ee2c331ab1151c62b05a14d7" category="paragraph">应用程序一致性快照可确保在拍摄快照时数据库处于一致状态。这很重要，因为它可以确保数据库在故障转移或故障回复操作后能够恢复到一致状态。</block>
@@ -1265,7 +1236,6 @@
   <block id="3670d8f515aeb4d6181706c8e4bda00d" category="list-text">对于 Windows VM，该服务使用 Microsoft 卷影复制服务 (VSS) 与任一数据库服务器协调。</block>
   <block id="17118d5c40a4db7a930eaa6bd6772347" category="list-text">对于 Linux VM，该服务使用一组脚本将 Oracle 服务器置于备份模式。</block>
   <block id="b023c75e908be8b918df8d4029c40bbb" category="paragraph">要启用虚拟机及其托管数据存储的应用程序一致性副本，请选中每个虚拟机的“创建应用程序一致性副本”*旁边的框，并提供具有适当权限的来宾登录凭据。</block>
-  <block id="64a2a2b78e563e79f2c42c8e9d160e0e" category="section-title">地图资源 &gt; 数据存储部分</block>
   <block id="848817103272774cc04857999310abc9" category="paragraph">VMware 数据存储库托管在ONTAP FlexVol卷或使用 VMware VMFS 的ONTAP iSCSI 或 FC LUN 上。使用数据存储部分定义目标ONTAP集群、存储虚拟机 (SVM) 以及卷或 LUN，以将磁盘上的数据复制到目标。</block>
   <block id="923805befcdde4aa8fa4752b9e9a277f" category="paragraph">选择“*数据存储*”旁边的向下箭头。根据虚拟机的选择，自动选择数据存储映射。</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">根据您的选择，此部分可能会启用或禁用。</block>
@@ -1273,18 +1243,12 @@
   <block id="7b6735057ec599457ce14b0629d098bf" category="paragraph"><block ref="383fd741f178abe8be4920d498113a6c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="66567f18828dfaf896a5c34da4af6cbb" category="list-text">*使用平台管理的备份和保留计划*：如果您使用外部快照管理解决方案，请选中此框。 NetApp Disaster Recovery支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或第三方集成。如果复制计划中的每个数据存储库（卷）都已具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp Disaster Recovery中的恢复点。</block>
   <block id="d22ee3234903873cb3dfd07b3999a93c" category="paragraph">选择此选项后， NetApp Disaster Recovery不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。</block>
-  <block id="23c4ec9f7f759cf6773cc360abd2a7ec" category="list-text">*开始时间*：输入您希望备份和保留开始运行的日期和时间。</block>
-  <block id="7a565b2606e153ac342f6305eef26c26" category="list-text">*运行间隔*：输入以小时和分钟为单位的时间间隔。例如，如果您输入 1 小时，则服务将每小时拍摄一次快照。</block>
-  <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留计数*：输入您想要保留的快照数量。</block>
   <block id="a7cb9d7cf359ecc9e5cef81ecdd91cd1" category="admonition">保留的快照数量以及每个快照之间的数据变化率决定了源和目标上消耗的存储空间量。保留的快照越多，消耗的存储空间就越多。</block>
   <block id="63882377431b20b814641f0190aa1986" category="list-text">*源和目标数据存储*：如果存在多个（扇出） SnapMirror关系，您可以选择要使用的目标。如果卷已建立SnapMirror关系，则会显示相应的源数据存储库和目标数据存储库。如果卷没有SnapMirror关系，您现在可以通过选择目标集群、选择目标 SVM 并提供卷名称来创建一个。该服务将创建卷和SnapMirror关系。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">如果虚拟机来自同一卷和同一 SVM，则该服务将执行标准ONTAP快照并更新辅助目标。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">如果虚拟机来自不同的卷和相同的 SVM，则该服务将通过包含所有卷来创建一致性组快照并更新辅助目标。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">如果虚拟机来自不同的卷和不同的 SVM，则该服务通过包含相同或不同集群中的所有卷来执行一致性组启动阶段和提交阶段快照，并更新辅助目标。</block>
   <block id="7fdb47d52c8257466211bbfeff754a21" category="list-text">在故障转移期间，您可以选择任何快照。如果您选择最新的快照，该服务将按需创建备份、更新目标并使用该快照进行故障转移。</block>
-  <block id="10c490bdf4b14320b22d49a659b33c9b" category="list-text">*首选 NFS LIF* 和 *导出策略*：通常，让服务选择首选 NFS LIF 和导出策略。如果要使用特定的 NFS LIF 或导出策略，请选择每个字段旁边的向下箭头并选择相应的选项。</block>
-  <block id="3a34b1c612fbfa5151b5f75fa3b7f4d8" category="paragraph">您可以选择在故障转移事件后为卷使用特定的数据接口 (LIF)。如果目标 SVM 有多个 LIF，这对于数据流量平衡很有用。</block>
-  <block id="80b4d61db95d764d9478be9bd5dce2ba" category="paragraph">为了进一步控制 NAS 数据访问安全性，该服务可以为不同的数据存储卷分配特定的 NAS 导出策略。导出策略定义访问数据存储卷的 NFS 客户端的访问控制规则。如果您未指定导出策略，则服务将使用 SVM 的默认导出策略。</block>
   <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">添加测试故障转移映射</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择“*测试映射*”选项卡。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">像以前一样浏览每个选项卡，但这次针对测试环境。</block>
@@ -1681,7 +1645,6 @@
   <block id="bb05f5a972177b632dbf8088c480f305" category="paragraph">现在您可以将自定义脚本注入到故障转移工作流程中，以便在创建备份之前运行。备份前脚本允许您在复制快照之前控制虚拟机的状态，并为虚拟机的转换做好准备。例如，您可以注入一个脚本来卸载 NFS 挂载点，然后在故障转移后使用另一个脚本重新挂载该挂载点。</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
   <block id="67d901d806b31ec45748075cf6b4b785" category="list-text">*降级虚拟机硬件版本并注册*：如果目标 ESX 主机版本早于源版本，请选择此项，以便在注册期间匹配。</block>
-  <block id="c41917a6c517c418de809b1e4f43f537" category="admonition">建议您创建一个专门的导出策略，将卷访问权限限制为_仅_将托管受保护虚拟机的源 vCenter ESXi 主机和目标 vCenter ESXi 主机。这样可以确保外部实体无法访问 NFS 导出内容。</block>
   <block id="11decf8e913c8fbeb5d947338d43e3b0" category="paragraph">有关详细信息，请参阅 <block ref="bf6dbdf786c7323ca961bfd2e12103c6" category="inline-link-macro-rx"></block>。</block>
   <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp以多种方式为NetApp Console及其云服务提供支持。全天候提供广泛的免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单获取的远程技术支持。</block>
   <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">有关云提供商文件服务、其基础设施或使用该服务的任何解决方案的技术支持，请参阅该产品的文档。</block>
@@ -1865,7 +1828,6 @@
   <block id="c0655d6a3a66f2180cdf2e00c1930e7c" category="list-text">使用 Google Cloud，您只能向复制计划添加一个卷或数据存储。</block>
   <block id="7bcd913022459926bf1a00069a8fb8f6" category="admonition">在部署NetApp Disaster Recovery之前整理您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。</block>
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">为故障转移测试创建一套单独的专用映射，以防止 VMS 使用相同的 IP 地址连接到生产网络。</block>
-  <block id="5f4825a97c910dc2ee0d9eb1107f19d9" category="section-title">地图资源 &gt; 虚拟机部分</block>
   <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">灾难恢复需要 vCenter 权限</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">有关详细信息，请参阅 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">有关详细信息，请参阅 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
@@ -1897,7 +1859,6 @@
   <block id="2a5d29dc0e8c9fb1d01f9e388b1b0b74" category="paragraph">版本 4.2.9</block>
   <block id="0c798cc11f8ddc52d0bd3006eaa122fc" category="summary">NetApp以多种方式为控制台提供支持。我们提供全天候 (24x7) 的丰富免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单系统提供的远程技术支持。</block>
   <block id="512fd5eb37bb5d3f000a423886a72dd0" category="summary">在向NetApp技术支持部门提交支持案例之前，您需要将NetApp支持站点帐户添加到NetApp Console，然后注册以获得支持。</block>
-  <block id="71e1bea6c178dd06aa64cb971b0a7ab6" category="paragraph">源 vCenter 必须位于本地 vCenter 上。目标 vCenter 可以是同一站点或远程站点中的第二个本地 vCenter，也可以是基于云的软件定义数据中心 (SDDC)，例如 VMware Cloud on AWS。这两个 vCenter 都应该已经添加到您的灾难恢复工作环境中。</block>
   <block id="5ac1f8de819731380d7b9bbae3ae1d60" category="list-text">在“资源映射”页面中，选中该复选框，以便对故障转移和测试操作使用相同的映射。</block>
   <block id="b48e099c4fc62f3d87b3ba0f45c91635" category="list-text">*脚本*：您可以将自定义的访客操作系统托管脚本（.sh、.bat 或 .ps1 格式）作为后处理程序包含在内。借助自定义脚本，灾难恢复可以在故障转移、故障恢复和迁移过程之后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。该服务可以在运行 Microsoft Windows 或任何受支持的 Linux 变体的虚拟机中运行脚本，并支持命令行参数。您可以将脚本分配给单个虚拟机，也可以分配给复制计划中的所有虚拟机。</block>
   <block id="beab47c47d07d73986a2773b714728e8" category="list-text">*保留原始文件夹层次结构*：默认情况下，灾难恢复会在故障转移时保留虚拟机清单层次结构（文件夹结构）。如果恢复目标_不_具有原始文件夹层次结构，则灾难恢复功能会创建它。</block>
@@ -2108,7 +2069,6 @@
   <block id="699554d8d02429739cd0995ec1ec3ab8" category="paragraph">版本 4.3.0</block>
   <block id="b57381f68dbba13b31fa8aa68f6b0b91" category="doc">从复制计划中排除数据存储库</block>
   <block id="97a6d5c9da6b211dcdf5d581e247e960" category="paragraph">现在，在 Disaster 中创建复制计划时，可以从复制中排除特定的数据存储区。对于将 VM 配置为使用多个数据存储区的情况，这允许您限制要复制的数据存储区。</block>
-  <block id="1783ee76cf8532a6df415b4e239a23d9" category="paragraph">有关详细信息，请参见 <block ref="c2741b2e4bc1013bb2e1908f9c4eb243" category="inline-link-macro-rx"></block>。</block>
   <block id="ec6c483e852913b786ae872f19efd121" category="section-title">已从 vCenter 密码中删除密码验证</block>
   <block id="8cca1120916820e14384f393325831ff" category="paragraph">灾难恢复删除了对 vCenter 密码的密码限制，以允许包含空格的密码。</block>
   <block id="32530c1a1edb0706f8c34b61bf263957" category="paragraph">有关详细信息，请参见 <block ref="0d43ad8ffb310486762e1912aeac4ebc" category="inline-link-macro-rx"></block>。</block>
@@ -2127,4 +2087,32 @@
   <block id="87c116e357fbcba643eb3c034af4b9f0" category="paragraph">添加 vCenter 站点后，您可以创建资源组，将 VM 组或数据存储库组作为一个单元。资源组使您能够将一组相关 VM 组织成满足您要求的逻辑组。例如，您可以对与一个应用程序关联的 VM 进行分组，也可以对具有类似层的应用程序进行分组。作为另一个示例，组可能包含可在恢复时运行的延迟启动顺序。</block>
   <block id="637fada88b0b3ac0031b3d726a3ffa4c" category="paragraph">资源组可让您将 VM 或数据存储区合并到单个单位中。</block>
   <block id="2273ca98b904e703bc39a6bc79871562" category="paragraph">如果这是您第一次使用 NetApp Disaster recovery，则需要添加 vCenter 信息。如果您已添加 vCenter 信息，则会看到控制面板。</block>
+  <block id="855f6640322147511d2bad1c3ef67a01" category="paragraph">有关详细信息，请参见<block ref="5e71e4e6b8c5e7bff47e3e8fc9f8f4a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="a7f0ae2d9bf264f3b8a764e25f427249" category="paragraph">创建计划时，请遵循以下指南：</block>
+  <block id="9c1fea18f8c5a2e7dbfc597cff63bcda" category="list-text">从 NetApp Disaster Recovery 菜单中，选择*复制计划*，然后选择*添加*。如果这是您第一次创建复制计划，请从仪表板中选择*添加复制计划*。</block>
+  <block id="a29968d7a7e40c3abadb4a3a66650aa2" category="list-text">输入复制计划的名称。</block>
+  <block id="c8f30cd4b86e358883441ae183002de2" category="list-text">在 *Source vCenter* 下，从下拉菜单中选择数据所在的 vCenter。在 *Target vCenter* 下，从下拉菜单中选择要将数据复制到的 vCenter。</block>
+  <block id="8e1ca61f41962bbab3b0edc4e77ec792" category="inline-image-macro">显示 vCenter 服务器页面的屏幕截图</block>
+  <block id="37fc88b8b1530f40d0ce4e2d7ca691dc" category="paragraph"><block ref="37fc88b8b1530f40d0ce4e2d7ca691dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="10296271f8e5d29ec10e8b2edad00c6b" category="list-text">确保数据存储区中至少有一个 VM。如果数据存储区中没有 VM，则不会发现该数据存储区。</block>
+  <block id="7c4632e0e4a0098db96e92264fac9557" category="list-text">请勿在同一数据存储区上托管受保护和未受保护的 VM。如果受保护和未受保护的 VM 托管在同一个数据存储区中，则可能会遇到以下问题：</block>
+  <block id="d9cbe60deafc2c2262ab4d07b9131f6a" category="list-text">该卷的使用容量可能会影响许可计算，因为 Disaster Recovery 使用 SnapMirror，这意味着系统会复制整个 ONTAP 卷。在此情况下，受保护和未受保护的虚拟机消耗的卷空间都将包含在此计算中。</block>
+  <block id="0995033be79b231587fd5dd53a2a94c9" category="list-text">如果您有现有的资源组，请选择**资源组**，选择资源组，然后选择**下一步**。</block>
+  <block id="ed4f95c7ecb7ed1087c4e69b67bc15c0" category="paragraph">如果您没有现有的资源组或需要向其中添加资源，请选择 *Virtual machines* 或 *Datastores*。</block>
+  <block id="9e789b98de8f3895acb993bdec773003" category="list-text">从自动生成的列表中选择要添加到复制计划的虚拟机或数据存储。对于虚拟机，您可以按数据存储进行筛选。选择数据存储或 VM 时，它会自动添加到资源组。</block>
+  <block id="11fce3579cd1b24abe9062137cfd5016" category="list-text">在页面的右半部分，查看选定的 VM 或数据存储。</block>
+  <block id="4fa21384871ccd830dad7c53fe8ad15a" category="list-text">要删除虚拟机或数据存储区，请将鼠标悬停在数据源的名称上，然后选择 *X*。</block>
+  <block id="9048a14e005d230c845b3098a8bdf4a4" category="list-text">要将资源组织成多个资源组，请选择*单击以添加另一个资源组*。添加资源组后，可以在组之间拖放资源。选择铅笔图标*以编辑资源组的名称。</block>
+  <block id="7ddea6f727802bf5d58c1c6fc1200d0b" category="section-title">计算资源部分</block>
+  <block id="55290e3407e3be9abd668def1fc094f0" category="list-text">*文件夹*（可选）</block>
+  <block id="3327cd0621dd5ede196b9e097644e871" category="admonition">切换高级设置以添加 *Scripts* 和 *Application consistency* 设置。</block>
+  <block id="72391e5d470b580e6491b3647580e58f" category="list-text">*CPU* 和 *Memory (GB)*：在虚拟机详细信息下，您可以选择调整 VM CPU 和内存的大小。</block>
+  <block id="5bb5f5ed113c90d31da88b6596b25520" category="list-text">*应用程序一致性*：指示是否创建应用程序一致性快照副本。服务将使应用程序静止，然后拍摄快照以获取应用程序的一致状态。此功能受在 Windows 和 Linux 上运行的 Oracle 以及在 Windows 上运行的 SQL Server 的支持。请在下方查看更多详情。</block>
+  <block id="4207cdc216537468251be88bbe3d2194" category="paragraph">您必须为此选项切换 *Advance settings* 切换。如果启用应用程序一致性，则必须以用户名和密码的形式提供凭据。</block>
+  <block id="6ffba2842dbe195b31043c058ec4a8b1" category="inline-image-macro">显示资源映射虚拟机部分的屏幕截图</block>
+  <block id="19c52774fb01f872c0f95a233173a1de" category="paragraph"><block ref="19c52774fb01f872c0f95a233173a1de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f78326f10957ba33aba302d329ac33e" category="section-title">数据存储部分</block>
+  <block id="141ae0745aa19a71f0ba80e5ba754682" category="list-text">*备份和保留开始时间*：输入您希望备份和保留开始运行的日期和时间。</block>
+  <block id="92cd787be79720ebbf8f89f517b891c9" category="list-text">*备份和保留频率*：输入以小时和分钟为单位的时间间隔。例如，如果您输入 1 小时，则服务将每小时拍摄一次快照。</block>
+  <block id="81b2d5bd2343a78b10f138613228f4b2" category="list-text">*所有数据存储库的保留计数*：输入要保留的快照数。</block>
 </blocks>

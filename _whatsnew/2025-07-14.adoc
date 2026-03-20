@@ -42,7 +42,8 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles
 ** 当在 vCenter 中删除集群、主机或数据中心时， NetApp Disaster Recovery现在会将其从复制计划和资源组中删除。
 
 
-* 您现在可以在浏览器的隐身模式下访问 Swagger 文档。您可以从NetApp Disaster Recovery中的“设置”选项 >“API 文档”中访问它，也可以在浏览器的隐身模式下直接通过以下 URL 访问它： https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swagger 文档"^] 。
+
+
 * 在某些情况下，故障回复操作完成后，iGroup 会被遗留下来。如果 iGroup 已过时，则此更新会将其删除。
 * 如果在复制计划中使用了 NFS FQDN， NetApp Disaster Recovery现在会将其解析为 IP 地址。如果灾难恢复站点中无法解析 FQDN，则此更新很有用。
 * UI 对齐改进
