@@ -396,15 +396,12 @@
   <block id="01a7e7f1580e9ccf4f0275e9f79a32dd" category="inline-link-macro">监控灾难恢复操作</block>
   <block id="899a3601f4e45edcb69bd9d82c68fbef" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> 。</block>
   <block id="f908b1751b236e73d9e2a5a1506e778e" category="summary">要使用NetApp Disaster Recovery，请执行几个步骤进行设置。</block>
-  <block id="e54ccdefb5dfc31454b15961127cb512" category="paragraph">要使用NetApp Disaster Recovery，请执行几个步骤在 Amazon Web Services (AWS) 和NetApp Console中对其进行设置。</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="c266abec3014ef58af380dae0b855a81" category="admonition">审查<block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block>以确保您的系统已准备就绪。</block>
   <block id="414c3e433eb5c1851ae3a86b00f4ceb3" category="paragraph">您可以在以下基础架构中使用NetApp Disaster Recovery：</block>
-  <block id="52737038ae7b3f37da8d52a547197b97" category="list-text">混合云 DR 将本地 VMware 和ONTAP数据中心复制到基于 VMware Cloud on AWS 和Amazon FSx for NetApp ONTAP 的AWS DR 基础架构。</block>
   <block id="d55e1af9ee418296c246b4085e868b14" category="list-text">私有云 DR 将本地 VMware 和ONTAP vCenter 复制到另一个本地 VMware 和ONTAP vCenter。</block>
   <block id="3a2292ce550693108458d6b2a70159a5" category="section-title">采用 VMware Cloud 和Amazon FSx for NetApp ONTAP 的混合云</block>
   <block id="f95c7ab842d27a83ace1046a7ef13cba" category="paragraph">此方法包括使用 NFS 协议托管在ONTAP FlexVol卷上的数据存储区的本地生产 vCenter 基础架构。  DR 站点由一个或多个 VMware Cloud SDDC 实例组成，这些实例使用由一个或多个 FSx for ONTAP实例通过 NFS 协议提供的FlexVol卷上托管的数据存储。</block>
-  <block id="83521463ad83fdaf8f794f019da74b65" category="paragraph">生产站点和 DR 站点通过与 AWS 兼容的安全连接进行连接。常见的连接类型是安全 VPN（私有或 AWS 提供）、AWS Direct Connect 或其他批准的互连方法。</block>
   <block id="b75bd33081eb3ed22808f61894156d53" category="paragraph">对于涉及 AWS 云基础设施的灾难恢复，您必须使用 AWS 的控制台代理。该代理应安装在与 FSx for ONTAP实例相同的 VPC 中。如果在其他 VPC 中部署了额外的 FSx for ONTAP实例，则托管代理的 VPC 必须能够访问其他 VPC。</block>
   <block id="b368450b04bead726034d8d89e27a399" category="section-title">AWS 可用区</block>
   <block id="88bb4c73bf361fedf7107f94d15ab629" category="paragraph">AWS 支持在给定区域内的一个或多个可用区 (AZ) 中部署解决方案。灾难恢复使用两种 AWS 托管服务：VMware Cloud for AWS 和 AWS FSx for NetApp ONTAP。</block>
@@ -413,9 +410,7 @@
   <block id="4f4bc7b1b73b3a9b248ab79f9fe4ab34" category="paragraph">*最佳实践*：对于 AWS DR 站点配置， NetApp建议对 VMware Cloud 和 AWS FSx for ONTAP实例使用单可用区部署。由于 AWS 用于 DR，因此引入多个 AZ 没有任何优势。多可用区可能会增加成本和复杂性。</block>
   <block id="1e8f73e81b609f921369b61db9962ba0" category="section-title">本地到 AWS</block>
   <block id="1b4220c693741db78edd086cf105c0a2" category="paragraph">AWS 提供了以下方法将私有数据中心连接到 AWS 云。每种解决方案都有其优点和成本考虑。</block>
-  <block id="2edef6867081f5c29915c6fb18c5c01b" category="list-text">*AWS Direct Connect*：这是位于与您的私有数据中心相同的地理区域并由 AWS 合作伙伴提供的 AWS 云互连。此解决方案在您的本地数据中心和 AWS 云之间提供安全的私有连接，而无需公共互联网连接。这是AWS提供的最直接、最有效的连接方式。</block>
   <block id="53e59c58dc937b1664dff508b4e63986" category="list-text">*AWS 互联网网关*：这提供了 AWS 云资源和外部计算资源之间的公共连接。这种类型的连接通常用于向外部客户提供服务，例如不需要安全性的 HTTP/HTTPS 服务。没有服务质量控制、安全性或连接性保证。因此，不建议使用此连接方法将生产数据中心连接到云。</block>
-  <block id="781c97b82b6a261b43aab079bc80abb2" category="list-text">*AWS Site-Site VPN*：此虚拟专用网络连接可用于与公共互联网服务提供商一起提供安全的访问连接。  VPN 对往返于 AWS 云的所有数据进行加密和解密。 VPN 可以基于软件，也可以基于硬件。对于企业应用程序，公共互联网服务提供商 (ISP) 应提供服务质量保证，以确保为 DR 复制提供足够的带宽和延迟。</block>
   <block id="9a3de1fc98f937de84c79a7dd80dfcbd" category="paragraph">*最佳实践*：对于 AWS DR 站点配置， NetApp建议使用 AWS Direct Connect。该解决方案为企业应用程序提供最高的性能和安全性。如果不可用，则应使用高性能公共 ISP 连接以及 VPN。确保 ISP 提供商业 QoS 服务级别以确保足够的网络性能。</block>
   <block id="db765aadec4d1aeb065102f4b7b8b139" category="section-title">VPC 到 VPC 互连</block>
   <block id="5cc4b596e4f36712e12ccd6eb9c96042" category="paragraph">AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点和成本考虑。</block>
@@ -1325,7 +1320,6 @@
   <block id="8082ac657e40ca576105ceaf88cbda23" category="list-text">如果源 vCenter 仍处于活动状态，请关闭所有正在进行故障转移的源端虚拟机。</block>
   <block id="addf2cf8485a908b734a233a37ce94ab" category="list-text">如果源 vCenter 和ONTAP集群仍处于活动状态，请创建反向SnapMirror关系，以便在故障转移状态下将任何更改复制回原始源站点。  SnapMirror关系从目标虚拟机到源虚拟机是相反的。</block>
   <block id="49f91cfb44052240b763337c959a02fb" category="admonition">故障转移启动后，您可以在灾难恢复站点的 vCenter 中看到恢复的虚拟机（虚拟机、网络和数据存储）。默认情况下，虚拟机会恢复到 Workload 文件夹。</block>
-  <block id="2daf88e8e899eb0e79ca31b1325a8026" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*故障转移*。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
   <block id="746c84b1b109b4fcfeb29ff36be21f14" category="paragraph"><block ref="746c84b1b109b4fcfeb29ff36be21f14" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">在发生故障转移之前，将拍摄当前源的快照并将其复制到当前目标。</block>
@@ -2115,4 +2109,23 @@
   <block id="141ae0745aa19a71f0ba80e5ba754682" category="list-text">*备份和保留开始时间*：输入您希望备份和保留开始运行的日期和时间。</block>
   <block id="92cd787be79720ebbf8f89f517b891c9" category="list-text">*备份和保留频率*：输入以小时和分钟为单位的时间间隔。例如，如果您输入 1 小时，则服务将每小时拍摄一次快照。</block>
   <block id="81b2d5bd2343a78b10f138613228f4b2" category="list-text">*所有数据存储库的保留计数*：输入要保留的快照数。</block>
+  <block id="5701a00214d8cf532eb05ab4390dd83c" category="doc">Google Cloud VMware Engine (GCVE) 支持现已全面推出 (GA)</block>
+  <block id="17eb3abfef8b1a9f92707a05bb82cb53" category="paragraph">针对 GCVE 的 NetApp Disaster Recovery 支持现已全面推出（GA）。借助 GA 支持，Disaster Recovery for GCVE 现在支持：</block>
+  <block id="6f9e9024f518a369b5759d900694f8b3" category="list-text">*平台管理的快照：* 通过 ONTAP 或 Google Cloud Platform (GCP) 无缝管理备份和保留策略。</block>
+  <block id="045d30a52ce459f46c504234d025f4c3" category="list-text">*每个复制计划有多个数据存储区：*通过将多个数据存储区整合到单个复制策略中，简化 Disaster Recovery 计划。</block>
+  <block id="c4eadd4786334639a92ab9b1508f337f" category="list-text">*对不可用的源站点强制故障转移：*如果源站点不可用，则切换到灾难恢复站点。</block>
+  <block id="a7772ec1948f1cd5c6087ddb93603474" category="list-text">*按需延迟 SnapMirror 重新同步和还原复制：* 使用"跳过保护"选项延迟 SnapMirror 重新同步，以避免在高峰操作期间对生产工作负载产生影响，然后使用重新保护选项按需还原复制</block>
+  <block id="4a8a0c3493007142356e2bab5b977e96" category="inline-link-macro">Disaster Recovery 支持的配置</block>
+  <block id="fd6fb30ddd2582b6a9be2fbd297066cd" category="paragraph">有关 GCVE 支持的详细信息，请参见 <block ref="e93ab8cb254bacf15604af8d15ae8da4" category="inline-link-macro-rx"></block>。</block>
+  <block id="9403a68744e5b91ec0e3309a60a08725" category="paragraph">要使用 NetApp Disaster Recovery，请执行几个步骤在 NetApp Console 和支持的灾难恢复环境中进行设置。</block>
+  <block id="cda0283bbd4a4fb561a454be42b95e79" category="section-title">支持的基础设施</block>
+  <block id="9753fdc07008742b97e2abeb69d97996" category="list-text">混合云灾难恢复，将本地 VMware 和 ONTAP 数据中心复制到基于 VMware Cloud on AWS 或 Elastic VMware Service (EVS) 和 Amazon FSx for NetApp ONTAP 的 AWS 灾难恢复基础架构。</block>
+  <block id="1a3b0e646655d3e634f506335377b274" category="list-text">云 DR，将基于 VMware Cloud on AWS 或 EVS 的 AWS DR 基础架构复制到另一个使用 FSx for NetApp ONTAP 的基于 AWS 的 DR 基础架构。</block>
+  <block id="9e44011b9e0a2de4c376eea05ca3b108" category="list-text">混合云 DR，将本地 VMware 和 ONTAP 数据中心复制到基于 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 的 Google DR 基础架构。</block>
+  <block id="1d1e533f25b0978157fd3d6581e3bfce" category="paragraph">生产和 DR 站点通过 AWS 兼容的安全连接进行连接。常见的连接类型包括安全 VPN（私有或 AWS 提供）、AWS Direct Connect 或其他已批准的互连方法。</block>
+  <block id="6da123917575e59f72dab08a3d3c444b" category="list-text">*AWS Direct Connect*：这是 AWS 云互连，与您的私有数据中心位于同一地理区域，由 AWS 合作伙伴提供。此解决方案可在您的本地数据中心和 AWS 云之间提供安全的私有连接，而无需公共互联网连接。这是 AWS 提供的最直接、最有效的连接方法。</block>
+  <block id="befc109880f1df3613fa6b68b938eea8" category="list-text">*AWS Site-Site VPN*：此虚拟专用网络连接可用于与公共互联网服务提供商一起提供安全的访问连接。VPN 会对往返 AWS 云的所有数据进行加密和解密。VPN 可以是基于软件的，也可以是基于硬件的。对于企业应用程序，公共互联网服务提供商 (ISP) 应提供服务质量保证，以确保为 DR 复制提供足够的带宽和延迟。</block>
+  <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
+  <block id="7a220dd27e25e08bf2217cc7bebbf755" category="paragraph">版本 4.3.2</block>
+  <block id="4f6d1243da0297d0c471e4b8e1c253f1" category="list-text">在右侧，选择 *Actions* 选项 <block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。</block>
 </blocks>

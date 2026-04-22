@@ -108,7 +108,7 @@ TIP: 故障转移启动后，您可以在灾难恢复站点的 vCenter 中看到
 .步骤
 . 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*故障转移*。
+. 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
 +
 image:dr-plan-failover3.png["故障转移页面"]
 
