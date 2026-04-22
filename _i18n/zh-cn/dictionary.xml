@@ -1822,7 +1822,6 @@
   <block id="c0655d6a3a66f2180cdf2e00c1930e7c" category="list-text">使用 Google Cloud，您只能向复制计划添加一个卷或数据存储。</block>
   <block id="7bcd913022459926bf1a00069a8fb8f6" category="admonition">在部署NetApp Disaster Recovery之前整理您的虚拟机，以最大限度地减少“数据存储蔓延”。将需要保护的虚拟机放置在数据存储的子集上，将不需要保护的虚拟机放置在不同的数据存储子集上。使用基于数据存储的保护来确保任何给定数据存储上的虚拟机都受到保护。</block>
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">为故障转移测试创建一套单独的专用映射，以防止 VMS 使用相同的 IP 地址连接到生产网络。</block>
-  <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">灾难恢复需要 vCenter 权限</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">有关详细信息，请参阅 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">有关详细信息，请参阅 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
   <block id="6da53899225555a506524070f96e33df" category="doc">支持本地环境中的多个控制台代理</block>
@@ -2128,4 +2127,73 @@
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
   <block id="7a220dd27e25e08bf2217cc7bebbf755" category="paragraph">版本 4.3.2</block>
   <block id="4f6d1243da0297d0c471e4b8e1c253f1" category="list-text">在右侧，选择 *Actions* 选项 <block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。</block>
+  <block id="7d40af2723bf06859de76af9f198b76a" category="summary">使用 NetApp Disaster Recovery 时，请确保在 ONTAP 中配置了正确的权限以确保正常运行。</block>
+  <block id="bee0de6585ac1ea0ad35e287ab014c6f" category="doc">为 NetApp Disaster Recovery 配置 ONTAP 权限</block>
+  <block id="8ad67216cdaef40fdcfdf442f9880d1a" category="section-title">最低 ONTAP 权限</block>
+  <block id="f53cfaf12220d1479bd7bc98f8fc61ae" category="paragraph">Disaster Recovery 需要以下 ONTAP 权限：</block>
+  <block id="db974238714ca8de634a7ce1d083a14f" category="cell">API</block>
+  <block id="72eb6abf9272757a5494f0d1f1c91658" category="cell">访问级别</block>
+  <block id="944da21c517df0c48dfbef7af28f3093" category="cell">/api</block>
+  <block id="d8bd6e60adcc01ce20f509ea6800de8f" category="cell">只读</block>
+  <block id="b46b834a97038e09aedf6c83d1aa6995" category="cell">/api/application/applications</block>
+  <block id="05cc0e531c89a2617c0047161c8a7ddd" category="cell">读/写</block>
+  <block id="a32d5f9154a1277fa4a93d06188fad04" category="cell">/api/application/consistency-groups</block>
+  <block id="d48b8c7902dee00442e14d9b1af3af1b" category="cell">/api/cluster</block>
+  <block id="afc03d1a82dbecc47aa9f8732c12aace" category="cell">/api/cluster/jobs</block>
+  <block id="3adec5775bcf3ba9eb5df43ece1d882c" category="cell">/api/cluster/peers</block>
+  <block id="6bef4b7576b4a12f9d1e06561ec5df51" category="cell">读取/创建/修改</block>
+  <block id="a2f315c73bdcda41c199bc98f4739ea2" category="cell">/api/cluster/schedules</block>
+  <block id="127472dce57e43d60473237cb646ac4a" category="cell">读取/创建</block>
+  <block id="a00c50b90749f90a36742b8673eb5362" category="cell">/api/network/ip/interfaces</block>
+  <block id="ec5cbac63e885455cb75c29fba62e761" category="cell">/api/network/ipspaces</block>
+  <block id="27443e01eef5ddc50c059b3886b7e2ac" category="cell">/api/protocols/cifs/services</block>
+  <block id="035793b8ec669871e80b3444230fd065" category="cell">/api/protocols/nfs/export-policies</block>
+  <block id="921cb198f30e9e7592d21cf41d35f7e3" category="cell">/api/protocols/nfs/services</block>
+  <block id="5c879dec70d547596e57552c4f4f9eb1" category="cell">/api/protocols/san/igroups</block>
+  <block id="d2456199c653a781d11df900b8d1b311" category="cell">/api/protocols/san/iscsi/sessions</block>
+  <block id="943932cdd7f938ace06757f2ff8852ec" category="cell">/api/protocols/san/lun-maps</block>
+  <block id="b98bcec013a122e0040cd6f6e8f3de6a" category="cell">/api/security/certificates</block>
+  <block id="b7379195c91cc8e0ced572b2fce63ed6" category="cell">/api/snapmirror/policies</block>
+  <block id="0100d992071d5c1121847f70dbfc59b1" category="cell">/api/snapmirror/relationships</block>
+  <block id="9c00c4c82590637bd6e1c6cc201ec33f" category="cell">/api/storage/aggregates</block>
+  <block id="91443afe19221b584756b058dec25daa" category="cell">/api/storage/file/clone</block>
+  <block id="9231c0532ac35991440242417354a12e" category="cell">/api/storage/flexcache/flexcaches</block>
+  <block id="06b7e60de283e2e758b24eb1b37b804f" category="cell">/api/storage/luns</block>
+  <block id="acd96993edb256d739763832d3f9f184" category="cell">/api/storage/qtrees</block>
+  <block id="0bb0f595e81d92bf26bf4c1c0c52b57c" category="cell">读取/修改</block>
+  <block id="d6111871e7cb4622142aa35fc122dcea" category="cell">/api/storage/snapshot-policies</block>
+  <block id="e4bda0100c995f1a022b02958516473a" category="cell">/api/storage/volumes</block>
+  <block id="b4d1abd13d22d7089694589c8b97f79b" category="cell">/api/svm/peers</block>
+  <block id="9c52661d131f07face38ff3baa271d09" category="cell">/api/svm/svms</block>
+  <block id="7376f33a273ec46f0b7a7d1460916640" category="section-title">在 ONTAP 中添加权限</block>
+  <block id="b295025ee0faa762a112e8b1ff4f6106" category="paragraph">在 ONTAP 中添加权限需要创建具有所需权限的角色并将角色分配给用户。您可以使用 System Manager 或 ONTAP CLI 在 ONTAP 中执行此任务。</block>
+  <block id="26ed02718973e705cd69ee6e109400e0" category="open-title">System Manager</block>
+  <block id="27623f36a095b5f5626aa6693f9f0545" category="paragraph">必须为源和目标集群单独执行此过程。</block>
+  <block id="6598a6676741a382a437fbcee1a07f47" category="list-title">创建角色</block>
+  <block id="ef4ead573c4d085bd2e947a33dd4e06a" category="list-text">使用管理员凭据登录到 ONTAP 集群。</block>
+  <block id="770a9cb46cf6dc2aafe7ea25f8db86ee" category="list-text">导航到 *Cluster* &gt; *Settings*。</block>
+  <block id="946d661dc3ca8e2867432a121edb5921" category="list-text">在 *Security* 下，选择 *Users and roles*。</block>
+  <block id="af5a76d3d58f57953dc1468d3a8e774d" category="list-text">选择 *+ Add* 以创建新角色。</block>
+  <block id="aab9e1de16f38176f86d7a92ba337a8d" category="inline-link-macro">表</block>
+  <block id="1a258025167e9f9d764abf629ad7fb63" category="list-text">输入 *Role name*。根据 <block ref="1844c1d9c45ee6f22e6767b46f1ce4cf" category="inline-link-macro-rx"></block> 分配 *REST API path*、*Secondary path* 和 *Access level*。</block>
+  <block id="b7332e6d2bd81772fa469d097c0681ee" category="list-text">添加所有必需的权限后，选择 *添加*。</block>
+  <block id="200899d014b914b6c3610b47f40d1b97" category="list-title">将角色分配给用户</block>
+  <block id="908af9d2070650ed0d8956762a832a9e" category="list-text">返回部分菜单的 *用户和角色* 部分。</block>
+  <block id="96a827c2d61a05cb12e7639d27b4344d" category="list-text">在 *用户* 中，选择 *添加*。</block>
+  <block id="5f57cad2aae18921379c19ce719f1e33" category="list-text">输入 *User name*，然后选择您之前创建的 *Role*。</block>
+  <block id="8f07ab48943575279560dae8e5733204" category="list-text">在用户登录方法下，单击添加，直到配置所有必需的登录方法。</block>
+  <block id="f7e38e2f34cbb4ca36919c2e953557c7" category="list-text">为用户创建 *Password* ，然后确认密码。</block>
+  <block id="91af5705f16502125e8b2187e64202c0" category="open-title">命令行界面</block>
+  <block id="dee94e64e69fac9e251323ae149ab1e4" category="paragraph">要在 ONTAP 中创建角色和用户，必须使用管理员凭据在相应 ONTAP 集群的 CLI 中进行身份验证。必须分别为源和目标集群执行此过程。</block>
+  <block id="96afd9f6d05a568df9d348bbe4d8bd68" category="list-title">使用所需权限创建角色</block>
+  <block id="a168d89dff4567041d524fa28c622b61" category="list-text">运行命令<block ref="072c03d88a4d3699e0075c9ea4aed641" prefix=" " category="inline-code"></block>以创建具有所需权限的角色。您可以复制要在创建角色的脚本中使用的完整命令集<block ref="cd3c0664b72023a3db5e67c6cf6f89c1" prefix=" " category="inline-code"></block>。</block>
+  <block id="ba4a9cd6fb5b572946d710f33f0fc386" category="list-title">创建用户</block>
+  <block id="54c29c1be4669b8b588bddf706e7f842" category="list-text">运行以下命令来创建用户：</block>
+  <block id="e31777054702912eb1924599ba108a0f" category="paragraph"><block ref="d359c3f30b9d4a3d791370e87bf7f419" prefix="" category="inline-code"></block></block>
+  <block id="fe96b5a4676897def1e9f6519bb58b71" category="paragraph">出现提示时，输入用户的密码。</block>
+  <block id="1237f2e321fe10a47285f61b2b2f8e60" category="list-text">运行以下命令以添加所有必需的身份验证方法：</block>
+  <block id="849d5c470183dcdd6d3a0470a6b17559" category="section-title">配置 Disaster Recovery</block>
+  <block id="682cb3d415af7ce02d9da4eb79ded765" category="inline-link-macro">在控制台中发现 ONTAP 集群</block>
+  <block id="d7e286f47367b20bf6d60da61a7525c5" category="paragraph">在创建 ONTAP 角色后，您需要<block ref="4e087b59ddbefd7d455fbc7b2c0ee722" category="inline-link-macro-rx"></block>。发现集群时，您需要 ONTAP 集群的 IP 地址、您创建的用户名以及此步骤的密码。对于 Disaster Recovery，您必须在源集群和目标集群上执行发现。</block>
+  <block id="0cfffe93bea4d4c736df44a3ecd13d15" category="sidebar">所需的 ONTAP 权限</block>
 </blocks>

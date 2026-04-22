@@ -2,7 +2,9 @@
 section: reference
 title: 参考
 entries:
-- title: 灾难恢复需要 vCenter 权限
+- title: 所需的 ONTAP 权限
+  url: "/reference/ontap-permissions.html"
+- title: 所需 vCenter 权限
   url: "/reference/vcenter-privileges.html"
 - title: 切换控制台代理
   url: "/reference/switch-console-agent.html"
