@@ -2106,7 +2106,6 @@
   <block id="3dbc5485bf1aa588640ee699337e0892" category="list-text">**以应用程序为中心的保护**：您现在可以在应用程序级别保护 Kubernetes 工作负载，确保在故障转移事件期间恢复关键服务。</block>
   <block id="6124980497de7eeb616c27d599b53c84" category="list-text">**简化编排**：Disaster Recovery 提供直观的工作流程，以自动化 Kubernetes 工作负载的备份和复制，利用与 VMware 环境相同的高效 SnapMirror 技术。</block>
   <block id="082f6fbdb4843c5f374a215502f493b9" category="inline-link-macro">NetApp Disaster Recovery 的 Kubernetes 要求</block>
-  <block id="84b0e3d023f875f2669a5f0d72922238" category="paragraph">对基于 Kubernetes 的工作负载的支持目前正处于预览阶段。要开始保护基于 Kubernetes 的工作负载，请参见 <block ref="343bf0d5acc46def5b744dcb13640f63" category="inline-link-macro-rx"></block>。</block>
   <block id="3723578e9eec661a364d573c9d930dd2" category="paragraph">*如何访问 NetApp Disaster Recovery？*NetApp Disaster Recovery 不需要任何启用。Disaster Recovery 会自动显示在 NetApp Console 左侧导航栏上。</block>
   <block id="617eb16cadcea920c3756320dc74fccf" category="summary">云灾难恢复是保护工作负载免受站点中断和数据损坏事件影响的一种弹性和经济高效的方式。使用 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 工作负载复制到使用 NetApp 云存储的公共云中的 VMware 软件定义数据中心，或复制到将 ONTAP 存储作为灾难恢复站点的另一个本地 VMware 环境。</block>
   <block id="3348cad21942b5f1082fd6256085c2ba" category="paragraph">云灾难恢复是保护工作负载免受站点中断和数据损坏事件影响的一种弹性和经济高效的方式。借助 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware VM 或数据存储工作负载复制到使用 NetApp 云存储的公共云中的 VMware 软件定义数据中心，或复制到另一个将 ONTAP 存储作为灾难恢复站点的本地 VMware 环境。您还可以使用 Disaster Recovery 将 VM 工作负载从一个站点迁移到另一个站点。</block>
@@ -2351,4 +2350,5 @@
   <block id="5069d199ba6ca379f339c144214cb9f0" category="sidebar">系统先决条件</block>
   <block id="a79ae1fa6b9efc331842efa8d96937c5" category="sidebar">VMware 先决条件</block>
   <block id="ffc29f7e69eb606c4fc0ff797755e240" category="sidebar">Kubernetes 先决条件</block>
+  <block id="e5d56575e494e873c5ded63467d12e44" category="paragraph">对基于 Kubernetes 的工作负载的支持目前正处于预览阶段。要开始保护基于 Kubernetes 的工作负载，请参见 <block ref="d1415fee440f8c1c4acbcf4ee7535778" category="inline-link-macro-rx"></block>。</block>
 </blocks>
