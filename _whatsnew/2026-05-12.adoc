@@ -1,0 +1,18 @@
+= 基于 Kubernetes 的工作负载支持（预览）
+:allow-uri-read: 
+
+
+
+
+=== 基于 Kubernetes 的工作负载支持（预览）
+
+NetApp Disaster Recovery 现在包括对基于 Kubernetes 的工作负载的支持。借助 Kubernetes 支持，您可以保护在 Kubernetes 集群上运行的应用程序，包括 OpenShift 虚拟化环境。Disaster Recovery 支持 link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect 目前支持的任何 Kubernetes 版本"^]，确保容器化应用程序的无缝集成和强大的灾难恢复功能。
+
+基于 Kubernetes 的工作负载支持的主要功能：
+
+* **广泛的兼容性**：Disaster Recovery 支持与 Trident Protect 兼容的所有 Kubernetes 版本，包括 Red Hat OpenShift Virtualization。
+* **以应用程序为中心的保护**：您现在可以在应用程序级别保护 Kubernetes 工作负载，确保在故障转移事件期间恢复关键服务。
+* **简化编排**：Disaster Recovery 提供直观的工作流程，以自动化 Kubernetes 工作负载的备份和复制，利用与 VMware 环境相同的高效 SnapMirror 技术。
+
+
+对基于 Kubernetes 的工作负载的支持目前正处于预览阶段。要开始保护基于 Kubernetes 的工作负载，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/task-kubernetes-requirements.html["NetApp Disaster Recovery 的 Kubernetes 要求"^]。

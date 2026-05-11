@@ -6,7 +6,7 @@ entries:
   url: "/use/use-overview.html"
 - title: 在仪表板上查看灾难恢复计划的运行状况
   url: "/use/dashboard-view.html"
-- title: 将 vCenter 添加到站点
+- title: 向站点添加资源
   url: "/use/sites-add.html"
 - title: 创建资源组
   url: "/use/resource-group.html"

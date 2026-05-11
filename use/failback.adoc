@@ -42,11 +42,40 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 == 步骤
 
-. 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
+[role="tabbed-block"]
+====
+.vCenter
+--
+.步骤
 . 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
-. 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*故障恢复*。
-. 输入复制计划名称以启动故障恢复。
-. 选择要从中恢复的数据存储的快照。默认是最新的。
-. 要监控作业进度，请在灾难恢复菜单中选择“作业监控”。
+. 在下拉菜单中，将筛选器设置为 *vCenter* 复制计划。
++
+image::site-type-toggle.png[站点类型切换的屏幕截图]
 
+. 确定要回切的复制计划。选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Failback*。
+. 选择要从中恢复的数据存储区的快照。选择 *Take snapshot now* 以启动新快照，或 *Select* 从可用快照中进行选择。
++
+image:failback.png["故障恢复对话框的屏幕截图"]
+
+. 输入 "Failback" 确认操作，然后选择 *Failback*。
+
+
+要监控作业进度，请在灾难恢复菜单中选择“作业监控”。
+
+--
+.Kubernetes
+--
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 在下拉菜单中，过滤到 *Kubernetes* 复制计划。
++
+image::site-type-toggle.png[站点类型切换的屏幕截图]
+
+. 确定要回切的复制计划。选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Failback*。
+. 选择要从中恢复的数据存储区的快照。选择 *立即拍摄快照* 以启动新的快照，或 *使用最新的快照* 以使用最新的成功快照。
+. 输入 "Failback" 确认操作，然后选择 *Failback*。
+
+
+要监控作业进度，请在灾难恢复菜单中选择“作业监控”。
+
+--
+====
