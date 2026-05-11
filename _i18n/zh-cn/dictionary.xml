@@ -2219,7 +2219,6 @@
   <block id="ec83ded0a983071f5ddfe6288e7832c9" category="list-text"><block ref="ec83ded0a983071f5ddfe6288e7832c9" category="inline-link-macro-rx"></block></block>
   <block id="56b24cdd5dc24570f7e1dd2ee03d39ca" category="paragraph">有关 NetApp Disaster Recovery 解决方案的完整概述，请参见 <block ref="ccfb532d2846c6e621e9709f67d9a040" category="inline-link-macro-rx"></block>。</block>
   <block id="264f41f7fda3caccf98196e21418201c" category="summary">NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 工作负载复制到公共云中的 VMware 软件定义数据中心，作为使用 NetApp 云存储的灾难恢复站点。</block>
-  <block id="e26c1e1448bd5f685a679ff49e20338a" category="section-title">2026 年 5 月 15 日</block>
   <block id="12af18005a606ba97f9e606aa2b596b8" category="paragraph">版本 4.3.3</block>
   <block id="1c42a04ac798111ed2c9388b25e2c237" category="paragraph">添加资源和站点后，您就可以创建_复制计划_了。复制计划管理数据保护。创建复制包括指定源站点和目标站点、选择资源组以及选择应如何恢复和打开应用程序。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有类似层的应用程序进行分组。</block>
   <block id="e6301bcb4d20444817b4b66020da65f2" category="paragraph">仅当复制计划处于以下状态之一时，才能启用保护：</block>
@@ -2351,4 +2350,5 @@
   <block id="a79ae1fa6b9efc331842efa8d96937c5" category="sidebar">VMware 先决条件</block>
   <block id="ffc29f7e69eb606c4fc0ff797755e240" category="sidebar">Kubernetes 先决条件</block>
   <block id="e5d56575e494e873c5ded63467d12e44" category="paragraph">对基于 Kubernetes 的工作负载的支持目前正处于预览阶段。要开始保护基于 Kubernetes 的工作负载，请参见 <block ref="d1415fee440f8c1c4acbcf4ee7535778" category="inline-link-macro-rx"></block>。</block>
+  <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
 </blocks>
