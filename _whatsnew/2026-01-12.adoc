@@ -36,7 +36,7 @@
 
 === Swagger 改进
 
-现在您可以从灾难恢复中访问 Swagger 文档。在灾难恢复中，选择**设置**，然后选择**API 文档**以链接到 Swagger，或者在浏览器的隐身/隐私模式下访问此 URL： link:https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas"^]。
+您现在可以从 Disaster Recovery 中访问 Swagger 文档。在 Disaster Recovery 中，选择 **设置**，然后选择 **API 文档**。您应处于隐私或无痕模式才能访问 link:https://api.bluexp.netapp.com/v1/services/draas/api/api-doc/draas["链接"^]。
 
 
 

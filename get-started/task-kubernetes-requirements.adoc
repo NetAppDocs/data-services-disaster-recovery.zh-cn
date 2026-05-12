@@ -181,7 +181,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 | Snapshot API | `kubectl get volumesnapshotclass` | 存在 CRD；列出 Trident 驱动程序 
 |===
-验证所有资源的状态后，使用您的 Trident StorageClass 部署或link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-migrate-apps.html#migrate-applications-from-one-storage-class-to-another-storage-class["迁移"^]您的工作负载。当您link:../use/sites-add.adoc["将 Kubernetes 集群添加到站点"]时，Disaster Recovery 会提供在集群上安装 Trident Protect 并将其注册到您的 Disaster Recovery 环境的说明。
+验证所有资源的状态后，使用您的 Trident StorageClass 部署或link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-migrate-apps.html#migrate-applications-from-one-storage-class-to-another-storage-class["迁移"^]您的工作负载。当您link:../use/sites-add.html["将 Kubernetes 集群添加到站点"]时，Disaster Recovery 会提供在集群上安装 Trident Protect 并将其注册到您的 Disaster Recovery 环境的说明。
 
 .查看安装 Trident Protect 的说明。
 [%collapsible]
@@ -192,7 +192,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 . 使用 client ID 和 client secret 创建 Kubernetes secret 以创建 OCCM 身份验证凭据。
 +
-`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clidentID> --from-literal=<clientSecret>`
+`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clientID> --from-literal=<clientSecret>`
 
 . 添加或更新 helm repo：
 +
@@ -209,5 +209,5 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 == 更多信息
 
 * link:https://docs.netapp.com/us-en/trident/trident-protect/learn-about-trident-protect.html["了解 Trident Protect"^]
-* link:../use/sites-add.adoc["在 Disaster Recovery 中添加站点"]
+* link:../use/sites-add.html["在 Disaster Recovery 中添加站点"]
 

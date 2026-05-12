@@ -145,6 +145,7 @@ image::site-type-toggle.png[站点类型切换的屏幕截图]
 . 选择复制计划。
 . 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
 . 选择要用于故障转移的快照副本。您可以 *立即拍摄快照* 以创建将复制到目标集群的全新快照，或 *使用最新快照* 以使用目标集群上可用的最新快照。
+. 如果您希望服务在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在 NetApp Disaster Recovery 中将其恢复联机之前在还原的站点上执行其他操作，则此功能非常有用。
 . 输入 "Failover" 确认操作，然后选择 *Failover*。
 
 

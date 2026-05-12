@@ -48,7 +48,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 --
 .步骤
 . 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
-. 在下拉菜单中，将筛选器设置为 *vCenter* 复制计划。
+. 在下拉菜单中，将过滤器设置为 *VMware*。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
@@ -71,7 +71,7 @@ image:failback.png["故障恢复对话框的屏幕截图"]
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
 . 确定要回切的复制计划。选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Failback*。
-. 选择要从中恢复的数据存储区的快照。选择 *立即拍摄快照* 以启动新的快照，或 *使用最新的快照* 以使用最新的成功快照。
+. 选择要从中恢复的集群的快照。选择 *Take snapshot now* 以启动新的快照，或 *Use latest snapshot* 以使用最新的成功快照。
 . 输入 "Failback" 确认操作，然后选择 *Failback*。
 
 

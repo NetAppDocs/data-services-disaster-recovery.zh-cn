@@ -17,8 +17,6 @@ summary: 在创建灾难恢复计划之前，您需要在NetApp Disaster Recover
 
 TIP: 确保源和目标都使用相同的 NetApp Console 代理。
 
-添加 vCenter 后， NetApp Disaster Recovery会对 vCenter 环境进行深度发现，包括 vCenter 集群、ESXi 主机、数据存储库、存储占用空间、虚拟机详细信息、 SnapMirror副本和虚拟机网络。
-
 *所需的NetApp Console角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
@@ -31,7 +29,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 .步骤
 . 在 Disaster Recovery 中，在侧边栏中选择 **Sites**。
-. 在下拉菜单中，选择站点类型：**vCenter** 或 **Kubernetes**。
+. 在下拉菜单中，选择站点类型：**VMware** 或 **Kubernetes**。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
@@ -84,7 +82,7 @@ NOTE: 该服务支持自签名安全证书或来自中央证书颁发机构 (CA)
 
 .步骤
 . 在 Disaster Recovery 中，在侧边栏中选择 **Sites**。
-. 在下拉菜单中，将过滤器设置为 *Kubernetes*。
+. 在下拉菜单中，将过滤器设置为 *VMware*。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
@@ -126,6 +124,8 @@ image:sites-list2.png["网站页面截图"]
 
 
 
+
+添加 vCenter 后， NetApp Disaster Recovery会对 vCenter 环境进行深度发现，包括 vCenter 集群、ESXi 主机、数据存储库、存储占用空间、虚拟机详细信息、 SnapMirror副本和虚拟机网络。
 
 --
 .Kubernetes
