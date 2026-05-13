@@ -140,6 +140,9 @@ NetApp Console用户必须具有以下角色：
 
 
 
+TIP: 要将灾难恢复与 Amazon Elastic VMware Service (EVS) 一起使用，请参见 link:../reference/evs-deploy-guide-config-prereqs.html["其他先决条件和配置指南"^]。
+
+
 
 === 创建NetApp Console代理
 
