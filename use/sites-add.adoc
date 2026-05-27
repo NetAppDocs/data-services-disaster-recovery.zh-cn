@@ -17,9 +17,7 @@ summary: 在创建灾难恢复计划之前，您需要在NetApp Disaster Recover
 
 TIP: 确保源和目标都使用相同的 NetApp Console 代理。
 
-*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
+*需要 NetApp Console 角色* 要执行此任务，需要超级管理员或灾难恢复管理员。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
 
 
