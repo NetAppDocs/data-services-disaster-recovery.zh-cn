@@ -30,6 +30,15 @@ summary: vCenter 账户必须具备一组最少的 vCenter 权限，才能使 Ne
 | Datastore.Rename | 重命名数据存储库 | 允许重命名数据存储库。 
 
 
+.2+| 主机 | 主机.配置.AdvancedConfig | 高级设置 | 允许设置高级主机配置选项。 
+
+
+| 主机.配置.存储 | 存储分区配置 | 允许扫描新的存储设备和管理 iSCSI。 
+
+
+| 资源 | 资源.分配虚拟机到资源池 | 资源池 | 允许将 VM 分配到资源池 
+
+
 .3+| 文件夹 | 文件夹.创建 | 创建文件夹 | 允许创建新文件夹。 
 
 
@@ -45,7 +54,16 @@ summary: vCenter 账户必须具备一组最少的 vCenter 权限，才能使 Ne
 | Network.Config | 配置 | 允许配置网络。 
 
 
-.9+| 虚拟机配置 | VirtualMachine.Config.AdvancedConfig | 高级配置 | 允许在虚拟机的配置文件中添加或修改高级参数。 
+.12+| 虚拟机配置 | VirtualMachine.Config.AdvancedConfig | 高级配置 | 允许在虚拟机的配置文件中添加或修改高级参数。 
+
+
+| VirtualMachine.Config.AddExistingDisk | 添加现有磁盘 | 允许将现有虚拟磁盘添加到 VM。 
+
+
+| VirtualMachine.Config.AddNewDisk | 添加新磁盘 | 允许创建新虚拟磁盘以添加到 VM。 
+
+
+| VirtualMachine.Config.RemoveDisk | 删除磁盘 | 允许删除虚拟磁盘设备。 
 
 
 | VirtualMachine.Config.Settings | 更改设置 | 允许更改常规 VM 设置。 

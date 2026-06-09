@@ -1254,7 +1254,6 @@
   <block id="0e00f106592672a761fa0dcf1949901f" category="list-text">取消停顿虚拟机中任何被标记为“应用程序一致”的受支持的数据库应用程序。</block>
   <block id="89b3318439959d14598bf04d917486ea" category="list-text">如果源 vCenter 和ONTAP集群仍处于活动状态，请创建反向SnapMirror关系，以将故障转移状态下的任何更改复制回原始源站点。</block>
   <block id="262b346523c2b98a9b37923882f4fa94" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*测试故障转移*。</block>
-  <block id="b5a4a47da1665893dbfd001a41980991" category="list-text">在测试故障转移页面中，输入“测试故障转移”并选择*测试故障转移*。</block>
   <block id="625033464ccff58d2815930ae362a422" category="list-text">测试完成后，清理测试环境。</block>
   <block id="302bf3ef5d8e942b185e4b4d03884ff4" category="section-title">故障转移测试后清理测试环境</block>
   <block id="b22e9cc3eebab01136ffe8d3f7e201ca" category="paragraph">故障转移测试完成后，您应该清理测试环境。此过程将从测试位置、FlexClone 和临时数据存储区中删除临时虚拟机。</block>
@@ -1280,7 +1279,6 @@
   <block id="41629e76e0d378b59baf8095f22e3e66" category="paragraph">任务需要不同的NetApp Console角色。有关详细信息，请参阅每个任务中的“所需的NetApp Console角色”部分。</block>
   <block id="0acfc5a5ce6523c8fad77ea0b4d65862" category="section-title">管理 vCenter 站点</block>
   <block id="f6384b4b10f3ca7cfac8402cfb23ef7f" category="paragraph">您可以编辑 vCenter 站点名称和站点类型（本地或 AWS）。</block>
-  <block id="ee96f26f36e356a1f6ec9037ad76ba51" category="paragraph">*所需的NetApp Console角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员角色。</block>
   <block id="d11708747a513e148a12f02e4e603105" category="list-text">从菜单中选择*站点*。</block>
   <block id="b2209ab446f654c29ab1bfca5d8d2693" category="list-text">选择“操作”选项<block ref="b571b46a13691830124ae7cdd5a7ca96" category="inline-image-macro-rx" type="image"></block>在 vCenter 名称右侧，选择“*编辑*”。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">编辑 vCenter 站点名称和位置。</block>
@@ -1342,7 +1340,6 @@
   <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">要查看特定作业的详细信息，请选择该行。</block>
   <block id="19a2cef623f0e702dd97e37e1bddd114" category="list-text">要刷新信息，请选择*刷新*。</block>
   <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
-  <block id="eead8518396b0c1b849be084fbe4f31a" category="paragraph">如果某项工作正在进行中或处于排队状态，而您不想让它继续，则可以取消它。如果作业停留在同一状态，您可能想要取消它，并且想要释放队列中的下一个操作。您可能想在作业超时之前取消它。</block>
   <block id="860b70267867fe6caf0f4adfd247b3e2" category="list-text">从NetApp Console左侧导航栏中，选择 *保护* &gt; *灾难恢复*。</block>
   <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在“作业监视器”页面中，记下要取消的作业的 ID。</block>
   <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">该作业必须处于“进行中”或“排队”状态。</block>
@@ -1532,7 +1529,6 @@
   <block id="3c843649a94855e3901bd423ac9ca414" category="paragraph">如果删除复制计划，您还可以删除该计划创建的主快照和辅助快照。</block>
   <block id="75c34b3422e5baaae429a2d21a62a9d8" category="list-text">选择要删除主快照、辅助快照，还是仅删除计划创建的元数据。</block>
   <block id="8e15489db6e2853bdefe4e39cf285c3d" category="list-text">输入“删除”以确认删除。</block>
-  <block id="c1ba23522836b9d395a79f30f4da96b4" category="paragraph">更改保留计数可以增加或减少保存的数据存储数量。</block>
   <block id="506d82cb3cd3b9175af419eb19bc5740" category="list-text">选择复制计划，然后选择“故障转移映射”选项卡。选择“编辑”铅笔图标。</block>
   <block id="58777a5460ab56ac04a8fc9d5cb1b259" category="list-text">选择“数据存储”行中的向下箭头将其展开。</block>
   <block id="2d3c0c55028659ea4dd39b2fd1ee9a30" category="list-text">更改所有数据存储的**保留计数**值。</block>
@@ -2244,7 +2240,6 @@
   <block id="fe2070975262fdb1507084ad02d139e7" category="paragraph"><block ref="fe2070975262fdb1507084ad02d139e7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ec5c6f08ada454e9670285c835649f45" category="list-text">输入 "Failback" 确认操作，然后选择 *Failback*。</block>
   <block id="2d518d2a0701e8e4560cbcf883ee4f3a" category="list-text">在下拉菜单中，过滤到 *Kubernetes* 复制计划。</block>
-  <block id="cf3a1b459cc4424970f17bd247150364" category="paragraph">在开始故障转移之前，您可以测试该过程。测试不会将 VM 置于离线状态。</block>
   <block id="1125e3b29e278ae1d41547291cfcb9fb" category="paragraph">在故障转移测试期间，Disaster Recovery 会暂时创建虚拟机。Disaster Recovery 将备份 FlexClone 卷的临时数据存储区映射到 ESXi 主机。</block>
   <block id="1d235eca89fa1ce9ae2c129b3459f24d" category="paragraph">完成测试后，应使用 *Clean up test* 选项重置虚拟机。虽然建议这样做，但不是必需的。</block>
   <block id="1ce56da10e5d8a1c98a950af6b3aa8f0" category="list-text">在 vCenter 中将目标虚拟机注册为新数据存储库。</block>
@@ -2281,7 +2276,6 @@
   <block id="7abaaec8330e6093848e8ad2b5fc55ad" category="admonition">NetApp Disaster Recovery 每 24 小时执行一次发现。设置站点后，您可以稍后编辑 vCenter 或 Kubernetes 集群，以自定义满足您需求的发现计划。例如，如果您有大量的 VM，则可以将发现计划设置为每 23 小时 59 分钟运行一次。如果您的 VM 数量较少，则可以将发现计划设置为每 12 小时运行一次。最小间隔为 30 分钟，最大间隔为 24 小时。</block>
   <block id="3df06dfecbba3cf48d3e0f796002cd30" category="paragraph">只有当复制计划处于以下状态之一时，才能保护资源：</block>
   <block id="3feb9d576508e0f0d5b31b94130afff9" category="paragraph">您需要下列信息才能将 vCenter 群集添加到站点：</block>
-  <block id="95a40723328d7973d1b42377e4a9279b" category="list-text">在下拉菜单中，将过滤器设置为 *Kubernetes*。</block>
   <block id="6ec607d90131ba368742b9a99a146722" category="list-text">选择要将 Kubernetes 集群添加到的站点。选择站点的操作菜单，然后选择 **添加集群**。</block>
   <block id="7e592170164af97cef86b80a254c840b" category="list-text">在站点页面中，选择站点的操作菜单，然后选择 *添加 vCenter*。</block>
   <block id="ff3b9c54386661390d0a394f4a1d50c4" category="list-text">确保 *Site* 正确。从下拉菜单中选择 *Console agent*。</block>
@@ -2356,10 +2350,64 @@
   <block id="78a1d5987eca33284817a9dca555eece" category="paragraph">*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复故障转移管理员角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
   <block id="6505512d1e3705256403aea56cc17f65" category="paragraph">*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
   <block id="16f190cf7635b199438ae35b0fe59f2c" category="paragraph">*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
-  <block id="471f9859d1f2a18f91bcac6a9a7a7cdf" category="paragraph">*必需的 NetApp Console 角色* 超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。</block>
-  <block id="1f78a1c33aa4c1ac6fb7d77efb19a5f4" category="paragraph">*必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。</block>
-  <block id="bf857d514ad33034eb60ee79c8a3aa99" category="paragraph">*必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色才能执行此任务。</block>
-  <block id="be5c474e990158548482b3a953022881" category="paragraph">*必需的 NetApp Console 角色* 超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。</block>
-  <block id="8e745eb6a2225b985f69a165c4ffe3a6" category="paragraph">*必需的 NetApp Console 角色* 超级管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。</block>
-  <block id="e509f2e4181583fe783409b5fef67c2d" category="paragraph">*需要 NetApp Console 角色* 要执行此任务，需要超级管理员或灾难恢复管理员。<block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="612649a00367a8c0d47c862b2609f91a" category="paragraph">*需要 NetApp Console 角色* 要执行此任务，需要超级管理员或灾难恢复管理员角色。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="84673f07cefbab42e915cbd959f8f20f" category="paragraph">*必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="f30e78142cdfb38729492098fb4e8de0" category="paragraph">*必需的 NetApp Console 角色* 需要组织管理员、文件夹或项目管理员或灾难恢复管理员角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="a986e84430ee60de89573d632903e271" category="paragraph">*必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="332fe49e1772f15dfec47321d1f86499" category="doc">Kubernetes 更新</block>
+  <block id="c0471f20c72304b23fb6eb762ed470b8" category="paragraph">灾难恢复针对基于 Kubernetes 的工作负载引入了以下更改：</block>
+  <block id="b1f52bc1b1d4ff2b36103a44b4128f19" category="section-title">测试 Kubernetes 工作负载的故障转移支持</block>
+  <block id="7e284075cd571fe0081cd386d1d3493c" category="paragraph">灾难恢复现在支持测试 Kubernetes 工作负载的故障转移过程。测试故障转移允许您验证灾难恢复计划。完成测试后，您可以清理测试故障转移，以便系统自动清理测试资源，以减少开销并确保环境的一致性。</block>
+  <block id="6031837c36096c58788ef48c962f6ff8" category="paragraph">有关详细信息，请参见 <block ref="a8818044286b10a3ca635d0b39faff78" category="inline-link-macro-rx"></block>。</block>
+  <block id="9be7f1264301a801add3868ed7829904" category="section-title">计划的测试故障转移</block>
+  <block id="2cb1fc25b0b81893e3832eea3384812d" category="paragraph">您现在可以通过安排测试故障转移来自动执行灾难恢复测试。您可以设置定期测试故障转移的时间表，以连续验证恢复计划，而无需人工干预，有助于保持对恢复目标的信心并满足合规性要求。</block>
+  <block id="35bd874c9b191a5ec4ef2620bcba1d01" category="paragraph">有关详细信息，请参见 <block ref="5e1f430868dd2493a6125e8cf919005e" category="inline-link-macro-rx"></block>。</block>
+  <block id="61a19574e3bdebdbc07d7daaaf8f76e1" category="section-title">Kubernetes 工作负载的计划发现</block>
+  <block id="d45fce8600e6e092745f48fddf5cd172" category="paragraph">使用定时发现，您可以控制 Disaster Recovery 扫描新 Kubernetes 工作负载的频率。您可以配置发现间隔以与操作节奏保持一致，从而减少不必要的系统开销，同时确保及时检测和保护新的工作负载。</block>
+  <block id="d5500e4522bde3536eb21086a6278cb6" category="inline-link-macro">自定义发现计划</block>
+  <block id="58b54ef9bb1184e1a76831a4c8532cdf" category="paragraph">有关详细信息，请参见 <block ref="00c64813bfb7d5f31a94dc7f7401aec7" category="inline-link-macro-rx"></block>。</block>
+  <block id="49bc059dcf19f0a0115deba3b42c6932" category="section-title">VMware 更新</block>
+  <block id="239000f59be4987b700a238e8ca4cbac" category="section-title">空数据存储的保护</block>
+  <block id="9a870179d2b3e04319fde1e2148bdde1" category="inline-link-macro">映射信息</block>
+  <block id="386068b3c8ab30655c493a434548a956" category="paragraph">灾难恢复现在允许为不包含任何虚拟机 (VM) 的数据存储配置保护。随后添加到数据存储的任何 VM 都会被灾难恢复自动检测到，此时您必须提供 <block ref="96f22499fac7fb5ec06f64e20472e919" category="inline-link-macro-rx"></block>。</block>
+  <block id="8ea79c5d84513219216b19fc3aa62033" category="inline-link-macro">故障转移到远程站点</block>
+  <block id="fcf6f6ded14457afdca64680218d849c" category="paragraph">将空数据存储区添加到保护计划时，必须在执行故障切换之前从保护计划中删除该数据存储区，或执行强制故障切换。有关详细信息，请参见 <block ref="a16180f75826879573c72d14ccfccc18" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d2e356e77ef22acf218ffb017d91233" category="section-title">将先前排除的数据存储还原到保护计划</block>
+  <block id="1453aa4dc117cbab5d75827143b273ea" category="paragraph">以前排除在保护范围之外的数据存储区现在可以重新包括在内。随着时间的推移，在管理和更新灾难恢复配置时，此增强功能提供了更大的灵活性。</block>
+  <block id="0f76cabceee2286086c65391269ec324" category="paragraph">有关详细信息，请参见 <block ref="37d0eb884ec50ead320898709eb6d605" category="inline-link-macro-rx"></block>。</block>
+  <block id="05c185480595feac79a02ae4a685fcc6" category="section-title">基于 VMFS 的数据存储更快的故障切换</block>
+  <block id="e63830ec714a620621135f51c7c84114" category="paragraph">Disaster Recovery 提高了基于 VMFS 的数据存储的故障转移性能。Host Bus Adapter (HBA) 重新扫描和数据存储装载操作现在可以并行执行，从而减少总体故障转移时间，并最大限度地减少恢复事件期间的停机时间。</block>
+  <block id="69aa1f50c340d05c0f749dc51b5d5737" category="inline-link-macro">使用灾难恢复进行故障切换</block>
+  <block id="bda5d94c4f296d65baa89f57187dafbd" category="paragraph">有关故障转移的详细信息，请参见 <block ref="6f81e5aa1c9b02c34c5ec309d5755115" category="inline-link-macro-rx"></block>。</block>
+  <block id="c2ca16d048ec66e04bca283eab048ec2" category="cell">主机</block>
+  <block id="c558a0155ca880ce7651092b8d34bdda" category="cell">主机.配置.AdvancedConfig</block>
+  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="cell">高级设置</block>
+  <block id="bfc4aca9e679b5e54fe1e06ec1a2fdae" category="cell">允许设置高级主机配置选项。</block>
+  <block id="b65acfdfa8b200521132554a2bf785c1" category="cell">主机.配置.存储</block>
+  <block id="a327173237d5e04189c770059b93c5b8" category="cell">存储分区配置</block>
+  <block id="8d1a22575f27ac05ff7b4dbaa3e07dd0" category="cell">允许扫描新的存储设备和管理 iSCSI。</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
+  <block id="a7e4bee1172f5ae98efff7f374c7c442" category="cell">资源.分配虚拟机到资源池</block>
+  <block id="4a80639450ebfdba618d1bb0d7fd4bc9" category="cell">资源池</block>
+  <block id="467e9c87035095663a3dab61ee7fa11f" category="cell">允许将 VM 分配到资源池</block>
+  <block id="1c47c283c10eb040185d834c1d4f570f" category="cell">VirtualMachine.Config.AddExistingDisk</block>
+  <block id="c629a65bf0cad09db50b338d3b22ceaa" category="cell">添加现有磁盘</block>
+  <block id="c77e1221a533a8ee299fde02b09ab63e" category="cell">允许将现有虚拟磁盘添加到 VM。</block>
+  <block id="826a9b0bd0c5de4d98b547fcc69301ff" category="cell">VirtualMachine.Config.AddNewDisk</block>
+  <block id="290f3ac3e6b4bd78ff9a9070bb2c965a" category="cell">添加新磁盘</block>
+  <block id="04195979ac94ef25dd5acd4ddb6f6d46" category="cell">允许创建新虚拟磁盘以添加到 VM。</block>
+  <block id="87a51990ea0f64db3976bc03be144283" category="cell">VirtualMachine.Config.RemoveDisk</block>
+  <block id="175d3bc37a203b0e58c2d1bb572971de" category="cell">删除磁盘</block>
+  <block id="23f63c2f1d737c005d58d613f81f3d37" category="cell">允许删除虚拟磁盘设备。</block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026 年 6 月 08 日</block>
+  <block id="0926e17414694f3b4201b416c6c4a6ca" category="paragraph">版本 4.3.4</block>
+  <block id="7aa7ac5ef00e37e99f8bb57b253d37ed" category="paragraph">在进行实时故障转移之前，您可以执行测试以检查您的准备情况。工作负载在测试过程中保持在线状态。</block>
+  <block id="f5fa15f6901bb980064f0a1e081fbfb7" category="list-text">在测试故障转移页面中，选择测试故障转移的快照：选择 **立即拍摄快照** 或 **选择** 以选择现有快照。如果选择 **选择**，请选择现有快照。</block>
+  <block id="0a07084d59200e5f62afd96db98a68b5" category="paragraph">然后输入"Test failover"并选择 *Test fail over*。</block>
+  <block id="962e92831673929912f04cd68819059b" category="admonition">如果复制计划包含空数据存储区，则必须首先从计划中删除空数据存储区，或使用 **强制故障转移** 选项，该选项将跳过空数据存储区。</block>
+  <block id="919dfe02d5a57784fd83bb645e8f8b8e" category="paragraph">更改保留计数可以让您增加或减少已保存的快照数量。</block>
+  <block id="e363882b79ccd237ac1f4dd679c679c2" category="paragraph">您可以取消正在进行的作业或处于队列状态的作业（如果作业处于停滞状态），或者对待定操作进行优先级排序。</block>
+  <block id="caf5841d5a0afa8a150bf6da9c22fc2f" category="list-text">在工作负载下拉菜单中，将过滤器设置为 *Kubernetes*。</block>
+  <block id="86839797735bfc02dea42929601e887a" category="list-text">在"设置"窗口中，根据需要编辑字段。</block>
+  <block id="83cfc8bb47b46515d41842fa32fa608b" category="list-text">要自定义发现计划，请选中 *启用计划发现* 框。选择开始发现的日期以及发现的时间间隔（以小时和分钟为单位）。</block>
 </blocks>

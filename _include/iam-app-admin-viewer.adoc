@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].

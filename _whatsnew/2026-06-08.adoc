@@ -1,0 +1,61 @@
+= Kubernetes 更新
+:allow-uri-read: 
+
+
+
+
+=== Kubernetes 更新
+
+灾难恢复针对基于 Kubernetes 的工作负载引入了以下更改：
+
+
+
+==== 测试 Kubernetes 工作负载的故障转移支持
+
+灾难恢复现在支持测试 Kubernetes 工作负载的故障转移过程。测试故障转移允许您验证灾难恢复计划。完成测试后，您可以清理测试故障转移，以便系统自动清理测试资源，以减少开销并确保环境的一致性。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html#test-the-failover-process["测试故障转移过程"^]。
+
+
+
+==== 计划的测试故障转移
+
+您现在可以通过安排测试故障转移来自动执行灾难恢复测试。您可以设置定期测试故障转移的时间表，以连续验证恢复计划，而无需人工干预，有助于保持对恢复目标的信心并满足合规性要求。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html#manage-replication-plans["管理复制计划"^]。
+
+
+
+==== Kubernetes 工作负载的计划发现
+
+使用定时发现，您可以控制 Disaster Recovery 扫描新 Kubernetes 工作负载的频率。您可以配置发现间隔以与操作节奏保持一致，从而减少不必要的系统开销，同时确保及时检测和保护新的工作负载。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html#edit-the-site-and-customize-the-discovery-schedule["自定义发现计划"^]。
+
+
+
+=== VMware 更新
+
+
+
+==== 空数据存储的保护
+
+灾难恢复现在允许为不包含任何虚拟机 (VM) 的数据存储配置保护。随后添加到数据存储的任何 VM 都会被灾难恢复自动检测到，此时您必须提供 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html#add-subnet-mapping-for-a-vcenter-site["映射信息"^]。
+
+将空数据存储区添加到保护计划时，必须在执行故障切换之前从保护计划中删除该数据存储区，或执行强制故障切换。有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移到远程站点"^]。
+
+
+
+==== 将先前排除的数据存储还原到保护计划
+
+以前排除在保护范围之外的数据存储区现在可以重新包括在内。随着时间的推移，在管理和更新灾难恢复配置时，此增强功能提供了更大的灵活性。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理站点、资源组和复制计划"^]。
+
+
+
+==== 基于 VMFS 的数据存储更快的故障切换
+
+Disaster Recovery 提高了基于 VMFS 的数据存储的故障转移性能。Host Bus Adapter (HBA) 重新扫描和数据存储装载操作现在可以并行执行，从而减少总体故障转移时间，并最大限度地减少恢复事件期间的停机时间。
+
+有关故障转移的详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["使用灾难恢复进行故障切换"^]。

@@ -17,7 +17,7 @@ summary: 在创建灾难恢复计划之前，您需要在NetApp Disaster Recover
 
 TIP: 确保源和目标都使用相同的 NetApp Console 代理。
 
-*需要 NetApp Console 角色* 要执行此任务，需要超级管理员或灾难恢复管理员。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
+*需要 NetApp Console 角色* 要执行此任务，需要超级管理员或灾难恢复管理员角色。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
 
 
@@ -129,7 +129,7 @@ image:sites-list2.png["网站页面截图"]
 .Kubernetes
 --
 . 在 Disaster Recovery 中，在侧边栏中选择 **Sites**。
-. 在下拉菜单中，将过滤器设置为 *Kubernetes*。
+. 在工作负载下拉菜单中，将过滤器设置为 *Kubernetes*。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
@@ -245,6 +245,8 @@ NOTE: 如果有两个虚拟机（例如，一个是 Linux，另一个是 Windows
 . 从NetApp Disaster Recovery菜单中，选择 *站点*。
 . 选择您要编辑的站点。
 . 选择操作image:icon-vertical-dots.png["操作图标"]右侧的图标并选择*编辑*。
+. 在"设置"窗口中，根据需要编辑字段。
+. 要自定义发现计划，请选中 *启用计划发现* 框。选择开始发现的日期以及发现的时间间隔（以小时和分钟为单位）。
 . 在编辑 vCenter 服务器页面中，根据需要编辑字段。
 . 要自定义发现计划，请选中“启用计划发现”框并选择所需的日期和时间间隔。
 +
