@@ -16,6 +16,7 @@ NetApp Console支持在单个工作环境中使用多个控制台代理。使用
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 * 你必须有xref:../get-started/dr-prerequisites.html#create-the-netapp-console-agent[为您的工作环境至少添加了两个控制台代理]。
@@ -24,6 +25,7 @@ NetApp Console支持在单个工作环境中使用多个控制台代理。使用
 
 
 
+[[steps]]
 == 步骤
 
 . 在灾难恢复中，选择**站点**。
@@ -43,6 +45,7 @@ image:edit-vcenter.png["更改控制台代理的屏幕截图"]
 
 
 
+[[more-information]]
 == 更多信息
 
 * link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["了解控制台代理"^]

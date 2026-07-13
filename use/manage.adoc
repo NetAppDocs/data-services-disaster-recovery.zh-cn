@@ -27,6 +27,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 
 
+[[manage-vcenter-sites]]
 == 管理 vCenter 站点
 
 您可以编辑 vCenter 站点名称和站点类型（本地或 AWS）。
@@ -41,6 +42,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 
 
+[[manage-resource-groups]]
 == 管理资源组
 
 您可以按虚拟机或数据存储创建资源组。它们可以在创建复制计划时添加，也可以在创建复制计划之后添加。
@@ -71,6 +73,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 
 
+[[manage-replication-plans]]
 == 管理复制计划
 
 您可以禁用、启用和删除复制计划。您可以更改时间表。
@@ -108,6 +111,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 
 
+[[reconcile-snapshots-on-demand]]
 === 按需协调快照
 
 灾难恢复功能每 24 小时自动删除源上的快照。如果发现源和目标之间的快照不同步，则需要解决快照之间的差异，以确保站点之间的一致性。
@@ -126,6 +130,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 
 
+[[delete-a-replication-plan]]
 === 删除复制计划
 
 如果删除复制计划，您还可以删除该计划创建的主快照和辅助快照。
@@ -142,6 +147,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 
 
+[[change-retention-count-for-failover-schedules]]
 === 更改故障转移计划的保留计数
 
 更改保留计数可以让您增加或减少已保存的快照数量。
@@ -161,6 +167,37 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 
 
 
+[[manage-trident-protect]]
+== 管理 Trident Protect
+
+在灾难恢复用户界面中，您可以升级或删除 Trident Protect。
+
+.升级 Trident Protect
+. 在灾难恢复中，从侧边栏中选择**站点**。
+. 在下拉菜单中选择 **Kubernetes**。
+. 在要修改的集群的操作菜单中，选择**升级集群**。
+. 在**选择目标版本**下拉列表中，选择要升级到的 Trident Protect 版本。您应在升级前查看 link:https://docs.netapp.com/us-en/trident/trident-rn.html["Trident 发行说明"^]，以了解不同版本的细微差别及其对集群的影响。
+. 选择**升级**以启动升级。
+
+
+.删除 Trident Protect
+. 在灾难恢复中，从侧边栏中选择**站点**。
+. 在下拉菜单中选择 **Kubernetes**。
+. 在要修改的站点的操作菜单中，选择 **Remove cluster**。
+. 查看此对话框，然后在要从中删除 Trident Protect 的集群上运行卸载命令： `helm uninstall trident-protect -n trident-protect`。
+. 要完成 Trident Protect 的删除，请切换回灾难恢复 UI 并选择**删除站点**。
+
+
+.从站点中删除集群
+. 在灾难恢复中，从侧边栏中选择**站点**。
+. 在下拉菜单中选择 **Kubernetes**。
+. 在要修改的站点的操作菜单中，选择 **Remove cluster**。
+. 查看对话框菜单，然后选择**Remove from site**。确保您选择了正确的选项以继续 Trident Protect 操作。
+
+
+
+
+[[view-datastore-information]]
 == 查看数据存储信息
 
 您可以查看有关源和目标上存在多少个数据存储区的信息。
@@ -176,6 +213,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 
 
 
+[[view-virtual-machines-information]]
 == 查看虚拟机信息
 
 您可以查看源和目标上存在多少个虚拟机以及 CPU、内存和可用容量的信息。

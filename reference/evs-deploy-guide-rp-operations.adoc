@@ -13,6 +13,7 @@ summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster R
 
 
 
+[[fail-over]]
 == 故障转移
 
 您可能需要执行的主要操作是您希望永远不会发生的操作：在生产本地站点发生灾难性故障时故障转移到 DR（目标）数据中心。
@@ -43,6 +44,7 @@ image:evs-rp-failover-dialog.png["故障转移对话框"]
 
 
 
+[[test-failover]]
 == 测试故障转移
 
 测试故障转移与故障转移类似，但有两个区别。
@@ -72,6 +74,7 @@ image:evs-test-failover-dialog.png["测试故障转移对话框"]
 
 
 
+[[run-a-compliance-check]]
 == 运行合规性检查
 
 默认情况下，合规性检查每三小时运行一次。您可能随时想要手动运行合规性检查。
@@ -87,6 +90,7 @@ image:evs-rp-menu-compliance-check.png["运行合规性检查菜单选项"]
 
 
 
+[[refresh-resources]]
 == 刷新资源
 
 每次对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，都需要在NetApp Disaster Recovery服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次此操作，但手动刷新可确保最新的虚拟基础设施信息可用并考虑到 DR 保护。
@@ -101,6 +105,7 @@ image::evs-rp-menu-refresh-resources.png[刷新资源菜单选项]
 
 
 
+[[migrate]]
 == 迁移
 
 虽然NetApp Disaster Recovery主要用于灾难恢复用例，但它也可以将一组虚拟机从源站点一次性移动到目标站点。这可能是为了协调迁移到云项目，也可能是为了避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时灾难性事件。
@@ -115,6 +120,7 @@ image::evs-rp-menu-migrate.png[迁移菜单选项]
 
 
 
+[[take-a-snapshot-now]]
 == 立即拍摄快照
 
 您可以随时立即拍摄复制计划的快照。此快照包含在复制计划的快照保留计数设置的NetApp Disaster Recovery考虑因素中。
@@ -128,6 +134,7 @@ image::evs-rp-menu-take-snapshot-now.png[立即拍摄快照菜单选项]
 
 
 
+[[disable-or-enable-replication-plan]]
 == 禁用或启用复制计划
 
 您可能需要暂时停止复制计划来执行一些可能影响复制过程的操作或维护。该服务提供了停止和启动复制的方法。
@@ -144,6 +151,7 @@ image::evs-rp-menu-disable-enable.png[禁用/启用菜单选项]
 
 
 
+[[clean-up-old-snapshots]]
 == 清理旧快照
 
 您可能想要清理保留在源站点和目标站点上的旧快照。如果复制计划的快照保留计数发生改变，就会发生这种情况。
@@ -157,6 +165,7 @@ image::evs-rp-menu-cleanup-old-snapshots.png[清理旧快照菜单选项]
 
 
 
+[[reconcile-snapshots]]
 == 协调快照
 
 由于该服务协调ONTAP卷快照，因此ONTAP存储管理员可以在服务不知情的情况下使用ONTAP系统管理器、 ONTAP CLI 或ONTAP REST API 直接删除快照。该服务每 24 小时自动删除源上不在目标集群上的任何快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
@@ -170,6 +179,7 @@ image::evs-rp-menu-reconcile-snapshots.png[协调快照菜单选项]
 
 
 
+[[delete-replication-plan]]
 == 删除复制计划
 
 如果不再需要复制计划，您可以将其删除。
@@ -183,6 +193,7 @@ image::evs-rp-menu-delete.png[删除菜单选项]
 
 
 
+[[edit-schedules]]
 == 编辑时间表
 
 两项操作会定期自动执行：测试故障转移和合规性检查。
@@ -196,6 +207,7 @@ image::evs-rp-menu-edit-schedules.png[编辑时间表菜单选项]
 
 
 
+[[change-compliance-check-interval]]
 === 更改合规性检查间隔
 
 默认情况下，每三小时执行一次合规性检查。您可以将其更改为 30 分钟到 24 小时之间的任意间隔。
@@ -206,6 +218,7 @@ image::evs-rp-edit-compliance-check-schedule.png[合规性检查时间表]
 
 
 
+[[schedule-automated-test-failovers]]
 === 安排自动测试故障转移
 
 默认情况下，测试故障转移是手动执行的。您可以安排自动测试故障转移，这有助于确保您的复制计划按预期执行。要了解有关测试故障转移过程的更多信息，请参阅link:../use/failover.html["测试故障转移过程"]。

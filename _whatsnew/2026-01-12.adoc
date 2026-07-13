@@ -4,6 +4,7 @@
 
 
 
+[[support-for-multiple-console-agents-in-on-premises-environments]]
 === 支持本地环境中的多个控制台代理
 
 如果您在本地使用灾难恢复，现在可以为每个 vCenter 实例部署控制台代理，从而提高恢复能力。
@@ -14,6 +15,7 @@
 
 
 
+[[add-vms-after-failover-for-replication-plans-using-datastore-based-protection]]
 === 使用基于数据存储的保护机制，在故障转移后为复制计划添加虚拟机
 
 当故障转移被触发时，任何使用基于数据存储的保护的复制计划都会包含已添加到数据存储中的虚拟机，前提是这些虚拟机已被发现。故障转移完成前，您必须提供新增虚拟机的映射详细信息。
@@ -22,6 +24,7 @@
 
 
 
+[[new-email-notifications]]
 === 新邮件通知
 
 灾难恢复功能现在会针对以下事件发送电子邮件通知：
@@ -34,18 +37,21 @@
 
 
 
+[[swagger-improvements]]
 === Swagger 改进
 
 您现在可以从 Disaster Recovery 中访问 Swagger 文档。在 Disaster Recovery 中，选择 **设置**，然后选择 **API 文档**。您应处于隐私或无痕模式才能访问 link:https://api.bluexp.netapp.com/v1/services/draas/api/api-doc/draas["链接"^]。
 
 
 
+[[improved-user-interfaces]]
 === 改进的用户界面
 
 灾难恢复功能现在提供更完善的警告和错误解决方法。此版本修复了导致已取消的作业无法在用户界面中显示的错误。已取消的职位现在可以查看了。当同一个目标网络映射到多个不同的源网络时，还会发出新的警告。
 
 
 
+[[retain-vm-folder-structure-added-as-default-in-replication-plans]]
 === 保留复制计划中默认添加的 VM 文件夹结构
 
 创建复制时，新的默认设置是保留 VM 文件夹结构。如果恢复目标没有原始文件夹层次结构，灾难恢复程序会创建它。您可以取消选择此选项以忽略原始文件夹层次结构。

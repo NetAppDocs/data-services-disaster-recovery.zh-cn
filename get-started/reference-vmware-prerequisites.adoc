@@ -16,6 +16,7 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的环境满足
 
 
 
+[[general-prerequisites]]
 == 一般先决条件
 
 这些先决条件适用于本地 vCenter 集群和 VMware Cloud for AWS 软件定义数据中心 (SDDC)。
@@ -33,6 +34,7 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的环境满足
 
 
 
+[[vmware-cloud-sddc-prerequisites]]
 == VMware Cloud SDDC 先决条件
 
 如果使用 VMware Cloud SDDC，则适用以下附加先决条件：

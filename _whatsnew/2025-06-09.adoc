@@ -4,6 +4,7 @@
 
 
 
+[[windows-local-administrator-password-solution-laps-support]]
 === Windows 本地管理员密码解决方案 (LAPS) 支持
 
 Windows 本地管理员密码解决方案 (Windows LAPS) 是 Windows 的一项功能，可自动管理和备份 Active Directory 上本地管理员帐户的密码。

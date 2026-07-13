@@ -1,0 +1,55 @@
+= Kubernetes 更新
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-updates]]
+=== Kubernetes 更新
+
+灾难恢复针对基于 Kubernetes 的工作负载引入了以下更改：
+
+
+
+==== 从站点菜单管理 Trident Protect
+
+灾难恢复现在支持直接从灾难恢复用户界面中的"站点"菜单管理 Trident Protect。您可以升级 Trident Protect 或将其从灾难恢复中删除，从而简化 Kubernetes 资源的管理。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["管理站点"^]。
+
+
+
+[[vmware-updates]]
+=== VMware 更新
+
+灾难恢复为基于 VMware 的工作负载引入了以下更改：
+
+
+
+==== 故障转移空数据存储库
+
+包含空数据存储的复制计划现在可以成功进行故障转移，而不会将其排除在计划之外或强制故障转移。在故障转移期间，Disaster Recovery 会自动在灾难恢复站点上挂载空数据存储，从而允许添加虚拟机并保护其以进行故障回复操作。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移到远程站点"^]。
+
+
+
+==== vCenter 网络自动映射
+
+现在，您可以在 vCenter 级别（即复制计划对话框之外）配置网络映射关系。配置完成后，灾难恢复会在添加或编辑复制计划时自动应用这些网络映射，从而简化复制计划管理。
+
+灾难恢复继续支持按计划覆盖。在复制计划中定义的现有网络映射仍然可以在每个网络的基础上进行编辑；这些映射优先于 vCenter 级别定义。
+
+
+
+[[disaster-recovery-viewer-role-tightening]]
+=== 灾难恢复查看器角色收紧
+
+已从灾难恢复查看器角色中删除了查看"升级系统"选项卡的功能。此更改使角色与只读用户更合适的体验保持一致。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^]。
+
+
+
+[[system-performance-enhancements]]
+=== 系统性能增强
+
+灾难恢复引入了一些更改，以减少系统资源消耗并提高各项操作的性能。

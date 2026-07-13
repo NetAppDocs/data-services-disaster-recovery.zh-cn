@@ -4,6 +4,7 @@
 
 
 
+[[support-for-on-premises-to-on-premises-vmware-vmfs-datastores]]
 === 支持本地到本地 VMware VMFS 数据存储区
 
 此版本支持安装在 VMware vSphere 虚拟机文件系统 (VMFS) 数据存储上的虚拟机，用于受 iSCSI 和 FC 保护的本地存储。此前，该服务提供了支持 iSCSI 和 FC 的 VMFS 数据存储的_技术预览_。

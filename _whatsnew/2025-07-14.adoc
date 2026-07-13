@@ -4,6 +4,7 @@
 
 
 
+[[user-roles-in-netapp-disaster-recovery]]
 === NetApp Disaster Recovery中的用户角色
 
 NetApp Disaster Recovery现在采用角色来管理每个用户对特定功能和操作的访问权限。
@@ -24,6 +25,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles
 
 
 
+[[other-updates-in-netapp-disaster-recovery]]
 === NetApp Disaster Recovery中的其他更新
 
 * 增强网络发现

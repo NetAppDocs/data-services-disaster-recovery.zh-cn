@@ -36,6 +36,7 @@ image:evs-create-rp-wiz-c0.png["创建复制计划，资源映射页面"]
 
 
 
+[[compute-resource-mapping]]
 == 计算资源映射
 
 由于一个站点可以托管多个虚拟数据中心和多个 vCenter 集群，因此您需要确定在发生故障转移时在哪个 vCenter 集群上恢复虚拟机。
@@ -58,6 +59,7 @@ image:evs-create-rp-wiz-c-compute-resources-1-4.png["创建复制计划、计算
 
 
 
+[[map-virtual-network-resources]]
 == 映射虚拟网络资源
 
 每个虚拟机可以有一个或多个虚拟网卡连接到 vCenter 网络基础架构内的虚拟网络。为了确保每个虚拟机在 DR 站点重新启动时都能正确连接到所需的网络，请确定哪些 DR 站点虚拟网络可连接这些虚拟机。通过将本地站点中的每个虚拟网络映射到 DR 站点上的关联网络来实现此目的。
@@ -72,6 +74,7 @@ image:evs-create-rp-wiz-c-network-resources-1-2.png["创建复制计划、网络
 
 
 
+[[define-options-for-vm-reconfiguration-during-failover]]
 == 定义故障转移期间虚拟机重新配置的选项
 
 每个虚拟机可能都需要修改才能在 DR vCenter 站点中正常工作。虚拟机部分使您能够提供必要的更改。
@@ -80,6 +83,7 @@ image:evs-create-rp-wiz-c-network-resources-1-2.png["创建复制计划、网络
 
 
 
+[[network-reconfiguration]]
 === 网络重新配置
 
 支持的 IP 地址类型为静态和 DHCP。对于静态 IP 地址，您有以下目标 IP 设置：
@@ -103,6 +107,7 @@ image:evs-create-rp-wiz-c-vm-resources-network-1-2.png["创建复制计划、网
 
 
 
+[[vm-compute-resource-reconfiguration]]
 === VM 计算资源重新配置
 
 重新配置虚拟机计算资源有多种选择。  NetApp Disaster Recovery支持更改虚拟 CPU 的数量、虚拟 DRAM 的数量和 VM 名称。
@@ -117,6 +122,7 @@ image:evs-create-rp-wiz-c-vm-resources-cpu-mem-1-2.png["创建复制计划、虚
 
 
 
+[[boot-order]]
 === 启动顺序
 
 NetApp Disaster Recovery支持根据启动顺序字段有序重启虚拟机。启动顺序字段指示每个资源组中的虚拟机如何启动。启动顺序字段中具有相同值的虚拟机将并行启动。
@@ -131,6 +137,7 @@ image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["创建复制计划、
 
 
 
+[[custom-guest-os-operations]]
 === 自定义客户操作系统操作
 
 NetApp Disaster Recovery支持为每个虚拟机执行一些客户操作系统操作：
@@ -154,6 +161,7 @@ image:evs-create-rp-wiz-c-vm-resources-ac-scripts-creds-1-2.png["创建复制计
 
 
 
+[[map-datastores]]
 == 地图数据存储
 
 创建复制计划的最后一步是确定ONTAP应如何保护数据存储库。这些设置定义了复制计划恢复点目标 (RPO)、应维护多少个备份以及在何处复制每个 vCenter 数据存储区的托管ONTAP卷。

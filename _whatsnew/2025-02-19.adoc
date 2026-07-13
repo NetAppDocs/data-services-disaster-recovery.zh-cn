@@ -4,6 +4,7 @@
 
 
 
+[[asa-r2-support-for-vms-and-datastores-on-vmfs-storage]]
 === ASA r2 支持 VMFS 存储上的虚拟机和数据存储
 
 此版本的NetApp Disaster Recovery为 VMFS 存储上的虚拟机和数据存储区提供ASA r2 支持。在ASA r2 系统上， ONTAP软件支持基本的 SAN 功能，同时删除 SAN 环境中不支持的功能。

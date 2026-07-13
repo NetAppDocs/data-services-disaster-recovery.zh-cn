@@ -1082,12 +1082,10 @@
   <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">查看活动窗格中的所有操作。要查看作业监视器上的所有操作，请选择“查看所有作业”。</block>
   <block id="d15994bcf2411bb66762cdf4c58704b3" category="doc">在NetApp Disaster Recovery中创建复制计划</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*关于此任务*</block>
-  <block id="978c7c7ea4c54312c02456ee28acd332" category="paragraph">您可以创建复制计划并编辑合规性和测试计划。运行虚拟机的测试故障转移而不影响生产工作负载。</block>
   <block id="fba54b7da5e3ceabe7362e860f7df87d" category="paragraph">您可以保护多个数据存储上的多个虚拟机。  NetApp Disaster Recovery为托管受保护 VM 数据存储的所有ONTAP卷创建ONTAP一致性组。</block>
   <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">已就绪</block>
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">故障回复已提交</block>
   <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">测试故障转移已提交</block>
-  <block id="2cd55dfb5ccc1ffae31967c7321620ec" category="paragraph">*复制计划快照*</block>
   <block id="65dd859759570a8a07801053fcf54421" category="paragraph">灾难恢复在源集群和目标集群上维护相同数量的快照。默认情况下，该服务每 24 小时执行一次快照协调过程，以确保源集群和目标集群上的快照数量相同。</block>
   <block id="4e5a9a818385822100abb8be4a2ef9c3" category="paragraph">以下情况可能会导致源集群和目标集群之间的快照数量不同：</block>
   <block id="44dfcfef8dbab15db411756f3ccc6b01" category="list-text">某些情况可能会导致灾难恢复之外的ONTAP操作在卷中添加或删除快照：</block>
@@ -1096,10 +1094,7 @@
   <block id="4a72656aa601ed9d31033e4be368a919" category="list-text">复制计划的快照保留计数的减少可能导致服务删除源站点和目标站点上最旧的快照以满足新减少的保留数量。</block>
   <block id="49ff95b6dcd137f59a6acecf04a4c3b1" category="inline-image-macro">水平点操作菜单</block>
   <block id="7639ea3b77d367f127d70d668027673c" category="paragraph">在这些情况下，灾难恢复会在下一次一致性检查时从源和目标集群中删除较旧的快照。或者，管理员可以通过选择“操作”立即执行快照清理<block ref="6b4b871445179eda383c81faf6cf5a92" category="inline-image-macro-rx" type="image"></block>复制计划上的图标并选择*清理快照*。</block>
-  <block id="3f1d340403a26ed0ad46982a91385d32" category="paragraph">该服务每 24 小时执行一次快照对称性检查。</block>
-  <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">*开始之前*</block>
   <block id="1059d7b16ffe2236c36ae0e8c15872ca" category="paragraph">在创建SnapMirror关系之前，请在灾难恢复之外设置集群和 SVM 对等关系。</block>
-  <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">创建计划</block>
   <block id="4f27ef77939e5393adc6b44aec83a6b7" category="paragraph">向导将引导您完成以下步骤：</block>
   <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">选择 vCenter 服务器。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">映射资源如何从源环境映射到目标。</block>
@@ -1319,7 +1314,6 @@
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">编辑故障转移映射页面</block>
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3a15d734e1eafd89e04f5eb526ec5cc" category="list-text">选择复制计划后，选择“操作”菜单，然后选择“清理旧快照”以删除目标上的旧快照以匹配新的保留计数。</block>
-  <block id="a6dcfee4cd10f2ad60c3d81bc2a3b8ad" category="section-title">查看数据存储信息</block>
   <block id="432624070ae1b8a0b19fd42c048a224c" category="paragraph">您可以查看有关源和目标上存在多少个数据存储区的信息。</block>
   <block id="7e551addf2432bb9127be36e3a23db1c" category="list-text">从菜单中选择*仪表板*。</block>
   <block id="5e141a758f792ce4ad7e1b2107b1f7a4" category="list-text">在站点行中选择 vCenter。</block>
@@ -2319,7 +2313,6 @@
   <block id="fd41d6f681fcde1d5668de60a04c0563" category="paragraph"><block ref="fa5ae6d9db1798cb96b18ea5809b60d9" prefix="" category="inline-code"></block></block>
   <block id="83e1151ac17b113708a4a8f22a39063c" category="list-text"><block ref="83e1151ac17b113708a4a8f22a39063c" category="inline-link-macro-rx"></block></block>
   <block id="d1078d331fc762f6c1e11445777639f1" category="list-text">请查看 <block ref="e169d85ddc666c008a7e023ca382e5b3" category="inline-link-macro-rx"></block>。</block>
-  <block id="3e2600f2f1048cf9d96b25b85a3b12b5" category="paragraph">添加资源和站点后，您就可以创建_复制计划_了。复制计划管理数据保护。创建复制包括指定源站点和目标站点、选择资源组以及选择应如何恢复和打开应用程序。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有类似层的应用程序进行分组。</block>
   <block id="fd0863d0dc188b339645e359055610e4" category="admonition">在部署 NetApp Disaster Recovery 之前，组织您的 VM 或 Kubernetes 集群以最大限度地减少蔓延。将需要保护的资源放置在数据存储的子集上，并将不会受保护的资源放置在不同的数据存储子集上。若要在创建复制计划之前组织资源组，请参阅 <block ref="2e9e1519a300bb9dc6a403652e82bcd7" category="inline-link-macro-rx"></block>。</block>
   <block id="65dea983a95654f072023e3fd251790f" category="list-text">对于 *Source*，选择 vCenter 或 Kubernetes 集群指定为源。</block>
   <block id="56da8dc4cd41826eefa46f92a1310a8b" category="paragraph">下一步是将所需的虚拟机、数据存储区或 Kubernetes 集群分组到功能资源组中。资源组使您能够使用通用快照保护一组资源，例如 Kubernetes 集群或虚拟机。</block>
@@ -2404,10 +2397,48 @@
   <block id="7aa7ac5ef00e37e99f8bb57b253d37ed" category="paragraph">在进行实时故障转移之前，您可以执行测试以检查您的准备情况。工作负载在测试过程中保持在线状态。</block>
   <block id="f5fa15f6901bb980064f0a1e081fbfb7" category="list-text">在测试故障转移页面中，选择测试故障转移的快照：选择 **立即拍摄快照** 或 **选择** 以选择现有快照。如果选择 **选择**，请选择现有快照。</block>
   <block id="0a07084d59200e5f62afd96db98a68b5" category="paragraph">然后输入"Test failover"并选择 *Test fail over*。</block>
-  <block id="962e92831673929912f04cd68819059b" category="admonition">如果复制计划包含空数据存储区，则必须首先从计划中删除空数据存储区，或使用 **强制故障转移** 选项，该选项将跳过空数据存储区。</block>
   <block id="919dfe02d5a57784fd83bb645e8f8b8e" category="paragraph">更改保留计数可以让您增加或减少已保存的快照数量。</block>
   <block id="e363882b79ccd237ac1f4dd679c679c2" category="paragraph">您可以取消正在进行的作业或处于队列状态的作业（如果作业处于停滞状态），或者对待定操作进行优先级排序。</block>
   <block id="caf5841d5a0afa8a150bf6da9c22fc2f" category="list-text">在工作负载下拉菜单中，将过滤器设置为 *Kubernetes*。</block>
   <block id="86839797735bfc02dea42929601e887a" category="list-text">在"设置"窗口中，根据需要编辑字段。</block>
   <block id="83cfc8bb47b46515d41842fa32fa608b" category="list-text">要自定义发现计划，请选中 *启用计划发现* 框。选择开始发现的日期以及发现的时间间隔（以小时和分钟为单位）。</block>
+  <block id="a3385cf694f169469155cf608126cc13" category="section-title">从站点菜单管理 Trident Protect</block>
+  <block id="d108f39d7ac8db7fc5eab434cd7df7fc" category="paragraph">灾难恢复现在支持直接从灾难恢复用户界面中的"站点"菜单管理 Trident Protect。您可以升级 Trident Protect 或将其从灾难恢复中删除，从而简化 Kubernetes 资源的管理。</block>
+  <block id="ceb6da856e73533ddb08cf15abe120b7" category="inline-link-macro">管理站点</block>
+  <block id="cee9739236651212176e7c87838bb2d3" category="paragraph">有关详细信息，请参见 <block ref="b4c4c365d924dbf2ff79378d36f70a71" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc6fa95b1e18a1fb7c53cf32734ead26" category="paragraph">灾难恢复为基于 VMware 的工作负载引入了以下更改：</block>
+  <block id="7f2d139bc27153ad07daea80fab0a433" category="section-title">故障转移空数据存储库</block>
+  <block id="bfea9e3d533bac76e79429a83d38837c" category="paragraph">包含空数据存储的复制计划现在可以成功进行故障转移，而不会将其排除在计划之外或强制故障转移。在故障转移期间，Disaster Recovery 会自动在灾难恢复站点上挂载空数据存储，从而允许添加虚拟机并保护其以进行故障回复操作。</block>
+  <block id="d3835be5f3c2a797d5fc948f95289e0c" category="paragraph">有关详细信息，请参见 <block ref="a16180f75826879573c72d14ccfccc18" category="inline-link-macro-rx"></block>。</block>
+  <block id="0fddd8fb8cd772934e1e5021d105b7fb" category="section-title">vCenter 网络自动映射</block>
+  <block id="07efa6bd1ca4b90d1c4eb002786f661b" category="paragraph">现在，您可以在 vCenter 级别（即复制计划对话框之外）配置网络映射关系。配置完成后，灾难恢复会在添加或编辑复制计划时自动应用这些网络映射，从而简化复制计划管理。</block>
+  <block id="1eee5c19633b811fc646be143dcd283f" category="paragraph">灾难恢复继续支持按计划覆盖。在复制计划中定义的现有网络映射仍然可以在每个网络的基础上进行编辑；这些映射优先于 vCenter 级别定义。</block>
+  <block id="d315df6836105d6791cc83a6539ee7e9" category="section-title">灾难恢复查看器角色收紧</block>
+  <block id="266377e44a916fdf2cc18bfbb23cf6bf" category="paragraph">已从灾难恢复查看器角色中删除了查看"升级系统"选项卡的功能。此更改使角色与只读用户更合适的体验保持一致。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。</block>
+  <block id="3ddd9403dd985627a83f357af005a768" category="section-title">系统性能增强</block>
+  <block id="baa35064269b3904d8b57c0745ca18f8" category="paragraph">灾难恢复引入了一些更改，以减少系统资源消耗并提高各项操作的性能。</block>
+  <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
+  <block id="17d61647c38ceaeec784c2ea23dd1f02" category="paragraph">版本 4.3.5</block>
+  <block id="460dfd853a44f41cd7e36e73abb3183d" category="paragraph">添加资源和站点后，创建一个_复制计划_来管理数据保护。创建复制计划包括指定源站点和目标站点、选择资源组以及选择应如何恢复和打开应用程序。例如，您可以对与一个应用程序关联的虚拟机 (VM) 进行分组，也可以对具有类似层的应用程序进行分组。</block>
+  <block id="64a6f997b6cbcf26c538dbf71179cfe3" category="paragraph">创建复制计划时，您还可以编辑合规性和测试计划，在不影响生产数据的情况下执行测试故障转移。</block>
+  <block id="aa0c550dfb503c90e6b173a0a07f63e0" category="section-title">关于复制计划</block>
+  <block id="70e9daad0ce38ec31033633e81624571" category="section-title">复制计划快照</block>
+  <block id="f4cbef5ca3f18eff6d1ab043a838c42d" category="paragraph">灾难恢复每 24 小时执行一次快照对称性检查。</block>
+  <block id="0199f8e45e93965175d2ac0013366462" category="list-text">如果在 vCenter 级别配置网络映射，则灾难恢复会在创建复制计划时识别这些映射。如果在创建复制计划后在 vCenter 级别上修改或添加网络映射，则在手动编辑复制计划时，灾难恢复会识别这些映射。</block>
+  <block id="8545a0d7cdafff8da2dece1a851630dc" category="section-title">管理 Trident Protect</block>
+  <block id="3609f175bfca3663a769d710b6693940" category="paragraph">在灾难恢复用户界面中，您可以升级或删除 Trident Protect。</block>
+  <block id="516ee22feede3bac94e552d7d7d47c7a" category="list-title">升级 Trident Protect</block>
+  <block id="852fd4e3ec5d4c29fa8a8cefa3c21471" category="list-text">在灾难恢复中，从侧边栏中选择**站点**。</block>
+  <block id="8cfefefc34bbe900b668594477ef4ad5" category="list-text">在下拉菜单中选择 **Kubernetes**。</block>
+  <block id="78804847b12a6563801a02b538c145df" category="list-text">在要修改的集群的操作菜单中，选择**升级集群**。</block>
+  <block id="d67cab9a5414e00a7ccf215f2d7dbd33" category="inline-link-macro">Trident 发行说明</block>
+  <block id="2a5efaa429a3a54de621dd8d0ad21ea4" category="list-text">在**选择目标版本**下拉列表中，选择要升级到的 Trident Protect 版本。您应在升级前查看 <block ref="135c4f4ed1782a7c491e834c1b93041f" category="inline-link-macro-rx"></block>，以了解不同版本的细微差别及其对集群的影响。</block>
+  <block id="38f32ced896e30548fa0f6bcfbba01a5" category="list-text">选择**升级**以启动升级。</block>
+  <block id="b402cd35b5fb9a57addd459fc4b1882a" category="list-title">删除 Trident Protect</block>
+  <block id="b97f5202b0568bf1ab06be0a84b05837" category="list-text">在要修改的站点的操作菜单中，选择 **Remove cluster**。</block>
+  <block id="f4721b43df8877d17946e2b9dd373ced" category="list-text">查看此对话框，然后在要从中删除 Trident Protect 的集群上运行卸载命令：<block ref="e32e94385e578bc57593f18c76552bb7" prefix=" " category="inline-code"></block>。</block>
+  <block id="d7d19228040ec612e692641319a73229" category="list-text">要完成 Trident Protect 的删除，请切换回灾难恢复 UI 并选择**删除站点**。</block>
+  <block id="8527638a378e1869ef948cf228cb1967" category="list-title">从站点中删除集群</block>
+  <block id="2e6e87ad0d5bb097a11e43a094522ce3" category="list-text">查看对话框菜单，然后选择**Remove from site**。确保您选择了正确的选项以继续 Trident Protect 操作。</block>
+  <block id="4c6f2ecfa631674b204ee705d90449fe" category="section-title">查看数据存储信息</block>
 </blocks>
