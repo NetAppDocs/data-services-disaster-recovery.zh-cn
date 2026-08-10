@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-使用NetApp Disaster Recovery仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。
+使用 NetApp Disaster Recovery 仪表板，您可以确定灾难恢复站点和复制计划的运行状况。您可以轻松评估哪些站点和计划运行正常、已断开连接或已降级。您还可以查看最近的警告和失败的作业，了解哪些工作负载受到保护以及哪些未受到保护，并查看容量概述。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -23,15 +23,15 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 +
 image:dr-dashboard.png["NetApp Disaster Recovery仪表板"]
 
-. 查看仪表板上的以下信息：
+. 查看控制面板中的运行状况信息：
 +
 ** *站点*：查看站点的健康状况。站点可以具有以下状态之一：
 +
-*** *正在运行*：vCenter 已连接、健康且正在运行。
-*** *关闭*：vCenter 无法访问或存在连接问题。
-*** *问题*：vCenter 无法访问或存在连接问题。
+*** *Running*：站点已连接、正常且正在运行。
+*** *Down*：站点不可访问或有连接问题。
+*** *Issue*：此站点存在连接问题。
 +
-要查看站点详细信息，请选择“查看全部”查看状态或选择“查看站点”查看全部。
+要查看详细信息，请选择 **View all sites**。
 
 
 
@@ -39,19 +39,14 @@ image:dr-dashboard.png["NetApp Disaster Recovery仪表板"]
 +
 *** *准备好*
 *** *失败的*
+*** *警告*
 +
-要查看复制计划的详细信息，请选择“查看全部”查看状态或选择“查看复制计划”查看全部。
+要查看复制计划详细信息，请选择*查看所有复制计划*。
 
 
 
-** *资源组*：查看资源组的健康状况。资源组可以具有以下状态之一：
-** *受保护的虚拟机*：虚拟机是资源组的一部分。
-** *未受保护的虚拟机*：虚拟机不属于资源组的一部分。
-+
-要查看详细信息，请选择每个下方的“查看”链接。
-
-** 故障转移、测试故障转移和迁移的次数。例如，如果您创建了两个计划并迁移到目标，则迁移计数显示为“2”。
 
 
-. 查看活动窗格中的所有操作。要查看作业监视器上的所有操作，请选择“查看所有作业”。
+. 查看*最近的警告和作业*以查看最近执行的作业和警告及其相关状态。选择*查看所有作业*以查看所有作业。
+. 查看 *Discovery and protection status*，以了解已发现工作负载的数量，以及按类型分列的受保护与未受保护工作负载的数字明细。您还可以按类型查看所有工作负载的已发现总容量。
 

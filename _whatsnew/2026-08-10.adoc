@@ -1,0 +1,46 @@
+= 改进的控制面板
+:allow-uri-read: 
+
+
+
+
+[[improved-dashboard]]
+=== 改进的控制面板
+
+已更新 Disaster Recovery 控制面板，提供增强的体验，让您一目了然地全面了解整个 Disaster Recovery 资产。全新控制面板包括：
+
+* *统一工作负载可见性* — 从单一窗格监控 VMware 和 Kubernetes 工作负载以及底层基础设施的运行状况。
+* *主动显示问题* — 控制面板现在自动突出显示环境问题，从而实现更快的诊断并缩短解决时间。
+* *容量利用率* — 容量指标现在直接显示在仪表板中，从而更轻松地了解资源消耗情况。
+
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["在仪表板上查看NetApp Disaster Recovery计划的运行状况"^]。
+
+
+
+[[improved-reports]]
+=== 改进报告
+
+报告功能已得到扩展，可以更深入地了解整个环境中的 Disaster Recovery 活动：
+
+* 生成适用于 VMware 工作负载、Kubernetes 工作负载或两者的报告，让您可以灵活地为受众定制报告。
+* 每个报告提供指定时间段的完整活动摘要，确保灾难恢复环境中的事件完全可见。
+
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/reports.html["创建NetApp Disaster Recovery报告"^]。
+
+
+
+[[user-job-logging]]
+=== 用户作业日志记录
+
+Disaster Recovery 通过用户级作业日志记录提高了作业的可问责性和可审计性。现在，执行的每个作业都会记录发起该作业的用户，为合规性和故障排除目的提供清晰的审计跟踪。Disaster Recovery 自动触发的作业被标识为"system"，便于区分用户发起的活动和服务发起的活动。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["监控NetApp Disaster Recovery作业"^]。
+
+
+
+[[performance-and-resource-optimization]]
+=== 性能和资源优化
+
+已进行了各种底层改进，以减少整体系统资源消耗并提高 Disaster Recovery 操作的性能。

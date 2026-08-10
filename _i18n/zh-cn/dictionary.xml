@@ -1062,24 +1062,11 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此选项会提示您再次登录。请注意，这些帐户的令牌将在 90 天后过期。我们将发布通知来提醒您此事。</block>
   <block id="c3533d0746cb1de0d34486c00ae36990" category="summary">NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。</block>
   <block id="d1a664c22b47275444c9a34501c2aac2" category="doc">在仪表板上查看NetApp Disaster Recovery计划的运行状况</block>
-  <block id="f236d43ec0e67c4b89d0afe52b6b6a75" category="paragraph">使用NetApp Disaster Recovery仪表板，您可以确定灾难恢复站点和复制计划的健康状况。您可以快速确定哪些站点和计划是健康的、断开的或降级的。</block>
   <block id="f23e4fbac73cf601cee1add8b6e11922" category="list-text">从NetApp Disaster Recovery菜单中，选择 *仪表板*。</block>
-  <block id="04edaa59dc99bd9193a5ad37083cc900" category="list-text">查看仪表板上的以下信息：</block>
   <block id="b845a02ab309809100805f1256a064e8" category="list-text">*站点*：查看站点的健康状况。站点可以具有以下状态之一：</block>
-  <block id="0e17ce70dd39a8a056cb5ca0081d4526" category="list-text">*正在运行*：vCenter 已连接、健康且正在运行。</block>
-  <block id="ed4bdaafb191f860f256d0b1e88eb50e" category="list-text">*关闭*：vCenter 无法访问或存在连接问题。</block>
-  <block id="45fa526b7f7589c94a8a5911f187838f" category="list-text">*问题*：vCenter 无法访问或存在连接问题。</block>
-  <block id="e2438a3d730fa8490b06524ee1d8b0ed" category="paragraph">要查看站点详细信息，请选择“查看全部”查看状态或选择“查看站点”查看全部。</block>
   <block id="18c8e34abace1973ab5a4468dba74870" category="list-text">*复制计划*：查看计划的健康状况。计划可以具有以下状态之一：</block>
   <block id="ddc1e4c30a24a09d9ea40b7e332147a4" category="list-text">*准备好*</block>
   <block id="f44027b669999f97854e8ef8c8215f16" category="list-text">*失败的*</block>
-  <block id="71fa181482da7d95240895b60c1654ee" category="paragraph">要查看复制计划的详细信息，请选择“查看全部”查看状态或选择“查看复制计划”查看全部。</block>
-  <block id="42ad006ef72ab8b86610109a75d3073b" category="list-text">*资源组*：查看资源组的健康状况。资源组可以具有以下状态之一：</block>
-  <block id="44cd3c457f12a5322db95c67eb00d629" category="list-text">*受保护的虚拟机*：虚拟机是资源组的一部分。</block>
-  <block id="8a5ac28d6ec264c5863fb5328c2943db" category="list-text">*未受保护的虚拟机*：虚拟机不属于资源组的一部分。</block>
-  <block id="348a99edae23b1f4e21c5ce75d209a50" category="paragraph">要查看详细信息，请选择每个下方的“查看”链接。</block>
-  <block id="2ce874f5717134aa8a63e219f05d39f9" category="list-text">故障转移、测试故障转移和迁移的次数。例如，如果您创建了两个计划并迁移到目标，则迁移计数显示为“2”。</block>
-  <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">查看活动窗格中的所有操作。要查看作业监视器上的所有操作，请选择“查看所有作业”。</block>
   <block id="d15994bcf2411bb66762cdf4c58704b3" category="doc">在NetApp Disaster Recovery中创建复制计划</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*关于此任务*</block>
   <block id="fba54b7da5e3ceabe7362e860f7df87d" category="paragraph">您可以保护多个数据存储上的多个虚拟机。  NetApp Disaster Recovery为托管受保护 VM 数据存储的所有ONTAP卷创建ONTAP一致性组。</block>
@@ -1331,13 +1318,11 @@
   <block id="d112f103569329954b57e42717e32021" category="paragraph">您可以监控所有NetApp Disaster Recovery作业并确定其进度。</block>
   <block id="b2885babde6f690716af50f947f38fa4" category="list-text">从菜单中选择*作业监控*。</block>
   <block id="a658e38fe05c1b71ade8529d73e083db" category="list-text">探索与操作相关的所有作业并查看其时间戳和状态。</block>
-  <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">要查看特定作业的详细信息，请选择该行。</block>
   <block id="19a2cef623f0e702dd97e37e1bddd114" category="list-text">要刷新信息，请选择*刷新*。</block>
   <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
   <block id="860b70267867fe6caf0f4adfd247b3e2" category="list-text">从NetApp Console左侧导航栏中，选择 *保护* &gt; *灾难恢复*。</block>
   <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在“作业监视器”页面中，记下要取消的作业的 ID。</block>
   <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">该作业必须处于“进行中”或“排队”状态。</block>
-  <block id="fa463eaf10ea5f2243e402c5c574ce96" category="list-text">在“操作”列中，选择“取消作业”。</block>
   <block id="73f285b2a2d2e36caf8a2b3dceba3bff" category="summary">使用NetApp Disaster Recovery，您可以使用SnapMirror复制将源站点上的 VMware 应用程序复制到云中的灾难恢复远程站点。</block>
   <block id="5542a31575b0db973ecf1e27638145e5" category="doc">使用NetApp Disaster Recovery将应用程序复制到另一个站点</block>
   <block id="f198c3ed2ffa46dda182aca950d079a7" category="admonition">创建灾难恢复计划、在向导中确定重复并启动到灾难恢复站点的复制后， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。</block>
@@ -1345,15 +1330,9 @@
   <block id="860a7c0767c6d5a81c5c68c072b88c23" category="list-text">在右侧，选择“操作”选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>并选择*复制*。</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障回复的摘要、所有站点的复制详细信息以及过去一年的作业详细信息。</block>
   <block id="a82244df08ebf8974422f7646e0239a4" category="doc">创建NetApp Disaster Recovery报告</block>
-  <block id="840e9ba54a3eb4b6ca1ba64036216f73" category="paragraph">查看NetApp Disaster Recovery报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。</block>
   <block id="8c0063a0e5fb937e4b6c45cefbf9765b" category="paragraph">您可以下载 PDF、HTML 或 JSON 格式的报告。</block>
-  <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">下载链接有效期为六小时。</block>
   <block id="d034750cd0fb1d447a3cf19d364332e1" category="list-text">从NetApp Console左侧导航栏中，选择 *复制计划*。</block>
   <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">选择*创建报告*。</block>
-  <block id="32e3f74f58555c69fe922de2e2c5a1fb" category="list-text">选择文件格式类型和过去 7 天内的时间段。</block>
-  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">选择“*创建*”。</block>
-  <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">该报告可能需要几分钟才能显示。</block>
-  <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">要下载报告，请选择*下载报告*并在管理员的下载文件夹中选择它。</block>
   <block id="c52bb35ab590385850c5a43aeeb51966" category="doc">在NetApp Disaster Recovery中创建资源组以组织虚拟机</block>
   <block id="68924c47e2eb51445ff8e93c1ce1bbc2" category="paragraph">您可以对虚拟机本身或数据存储中的虚拟机进行分组。</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">您可以使用以下方法创建资源组：</block>
@@ -2441,4 +2420,45 @@
   <block id="8527638a378e1869ef948cf228cb1967" category="list-title">从站点中删除集群</block>
   <block id="2e6e87ad0d5bb097a11e43a094522ce3" category="list-text">查看对话框菜单，然后选择**Remove from site**。确保您选择了正确的选项以继续 Trident Protect 操作。</block>
   <block id="4c6f2ecfa631674b204ee705d90449fe" category="section-title">查看数据存储信息</block>
+  <block id="63459ccd5f56d025aab8953dda2cac89" category="doc">改进的控制面板</block>
+  <block id="f682318aec1bd156e47f27a6821a89a5" category="paragraph">已更新 Disaster Recovery 控制面板，提供增强的体验，让您一目了然地全面了解整个 Disaster Recovery 资产。全新控制面板包括：</block>
+  <block id="9823d8b117c3e7a42545ab50cbf51e42" category="list-text">*统一工作负载可见性* — 从单一窗格监控 VMware 和 Kubernetes 工作负载以及底层基础设施的运行状况。</block>
+  <block id="cb6d28fda9538aed2308a2a41da8fef6" category="list-text">*主动显示问题* — 控制面板现在自动突出显示环境问题，从而实现更快的诊断并缩短解决时间。</block>
+  <block id="4682c01fd7e04d919efdbb898660b551" category="list-text">*容量利用率* — 容量指标现在直接显示在仪表板中，从而更轻松地了解资源消耗情况。</block>
+  <block id="83ffc188b91ae4a820fc973dcb4f2932" category="paragraph">有关详细信息，请参见 <block ref="8f765f2bdeedf185243a86837c41ce64" category="inline-link-macro-rx"></block>。</block>
+  <block id="1b89eeafa349152b4736736033fd9afa" category="section-title">改进报告</block>
+  <block id="0dc7dafa2af4e7002cfea0adec9f9574" category="paragraph">报告功能已得到扩展，可以更深入地了解整个环境中的 Disaster Recovery 活动：</block>
+  <block id="7f09e48950606d1acab05c889751f513" category="list-text">生成适用于 VMware 工作负载、Kubernetes 工作负载或两者的报告，让您可以灵活地为受众定制报告。</block>
+  <block id="7a778b01d59bf3ae1ff3f2feb2d289b6" category="list-text">每个报告提供指定时间段的完整活动摘要，确保灾难恢复环境中的事件完全可见。</block>
+  <block id="fd5ba3d3711dc4d9c0e25f25fe06d680" category="paragraph">有关详细信息，请参见 <block ref="39a309d4a05fe8ce442631f7b813f522" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c06591fa7a638998ecf07caf020e711" category="section-title">用户作业日志记录</block>
+  <block id="c021095f262d283ec8653a39f95e447d" category="paragraph">Disaster Recovery 通过用户级作业日志记录提高了作业的可问责性和可审计性。现在，执行的每个作业都会记录发起该作业的用户，为合规性和故障排除目的提供清晰的审计跟踪。Disaster Recovery 自动触发的作业被标识为"system"，便于区分用户发起的活动和服务发起的活动。</block>
+  <block id="42ed5c1343751a7af21890f24cd3c64e" category="paragraph">有关详细信息，请参见 <block ref="40b7771ffeffc9237f3cc63a2ebdb5c0" category="inline-link-macro-rx"></block>。</block>
+  <block id="00d2a24b32e6b20b963007b68cdb131f" category="section-title">性能和资源优化</block>
+  <block id="30f4219e3688914aa51c7df386e1780b" category="paragraph">已进行了各种底层改进，以减少整体系统资源消耗并提高 Disaster Recovery 操作的性能。</block>
+  <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
+  <block id="2c613e5d46b6a88da4ef71969949f8ed" category="paragraph">版本 4.3.6</block>
+  <block id="64d5f2a483005a7cc6303c4015d43a5c" category="paragraph">使用 NetApp Disaster Recovery 仪表板，您可以确定灾难恢复站点和复制计划的运行状况。您可以轻松评估哪些站点和计划运行正常、已断开连接或已降级。您还可以查看最近的警告和失败的作业，了解哪些工作负载受到保护以及哪些未受到保护，并查看容量概述。</block>
+  <block id="bd068902af2ce39e706eebf1c24b4d76" category="list-text">查看控制面板中的运行状况信息：</block>
+  <block id="a42ca2864206a93e33039e6598055690" category="list-text">*Running*：站点已连接、正常且正在运行。</block>
+  <block id="36cd7041f6cbfd714bd608ae3d78d535" category="list-text">*Down*：站点不可访问或有连接问题。</block>
+  <block id="9b2a75730600af9907e95659422ba650" category="list-text">*Issue*：此站点存在连接问题。</block>
+  <block id="a34ac24ac668b7073f201165e855f7fa" category="paragraph">要查看详细信息，请选择 **View all sites**。</block>
+  <block id="205be22566e424b4c8a81c6d8e8864e6" category="list-text">*警告*</block>
+  <block id="f45e2c030a4c208e00f685932255a3ca" category="paragraph">要查看复制计划详细信息，请选择*查看所有复制计划*。</block>
+  <block id="c829e7823834805c5cfdbad004224956" category="list-text">查看*最近的警告和作业*以查看最近执行的作业和警告及其相关状态。选择*查看所有作业*以查看所有作业。</block>
+  <block id="cb616e9285bb30b93344966fddafd029" category="list-text">查看 *Discovery and protection status*，以了解已发现工作负载的数量，以及按类型分列的受保护与未受保护工作负载的数字明细。您还可以按类型查看所有工作负载的已发现总容量。</block>
+  <block id="c1f56983411f9326a2cf92b7e410cdf2" category="list-text">要查看特定作业的详细信息，请选择该行。您可以通过选择操作菜单，然后选择 **Download job details** 来下载作业详细信息以进行离线审核。</block>
+  <block id="7e8d3582ff1a097fae78e430ac2242b4" category="admonition">在查看作业详细信息时，Disaster Recovery 会报告启动该作业的用户。如果责任方列为"system"，则表示该作业由 Disaster Recovery 启动。</block>
+  <block id="69ebf4461fc9429dbfcd7813c2832c6a" category="list-text">选择操作菜单，然后选择**取消作业**。</block>
+  <block id="c6f5d2645082be603586c7fcecedd01e" category="doc">在 NetApp Disaster Recovery 中创建报告</block>
+  <block id="458bdb93da448c5d3e7bece387f1c4d2" category="paragraph">NetApp Disaster Recovery 报告可以帮助您分析灾难恢复准备情况。报告提供了对复制计划的见解，包括计划涵盖的资源组、虚拟机或 Kubernetes 集群以及数据存储的数量。它们还显示合规性状态、作业摘要和备份设置，包括恢复点目标 (RPO) 和保留计数。</block>
+  <block id="466b68043567b88303b6c00217b4aeb5" category="paragraph">报告下载链接在生成后六小时内有效。</block>
+  <block id="c5cbff21ca879b1c12f07a2c7ced7d25" category="list-text">登录到 <block ref="3127a7e60ca42a30e72a85e6e4e87658" category="inline-link-macro-rx"></block>。</block>
+  <block id="86179d32bfddb5ed25033adf646f60d7" category="list-text">选择要将报告范围界定为哪个*工作负载*：Kubernetes、VMware 或所有。</block>
+  <block id="a4b18ba0532b0bf268eb0e3e25dcb79c" category="list-text">选择报告应涵盖的*文件类型*（PDF、HTML 或 JSON）和*时间段*（过去一至七天）。</block>
+  <block id="a5a7078aa40bb08318bf73843094da19" category="image-alt">创建报告的屏幕截图</block>
+  <block id="3d5401fc3d8a7a798c226379efd0e54a" category="list-text">选择*创建*以生成报告。</block>
+  <block id="c7752461db4ae72d9cab16a4731fae88" category="admonition">生成报告可能需要几分钟时间。</block>
+  <block id="570cb7369470f1ec54ee8b421baca86e" category="list-text">在复制计划仪表板上，选择*下载报告*。</block>
 </blocks>
