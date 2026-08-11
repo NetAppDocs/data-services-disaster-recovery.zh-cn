@@ -56,6 +56,42 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 
+[[considerations-for-platform-managed-backups]]
+=== 平台管理备份的注意事项
+
+如果您计划使用平台管理的备份（即 ONTAP 管理的快照），建议您使用 *MirrorAll* 复制策略。查看表格，了解不同 SnapMirror 复制策略的影响以及为何 MirrorAll 是推荐选项。
+
+[cols="10,10,80"]
+|===
+
+
+| 策略 | 建议 | 笔记 
+
+
+| *MirrorAll* | 建议 | 不要将 SnapMirror 传输快照用于故障转移或故障恢复操作。 
+
+
+| *MirrorVault* .2+| 备选建议 .2+| 确保在故障切换或故障回复期间选择的快照同时存在于源卷和目标卷上。否则将导致错误："转换到 'snapmirrored' 状态失败。原因：未找到通用快照。" 
+
+
+| *异步* 
+
+
+| *MirrorLatest* | 不推荐 | 此策略导致目标实际上只有一个用于故障转移的常见快照，这对于灾难恢复方案来说并不理想。 
+|===
+
+
+[[considerations-for-disaster-recovery-managed-backups]]
+=== Disaster Recovery 管理的备份的注意事项
+
+使用 Disaster Recovery 托管备份时，以下指南适用于在 NetApp Disaster Recovery 之外创建的 SnapMirror 关系：
+
+* SnapMirror 关系可以支持 MirrorAll、MirrorVault、MirrorLatest 和异步复制策略。
+* 请勿为这些关系安排更新，因为它们将由 Disaster Recovery 服务管理。
+
+
+
+
 [[before-you-begin]]
 == 开始之前
 
@@ -437,7 +473,10 @@ VMware 数据存储库托管在ONTAP FlexVol卷或使用 VMware VMFS 的ONTAP iS
 
 image:dr-plan-datastore-platform.png["屏幕截图显示了“添加复制计划”>“资源映射”>“数据存储区”"]
 
-* *使用平台管理的备份和保留计划*：如果您使用外部快照管理解决方案，请选中此框。 NetApp Disaster Recovery支持使用外部快照管理解决方案，例如本机ONTAP SnapMirror策略调度程序或第三方集成。如果复制计划中的每个数据存储库（卷）都已具有在其他地方管理的SnapMirror关系，则可以将这些快照用作NetApp Disaster Recovery中的恢复点。
+
+TIP: 在进行这些选择之前，请查看 <<平台管理备份的注意事项>>。
+
+* *使用平台管理的备份和保留计划*：如果您使用的是外部快照管理解决方案，请选中此框。Disaster Recovery 支持使用外部快照管理解决方案，例如本机 ONTAP SnapMirror 策略调度程序或第三方集成。如果复制计划中的每个数据存储区（卷）都已具有在其他位置管理的 SnapMirror 关系，则可以将这些快照用作 NetApp Disaster Recovery 中的恢复点。
 +
 选择此选项后， NetApp Disaster Recovery不会配置备份计划。但是，您仍然需要配置保留计划，因为仍可能需要拍摄快照以进行测试、故障转移和故障回复操作。
 

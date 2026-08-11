@@ -2,8 +2,6 @@
 section: use
 title: 使用NetApp Disaster Recovery
 entries:
-- title: 使用NetApp Disaster Recovery概述
-  url: "/use/use-overview.html"
 - title: 在仪表板上查看灾难恢复计划的运行状况
   url: "/use/dashboard-view.html"
 - title: 向站点添加资源

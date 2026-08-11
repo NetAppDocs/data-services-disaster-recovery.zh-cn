@@ -4,14 +4,18 @@ permalink: reference/evs-deploy-guide-creating-replication-plans.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
 summary: '使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。在您需要保护本地站点上的 vCenter 并且配置了 Amazon EVS 站点以使用Amazon FSx for NetApp ONTAP（可将其用作 DR 目标）之后，您现在可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。' 
 ---
-= 在NetApp Disaster Recovery概述中创建复制计划
+= 在 NetApp Disaster Recovery 中为 Amazon EVS 创建复制计划
 :allow-uri-read: 
 
 
 [role="lead"]
 在本地站点上有要保护的 vCenter 并且您有一个配置为使用Amazon FSx for NetApp ONTAP 的Amazon EVS 站点（可将其用作 DR 目标）后，您可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。
 
-.要开始复制计划创建过程：
+
+
+[[initiate-the-replication-plan-wizard]]
+== 启动复制计划向导
+
 . 从任何NetApp Disaster Recovery屏幕中，选择“复制计划”选项。
 +
 image:evs-create-rp-1.png["复制计划选项"]
@@ -24,4 +28,241 @@ image:evs-create-rp-2.png["复制计划屏幕"]
 
 这将打开创建复制计划向导。
 
-继续link:evs-deploy-guide-create-rp-wiz-01.html["创建复制计划向导步骤 1"]。
+
+
+[[select-vcenters]]
+== 选择 vCenters
+
+.步骤
+. 为复制计划输入一个唯一的名称。
++
+复制计划名称仅允许使用字母数字字符和下划线 (_)。
+
+. 选择源 vCenter 集群。
+. 选择目标 vCenter 集群。
+. 选择“下一步”。
++
+image:evs-create-rp-wiz-a-1-4.png["创建复制计划，选择 vCenter"]
+
+
+
+
+
+[[select-vm-resources-for-protection]]
+== 选择要保护的虚拟机资源
+
+有多种方法可以选择要保护的虚拟机。接下来的步骤展示了如何保护整个 vCenter 数据存储区，但您应该选择最适合您需求的方法。
+
+* *选择单个虚拟机*：选择*虚拟机*按钮可让您选择要保护的单个虚拟机。当您选择每个虚拟机时，服务会将其添加到位于屏幕右侧的默认资源组。
+* *选择先前创建的资源组*：您可以使用 NetApp Disaster Recovery 菜单中的资源组选项预先创建自定义资源组。这不是必需的，因为您可以使用其他两种方法在复制计划过程中创建资源组。有关详细信息，请参见 link:../use/drplan-create.html["创建复制计划"]。
+* *选择整个 vCenter 数据存储区*：如果使用此复制计划需要保护大量虚拟机，则选择单个虚拟机的效率可能不高。由于 Disaster Recovery 使用基于卷的 SnapMirror 复制来保护虚拟机，因此驻留在数据存储区上的所有虚拟机都将作为卷的一部分进行复制。在大多数情况下，您应该使用 Disaster Recovery 保护并重新启动数据存储区上的所有虚拟机。使用此选项可告知服务将所选数据存储区上托管的任何虚拟机添加到受保护虚拟机列表中。
+
+
+.访问此页面的步骤
+. 从“*复制计划*”页面继续到“*应用程序*”部分。
+. 查看打开的“*应用程序*”页面中的信息。
++
+image:evs-create-rp-wiz-b-1-4.png["复制计划，应用程序页面"]
+
+. 选择*数据存储*。
+. 选中您想要保护的每个数据存储旁边的复选框。
+. （可选）通过选择资源组名称旁边的铅笔图标，将资源组重命名为合适的名称。
+. 选择“下一步”。
+
+
+
+
+[[map-resources]]
+== 映射资源
+
+在选择要保护的虚拟机后，您必须执行网络映射。网络映射有四个区域：
+
+* 计算资源
+* 虚拟网络
+* 虚拟机重新配置
+* 数据存储映射
+
+
+每个虚拟机都需要前三种类型的信息。每个托管要保护的虚拟机的数据存储都需要进行数据存储映射。
+
+* 带有警告图标(image:evs-caution-icon.png["20.20"])的部分要求您提供映射信息。
+* 标有复选图标（image:evs-check-icon.png["20.20"]）的部分已映射或具有默认映射。请检查这些部分，以确保当前配置符合您的要求。
+
+
+.访问资源映射
+. 从“*复制计划*”页面继续到“*资源映射*”部分。
+. 查看打开的“资源映射”页面上的信息。
++
+image:evs-create-rp-wiz-c0.png["创建复制计划，资源映射页面"]
+
+. 要打开所需的每个映射类别，请选择该部分旁边的向下箭头（*v*）。
+
+
+
+
+[[compute-resources-mapping]]
+=== 计算资源映射
+
+由于一个站点可以托管多个虚拟数据中心和多个 vCenter 集群，因此您需要确定在发生故障转移时在哪个 vCenter 集群上恢复虚拟机。
+
+.步骤
+. 从位于 DR 站点的数据中心列表中选择虚拟数据中心。
+. 从所选虚拟数据中心内的集群列表中选择用于托管数据存储区和虚拟机的集群。
+. （可选）选择目标集群中的目标主机。
++
+此步骤不是必需的，因为 NetApp Disaster Recovery 会选择添加到 vCenter 中集群的第一台主机。此时，虚拟机要么继续在该 ESXi 主机上运行，要么 VMware DRS 根据配置的 DRS 规则将虚拟机移动到不同的 ESXi 主机。
+
+. （可选）提供要将虚拟机注册放入的顶级 vCenter 文件夹的名称。此步骤可以满足组织需求，但不是必需的。
++
+image:evs-create-rp-wiz-c-compute-resources-1-4.png["创建复制计划、计算资源"]
+
+
+
+
+
+[[map-virtual-network-resources]]
+=== 映射虚拟网络资源
+
+每个虚拟机可以有一个或多个虚拟网卡连接到 vCenter 网络基础架构内的虚拟网络。为了确保每个虚拟机在 DR 站点重新启动时都能正确连接到所需的网络，请确定哪些 DR 站点虚拟网络可连接这些虚拟机。通过将本地站点中的每个虚拟网络映射到 DR 站点上的关联网络来实现此目的。
+
+. 从下拉列表中选择目标段。
+. 对列出的每个源虚拟网络重复上一步。
++
+image:evs-create-rp-wiz-c-network-resources-1-2.png["创建复制计划、网络资源"]
+
+
+
+
+
+[[define-options-for-vm-reconfiguration-during-failover]]
+=== 定义故障转移期间虚拟机重新配置的选项
+
+每个虚拟机可能都需要修改才能在 DR vCenter 站点中正常工作。虚拟机部分使您能够提供必要的更改。
+
+默认情况下，NetApp Disaster Recovery 对每个 VM 使用与源本地站点相同的设置。这假设 VM 将使用相同的 IP 地址、虚拟 CPU 和虚拟 DRAM 配置。
+
+
+
+[[network-reconfiguration]]
+=== 网络重新配置
+
+支持的 IP 地址类型为静态和 DHCP。对于静态 IP 地址，您有以下目标 IP 设置：
+
+* *与源相同*：顾名思义，该服务在目标虚拟机上使用的 IP 地址与源站点虚拟机上使用的 IP 地址相同。这要求您为上一步中映射的虚拟网络配置相同的子网设置。
+* *与源不同*：该服务为每个 VM 提供了一组 IP 地址字段，这些字段必须针对目标虚拟网络上使用的适当子网进行配置，您在上一节中已映射该子网。对于每个虚拟机，您必须提供 IP 地址、子网掩码、DNS 和默认网关值。或者，对所有虚拟机使用相同的子网掩码、DNS 和网关设置，以简化所有虚拟机连接到同一子网时的过程。
+* *子网映射*：此选项根据目标虚拟网络的 CIDR 配置重新配置每个 VM 的 IP 地址。要使用此功能，请确保每个 vCenter 的虚拟网络在服务内都有定义的 CIDR 设置，如“站点”页面中的 vCenter 信息中所更改的那样。
+
+
+配置子网后，子网映射对源和目标 VM 配置使用相同的 IP 地址单元组件，但根据提供的 CIDR 信息替换 IP 地址的子网组件。此功能还要求源虚拟网络和目标虚拟网络具有相同的 IP 地址类别（ `/xx` CIDR 的组成部分）。这可确保目标站点有足够的 IP 地址来托管所有受保护的虚拟机。
+
+对于此 EVS 设置，我们假设源和目标 IP 配置相同，不需要任何额外的重新配置。
+
+.更改网络设置重新配置
+. 选择故障转移虚拟机使用的 IP 寻址类型。
+. （可选）通过提供可选的前缀和后缀值，为重新启动的虚拟机提供虚拟机重命名方案。
++
+image:evs-create-rp-wiz-c-vm-resources-network-1-2.png["创建复制计划、网络资源"]
+
+
+
+
+
+[[vm-compute-resource-reconfiguration]]
+=== VM 计算资源重新配置
+
+重新配置虚拟机计算资源有多种选项。Disaster Recovery 支持更改虚拟 CPU 的数量、虚拟 DRAM 的数量和虚拟机名称。
+
+
+NOTE: 这些步骤为可选步骤。
+
+.更改 VM 配置
+. 可选地，修改每个虚拟机应使用的虚拟 CPU 数量。如果您的灾难恢复 vCenter 集群主机没有源 vCenter 集群那么多的 CPU 内核，则可能需要执行此操作。
+. 可选操作：修改每个 VM 应使用的虚拟 DRAM 数量。如果您的 DR vCenter 集群主机的物理 DRAM 不如源 vCenter 集群主机多，则可能需要执行此操作。
++
+image:evs-create-rp-wiz-c-vm-resources-cpu-mem-1-2.png["创建复制计划、虚拟机资源"]
+
+
+
+
+
+[[boot-order]]
+=== 启动顺序
+
+Disaster Recovery 支持基于引导顺序字段有序重新启动虚拟机。引导顺序字段指示每个资源组中的虚拟机如何启动。引导顺序字段中具有相同值的虚拟机并行引导。
+
+
+NOTE: 设置引导顺序是可选的
+
+.修改启动顺序设置
+. （可选）修改虚拟机的重新启动顺序。此字段接受任意数值。NetApp Disaster Recovery 会尝试并行重新启动具有相同数值的虚拟机。
+. 可选择提供每次 VM 重启之间的延迟时间。此时间在此 VM 重启完成后、具有下一个更高引导顺序号的 VM 启动之前注入。此数字以分钟为单位。
++
+image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["创建复制计划、启动顺序"]
+
+
+
+
+
+[[custom-guest-os-operations]]
+=== 自定义客户操作系统操作
+
+灾难恢复支持为每个虚拟机执行一些来宾操作系统操作：
+
+* 灾难恢复可以为运行 Oracle 数据库和 Microsoft SQL Server 数据库的虚拟机执行应用程序一致的虚拟机备份。
+* Disaster Recovery 可以为每个虚拟机执行适合来宾操作系统的自定义脚本。执行此类脚本需要来宾操作系统可接受的用户凭据，且该凭据须具有足够的权限来执行脚本中列出的操作。
+
+
+.修改每个虚拟机的自定义客户操作系统操作
+. （可选）如果虚拟机托管的是 Oracle 或 SQL Server 数据库，请选中*创建应用程序一致性副本*复选框。
+. 或者，要在启动过程中在访客操作系统内执行自定义操作，请上传任何虚拟机的脚本。要在所有虚拟机中运行单个脚本，请使用突出显示的复选框并填写字段。
+. 某些配置更改需要具有足够权限的用户凭据才能执行操作。在下列情况下提供凭证：
++
+** 客户操作系统将在虚拟机内执行脚本。
+** 需要执行应用程序一致的快照。
++
+image:evs-create-rp-wiz-c-vm-resources-ac-scripts-creds-1-2.png["创建复制计划、自定义客户操作系统操作"]
+
+
+
+
+
+
+
+[[map-datastores]]
+=== 地图数据存储
+
+创建复制计划的最后一步是确定 ONTAP 应如何保护数据存储。这些设置定义了复制计划恢复点目标 (RPO)、应维护多少个备份以及在何处复制每个 vCenter 数据存储的托管 ONTAP 卷。
+
+默认情况下，Disaster Recovery 管理其自己的快照复制计划；但是，您也可以选择指定使用现有 SnapMirror 复制策略计划进行数据存储保护。
+
+此外，您还可以选择自定义要使用的数据 LIF（逻辑接口）和导出策略。如果不提供这些设置，Disaster Recovery 将使用与相应协议（NFS、iSCSI 或 FC）关联的所有数据 LIF，并使用 NFS 卷的默认导出策略。
+
+.配置数据存储库（卷）映射
+. （可选）决定是使用现有的 ONTAP SnapMirror 复制计划，还是让 Disaster Recovery 管理对虚拟机的保护（默认）。
+. 提供服务开始备份的起点。
+. 指定服务进行备份并将其复制到 DR 目标Amazon FSx for NetApp ONTAP集群的频率。
+. 指定应保留多少个历史备份。该服务在源和目标存储集群上维护相同数量的备份。
+. （可选）为每个卷选择一个默认逻辑接口（数据 LIF）。如果未选择任何内容，则配置目标 SVM 中支持卷访问协议的所有数据 LIF。
+. （可选）为任何 NFS 卷选择导出策略。如果未选择，则使用默认导出策略
++
+image:evs-create-rp-wiz-c-datastore-mapping.png["创建复制计划、数据存储映射"]
+
+
+
+
+
+[[verify-settings]]
+== 验证设置
+
+在 NetApp Disaster Recovery 中添加复制计划信息后，请验证输入的信息是否正确。这是最后一步。
+
+.步骤
+. 在激活复制计划之前，选择“*保存*”来检查您的设置。
++
+您可以选择每个选项卡来查看设置，并通过选择铅笔图标在任何选项卡上进行更改。
+
++
+复制计划设置审查image:evs-create-rp-wiz-c-verify.png["复制计划设置审查"]
+
+. 确认所有设置均正确后，选择*添加计划*。
+
