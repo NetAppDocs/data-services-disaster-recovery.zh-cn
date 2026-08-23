@@ -30,7 +30,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 [[manage-vcenter-sites]]
 == 管理 vCenter 站点
 
-您可以编辑 vCenter 站点名称和站点类型（本地或 AWS）。
+您可以编辑 vCenter 站点名称和类型（本地或 AWS）。
 
 *必需的 NetApp Console 角色* 需要组织管理员、文件夹或项目管理员或灾难恢复管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -45,7 +45,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 [[manage-resource-groups]]
 == 管理资源组
 
-您可以按虚拟机或数据存储创建资源组。它们可以在创建复制计划时添加，也可以在创建复制计划之后添加。
+您可以按虚拟机或数据存储创建资源组。您可以在创建复制计划时或之后添加它们。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -76,7 +76,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 [[manage-replication-plans]]
 == 管理复制计划
 
-您可以禁用、启用和删除复制计划。您可以更改时间表。
+您可以禁用、启用和删除复制计划。您可以更改计划。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -150,13 +150,13 @@ image:../use/dr-plan-list.png["复制计划列表"]
 [[change-retention-count-for-failover-schedules]]
 === 更改故障转移计划的保留计数
 
-更改保留计数可以让您增加或减少已保存的快照数量。
+更改保留计数可增加或减少保存的快照数量。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
 .步骤
 . 从菜单中选择*复制计划*。
-. 选择复制计划，然后选择“故障转移映射”选项卡。选择“编辑”铅笔图标。
+. 选择复制计划，然后选择*故障转移映射*选项卡。选择*编辑*铅笔图标。
 . 选择“数据存储”行中的向下箭头将其展开。
 +
 image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
@@ -192,7 +192,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 . 在灾难恢复中，从侧边栏中选择**站点**。
 . 在下拉菜单中选择 **Kubernetes**。
 . 在要修改的站点的操作菜单中，选择 **Remove cluster**。
-. 查看对话框菜单，然后选择**Remove from site**。确保您选择了正确的选项以继续 Trident Protect 操作。
+. 查看对话框，然后选择 **Remove from site**。确保选择正确的选项以继续 Trident Protect 操作。
 
 
 
@@ -200,7 +200,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 [[view-datastore-information]]
 == 查看数据存储信息
 
-您可以查看有关源和目标上存在多少个数据存储区的信息。
+您可以查看源站点和目标站点上存在多少个数据存储区。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -216,7 +216,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 [[view-virtual-machines-information]]
 == 查看虚拟机信息
 
-您可以查看源和目标上存在多少个虚拟机以及 CPU、内存和可用容量的信息。
+您可以查看源站点和目标站点上存在的虚拟机数量，以及 CPU、内存和可用容量。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 

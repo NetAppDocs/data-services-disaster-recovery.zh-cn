@@ -12,14 +12,14 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的 Kubernetes 
 
 
 [role="lead"]
-在为 Kubernetes 集群配置 NetApp Disaster Recovery 之前，您必须准备好每个 Kubernetes 集群。通常，保护适用于源和单独的目标集群，这意味着需要将这些程序应用于对中的每个集群。
+在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群。保护通常适用于源集群和单独的目标集群，因此请在成对的每个集群上完成这些过程。
 
 
 
 [[prerequisites]]
 == 前提条件
 
-在配置 Kubernetes 集群要求之前，请确保已配置 Kubernetes 集群和 ONTAP 集群。
+开始之前，请确保已配置 Kubernetes 集群和 ONTAP 集群。
 
 灾难恢复支持 link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect 目前支持的任何 Kubernetes 版本"^]。
 
@@ -31,7 +31,7 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的 Kubernetes 
 对于每个 Kubernetes 集群，请确保：
 
 * 您对每个 Kubernetes 集群具有管理 `kubectl`员访问权限。
-* 运行安装命令时可使用 Helm 3
+* 运行安装命令时，可以使用 Helm 3。
 
 
 
@@ -41,10 +41,10 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的 Kubernetes 
 
 对于每个 ONTAP 群集，请确保已配置以下资源：
 
-* **管理 LIF** - Trident 用于管理 API 访问
-* **数据 (NFS) LIF** - 用于卷的 NFS 流量
-* **SVM 名称** - 托管卷的 Storage VM
-* **凭据** - Trident 将使用的账户（通常， `admin`或 SVM 范围的账户）
+* **Management LIF**：由 Trident 用于管理 API 访问。
+* **数据 (NFS) LIF**：用于卷的 NFS 流量。
+* **SVM name**：托管卷的 Storage VM。
+* **凭据**：Trident 使用的帐户，通常 `admin`或 SVM 范围的帐户。
 * 工作节点必须能够访问 ONTAP 管理和数据 LIF。
 * 如果使用  `autoExportPolicy` 和 CIDR 限制，请包括节点子网。
 
@@ -86,7 +86,7 @@ kubectl create secret generic trident-ontap-secret -n <namespace> \
 [[create-the-tridentbackendconfig]]
 === 创建 TridentBackendConfig
 
- 您可以
+应用指向 SVM^ 的链接：https://docs.netapp.com/us-en/trident/trident-use/backend-kubectl.html#step-2-create-the-tridentbackendconfig-cr[`TridentBackendConfig`。例如：
 
 [source, yaml]
 ----
@@ -147,7 +147,7 @@ Trident Protect 复制的应用 PVC 必须使用通过 Trident 配置的存储�
 [[configure-volume-group-snapshot-custom-resource-definitions-crd]]
 == 配置卷组快照自定义资源定义 (CRD)
 
-link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["安装 snapshot CRD 和 snapshot 控制器。"^]。这些安装是 Trident Protect 中的卷快照所必需的。
+安装 link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["快照 CRD 和快照控制器"^]。这些安装是 Trident Protect 中的卷快照所必需的。
 
 使用以下命令验证自定义资源定义：
 
@@ -203,7 +203,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 . 使用 client ID 和 client secret 创建 Kubernetes secret 以创建 OCCM 身份验证凭据。
 +
-`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clientID> --from-literal=<clientSecret>`
+`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clientID> --from-literal=client_secret=<clientSecret>`
 
 . 添加或更新 helm repo：
 +

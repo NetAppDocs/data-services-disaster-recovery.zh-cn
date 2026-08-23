@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-您可以监控所有NetApp Disaster Recovery作业并确定其进度。
+监控 NetApp Disaster Recovery 作业以跟踪其状态和进度。
 
 
 
@@ -25,11 +25,11 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 . 登录 https://console.netapp.com/["NetApp Console"^]。
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 . 从菜单中选择*作业监控*。
-. 探索与操作相关的所有作业并查看其时间戳和状态。
-. 要查看特定作业的详细信息，请选择该行。您可以通过选择操作菜单，然后选择 **Download job details** 来下载作业详细信息以进行离线审核。
+. 查看作业，包括其时间戳和状态。
+. 要查看作业的详细信息，请选择其行。要下载作业详细信息以进行离线审核，请选择操作菜单，然后选择**下载作业详细信息**。
 +
 
-TIP: 在查看作业详细信息时，Disaster Recovery 会报告启动该作业的用户。如果责任方列为"system"，则表示该作业由 Disaster Recovery 启动。
+TIP: 当您查看作业详细信息时，Disaster Recovery 将显示启动作业的用户。如果责任方列为"system"，则表示该作业由 Disaster Recovery 启动。
 
 . 要刷新信息，请选择*刷新*。
 
@@ -46,7 +46,7 @@ TIP: 在查看作业详细信息时，Disaster Recovery 会报告启动该作业
 .步骤
 . 从NetApp Console左侧导航栏中，选择 *保护* > *灾难恢复*。
 . 从菜单中选择*作业监控*。
-. 在“作业监视器”页面中，记下要取消的作业的 ID。
+. 在作业监控页面上，记下要取消的作业的 ID。
 +
 该作业必须处于“进行中”或“排队”状态。
 

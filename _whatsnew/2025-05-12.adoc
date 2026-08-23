@@ -19,7 +19,7 @@
 
 VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置中，NetworkA 映射到 NetworkB。
 
-故障转移时， NetApp Disaster Recovery会替换原始 IP 地址 (10.1.1) 的网络部分，并保留原始 IP 地址 (10.1.1.50) 的主机地址 (.50)。对于 VM1， NetApp Disaster Recovery查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分 (.50) 来为 VM1 创建新的 IP 地址。新的IP变为192.168.1.50。
+故障转移后，NetApp Disaster Recovery 将替换原始 IP 地址（10.1.1）的网络部分，并保留原始 IP 地址（10.1.1.50）的主机地址（.50）。对于 VM1，NetApp Disaster Recovery 查看 NetworkB 的 CIDR 设置，并使用 NetworkB 网络部分 192.168.1，同时保留主机部分（.50）以创建 VM1 的新 IP 地址。新 IP 变为 192.168.1.50。
 
 总之，主机地址保持不变，而网络地址则被站点子网映射中配置的地址替换。这使您能够更轻松地管理故障转移时的 IP 地址重新分配，特别是当您需要管理数百个网络和数千个虚拟机时。
 
@@ -38,7 +38,7 @@ VM1 有一个连接到 NetworkA 的 vNIC（10.1.1.50）。在复制计划设置�
 
 原始源站点恢复在线后，您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。
 
-有关跳过保护的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
+要了解有关跳过保护的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
 
 
 

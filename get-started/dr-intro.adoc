@@ -14,11 +14,11 @@ summary: 云灾难恢复是保护工作负载免受站点中断和数据损坏�
 [role="lead"]
 云灾难恢复是保护工作负载免受站点中断和数据损坏事件影响的一种弹性和经济高效的方式。NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。使用 NetApp Disaster Recovery，您可以保护本地 Kubernetes 集群、基于 NFS 的工作负载，以及运行在 NetApp 存储上的 iSCSI 和 FC 的 VMware vSphere 虚拟机文件系统（VMFS）数据存储，保护对象包括以下之一：
 
-* Amazon Elastic VMware Service (EVS) 和Amazon FSx for NetApp ONTAP有关详细信息，请参阅link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和Amazon FSx for NetApp ONTAP实现NetApp Disaster Recovery"]。
+* Amazon Elastic VMware Service (EVS) with Amazon FSx for NetApp ONTAP。有关详细信息，请参阅 link:../reference/evs-deploy-guide-introduction.html["使用 Amazon Elastic VMware Service 和 Amazon FSx for NetApp ONTAP 的 NetApp Disaster Recovery 简介"]。
 * AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP
-* 带有NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware 解决方案 (AVS)（私人预览版）
+* Azure VMware Solution 与 NetApp Cloud Volumes ONTAP (iSCSI)（私有预览）
 * Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes
-* 另一个具有ONTAP存储的本地 NFS 和/或基于 VMFS (iSCSI/FC) 的 VMware 环境
+* 另一个具有 ONTAP 存储的基于 NFS 和/或 VMFS (iSCSI/FC) 的本地 VMware 环境
 
 
 NetApp Disaster Recovery使用ONTAP SnapMirror技术与集成的本机 VMware 业务流程来保护 VMware VM 及其相关的磁盘操作系统映像，同时保留ONTAP的所有存储效率优势。灾难恢复使用这些技术作为到灾难恢复站点的复制传输。这使得主站点和辅助站点能够实现业界最佳的存储效率（压缩和重复数据删除）。
@@ -185,9 +185,9 @@ Disaster Recovery 使用以下组件：
 *支持的保护目标*
 
 * AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP
-* 另一个本地、基于 NFS 的 VMware 环境，具有ONTAP存储或本地 FC/iSCSI VMSF
+* 另一个具有 ONTAP 存储的基于 NFS 的本地 VMware 环境，或本地 FC/iSCSI VMFS 环境
 * Amazon Elastic VMware 服务
-* 带有NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware 解决方案 (AVS)（私人预览版）
+* Azure VMware Solution 与 NetApp Cloud Volumes ONTAP (iSCSI)（私有预览）
 * Google Cloud VMware Engine (GCVE) 与Google Cloud NetApp Volumes
 
 

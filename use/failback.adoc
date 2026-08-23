@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-灾难解决后，从灾难恢复站点故障回复到源站点以恢复正常运行。您可以选择要恢复的快照。
+灾难解决后，从灾难恢复站点回切到源站点以恢复正常操作。您可以选择用于恢复的快照。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复故障转移管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -21,7 +21,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[about-failback]]
 == 关于故障恢复
 
-在故障恢复过程中， NetApp Disaster Recovery会将所有更改复制（重新同步）回原始源虚拟机，然后再反转复制方向。这个过程始于一段已经完成失败转移至目标的关系，并包括以下步骤：
+在故障恢复中，NetApp Disaster Recovery 会在反转复制方向之前将任何更改复制（重新同步）回原始源虚拟机。此过程在关系故障切换到目标后开始，涉及以下步骤：
 
 * 对恢复的站点执行合规性检查。
 * 刷新已确定位于恢复站点中的每个 vCenter 群集的 vCenter 信息。
@@ -36,7 +36,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[before-you-begin]]
 == 开始之前
 
-如果您使用的是基于数据存储的保护，则已添加到数据存储中的虚拟机可能会在故障转移过程中添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的附加映射信息。要编辑资源映射，请参阅 link:manage.html#manage-replication-plans["管理复制计划"]。
+如果使用基于数据存储的保护，虚拟机可能会在故障转移期间添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的其他映射信息。要编辑资源映射，请参阅 link:manage.html#manage-replication-plans["管理复制计划"]。
 
 
 
@@ -53,7 +53,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
-. 确定要回切的复制计划。选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Failback*。
+. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
 . 选择要从中恢复的数据存储区的快照。选择 *Take snapshot now* 以启动新快照，或 *Select* 从可用快照中进行选择。
 +
 image:failback.png["故障恢复对话框的屏幕截图"]
@@ -71,7 +71,7 @@ image:failback.png["故障恢复对话框的屏幕截图"]
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
-. 确定要回切的复制计划。选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Failback*。
+. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
 . 选择要从中恢复的集群的快照。选择 *Take snapshot now* 以启动新的快照，或 *Use latest snapshot* 以使用最新的成功快照。
 . 输入 "Failback" 确认操作，然后选择 *Failback*。
 

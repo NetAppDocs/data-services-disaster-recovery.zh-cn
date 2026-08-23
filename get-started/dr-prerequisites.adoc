@@ -53,9 +53,9 @@ ONTAP 9.10.0 或更高版本
 [[google-cloud-prerequisites-and-considerations]]
 == Google Cloud 的先决条件和注意事项
 
-使用 Google Google Cloud NetApp Volumes VMware Engine 上进行灾难恢复时，请确保配置正确的权限并遵守以下注意事项。
+当您将 NetApp Disaster Recovery 与 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 结合使用时，请确保配置正确的权限并查看以下注意事项。
 
-* 请联系 Google SRE 团队，将以下服务添加到允许列表中：
+* 请联系 Google SRE 团队，将以下内容加入允许列表：
 +
 ** 同步 API，用于将快照从本地存储传输到Google Cloud NetApp Volumes。
 ** Google 与 VMware 引擎合作的项目，用于创建、挂载和卸载数据存储。
@@ -110,7 +110,7 @@ NetApp Console用户必须具有以下角色：
 [[ontap-storage-prerequisites]]
 == ONTAP存储前提条件
 
-这些先决条件适用于 ONTAP 和 Amazon FSX for NetApp ONTAP 实例。
+这些先决条件适用于 ONTAP 和 Amazon FSx for NetApp ONTAP 实例。
 
 * 源集群和目标集群必须具有对等关系。
 * 承载灾难恢复卷的 SVM 必须存在于目标集群上。
@@ -133,7 +133,7 @@ NetApp Console用户必须具有以下角色：
 [[get-started-with-the-netapp-console]]
 === 开始使用NetApp Console
 
-如果你还没有这样做的话， https://docs.netapp.com/us-en/console-setup-admin/task-sign-up-saas.html["注册NetApp Console并创建组织"^] 。
+如果您尚未完成此操作， https://docs.netapp.com/us-en/console-setup-admin/task-sign-up-saas.html["注册 NetApp Console 并创建组织"^]。
 
 
 

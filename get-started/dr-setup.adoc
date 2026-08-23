@@ -12,7 +12,7 @@ summary: 要使用NetApp Disaster Recovery，请执行几个步骤进行设置�
 
 
 [role="lead"]
-要使用 NetApp Disaster Recovery，请执行几个步骤在 NetApp Console 和支持的灾难恢复环境中进行设置。
+要使用 NetApp Disaster Recovery，请在 NetApp Console 和支持的灾难恢复环境中完成几个设置步骤。
 
 
 TIP: 审查link:../get-started/dr-prerequisites.html["前提条件"]以确保您的系统已准备就绪。
@@ -44,15 +44,15 @@ TIP: 审查link:../get-started/dr-prerequisites.html["前提条件"]以确保您
 
 
 [[aws-availability-zones]]
-=== AWS 可用区
+=== AWS 可用性区域
 
-AWS 支持在给定区域内的一个或多个可用区 (AZ) 中部署解决方案。灾难恢复使用两种 AWS 托管服务：VMware Cloud for AWS 和 AWS FSx for NetApp ONTAP。
+AWS 支持在一个区域内的一个或多个可用区 (AZ) 中部署解决方案。NetApp Disaster Recovery 使用两种 AWS 托管服务：VMware Cloud on AWS 和 Amazon FSx for NetApp ONTAP。
 
-* *VMware Cloud for AWS*：支持在单可用区或双可用区延伸集群 SDDC 环境中部署。灾难恢复仅支持针对 Amazon VMware Cloud for AWS 的单可用区 SDDC 部署。
-* *AWS FSx for NetApp ONTAP*：当以双可用区配置部署时，每个卷都由单个 FSx 系统拥有。每个卷由单个 FSx 系统拥有。该卷的数据被镜像到第二个 FSx 系统。 FSx for ONTAP系统可以部署在单可用区或双可用区部署中。灾难恢复支持单可用区和多可用区 FSx for ONTAP部署。
+* *VMware Cloud for AWS*：支持在单 AZ 或双 AZ 扩展集群 SDDC 环境中进行部署。NetApp Disaster Recovery 仅支持 VMware Cloud on AWS 的单 AZ SDDC 部署。
+* *AWS FSx for NetApp ONTAP*：在多 AZ 配置中部署 Amazon FSx for NetApp ONTAP 时，每个卷由一个 FSx for ONTAP 文件系统拥有，数据将镜像到第二个文件系统。FSx for ONTAP 可以部署在单 AZ 或多 AZ 配置中。NetApp Disaster Recovery 支持这两种部署模式。
 
 
-*最佳实践*：对于 AWS DR 站点配置， NetApp建议对 VMware Cloud 和 AWS FSx for ONTAP实例使用单可用区部署。由于 AWS 用于 DR，因此引入多个 AZ 没有任何优势。多可用区可能会增加成本和复杂性。
+*最佳实践*：对于 AWS DR 站点配置，NetApp 建议对 VMware Cloud 和 AWS FSx for ONTAP 实例使用单 AZ 部署。由于 AWS 用于灾难恢复，因此引入多个可用区没有优势。多 AZ 部署可能会增加成本和复杂性。
 
 
 
@@ -63,7 +63,7 @@ AWS 提供了以下方法将私有数据中心连接到 AWS 云。每种解决�
 
 * *AWS Direct Connect*：这是 AWS 云互连，与您的私有数据中心位于同一地理区域，由 AWS 合作伙伴提供。此解决方案可在您的本地数据中心和 AWS 云之间提供安全的私有连接，而无需公共互联网连接。这是 AWS 提供的最直接、最有效的连接方法。
 * *AWS 互联网网关*：这提供了 AWS 云资源和外部计算资源之间的公共连接。这种类型的连接通常用于向外部客户提供服务，例如不需要安全性的 HTTP/HTTPS 服务。没有服务质量控制、安全性或连接性保证。因此，不建议使用此连接方法将生产数据中心连接到云。
-* *AWS Site-Site VPN*：此虚拟专用网络连接可用于与公共互联网服务提供商一起提供安全的访问连接。VPN 会对往返 AWS 云的所有数据进行加密和解密。VPN 可以是基于软件的，也可以是基于硬件的。对于企业应用程序，公共互联网服务提供商 (ISP) 应提供服务质量保证，以确保为 DR 复制提供足够的带宽和延迟。
+* *AWS Site-to-Site VPN*：此虚拟专用网络连接可通过公共互联网服务提供商提供安全连接。VPN 对往返 AWS 云的所有数据进行加密和解密。VPN 可以是基于软件的，也可以是基于硬件的。对于企业应用程序，公共互联网服务提供商（ISP）应提供服务质量保证，以确保为灾难恢复复制提供足够的带宽和延迟。
 
 
 *最佳实践*：对于 AWS DR 站点配置， NetApp建议使用 AWS Direct Connect。该解决方案为企业应用程序提供最高的性能和安全性。如果不可用，则应使用高性能公共 ISP 连接以及 VPN。确保 ISP 提供商业 QoS 服务级别以确保足够的网络性能。
@@ -80,7 +80,7 @@ AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点
 * *AWS Transit Gateway*：这是一种基于集中式路由器的连接类型，使每个 VPC 能够连接到单个中央网关，该网关充当所有 VPC 到 VPC 流量的中央枢纽。这也可以连接到您的 VPN 解决方案，以使本地数据中心资源能够访问 AWS VPC 托管的资源。这种类型的连接通常需要额外的成本来实现。
 
 
-*最佳实践*：对于涉及 VMware Cloud 和单个 FSx for ONTAP VPC 的 DR 解决方案， NetApp建议您使用 VPC 对等连接。如果部署了多个 FSx for ONTAP VPC，我们建议使用 AWS Transit Gateway 来减少多个 VPC 对等连接的管理开销。
+*最佳实践*：对于使用 VMware Cloud 和单个 FSx for ONTAP VPC 的灾难恢复解决方案，NetApp 建议使用 VPC 对等。如果部署了多个 FSx for ONTAP VPC，则建议使用 AWS Transit Gateway 来减少多个 VPC 对等连接的管理开销。
 
 
 
@@ -104,7 +104,7 @@ AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点
 
 
 * 将Amazon FSx for ONTAP添加到系统，并为 FSx for ONTAP添加 AWS 凭证。
-* 在 AWS FSx for ONTAP实例中创建或验证您的目标ONTAP SVM。
+* 在 AWS FSx for ONTAP 实例中创建或验证您的目标 ONTAP SVM。
 * 在NetApp Console中配置源本地ONTAP集群和 FSx for ONTAP实例之间的复制。
 
 
@@ -162,6 +162,6 @@ NetApp Console代理支持智能代理。智能代理是一种将您的内部环
 
 配置代理后， NetApp Disaster Recovery会尝试直接与 VMware 或ONTAP通信，如果直接通信失败，则使用配置的代理。
 
-NetApp Disaster Recovery代理实施需要使用 HTTPS 协议在控制台代理与任何 vCenter Server 和ONTAP阵列之间进行端口 443 通信。控制台代理内的NetApp Disaster Recovery代理在执行任何操作时直接与 VMware vSphere、VC 或ONTAP通信。
+NetApp Disaster Recovery 代理实现需要控制台代理与使用 HTTPS 协议的任何 vCenter 服务器和 ONTAP 阵列之间进行端口 443 通信。控制台代理中的 NetApp Disaster Recovery 代理在执行操作时直接与 VMware vSphere、vCenter 服务器或 ONTAP 通信。
 
 有关NetApp Console中常规代理设置的更多信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["配置控制台代理以使用代理服务器"^]。

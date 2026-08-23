@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/resource-group.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
-summary: 资源组使您能够将一组从属资源组织成满足您要求的逻辑组。 
+summary: 资源组允许您将依赖资源组织成满足您要求的逻辑组。 
 ---
-= 在NetApp Disaster Recovery中创建资源组以组织虚拟机
+= 在 NetApp Disaster Recovery 中创建资源组
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 资源组使您能够将一组从属资源组织成满足您要求的�
 
 
 [role="lead"]
-向站点添加资源后，您可以创建资源组来将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组使您能够将一组从属资源组织成满足您要求的逻辑组。例如，您可以对与一个应用程序关联的虚拟机进行分组，也可以对具有类似层的应用程序进行分组。作为另一个示例，组可能包含可在恢复时运行的延迟引导顺序。
+向站点添加资源后，创建资源组以将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以为一个应用程序对虚拟机进行分组，或对共享类似层的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟引导顺序。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -27,7 +27,7 @@ summary: 资源组使您能够将一组从属资源组织成满足您要求的�
 
 
 
-TIP: 每个资源组可以包括一个或多个虚拟机、数据存储或 Kubernetes 集群。虚拟机将根据您将它们包含在复制计划中的顺序启动。您可以通过向上或向下拖动资源组列表中的虚拟机或数据存储来更改顺序。
+TIP: 每个资源组可以包括一个或多个虚拟机、数据存储或 Kubernetes 集群。虚拟机将根据您将它们包含在复制计划中的顺序开机。您可以通过向上或向下拖动资源组列表中的虚拟机或数据存储来更改顺序。
 
 .关于资源组
 资源组可让您将虚拟机、数据存储区或 Kubernetes 应用程序合并到一个单元中。
@@ -35,9 +35,9 @@ TIP: 每个资源组可以包括一个或多个虚拟机、数据存储或 Kuber
 例如，销售点应用程序可能会使用多个虚拟机来存储数据库、业务逻辑和店面。您可以使用一个资源组管理所有这些虚拟机。设置资源组以应用虚拟机启动顺序、网络连接和应用程序所需的所有虚拟机的恢复的复制计划规则。
 
 .它是如何工作的？
-NetApp Disaster Recovery通过复制资源组中托管虚拟机的底层ONTAP卷和 LUN 来保护虚拟机。为此，系统向 vCenter 查询资源组中托管虚拟机的每个数据存储的名称。然后， NetApp Disaster Recovery会识别托管该数据存储的源ONTAP卷或 LUN。所有保护均使用SnapMirror复制在ONTAP卷级别执行。
+NetApp Disaster Recovery 通过复制资源组中托管虚拟机的底层 ONTAP 卷和 LUN 来保护虚拟机。为此，系统查询 vCenter 以获取资源组中托管虚拟机的每个数据存储的名称。NetApp Disaster Recovery 随后标识托管该数据存储的源 ONTAP 卷或 LUN。所有保护均在 ONTAP 卷级别使用 SnapMirror 复制来执行。
 
-如果资源组中的虚拟机托管在不同的数据存储上， NetApp Disaster Recovery将使用以下方法之一来创建ONTAP卷或 LUN 的数据一致快照。
+如果资源组中的虚拟机托管在不同的数据存储区上，NetApp Disaster Recovery 将使用以下方法之一来创建 ONTAP 卷或 LUN 的数据一致性快照。
 
 [cols="30,65a"]
 |===
@@ -113,7 +113,7 @@ image::site-type-toggle.png[站点类型切换的屏幕截图]
 . 选择“*添加*”。
 . 为资源组输入**名称**，然后从下拉菜单中选择 Kubernetes **集群**。
 . 选择 *Namespaces* 以添加到资源组。
-. 对*资源类型*进行分类。默认情况下，选择"包括所有"，表示多个资源类型
+. 对*资源类型*进行分类。默认情况下，选择"包括所有"，表示多种资源类型。
 . （可选）包括任何 *Label selectors*。
 +
 image:kubernetes-resource-group.png["添加 Kubernetes 资源组的屏幕截图"]

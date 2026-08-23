@@ -54,6 +54,6 @@
 [[retain-vm-folder-structure-added-as-default-in-replication-plans]]
 === 保留复制计划中默认添加的 VM 文件夹结构
 
-创建复制时，新的默认设置是保留 VM 文件夹结构。如果恢复目标没有原始文件夹层次结构，灾难恢复程序会创建它。您可以取消选择此选项以忽略原始文件夹层次结构。
+创建复制计划时，新的默认值是保留 VM 文件夹结构。如果恢复目标不具有原始文件夹层次结构，Disaster Recovery 将创建该层次结构。您可以取消选择此选项以忽略原始文件夹层次结构。
 
 有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"^]。

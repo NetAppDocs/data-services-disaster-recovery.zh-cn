@@ -12,7 +12,7 @@ summary: 只需几个步骤即可开始使用NetApp Disaster Recovery服务。
 
 
 [role="lead"]
-以下是开始使用NetApp Disaster Recovery所需步骤的概述。每个步骤中的链接都会将您带到提供更多详细信息的页面。
+使用这些步骤开始使用 NetApp Disaster Recovery。每个步骤中的链接都会转到包含更多详细信息的页面。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]审查先决条件
 [role="quick-margin-para"]
@@ -26,7 +26,7 @@ link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]下一步是什么？
 [role="quick-margin-para"]
-设置服务后，您可以执行以下操作。
+设置服务后，您可以完成这些后续步骤。
 
 [role="quick-margin-list"]
 * link:../use/sites-add.html["将您的 vCenter 站点添加到NetApp Disaster Recovery"] 。

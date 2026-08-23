@@ -12,7 +12,7 @@ summary: 查看灾难恢复报告可以帮助您分析灾难恢复准备情况�
 
 
 [role="lead"]
-NetApp Disaster Recovery 报告可以帮助您分析灾难恢复准备情况。报告提供了对复制计划的见解，包括计划涵盖的资源组、虚拟机或 Kubernetes 集群以及数据存储的数量。它们还显示合规性状态、作业摘要和备份设置，包括恢复点目标 (RPO) 和保留计数。
+使用 NetApp Disaster Recovery 报告评估灾难恢复准备情况。报告提供了有关复制计划的详细信息，包括每个计划涵盖的资源组、虚拟机、Kubernetes 集群和数据存储库的数量。报告还显示合规性状态、作业摘要和备份设置，如恢复点目标 (RPO) 和保留计数。
 
 您可以下载 PDF、HTML 或 JSON 格式的报告。
 
@@ -23,8 +23,8 @@ NetApp Disaster Recovery 报告可以帮助您分析灾难恢复准备情况。�
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 . 从NetApp Console左侧导航栏中，选择 *复制计划*。
 . 选择*创建报告*。
-. 选择要将报告范围界定为哪个*工作负载*：Kubernetes、VMware 或所有。
-. 选择报告应涵盖的*文件类型*（PDF、HTML 或 JSON）和*时间段*（过去一至七天）。
+. 选择要将报告范围界定为哪个*工作负载*：Kubernetes、VMware 或全部。
+. 选择报告的*文件类型*（PDF、HTML 或 JSON）和*时间段*（过去一至七天）。
 +
 image::report.png[创建报告的屏幕截图]
 

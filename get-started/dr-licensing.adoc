@@ -12,11 +12,16 @@ summary: 使用NetApp Disaster Recovery，您可以使用不同的许可计划�
 
 
 [role="lead"]
-使用NetApp Disaster Recovery，您可以使用不同的许可计划，包括免费试用、按需付费订阅或自带许可证。
+NetApp Disaster Recovery 提供多种许可选项，包括免费试用、按需购买订阅以及自带许可证 (BYOL)。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
-*许可选项* 您可以使用以下许可选项：
+
+
+[[licensing-options]]
+== 许可选项
+
+可以使用以下许可选项：
 
 * 注册即可获得 30 天免费试用。
 * 购买 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 的即用即付 (PAYGO) 订阅。
@@ -79,13 +84,13 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recovery的登录页面屏�
 .步骤
 . 在NetApp Disaster Recovery中，您会看到一条消息，提示免费试用即将到期。在消息中，选择*订阅或购买许可证*。
 +
-或者，从中选择*查看付款方式*。
+或者，从 Disaster Recovery 菜单中选择 *查看付款方式*。
 
 +
 image:dr-licensing-payment-methods.png["NetApp Disaster Recovery付款方式页面"]
 
 . 选择*在 AWS Marketplace 中订阅*或*在 Azure Marketplace 中订阅*。
-. 使用 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 * NetApp Disaster Recovery*。
+. 使用 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 *NetApp Disaster Recovery*。
 . 当您返回到NetApp Disaster Recovery时，会出现一条消息表明您已订阅。
 +
 您可以在NetApp Console订阅页面查看订阅详细信息。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-homepage.html["详细了解如何使用NetApp Console管理订阅"^]。
@@ -101,7 +106,12 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recovery付款方式页�
 
 如果您自带许可证 (BYOL)，则设置包括购买许可证、获取NetApp许可证文件 (NLF) 以及将许可证添加到NetApp Console。
 
-*将许可证添加到NetApp Console** 从NetApp销售代表处购买NetApp Disaster Recovery许可证后，您可以在控制台中管理该许可证。
+
+
+[[add-the-license-to-the-netapp-console]]
+=== 将许可证添加到 NetApp Console
+
+从 NetApp 销售代表处购买 NetApp Disaster Recovery 许可证后，您可以在控制台中管理该许可证。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何使用NetApp Console添加许可证"^]。
 
@@ -110,7 +120,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 [[update-your-license-when-it-expires]]
 == 许可证到期时更新
 
-如果您的许可期限即将到期，或者您的许可容量已达到限制，您将在NetApp Disaster RecoveryUI 中收到通知。您可以在 NetApp Disaster Recovery许可证到期之前进行更新，这样您访问扫描数据的能力就不会中断。
+如果您的许可期限已接近到期日期，或者您的许可容量已达到上限，您将在 NetApp Disaster Recovery UI 中收到通知。您可以在 NetApp Disaster Recovery 许可证到期前对其进行更新，以免中断您使用该服务的能力。
 
 
 TIP: 此消息也会出现在NetApp Console和 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。

@@ -12,7 +12,7 @@ summary: 在创建灾难恢复计划之前，您需要在NetApp Disaster Recover
 
 
 [role="lead"]
-在创建灾难恢复计划之前，您需要将站点添加到 Disaster Recovery。站点是 vCenter 服务器或 Kubernetes 集群（本地或云端）的集合。您应该添加主站点或生产站点以及灾难恢复站点。
+在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。同时添加生产站点和灾难恢复站点。
 
 
 TIP: 确保源和目标都使用相同的 NetApp Console 代理。
