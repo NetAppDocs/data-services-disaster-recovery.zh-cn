@@ -139,11 +139,8 @@
   <block id="1842d5453eb18b28e3fe6f5c7acc9eaa" category="list-text">存储发现改进，包括减少本地部署的发现时间</block>
   <block id="58077d66ee3ca42d6d7732854dac2714" category="list-text">身份和访问管理 (IAM) 支持，包括基于角色的访问控制 (RBAC) 和增强的用户权限</block>
   <block id="ef31873b640af7e0e4300d5282baffe4" category="list-text">对 Azure VMware 解决方案和Cloud Volumes ONTAP 的私人预览支持。有了此支持，您现在可以使用Cloud Volumes ONTAP存储配置从本地到 Azure VMware 解决方案的灾难恢复保护。</block>
-  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">如果您只是想快速找到问题的答案，此常见问题解答可以为您提供帮助。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
   <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
-  <block id="608e4777418fc3c48801c19842213f36" category="paragraph">* NetApp Disaster RecoveryURL 是什么？*对于 URL，在浏览器中输入：<block ref="50afa4cc4e54d55b53b9cfffe1bc930c" category="inline-link-rx"></block>访问NetApp控制台。</block>
-  <block id="b3e4ed172be774a7750c54db8ee694c0" category="paragraph">*您需要许可证才能使用NetApp Disaster Recovery吗？*需要NetApp Disaster Recovery许可证才能获得完全访问权限。但是，您可以通过免费试用版进行尝试。</block>
   <block id="dd5a7130a9e4691912bd5e866f5f38d3" category="inline-link-macro">设置NetApp Disaster Recovery许可</block>
   <block id="8de8bf3c0e2312de770e9e57b5d7b618" category="paragraph">有关设置NetApp Disaster Recovery许可的详细信息，请参阅<block ref="dcc09fe94eaacf55e14028798bbcb75a" category="inline-link-macro-rx"></block>。</block>
   <block id="7d34f6a9b5c271fe76e07e48a0c0d2b1" category="list-text">AWS 上的 VMware Cloud (VMC) 以及适用Amazon FSx for NetApp ONTAP</block>
@@ -170,7 +167,6 @@
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">许可</block>
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">您可以使用以下许可证类型：</block>
   <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">注册即可获得 30 天免费试用。</block>
-  <block id="ae8251a7b4c0fab0673e14f4f9d000d1" category="list-text">通过 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 购买即用即付 (PAYGO) 订阅。此许可证使您能够购买固定保护容量许可证，而无需任何长期承诺。</block>
   <block id="c6f69d5df53a010be34f1bdca81f2d34" category="list-text">自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console中激活 BYOL。</block>
   <block id="f32471ef823f660bfa852ce10e9e5843" category="paragraph">所有NetApp数据服务的许可证均通过NetApp Console中的订阅进行管理。设置 BYOL 后，您可以在控制台中看到该服务的有效许可证。</block>
   <block id="924fd9d885c358418e2ee855de9a3281" category="paragraph">受保护的卷可以托管许多虚拟机。有些可能不属于NetApp Disaster Recovery资源组。无论如何，该卷或 LUN 上所有虚拟机消耗的存储都将用于满足许可证最大容量要求。</block>
@@ -1885,7 +1881,6 @@
   <block id="3dbc5485bf1aa588640ee699337e0892" category="list-text">**以应用程序为中心的保护**：您现在可以在应用程序级别保护 Kubernetes 工作负载，确保在故障转移事件期间恢复关键服务。</block>
   <block id="6124980497de7eeb616c27d599b53c84" category="list-text">**简化编排**：Disaster Recovery 提供直观的工作流程，以自动化 Kubernetes 工作负载的备份和复制，利用与 VMware 环境相同的高效 SnapMirror 技术。</block>
   <block id="082f6fbdb4843c5f374a215502f493b9" category="inline-link-macro">NetApp Disaster Recovery 的 Kubernetes 要求</block>
-  <block id="3723578e9eec661a364d573c9d930dd2" category="paragraph">*如何访问 NetApp Disaster Recovery？*NetApp Disaster Recovery 不需要任何启用。Disaster Recovery 会自动显示在 NetApp Console 左侧导航栏上。</block>
   <block id="617eb16cadcea920c3756320dc74fccf" category="summary">云灾难恢复是保护工作负载免受站点中断和数据损坏事件影响的一种弹性和经济高效的方式。使用 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 工作负载复制到使用 NetApp 云存储的公共云中的 VMware 软件定义数据中心，或复制到将 ONTAP 存储作为灾难恢复站点的另一个本地 VMware 环境。</block>
   <block id="99768e8237948205202d18a652ffd119" category="inline-image-macro">显示 NetApp Disaster Recovery 组件的图表</block>
   <block id="ba116452d0da87465a7f182425b0428a" category="paragraph"><block ref="ba116452d0da87465a7f182425b0428a" category="inline-image-macro-rx" type="image"></block></block>
@@ -2436,4 +2431,127 @@
   <block id="03c66aa95215fd945ab9f6521baef55e" category="paragraph">如果资源组中的虚拟机托管在不同的数据存储区上，NetApp Disaster Recovery 将使用以下方法之一来创建 ONTAP 卷或 LUN 的数据一致性快照。</block>
   <block id="183b61458af19e5b813be061374378cf" category="list-text">对*资源类型*进行分类。默认情况下，选择"包括所有"，表示多种资源类型。</block>
   <block id="372899929926faabc33dabdd64a2ecc2" category="paragraph">在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。同时添加生产站点和灾难恢复站点。</block>
+  <block id="11a59530affce2463e250e21bdbcc29c" category="summary">有关适用于 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 的常见问题。</block>
+  <block id="6782fe55d65b471e3f7ea9c8c6c97abb" category="paragraph">本常见问题解答回答了有关 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 常见问题。本文重点介绍在实施灾难恢复配置以及管理复制、迁移、故障转移和故障恢复操作时所涉及的概念、术语、系统行为和约束条件。</block>
+  <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">入门指南</block>
+  <block id="c9765fd31b48f3fca291b4069513a081" category="paragraph-title">什么是 NetApp Disaster Recovery？</block>
+  <block id="685c012b5ad43ae8f78cb16f13b132f2" category="paragraph">NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可通过 NetApp Console 访问，可自动执行 VMware 和 Kubernetes 环境的灾难恢复工作流程。它将运行 ONTAP 存储的本地 VMware 工作负载或运行 Trident 管理的 ONTAP 存储的 Kubernetes 工作负载复制到另一个站点作为灾难恢复目标。该服务使用 ONTAP SnapMirror 技术，结合原生 VMware 编排或 Trident Protect 编排，在保留 ONTAP 存储效率（例如压缩和重复数据删除）的同时保护工作负载。</block>
+  <block id="009485187b14dcf377759e6990a3cd29" category="paragraph-title">如何访问 NetApp Disaster Recovery？</block>
+  <block id="6ba97b97f5cafb293b8b470e85d345ef" category="paragraph">灾难恢复不需要任何单独的启用。它会自动显示在 NetApp Console 左侧导航栏的*保护* &gt; *灾难恢复*下。要访问 NetApp Console，请在浏览器中输入：<block ref="50afa4cc4e54d55b53b9cfffe1bc930c" category="inline-link-rx"></block>。</block>
+  <block id="8bf50a93bd9428093b7d8d4d5b1b0b36" category="paragraph-title">是否需要许可证才能使用灾难恢复?</block>
+  <block id="00dec6c85f2743479fc02854bda53ae8" category="inline-link-macro">设置 Disaster Recovery 许可</block>
+  <block id="a6f94b1b055cfba0760274ebe73edd0f" category="paragraph">要进行完整、持续的访问，需要 Disaster Recovery 许可证。在购买许可证或订阅之前，您可以通过 30 天的免费试用来试用该服务。有关详细信息，请参阅 <block ref="dbcbb19e1cf3cf9e67976fef02d6b337" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f3c88b9b64d7c04d0a5af9d9b038b8a" category="paragraph-title">灾难恢复支持哪些保护目标？</block>
+  <block id="2bbf74ed6470801d33a79aa97284c8a1" category="paragraph">灾难恢复支持以下保护目标:</block>
+  <block id="03a433c06058e0842e084e12c6761ada" category="list-text">Amazon Elastic VMware Service (EVS) with Amazon FSx for NetApp ONTAP</block>
+  <block id="a4508b30b1ece8318f0401ea22ba314c" category="list-text">具有 NetApp Cloud Volumes ONTAP (iSCSI) 的 Azure VMware Solution (AVS)（私有预览）</block>
+  <block id="1e5c2af338d158fea3074ac741c12f7f" category="list-text">运行 Trident 管理的 ONTAP 存储的 Kubernetes 集群（使用 Trident Protect 进行保护）</block>
+  <block id="03e34d9d0969ffe91db834baf5fc676c" category="list-text">具有 ONTAP 存储的基于 NFS 的本地 VMware 环境，或本地 FC/iSCSI VMFS 环境</block>
+  <block id="a3112671a6fb73e68a4eb5e2e5596d1d" category="paragraph-title">Disaster Recovery 支持哪些数据存储区类型？</block>
+  <block id="6d8335c6284a0148e6a1b5e182622f28" category="paragraph">对于 VMware 工作负载，Disaster Recovery 支持以下数据存储类型：</block>
+  <block id="8d26eec49f6112d9e5765d1264d9af72" category="list-text">托管在驻留于 ONTAP 集群上的 ONTAP FlexVol 卷上的 NFS 数据存储</block>
+  <block id="5a29a9fc808b533ac3b2f4df76c93e8b" category="paragraph">对于 Kubernetes 工作负载，NetApp Disaster Recovery 保护通过 NetApp Trident 在 ONTAP 存储上配置的持久卷。</block>
+  <block id="a153862bfd0588d7dc0f9a29fa98f22a" category="section-title">许可和成本</block>
+  <block id="7695f18938c37b2aabf318dde48840c1" category="paragraph-title">灾难恢复有哪些许可选项？</block>
+  <block id="18a592d2cf2780535a0976d232a6b68d" category="paragraph">灾难恢复提供以下许可选项：</block>
+  <block id="31199494c34737143146e2cf1a74b417" category="list-text">30 天免费试用（试用期间不强制执行容量限制）</block>
+  <block id="b99c57be085b04f4f2f1b3ce0008c1e1" category="list-text">使用 Amazon Web Services (AWS) Marketplace、Azure Marketplace 或 Google Cloud Marketplace 的即用即付 (PAYGO) 订阅</block>
+  <block id="a71c98e80ca40a1236ab4d4c8e91e837" category="list-text">自带许可证 (BYOL)，这是您从 NetApp 销售代表处获得并使用 NetApp Console 中的许可证序列号激活的 NetApp 许可证文件 (NLF)</block>
+  <block id="0899260c78c1e54d84e3cf050a8f64e1" category="paragraph">当至少有一个虚拟机或 Kubernetes 资源具有复制计划时，灾难恢复费用基于源站点上数据存储的已用容量。</block>
+  <block id="44023762377876d62f152da635813b23" category="paragraph-title">如果超出容量，会发生什么？</block>
+  <block id="b1cab6c26795bbf5933dd5e1fb5bc234" category="paragraph">对于 BYOL，如果数据超出允许的容量，则在您获得额外的容量许可证或在 NetApp Console 中升级许可证之前，服务中的操作将受到限制。</block>
+  <block id="8f682126932c0bc027583969c665f0b2" category="paragraph-title">30 天免费试用期结束后会发生什么？</block>
+  <block id="bf8c00eccd33cf71d2291453b570ba6d" category="paragraph">免费试用结束后，您仍然可以查看和删除工作负载和复制计划等资源，并运行在试用期间创建的所有计划操作。要继续使用具有完整功能的服务，您需要从云提供商处获取 PAYGO 订阅，或从 NetApp 购买 BYOL 许可证。</block>
+  <block id="a7fd20275e66fa4773cec0d049fd6735" category="paragraph">您可以随时购买许可证或订阅，在 30 天试用期结束之前，我们不会向您收取费用。</block>
+  <block id="6c00e4926a955219a7e9c10de1457149" category="section-title">支持的环境和基础设施</block>
+  <block id="4514c3f298352ef857a50cd3d57cfd07" category="paragraph-title">Disaster Recovery 支持哪些基础架构拓扑？</block>
+  <block id="f10dcf48d56e70a97e57a5179159d52e" category="paragraph">灾难恢复支持以下拓扑：</block>
+  <block id="f0fb78ff06794aa000c885a6cf7cc846" category="list-text">混合云灾难恢复，将本地 VMware 加 ONTAP 数据中心复制到基于 VMware Cloud on AWS 或 Amazon Elastic VMware Service (EVS) 和 Amazon FSx for NetApp ONTAP 的 AWS 灾难恢复基础架构</block>
+  <block id="4f59f088502d409238ee98fb167b1627" category="list-text">将本地 VMware 加 ONTAP vCenter 复制到另一个本地 VMware 加 ONTAP vCenter 的私有云灾难恢复</block>
+  <block id="70cbd6c1eca3ee85af56ee77c142fbbc" category="list-text">使用 FSx for NetApp ONTAP 将基于 VMware Cloud on AWS 或 EVS 的 AWS DR 基础架构复制到另一个基于 AWS 的 DR 基础架构的 Cloud DR</block>
+  <block id="e5d74f9defabeca515d32bdc3e6882e0" category="list-text">混合云 DR，将本地 VMware 和 ONTAP 数据中心复制到基于 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 的 Google Cloud DR 基础架构</block>
+  <block id="8b5545289388529be811a17842721533" category="list-text">使用 Trident 托管 ONTAP 存储的集群之间的 Kubernetes-to-Kubernetes DR</block>
+  <block id="205c3abce10f4db11d5e7a43071941a3" category="section-title">前提条件和设置</block>
+  <block id="bee44633bd765795fd96a89d2ea8d744" category="list-title">使用 Disaster Recovery 之前必须满足哪些先决条件？</block>
+  <block id="3cc5d65c196d5c02b066a3f38fabc422" category="list-text">希望 NetApp Disaster Recovery 管理的所有 VMware 集群必须使用 ONTAP 卷来托管要保护的任何虚拟机。</block>
+  <block id="2960e86d5435c6d4983a6bedb4e341b9" category="list-text">VMware Tools（或 Open VM Tools）必须在受保护的虚拟机上运行。</block>
+  <block id="f3f78406752acc9ae3fe2180e45e7f33" category="list-text">对于运行 Microsoft SQL Server 或 Oracle 数据库的 Windows VM，数据库必须启用其 VSS Writers。</block>
+  <block id="8797466feb8b593d185d9a5b856d40db" category="list-text">对于在 Linux 上运行的 Oracle 数据库，必须为 Oracle 数据库 SYSDBA 角色启用操作系统用户身份验证。</block>
+  <block id="32458301d6055c57642a02dd2e2a8624" category="inline-link-macro">Kubernetes 集群的灾难恢复要求</block>
+  <block id="30d53f5e9f738af2dce8e354b6e02bfa" category="list-text">对于 Kubernetes，请查看 <block ref="170f9022121dc32cb8d6bdb79a86df4b" category="inline-link-macro-rx"></block> 中的其他要求。</block>
+  <block id="b7c94cf1f714b64789658b0bd3c1f536" category="inline-link-macro">灾难恢复先决条件</block>
+  <block id="2791151bd11882e779ad62c4a90bed7d" category="paragraph">有关完整列表，请参见 <block ref="ab24f14855e7dfb063c4daf2abf49c3e" category="inline-link-macro-rx"></block>。</block>
+  <block id="32cb9f4da9f23af0b3a0d8926400a876" category="paragraph-title">什么是控制台代理？为什么需要它？</block>
+  <block id="f6f14ea127e16276280dc1146a521662" category="paragraph">控制台代理是一种软件组件，使 NetApp Console 能够与您的 ONTAP 存储和 VMware vCenter 集群进行通信。这是灾难恢复正常运行所必需的。代理驻留在您的专用网络（本地数据中心或云 VPC）中，并与您的 ONTAP 存储实例和 vCenter 集群进行通信。</block>
+  <block id="8e9d521e81d073f77ae2c82143d6170f" category="paragraph">对于本地到本地灾难恢复，请在灾难恢复站点中安装本地控制台代理。对于本地到 AWS，请在 AWS VPC 中安装 AWS 控制台代理。源和目标 vCenter 集群都应使用相同的控制台代理。灾难恢复仅适用于标准模式代理部署。</block>
+  <block id="d438ccd3391b093c3d412dbbf52c4615" category="paragraph-title">Kubernetes 集群在受到保护之前需要什么？</block>
+  <block id="2f01c241b558291169d132c87e061c93" category="paragraph">每个 Kubernetes 集群都必须安装 NetApp Trident、配置 ONTAP 后端和存储类，并安装卷快照 CRD 和控制器。应用程序必须使用通过 Trident 存储类配置的永久卷。当您将 Kubernetes 集群添加为站点时，Disaster Recovery 将指导您在该集群上安装和注册 Trident Protect。有关分步命令和验证检查，请参阅 <block ref="170f9022121dc32cb8d6bdb79a86df4b" category="inline-link-macro-rx"></block>。</block>
+  <block id="72d167ef919d5c2ce32f0a4ebe13b34a" category="section-title">核心概念</block>
+  <block id="4ce33d066be7d36d3c5e42092f5c2d72" category="paragraph-title">什么是灾难恢复站点？</block>
+  <block id="24c26aa5a7ef691a688d2c6752f7da09" category="paragraph">站点是一个逻辑容器，通常与物理数据中心或云位置相关联，托管一个或多个 vCenter 集群或 Kubernetes 集群。在创建复制计划之前，需要添加源（生产）站点和目标（灾难恢复）站点。</block>
+  <block id="f612271843c01bba17d71f36507809c8" category="paragraph-title">什么是资源组？它是如何使用的？</block>
+  <block id="386675ee09d15b4ecb26861362fd08e2" category="paragraph">资源组是一个逻辑容器，允许您将多个虚拟机、数据存储区或 Kubernetes 命名空间和资源作为一个单元进行管理，从而可以使用通用快照对其进行保护。一个虚拟机一次只能属于一个资源组。您可以为要保护的每个应用程序或工作负载创建一个资源组，虚拟机根据您在组中配置的引导顺序启动。</block>
+  <block id="9f64dd723cccc90d08922938bac1207f" category="paragraph-title">什么是灾难恢复中的复制计划？</block>
+  <block id="c83a085c0f5007412bbd2761ae6fa4ee" category="paragraph">复制计划是关于备份发生频率和如何处理故障转移事件的一组规则。它选择源站点和目标站点，分配资源组，定义恢复映射，并配置开机行为。计划通过数据复制的频率定义恢复点目标 (RPO)。</block>
+  <block id="d7c52d33ae728dcf2dfc2458e6a234ad" category="paragraph-title">RPO 和 RTO 有什么区别？</block>
+  <block id="d5936ba7dd99cc8a1b2cb68192bb7fc5" category="paragraph">恢复点目标 (RPO) 是在发生灾难时可接受的最大数据丢失量；它由复制计划的复制频率或时间表定义。恢复时间目标 (RTO) 是从灾难中恢复可接受的最长时间；它取决于故障切换到灾难恢复站点并重新启动所有虚拟机或应用程序所需的时间。</block>
+  <block id="d81737f9809ed4d7f221a84f6106c789" category="section-title">站点、发现和资源组</block>
+  <block id="d1e7d0bc6d9c47e3951244ee293d9b7f" category="list-title">将 vCenter 添加到站点需要哪些信息？</block>
+  <block id="ddb5e1095980894f2fb0d0dfd36e5a01" category="list-text">具有所需权限的 vCenter 帐户的凭据（请参阅 <block ref="0a23d475349d8b59d7b1d04d622e5f7f" category="inline-link-macro-rx"></block>）</block>
+  <block id="03c874a37af5de992c0d9ad7310e9c2b" category="list-text">用于访问您的 vCenter 的安全证书（支持自签名或 CA 颁发的证书）</block>
+  <block id="4b6f54012db0eaab6da13597466b9cb4" category="inline-link-macro">在 Disaster Recovery 中添加站点</block>
+  <block id="19da781ad1ff6faedec1d5d08e809ef1" category="paragraph">有关步骤，请参见 <block ref="983f959211bf5a17b19f7580e1fa8dc3" category="inline-link-macro-rx"></block>。</block>
+  <block id="0e4af546d95c84703de8b32deb7d430f" category="paragraph-title">Disaster Recovery 发现 vCenter 或 Kubernetes 环境的频率如何？</block>
+  <block id="f3615b45c7ee008a57e9d7cd91ddf94b" category="paragraph">默认情况下，Discovery 每 24 小时运行一次；您可以自定义计划以适应您的环境。最小间隔为 30 分钟，最大间隔为 24 小时。NetApp 建议先执行一些手动发现以获取最新信息，然后将计划设置为自动运行。新添加或删除的资源将在下一次计划或手动发现时被识别。</block>
+  <block id="ace9c670964180ada43847433df374b2" category="paragraph-title">受保护和未受保护的资源是否可以托管在同一个数据存储库中？</block>
+  <block id="824d4f4288bf4634cd19c7faa7e8073d" category="paragraph">不可以。在同一数据存储区上托管受保护和未受保护的虚拟机可能会导致问题。也就是说，如果数据存储进行了故障转移，则故障转移后，其上的任何未受保护的虚拟机都不再存在于源处，并且 Disaster Recovery 将不会在故障转移站点启动它们。</block>
+  <block id="88e9b940c9ea3645df4ac3421569e9af" category="paragraph">在部署 Disaster Recovery 之前，应组织资源，以便受保护和未受保护的工作负载使用单独的数据存储子集，并确保单个数据存储不受多个复制计划的保护。</block>
+  <block id="24408a3793e151cfbb91861a413159c6" category="section-title">复制和保护</block>
+  <block id="7218aa5b5ed515da57d66c69fbbaa93f" category="paragraph-title">我应该使用哪种 SnapMirror 复制策略？</block>
+  <block id="dd0421c134e490440d04e91bf0ccb6ec" category="paragraph">如果您计划使用平台托管（ONTAP 托管）备份，请使用 *MirrorAll* 策略。*MirrorVault* 和 *Asynchronous* 是可接受的替代方案，但必须确保在故障转移或故障回复期间选择的快照在源卷和目标卷上都存在，否则操作将失败并出现"未找到通用快照"错误。*MirrorLatest* 不建议使用，因为它仅为故障转移留下一个通用快照。对于 NetApp Disaster Recovery 管理的 SnapMirror 关系，请勿在服务之外为其计划更新，因为 NetApp Disaster Recovery 负责管理复制计时。</block>
+  <block id="31e6e9e908e6c5f7da40636171aef75d" category="paragraph-title">我可以将现有 SnapMirror 关系用于灾难恢复吗？</block>
+  <block id="cb3c6f536437a2202a725d6f719e2dd8" category="paragraph">是。如果受保护数据存储的源卷和目标卷之间已存在 SnapMirror 关系，灾难恢复将对所有复制操作使用该关系，而不是创建新关系。</block>
+  <block id="19f59b74448f6a27519db281a44e4b12" category="section-title">迁移</block>
+  <block id="2b2c519a9c09c9a357daee65f49d229d" category="paragraph-title">除了灾难恢复之外，Disaster Recovery 还支持迁移吗？</block>
+  <block id="37fca13c16336a96bde58435050fff09" category="inline-link-macro">将应用程序迁移至其他站点</block>
+  <block id="09ce2ef05faf266611a114b984051541" category="paragraph">是的。您可以使用为迁移配置的复制计划，将 VMware 应用程序从源站点迁移到另一个站点。启动迁移后，服务会每 30 分钟验证一次迁移是否按计划进行；您可以在“作业监控”中监控进度。目前不支持对基于 Kubernetes 的工作负载进行迁移。请参见 <block ref="5e54248757725961ec4fdf0f2bd5956a" category="inline-link-macro-rx"></block>。</block>
+  <block id="8899c9b7dbe2a21cc0d14f57154212bc" category="section-title">故障转移和测试</block>
+  <block id="f270c3437db50c6ab0f1cd2d524b9353" category="paragraph-title">我可以在不影响生产工作负载的情况下测试灾难恢复计划吗？</block>
+  <block id="2111cf6f7e1f104e2f5480c0917138d8" category="paragraph">可以。在测试故障转移期间，Disaster Recovery 将从选定快照的新 FlexClone 卷创建临时虚拟机，并将临时 FlexClone 支持的数据存储映射到 ESXi 主机。这不会消耗额外的物理容量，不会修改原始源卷，也不会中断 SnapMirror 关系或生产工作负载，这些工作负载将继续正常复制。测试完成后，使用 *清理故障转移测试* 操作清理测试环境。请参阅 <block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block>。</block>
+  <block id="13bd78008a8970f2cd7112816120687b" category="list-title">故障转移操作期间会发生什么？</block>
+  <block id="46f3aa141f16bc138e1f00fb0da83c76" category="list-text">如果选择了最新快照，它将执行 SnapMirror 更新以复制最新更改。</block>
+  <block id="07fd0855bebd759d41e85a0b05078e7a" category="list-text">根据快照选择，活动文件系统将恢复到指定的快照。</block>
+  <block id="1ec6edd46294d0e089f9adceea567630" category="list-text">数据存储区已创建并挂载到 VMware 或 VMC 集群或主机（VMFS 数据存储区也会将 iGroup 映射到每个 LUN）。</block>
+  <block id="8471333abec977717f9935bb2208c101" category="list-text">目标虚拟机根据资源组中的引导顺序开机。</block>
+  <block id="b53b9b42d28508f30ca3ea4520d0ad26" category="list-text">如果源 vCenter 仍处于活动状态，则正在进行故障转移的源端虚拟机将关闭。</block>
+  <block id="4eb42964047d17f6c54d43db314dc032" category="list-text">任何应用程序一致性 VM 都将取消静默。</block>
+  <block id="64876338f43a7dddf94cde5d886c3752" category="list-text">如果源 vCenter 和 ONTAP 集群仍处于活动状态，则系统会创建一个反向 SnapMirror 关系，以将更改复制回原始源站点（除非选择了 *Skip protection*）。</block>
+  <block id="d5c7034f2fc9b34dec2f07e83623c94e" category="paragraph-title">是否可以在故障转移期间自定义虚拟机的引导顺序？</block>
+  <block id="363217ec7b97809e77b8e759c09a5964" category="paragraph">可以。默认情况下，所有虚拟机并行启动，但可以为每个虚拟机分配一个顺序编号（例如 1、2、3）来控制启动顺序，也可以将相同的编号分配给多个虚拟机以同时启动。您还可以为每个虚拟机设置启动延迟（0–10 分钟）以错开启动时间，这有助于确保高优先级虚拟机在低优先级虚拟机启动之前已处于运行状态。</block>
+  <block id="6d80a3efb80520f47b63dc279e1bea3d" category="section-title">故障回复</block>
+  <block id="c199f96c732dffb896730ae4fc9b6803" category="paragraph-title">什么是故障回退过程，何时应使用它？</block>
+  <block id="44f12c565dbce73394bd694616ce9ac1" category="paragraph">故障回切在灾难解决后将操作返回到原始源站点。从已故障切换到目标的关系开始，NetApp Disaster Recovery 将任何更改重新同步回原始源 VM 或 Kubernetes 集群，然后再反转复制方向。流程：</block>
+  <block id="b2250b6519a4f056a25ea4c84fdd42f2" category="list-text">对恢复的站点执行合规性检查。</block>
+  <block id="079b36e4b1109aa24bc458955bdfafa5" category="list-text">刷新已恢复站点中每个 vCenter 集群的 vCenter 信息。</block>
+  <block id="1744b2e57532714a63aa65b88bee6b1f" category="list-text">在目标站点上，关闭并注销虚拟机，并卸载卷。</block>
+  <block id="fc1352d18c266f99fad69758b52d0e51" category="list-text">中断原始源上的 SnapMirror 关系，使其变为读/写状态。</block>
+  <block id="42db61736fd1d2f0df54f85c28fa9872" category="list-text">重新同步 SnapMirror 关系以反转复制方向。</block>
+  <block id="12379932aa978e14cd6d76fa825133c8" category="list-text">启动并注册源虚拟机，并在源虚拟机上挂载卷。</block>
+  <block id="4e76033871d8eb52e7a46330cc531bd8" category="inline-link-macro">将应用程序回切至原始源</block>
+  <block id="d0ee1332bfe1d2dcc14bb8e0f23a1bc0" category="paragraph">请参阅 <block ref="d92574bd6530d8f939e71dda0e2a850b" category="inline-link-macro-rx"></block>。</block>
+  <block id="13c907a4d0954aa1ae2608b978d9eb36" category="section-title">监控、报告和管理</block>
+  <block id="70dd6703bc7baad3986554a3a674ad0e" category="paragraph-title">如何检查站点和复制计划的运行状况？</block>
+  <block id="ca8a545217faa1b5ecb6c20f5c18f44b" category="inline-link-macro">查看灾难恢复计划运行状况</block>
+  <block id="dbb7ffb8d61f39175256e59995019d34" category="paragraph">使用 Disaster Recovery *Dashboard* 查看站点和计划是否正常、断开连接或降级；查看最近的警告和失败的作业；识别受保护和未受保护的工作负载；并一目了然地查看容量。请参阅 <block ref="274730a0525c7241e4e1e90adaacaa61" category="inline-link-macro-rx"></block>。</block>
+  <block id="294136b6dea02c21775f4a0d2840d61b" category="paragraph-title">如何监控或取消作业？</block>
+  <block id="dfd1782d3d07756f9468409f50dc7e64" category="inline-link-macro">监视灾难恢复作业</block>
+  <block id="bfe5df883bfdbcba46f8f1fa4a9ec38c" category="paragraph">使用 *Job monitoring* 来查看作业时间戳、状态和发起者（或"系统"，如果 Disaster Recovery 启动了它）。您可以从"操作"菜单中取消"正在进行"或"已排队"的作业，这在作业停滞或需要优先执行其他操作时非常有用。请参阅 <block ref="29bb3ef1ff285e3d3f2d4c33e53aff20" category="inline-link-macro-rx"></block>。</block>
+  <block id="364c3401bb1483aafb7ac1c3e6980874" category="paragraph-title">有哪些报告可用，以何种格式提供？</block>
+  <block id="f2f0e5b443a8d91e661e3cea9383b9dd" category="inline-link-macro">在 Disaster Recovery 中创建报告</block>
+  <block id="6945173f0edcde5ee35ab045a8d2e7c6" category="paragraph">您可以生成适用于 VMware、Kubernetes 或所有工作负载的报告，包括复制计划详细信息、合规性状态和作业摘要。报告可以下载为 PDF、HTML 或 JSON 文件。它们涵盖一到七天的时间段。有关详细信息，请参见 <block ref="5bffefa9db1727e92010e150d30d9a1b" category="inline-link-macro-rx"></block>。</block>
+  <block id="344e4080c182fb26bcaae9b4aafcff09" category="section-title">Kubernetes 特定问题</block>
+  <block id="6c529b0fa4de29d8b96719f5eb415629" category="paragraph-title">什么是 AppVault？</block>
+  <block id="3d6bb738851a3bfae62f8c75b1ffb531" category="paragraph">AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。</block>
+  <block id="2f5122e05c45ffd052c98ecc0e6d46cf" category="list-text">通过 Amazon Web Services (AWS) Marketplace、Azure Marketplace 或 Google Cloud Marketplace 购买按需付费 (PAYGO) 订阅。此许可证允许您购买固定受保护容量许可证，而无需任何长期承诺。</block>
+  <block id="3339edb028f501d54393ca849ca0f55b" category="admonition">NetApp Disaster Recovery 费用基于源站点上数据存储的已用容量（当至少有一个虚拟机或 Kubernetes 资源具有复制计划时）。故障转移数据存储的容量不包含在容量限额中。对于 BYOL，如果数据超出允许的容量，则在您获得额外的容量许可证或在 NetApp Console 中升级许可证之前，服务中的操作将受到限制。</block>
 </blocks>

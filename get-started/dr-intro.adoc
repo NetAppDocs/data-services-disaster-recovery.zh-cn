@@ -93,7 +93,7 @@ IMPORTANT: 一些版本包括技术预览。 NetApp不会向您收取任何预�
 您可以使用以下许可证类型：
 
 * 注册即可获得 30 天免费试用。
-* 通过 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 购买即用即付 (PAYGO) 订阅。此许可证使您能够购买固定保护容量许可证，而无需任何长期承诺。
+* 通过 Amazon Web Services (AWS) Marketplace、Azure Marketplace 或 Google Cloud Marketplace 购买按需付费 (PAYGO) 订阅。此许可证允许您购买固定受保护容量许可证，而无需任何长期承诺。
 * 自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console中激活 BYOL。
 
 
@@ -104,7 +104,7 @@ Disaster Recovery 的许可基于受保护 ONTAP 卷上托管的数据量。该�
 受保护的卷可以托管许多虚拟机。有些可能不属于NetApp Disaster Recovery资源组。无论如何，该卷或 LUN 上所有虚拟机消耗的存储都将用于满足许可证最大容量要求。
 
 
-NOTE: 当至少有一个虚拟机具有复制计划时， NetApp Disaster Recovery费用基于源站点上数据存储区的已用容量。故障转移数据存储区的容量不包含在容量限额内。对于 BYOL，如果数据超出允许的容量，服务中的操作将受到限制，直到您获得额外的容量许可证或在NetApp Console中升级许可证。
+NOTE: NetApp Disaster Recovery 费用基于源站点上数据存储的已用容量（当至少有一个虚拟机或 Kubernetes 资源具有复制计划时）。故障转移数据存储的容量不包含在容量限额中。对于 BYOL，如果数据超出允许的容量，则在您获得额外的容量许可证或在 NetApp Console 中升级许可证之前，服务中的操作将受到限制。
 
 有关设置NetApp Disaster Recovery许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
 
