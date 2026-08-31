@@ -1,0 +1,23 @@
+= 改进的 SnapMirror Snapshot 管理
+:allow-uri-read: 
+
+
+
+
+[[improved-snapmirror-snapshot-management]]
+=== 改进的 SnapMirror Snapshot 管理
+
+现在，您可以使用最新的快照触发故障转移，这是不拍摄新快照时的首选方法。
+
+选择特定的快照基线时，默认情况下，SnapMirror 传输快照是隐藏的。这是因为它们可能在故障转移过程中被删除，导致由于"未找到公共快照"错误而无法在故障转移后重新保护工作负载。您仍然可以使用这些快照，但必须完成额外的确认提示以确认风险。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移到远程站点"^]。
+
+
+
+[[other-improvements]]
+=== 其他改进
+
+* 为提高测试故障转移工作流的弹性，进行了一些小的改进。
+* 已更正添加脚本时的验证错误。
+

@@ -1108,13 +1108,10 @@
   <block id="302bf3ef5d8e942b185e4b4d03884ff4" category="section-title">故障转移测试后清理测试环境</block>
   <block id="b22e9cc3eebab01136ffe8d3f7e201ca" category="paragraph">故障转移测试完成后，您应该清理测试环境。此过程将从测试位置、FlexClone 和临时数据存储区中删除临时虚拟机。</block>
   <block id="ce68649418f9a08c1ca788541d81a5fc" category="section-title">将源站点故障转移到灾难恢复站点</block>
-  <block id="f5a93054f0d69f6d7904ca9d2efa38f0" category="paragraph">故障转移过程涉及以下操作：</block>
   <block id="6682a4ae7387f7df7c334b36315edd16" category="list-text">灾难恢复对目标集群和SnapMirror关系执行预检查。</block>
   <block id="2b56dea239dc4c074a14290431d91d6a" category="list-text">如果您选择了最新的快照，则会执行SnapMirror更新以复制最新的更改。</block>
   <block id="e935faae451901d06e1096c19cac8457" category="list-text">根据快照的选择，活动文件系统将恢复到指定的快照（最新或选定）。</block>
   <block id="85899d140b2c490b9793c31912367209" category="list-text">根据复制计划中捕获的信息创建数据存储并将其安装到 VMware 或 VMC 集群或主机。如果任何数据存储都是 VMFS，则创建一个 iGroup 并将其映射到每个 LUN。</block>
-  <block id="8082ac657e40ca576105ceaf88cbda23" category="list-text">如果源 vCenter 仍处于活动状态，请关闭所有正在进行故障转移的源端虚拟机。</block>
-  <block id="addf2cf8485a908b734a233a37ce94ab" category="list-text">如果源 vCenter 和ONTAP集群仍处于活动状态，请创建反向SnapMirror关系，以便在故障转移状态下将任何更改复制回原始源站点。  SnapMirror关系从目标虚拟机到源虚拟机是相反的。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
   <block id="746c84b1b109b4fcfeb29ff36be21f14" category="paragraph"><block ref="746c84b1b109b4fcfeb29ff36be21f14" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c446892b6c8669077c04a02123055cec" category="admonition">您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。</block>
@@ -1565,7 +1562,6 @@
   <block id="1e42cd2ab50cb43033ac96845f0cbcbf" category="list-text">在右侧，选择“操作”选项 <block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block> 然后*清理故障转移测试*。</block>
   <block id="a6701b6b4f098b920e9ad613536f4135" category="list-text">在“测试故障转移”页面中，输入“清理故障转移”，然后选择“清理故障转移测试”。</block>
   <block id="e27d8a06ee52d6dc3adabdbe1c4e94a7" category="admonition">对于基于数据存储的复制计划，如果您已添加并发现了任何虚拟机，但未提供映射详细信息，则这些虚拟机将包含在故障转移中。故障转移失败后，作业中会发出通知。您必须提供映射详细信息才能成功完成故障转移。</block>
-  <block id="3bb0ada53df5172b3b5e85e4ac853ba0" category="list-text">在故障转移页面中，您可以立即创建一个新的快照，或者选择一个现有的快照作为数据存储的恢复基础。默认值为最新版本。</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">这是系统生成的映射到您的电子邮件的 ID。在*NSS 管理*页面上，您可以显示来自<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜单。</block>
@@ -2028,7 +2024,6 @@
   <block id="bbb1b16486e8f54306a7a02c2ea6a39c" category="admonition">故障转移开始后，您可以在灾难恢复站点的 vCenter 中看到已恢复的虚拟机（虚拟机、网络和数据存储区）。默认情况下，虚拟机将恢复到 Workload 文件夹。</block>
   <block id="cd3ff8e65cebdd7f0aa846632bbebcb2" category="list-text">在下拉菜单中，过滤到 *vCenter* 复制计划。</block>
   <block id="895a527b215871aa5fc33ec6c9b01c15" category="list-text">如果您希望服务在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在 NetApp Disaster Recovery 中将其恢复联机之前在还原的站点上执行其他操作，则此功能非常有用。</block>
-  <block id="baf0b4e105ebbfa84dd088a11896c49a" category="list-text">选择要用于故障转移的快照副本。您可以 *立即拍摄快照* 以创建将复制到目标集群的全新快照，或 *使用最新快照* 以使用目标集群上可用的最新快照。</block>
   <block id="02531ddbf670fbb347701db90d4791ea" category="list-text">输入 "Failover" 确认操作，然后选择 *Failover*。</block>
   <block id="98bf814ae7ba9991db0d5988d6e83219" category="paragraph">您可以在 *Job monitoring* 或 *Replication plans* 中监控作业状态。</block>
   <block id="85c3e85b3061b8da1b16538c49af072b" category="paragraph">资源组可让您将虚拟机、数据存储区或 Kubernetes 应用程序合并到一个单元中。</block>
@@ -2398,7 +2393,6 @@
   <block id="992afcf904b48182f53abedd4c345eb3" category="paragraph">在进行实时故障转移之前，您可以执行测试以验证就绪性。在测试过程中，工作负载保持在线状态。</block>
   <block id="62726f7629b70dfdba92a199bf2d6188" category="paragraph">然后输入"Test failover"并选择 *Test failover*。</block>
   <block id="812a25f47897c42088ce8109b2dc17ab" category="paragraph">如果发生灾难，请按需将您的主要本地 VMware 站点故障转移到另一个本地 VMware 站点或 VMware Cloud on AWS with FSx for NetApp ONTAP。</block>
-  <block id="76ac605ebc55c0714aa7e8ca249cc175" category="paragraph">在进行故障转移之前，将对当前源创建快照并将其复制到当前目标。</block>
   <block id="82692f8686eaa3ddcdc1df8544f4fa9a" category="list-text">如果您希望故障转移继续，即使服务检测到通常会阻止它的错误，请选择*强制故障转移*。</block>
   <block id="8fe77e1d324dab0e88ae83c79f1987ee" category="paragraph">您可以编辑 vCenter 站点名称和类型（本地或 AWS）。</block>
   <block id="bfe95c617e00c3590496c016d8d8b2bf" category="paragraph">您可以按虚拟机或数据存储创建资源组。您可以在创建复制计划时或之后添加它们。</block>
@@ -2554,4 +2548,23 @@
   <block id="3d6bb738851a3bfae62f8c75b1ffb531" category="paragraph">AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。</block>
   <block id="2f5122e05c45ffd052c98ecc0e6d46cf" category="list-text">通过 Amazon Web Services (AWS) Marketplace、Azure Marketplace 或 Google Cloud Marketplace 购买按需付费 (PAYGO) 订阅。此许可证允许您购买固定受保护容量许可证，而无需任何长期承诺。</block>
   <block id="3339edb028f501d54393ca849ca0f55b" category="admonition">NetApp Disaster Recovery 费用基于源站点上数据存储的已用容量（当至少有一个虚拟机或 Kubernetes 资源具有复制计划时）。故障转移数据存储的容量不包含在容量限额中。对于 BYOL，如果数据超出允许的容量，则在您获得额外的容量许可证或在 NetApp Console 中升级许可证之前，服务中的操作将受到限制。</block>
+  <block id="c9dcf9057588b19f1d398446f68f093d" category="admonition">选择特定快照基线时，默认情况下会隐藏 SnapMirror 传输快照，因为它们可能在故障转移过程中被删除。此删除会导致故障转移后由于"未找到公共快照"错误而无法重新保护工作负载。您仍然可以使用 SnapMirror 传输快照，但必须完成额外的确认提示以确认相关风险。</block>
+  <block id="e10cb273323f88df11fadb5507d738a0" category="doc">改进的 SnapMirror Snapshot 管理</block>
+  <block id="f0503ae9f824deb7b1d7d923eccde6cf" category="paragraph">现在，您可以使用最新的快照触发故障转移，这是不拍摄新快照时的首选方法。</block>
+  <block id="904ad73a93f80a63956690821d3e7583" category="paragraph">选择特定的快照基线时，默认情况下，SnapMirror 传输快照是隐藏的。这是因为它们可能在故障转移过程中被删除，导致由于"未找到公共快照"错误而无法在故障转移后重新保护工作负载。您仍然可以使用这些快照，但必须完成额外的确认提示以确认风险。</block>
+  <block id="b55121c9a6dfee22377b715103e30d54" category="paragraph">有关详细信息，请参见 <block ref="0659d04a54310aa1f4f7b2818a7e8b7d" category="inline-link-macro-rx"></block>。</block>
+  <block id="e2725f83c9b13c105b305f08c1ae5aa3" category="section-title">其他改进</block>
+  <block id="c228cd16d1f14f9ba8606b879f59e931" category="list-text">为提高测试故障转移工作流的弹性，进行了一些小的改进。</block>
+  <block id="afb89ab075bef1d8e9fa1a1124a73a26" category="list-text">已更正添加脚本时的验证错误。</block>
+  <block id="91b0db938f6511dad8ea423304795a3a" category="section-title">2026年8月31日</block>
+  <block id="3806c88477c309bbf8c03bd54373594d" category="paragraph">版本 4.3.6P1</block>
+  <block id="c417772661f0dcc86af9bfb25253e775" category="paragraph">故障转移过程涉及以下操作：</block>
+  <block id="2ad49ff1f5df8038d87e4e5f7cb8741e" category="list-text">如果源 vCenter 仍处于活动状态，请关闭正在进行故障转移的所有源端虚拟机的电源。</block>
+  <block id="389083a3b9743d34a289e43d3a45d618" category="list-text">如果源 vCenter 和 ONTAP 集群仍处于活动状态，请创建反向 SnapMirror 关系，以便在故障转移状态下将任何更改复制回原始源站点。SnapMirror 关系从目标虚拟机反向到源虚拟机。</block>
+  <block id="a15a061412d42593895d687f77b6e2a4" category="list-text">选择要用于故障转移的快照副本：</block>
+  <block id="6fb3534aed2b1434680c24a124973105" category="list-text">选择*立即拍摄快照*以创建一个全新的快照，该快照将在故障转移之前复制到目标集群。</block>
+  <block id="c28ac9182cd2d7fd6ffc8d3320efa414" category="list-text">选择*Use latest snapshot*以使用目标集群上可用的最新快照。</block>
+  <block id="3402d8d43abf71995137392eb9b660bc" category="list-text">选择*Select*可查看按近期排序的快照列表。</block>
+  <block id="2c9e00774620c5f83c48800d39a8e3a1" category="list-text">选择 *Take snapshot now* 以创建将复制到目标集群的全新快照。</block>
+  <block id="15816348d7ed6eb8ac7c5354e5a1aa49" category="list-text">如果您希望 Disaster Recovery 在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在将还原的站点恢复联机之前在 NetApp Disaster Recovery 中对其执行其他操作，此功能非常有用。</block>
 </blocks>
