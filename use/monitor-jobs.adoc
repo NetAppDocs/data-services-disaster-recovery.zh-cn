@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-监控 NetApp Disaster Recovery 作业以跟踪其状态和进度。
+监控 NetApp Disaster Recovery 作业以查看其历史记录、状态和详细信息。跟踪作业状态和进度，可让您在失败或停滞的操作影响恢复就绪状态之前及时发现这些操作。
 
 
 

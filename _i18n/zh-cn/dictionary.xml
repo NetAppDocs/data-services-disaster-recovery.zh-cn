@@ -2406,7 +2406,6 @@
   <block id="57428a711cfa3bd5fc08ccca3ebd74d1" category="admonition">创建复制计划、在向导中设置重复周期并启动迁移后，Disaster Recovery 将每 30 分钟执行一次验证，以确认迁移是否正在按计划进行。您可以在 Job Monitor 页面中监控进度。</block>
   <block id="0e00059b7ae89bb2943107122795d39b" category="paragraph">在启动迁移之前，请创建复制计划并将其配置为迁移。然后，*Migrate* 选项将显示在操作菜单中。</block>
   <block id="c3ddf9c129ec78b8669259e50ef2b80b" category="list-text">在文本框中输入"Migrate"以确认操作，然后选择 *Migrate*。</block>
-  <block id="f1f2884d80fd0cf77d91665857fb19fd" category="paragraph">监控 NetApp Disaster Recovery 作业以跟踪其状态和进度。</block>
   <block id="119ecc97f4025cf7e813b10479d31164" category="list-text">查看作业，包括其时间戳和状态。</block>
   <block id="3fe84e5e3b6ca68b66ef1e1ff0d7b114" category="list-text">要查看作业的详细信息，请选择其行。要下载作业详细信息以进行离线审核，请选择操作菜单，然后选择**下载作业详细信息**。</block>
   <block id="f917d3f114d10bd11fbc835ef9241353" category="admonition">当您查看作业详细信息时，Disaster Recovery 将显示启动作业的用户。如果责任方列为"system"，则表示该作业由 Disaster Recovery 启动。</block>
@@ -2567,4 +2566,5 @@
   <block id="3402d8d43abf71995137392eb9b660bc" category="list-text">选择*Select*可查看按近期排序的快照列表。</block>
   <block id="2c9e00774620c5f83c48800d39a8e3a1" category="list-text">选择 *Take snapshot now* 以创建将复制到目标集群的全新快照。</block>
   <block id="15816348d7ed6eb8ac7c5354e5a1aa49" category="list-text">如果您希望 Disaster Recovery 在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在将还原的站点恢复联机之前在 NetApp Disaster Recovery 中对其执行其他操作，此功能非常有用。</block>
+  <block id="d4fd90d5c03a49a34d58a0210e1f6a1b" category="paragraph">监控 NetApp Disaster Recovery 作业以查看其历史记录、状态和详细信息。跟踪作业状态和进度，可让您在失败或停滞的操作影响恢复就绪状态之前及时发现这些操作。</block>
 </blocks>
