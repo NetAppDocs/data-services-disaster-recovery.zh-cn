@@ -14,6 +14,16 @@ summary: 查看灾难恢复报告可以帮助您分析灾难恢复准备情况�
 [role="lead"]
 使用 NetApp Disaster Recovery 报告评估灾难恢复准备情况。报告提供了有关复制计划的详细信息，包括每个计划涵盖的资源组、虚拟机、Kubernetes 集群和数据存储库的数量。报告还显示合规性状态、作业摘要和备份设置，如恢复点目标 (RPO) 和保留计数。
 
+使用报告在事件发生前评估复制合规性和恢复历史记录，以便识别保护差距。
+
+
+TIP: link:dashboard-view.html["您可以在 Dashboard 中按较高级别查看保护状态，也可以在"工作负载"页面中按工作负载查看保护状态。"]
+
+
+
+[[about-disaster-recovery-reports]]
+== 关于灾难恢复报告
+
 您可以下载 PDF、HTML 或 JSON 格式的报告。
 
 报告下载链接在生成后六小时内有效。

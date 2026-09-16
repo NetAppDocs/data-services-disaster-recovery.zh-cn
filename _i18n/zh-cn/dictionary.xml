@@ -1145,7 +1145,6 @@
   <block id="b5e92408332ec8fe388fc403b03249bf" category="section-title">查看虚拟机信息</block>
   <block id="3849da8702f93c4c73b8b2d18d7d3b4d" category="list-text">选择“虚拟机”。</block>
   <block id="2e91c6382e139b4d3b0307917725df9c" category="list-text">查看虚拟机信息。</block>
-  <block id="74b7e5a581d3f8be472f23c9f533948e" category="summary">使用NetApp Disaster Recovery，您可以将源站点上的 VMware 应用程序迁移到另一个站点。</block>
   <block id="e149f52ef3987c9798fc0b5e92f0d94c" category="doc">使用NetApp Disaster Recovery将应用程序迁移到另一个站点</block>
   <block id="c1845ff7083c49cb3022e9cb477f265b" category="summary">NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。您可以监控所有灾难恢复工作并确定其进度。</block>
   <block id="45b443b335251cfe162de8423d5b2021" category="doc">监控NetApp Disaster Recovery作业</block>
@@ -1880,7 +1879,6 @@
   <block id="265b5db3aaacf91c1fc792d5022d95b7" category="paragraph">如果使用 VMware Cloud SDDC，则适用以下附加先决条件：</block>
   <block id="9aa66a327a3181a340b88cc81b7ac070" category="summary">在使用 NetApp Disaster Recovery 之前，请确保您的 Kubernetes 集群满足要求。</block>
   <block id="90e2c61883b995611cf3a865b7eefbbd" category="doc">NetApp Disaster Recovery 的 Kubernetes 集群要求</block>
-  <block id="189edd980c131edf9d5711ed1e7b1d73" category="paragraph">灾难恢复支持 <block ref="ee3b2775270ba891227fbdcc3618242b" category="inline-link-macro-rx"></block>。</block>
   <block id="85eb427901278daf26f132cb3e076914" category="section-title">Kubernetes 集群</block>
   <block id="3db879f685c32ec1d391ee151f8cbbb3" category="paragraph">对于每个 Kubernetes 集群，请确保：</block>
   <block id="b6a170e7cec78934ee3380877053401e" category="list-text">您对每个 Kubernetes 集群具有管理<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block>员访问权限。</block>
@@ -1892,7 +1890,6 @@
   <block id="92601eac5d4e753f0d60f0e5ba9a27f1" category="inline-link-macro">在 _each_ cluster^ 上安装 Trident 操作员。</block>
   <block id="bd2bdca3f6b8a3f02b562505d50b41e2" category="paragraph"><block ref="bd2bdca3f6b8a3f02b562505d50b41e2" category="inline-link-macro-rx"></block></block>
   <block id="ed5e6801d7e087345895d132f7e9d2dc" category="paragraph">如果您已经安装了 Trident，请使用命令<block ref="8dd3e3fab389d3d56b4dbea697d52e91" prefix=" " category="inline-code"></block>验证安装。如果安装成功，您将看到 Trident 控制器、节点 pods（DaemonSet），并且操作员的状态在几分钟后处于<block ref="5bda814c4aedb126839228f1a3d92f09" prefix=" " category="inline-code"></block>状态。</block>
-  <block id="33c1ffdebe58ba196b293c23e0e2f697" category="section-title">配置 ONTAP 后端和 Trident StorageClass</block>
   <block id="ed6eabebedff09350cdabab556887c62" category="section-title">创建 Kubernetes 密钥</block>
   <block id="019a873bad5bd15622bc515c6deabc69" category="paragraph">在该命名空间中创建一个 Kubernetes 密钥：</block>
   <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
@@ -2312,7 +2309,6 @@
   <block id="7bb121cdcae2c2832838e2f290a86bf5" category="list-text">所有由 NetApp Disaster Recovery 管理的 VMware 集群必须使用 ONTAP 卷来托管要保护的虚拟机。</block>
   <block id="dfb6f3404d01c2320e91dc82c3743342" category="list-text">将 VMware Cloud SDDC 与 Amazon FSx for NetApp ONTAP 实例链接。请参阅<block ref="703588ab376df01744e79984f081d5fd" category="inline-link-rx"></block>。</block>
   <block id="652475d7336cd836411ec7d566842d60" category="paragraph">在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群。保护通常适用于源集群和单独的目标集群，因此请在成对的每个集群上完成这些过程。</block>
-  <block id="9ac66e8e2bbbe7b9901c0c80b4c7ed2e" category="paragraph">开始之前，请确保已配置 Kubernetes 集群和 ONTAP 集群。</block>
   <block id="0a4e25753cea4f154af0469ab230e9ba" category="list-text">运行安装命令时，可以使用 Helm 3。</block>
   <block id="538e8cc604d9acb8c54b11be5d28123e" category="list-text">**Management LIF**：由 Trident 用于管理 API 访问。</block>
   <block id="e8fe43ecd8f37d6c3b374d6267a0e1bc" category="list-text">**数据 (NFS) LIF**：用于卷的 NFS 流量。</block>
@@ -2348,7 +2344,6 @@
   <block id="5d6353688a496fa47de65c195b8ac3bc" category="paragraph">在故障恢复中，NetApp Disaster Recovery 会在反转复制方向之前将任何更改复制（重新同步）回原始源虚拟机。此过程在关系故障切换到目标后开始，涉及以下步骤：</block>
   <block id="44d4c6d5260eb624900ebb869b4a4939" category="paragraph">如果使用基于数据存储的保护，虚拟机可能会在故障转移期间添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的其他映射信息。要编辑资源映射，请参阅 <block ref="aae3ec9b67319c36c78ebcd18b670ec7" category="inline-link-macro-rx"></block>。</block>
   <block id="a1502915916db4624a57959d103aa608" category="list-text">确定要回切的复制计划。选择*操作*选项<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>，将鼠标悬停在*恢复*上，然后选择*故障回切*。</block>
-  <block id="dfd07f1f5209a167efdb80c6f3885d11" category="paragraph">如果发生灾难，请将您的主要本地 VMware 站点故障切换到其他本地 VMware 站点或 VMware Cloud on AWS。您还可以提前测试故障转移过程，以确认恢复是否按预期工作。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">关于此任务</block>
   <block id="634ed35083de0dc9fd6ca402130b2364" category="paragraph">在故障切换期间，NetApp Disaster Recovery 默认使用最新的 SnapMirror 快照副本，但您可以从时间点快照中选择特定的快照（根据 SnapMirror 的保留策略）。如果最近的副本遭到破坏（例如在勒索软件攻击期间），请使用时间点选项。</block>
   <block id="992afcf904b48182f53abedd4c345eb3" category="paragraph">在进行实时故障转移之前，您可以执行测试以验证就绪性。在测试过程中，工作负载保持在线状态。</block>
@@ -2379,12 +2374,10 @@
   <block id="260df5358fdc3f07758e38ffb3a77c19" category="list-text">选择报告的*文件类型*（PDF、HTML 或 JSON）和*时间段*（过去一至七天）。</block>
   <block id="ba11bffa8084f9c85a1963af8d050a3f" category="summary">资源组允许您将依赖资源组织成满足您要求的逻辑组。</block>
   <block id="6e21e837facbd5d06523d904bcd2334d" category="doc">在 NetApp Disaster Recovery 中创建资源组</block>
-  <block id="1679edd6924beab7d71a5390cf59b854" category="paragraph">向站点添加资源后，创建资源组以将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以为一个应用程序对虚拟机进行分组，或对共享类似层的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟引导顺序。</block>
   <block id="868ae8e25cad278cb95070092e1b5058" category="admonition">每个资源组可以包括一个或多个虚拟机、数据存储或 Kubernetes 集群。虚拟机将根据您将它们包含在复制计划中的顺序开机。您可以通过向上或向下拖动资源组列表中的虚拟机或数据存储来更改顺序。</block>
   <block id="7ef9d7f4e6bf5f38edfd03606bf493da" category="paragraph">NetApp Disaster Recovery 通过复制资源组中托管虚拟机的底层 ONTAP 卷和 LUN 来保护虚拟机。为此，系统查询 vCenter 以获取资源组中托管虚拟机的每个数据存储的名称。NetApp Disaster Recovery 随后标识托管该数据存储的源 ONTAP 卷或 LUN。所有保护均在 ONTAP 卷级别使用 SnapMirror 复制来执行。</block>
   <block id="03c66aa95215fd945ab9f6521baef55e" category="paragraph">如果资源组中的虚拟机托管在不同的数据存储区上，NetApp Disaster Recovery 将使用以下方法之一来创建 ONTAP 卷或 LUN 的数据一致性快照。</block>
   <block id="183b61458af19e5b813be061374378cf" category="list-text">对*资源类型*进行分类。默认情况下，选择"包括所有"，表示多种资源类型。</block>
-  <block id="372899929926faabc33dabdd64a2ecc2" category="paragraph">在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。同时添加生产站点和灾难恢复站点。</block>
   <block id="11a59530affce2463e250e21bdbcc29c" category="summary">有关适用于 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 的常见问题。</block>
   <block id="6782fe55d65b471e3f7ea9c8c6c97abb" category="paragraph">本常见问题解答回答了有关 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 常见问题。本文重点介绍在实施灾难恢复配置以及管理复制、迁移、故障转移和故障恢复操作时所涉及的概念、术语、系统行为和约束条件。</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">入门指南</block>
@@ -2682,4 +2675,53 @@
   <block id="808c9323236f2ed48bff12970a5f1c49" category="list-text"><block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block></block>
   <block id="005c3fd782ef9a703a22a6405758e8d0" category="sidebar">查看计划运行状况和保护状态</block>
   <block id="8b2d90137c20f81f88555e65f6c0467a" category="sidebar">管理资源转换模板</block>
+  <block id="870caf8c63b38657c754a6ae2bfdccfa" category="list-text">在配置 Kubernetes 集群要求之前，请确保已配置 Kubernetes 集群和 ONTAP 集群。</block>
+  <block id="6fc27d93b674dc2181e0f20fed00ba74" category="list-text">确保使用受支持的 Kubernetes 版本。Disaster Recovery 支持 <block ref="ee3b2775270ba891227fbdcc3618242b" category="inline-link-macro-rx"></block>。</block>
+  <block id="ef591b016875b0c367446c1b32d0cb33" category="inline-link-macro">Trident Protect 的权限</block>
+  <block id="6a8721c6d84b89d600d6f9f71aee3cd0" category="list-text">配置适当的 <block ref="2e82bab41ca83cccc3d3234ff27d0186" category="inline-link-macro-rx"></block>。</block>
+  <block id="da4a61950000370345af09d5653606e5" category="section-title">NetApp Console 角色</block>
+  <block id="000b23326681f264355080f1b40f0c3a" category="inline-link-macro">确保您具有正确的 Console 角色，以便 Disaster Recovery 执行发现、故障转移和其他任务。</block>
+  <block id="633d8dca168073e743492024f682a468" category="paragraph">执行 Trident Protect 和 Kubernetes 配置后，<block ref="75e0472282f0516ba7697bd410d51691" category="inline-link-macro-rx"></block></block>
+  <block id="95318750d34cc904bb16702f9a790ce8" category="summary">使用 NetApp Disaster Recovery 时，请确保已配置正确的 Trident Protect 配置，以发现和注册您的 Kubernetes 集群。</block>
+  <block id="4fb98e5696b973e4f7e26f71b1dc5572" category="doc">配置 Trident Protect 权限以用于 NetApp Disaster Recovery</block>
+  <block id="510f7e6ce9bfcf6223b479b6d2b5bf57" category="section-title">Trident Protect 集群权限</block>
+  <block id="e63fae19e777b24af95d46b917748920" category="paragraph">以下集群权限需要与 Disaster Recovery 配合使用：</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">权限</block>
+  <block id="86408593c34af77fdd90df932f8b5261" category="cell">功能</block>
+  <block id="075beeeea7e84e77a2ecc9b64b6c9276" category="cell">dr:trident_cluster-view</block>
+  <block id="fccae372786983126b9675ff75dfdbc7" category="cell">查看 Disaster Recovery 使用的已注册 Kubernetes 集群和集群清单</block>
+  <block id="33c1f6a282a123d4cb586cdfc39796ba" category="cell">dr:trident_cluster-create</block>
+  <block id="2ef43485b730a57e6d07cff8f3000fb5" category="cell">注册 Kubernetes 集群并生成 setup 命令。</block>
+  <block id="cfb270fe2ed558fee43873a56ed2de55" category="cell">dr:trident_cluster-update</block>
+  <block id="a22b7cbab8eae9790586bc03c12fbe0c" category="cell">修改已注册的 Kubernetes 集群。</block>
+  <block id="d5f936a20f2376f49e243e2b6ea3fcea" category="cell">dr:trident_cluster-delete</block>
+  <block id="1d8144283609007a3d4c341c419c349a" category="cell">删除已注册的 Kubernetes 集群。</block>
+  <block id="33ecd3ae9b8df84f4271d342f6cdd95c" category="cell">dr:trident_cluster-refresh</block>
+  <block id="8acf065073d123ab8eeb78e96905246f" category="cell">运行 Trident 集群发现。</block>
+  <block id="9cd9d05d35ebe6942d491e995eb85059" category="section-title">Trident Protect AppVault 权限</block>
+  <block id="8c7283f469c713d4e5f2e9d03fffb21f" category="paragraph">灾难恢复需要以下 AppVault 权限：</block>
+  <block id="29b70ab80a4f3aecbd88e1aa39334b52" category="cell">dr:trident_appvault-view</block>
+  <block id="4e6887c24ac5bb7b528699f806376f21" category="cell">查看 Trident AppVaults 和云/对象存储发现数据，这些数据是 AppVault 设置所必需的。</block>
+  <block id="e525b1d33e3251e3b61c77ec8aa4b345" category="cell">dr:trident_appvault-create</block>
+  <block id="3faa34364f354654f4330d1023ab4196" category="cell">通过 Disaster Recovery 创建 Trident AppVault 自定义资源。</block>
+  <block id="c473474f3a32f5ce35cebb7bac6ea99a" category="section-title">Trident Protect 凭据权限</block>
+  <block id="01bac8a90b2b6c564c7d063b834773a7" category="paragraph">以下凭据权限是 Disaster Recovery 所必需的：</block>
+  <block id="57dea2516cdc11e5173ac0e824c65ed2" category="cell">dr:credential-view</block>
+  <block id="d53f4c1b208e8e382831c9ae73eee559" category="cell">查看凭据元数据并列出用于 AppVault 设置的 ONTAP S3/StorageGRID 存储桶。</block>
+  <block id="c0e93404607f0eea5f02a73c75225bbf" category="cell">dr:credential-create</block>
+  <block id="8c5965f17b42f7518125742451c79924" category="cell">注册凭据，包括 ONTAP S3 和 StorageGRID。</block>
+  <block id="c237c22374e72d1ba1788c15ddb6fe60" category="cell">dr:credential-update</block>
+  <block id="d8d15ad255eb96a9222a8f0f61c9f3a2" category="cell">更新凭据，包括 ONTAP S3 和 StorageGRID。</block>
+  <block id="48b722a9b0d9600d166bf0f2b2a64f8b" category="cell">dr:credential-delete</block>
+  <block id="c84e57eedd140baa3e64f5ac5e7f1871" category="cell">删除包括 ONTAP S3 和 StorageGRID 在内的凭据。</block>
+  <block id="ca2825c2ddf78928b38c75787c2ca73d" category="paragraph">当发生灾难或其他类似事件时，使用 NetApp Disaster Recovery 来恢复关键工作负载，以便应用程序可以通过计划的映射在灾难恢复站点恢复。</block>
+  <block id="77cb0faa6eb8788ec91dedae1de2f3f9" category="paragraph">灾难恢复还支持测试故障转移。执行测试有助于您熟悉该过程，并确认恢复是否按预期运行。</block>
+  <block id="fbddadf2edd321dc064fe81274b6ff1e" category="paragraph">NetApp Disaster Recovery 支持将 VMware 应用程序从源站点迁移到辅助站点。例如，如果基础设施发生更改，使目标环境能够承担生产操作，则可以使用迁移功能。</block>
+  <block id="4e3e73573935056375c83edc2d6f5bfe" category="paragraph">使用 NetApp Disaster Recovery，您可以使用 SnapMirror 复制将 VMware 应用程序从源站点复制到云中的远程灾难恢复站点。使远程站点的恢复数据保持最新，可确保受保护的应用程序能够从最新的 SnapMirror 快照中还原。</block>
+  <block id="6187f0da8e0aee4b4df945d5f7c68b0f" category="paragraph">使用报告在事件发生前评估复制合规性和恢复历史记录，以便识别保护差距。</block>
+  <block id="8240e502c7ce5e9805091f5f8c4a3085" category="inline-link-macro">您可以在 Dashboard 中按较高级别查看保护状态，也可以在"工作负载"页面中按工作负载查看保护状态。</block>
+  <block id="18d6539292478681d68b9282daa86220" category="admonition"><block ref="18d6539292478681d68b9282daa86220" category="inline-link-macro-rx"></block></block>
+  <block id="efcf3aea6733a7f1535a22c63a31816e" category="section-title">关于灾难恢复报告</block>
+  <block id="08e23a6b35ef4e66680d353da268fa9d" category="paragraph">向站点添加资源后，您可以创建资源组来将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以对某个应用程序的虚拟机进行分组，或对共享相似层级的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟启动顺序，以确保资源以正确的顺序启动。</block>
+  <block id="0b3812b60ebe3c1059cea904557f00cb" category="paragraph">在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。添加生产站点和灾难恢复站点，以便 Disaster Recovery 可以协调用于恢复的资源。</block>
 </blocks>

@@ -12,7 +12,9 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 [role="lead"]
-如果发生灾难，请将您的主要本地 VMware 站点故障切换到其他本地 VMware 站点或 VMware Cloud on AWS。您还可以提前测试故障转移过程，以确认恢复是否按预期工作。
+当发生灾难或其他类似事件时，使用 NetApp Disaster Recovery 来恢复关键工作负载，以便应用程序可以通过计划的映射在灾难恢复站点恢复。
+
+灾难恢复还支持测试故障转移。执行测试有助于您熟悉该过程，并确认恢复是否按预期运行。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复故障转移管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 

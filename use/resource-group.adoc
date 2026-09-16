@@ -12,7 +12,7 @@ summary: 资源组允许您将依赖资源组织成满足您要求的逻辑组�
 
 
 [role="lead"]
-向站点添加资源后，创建资源组以将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以为一个应用程序对虚拟机进行分组，或对共享类似层的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟引导顺序。
+向站点添加资源后，您可以创建资源组来将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以对某个应用程序的虚拟机进行分组，或对共享相似层级的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟启动顺序，以确保资源以正确的顺序启动。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
