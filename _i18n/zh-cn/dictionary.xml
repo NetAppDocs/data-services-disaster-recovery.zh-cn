@@ -2724,4 +2724,5 @@
   <block id="efcf3aea6733a7f1535a22c63a31816e" category="section-title">关于灾难恢复报告</block>
   <block id="08e23a6b35ef4e66680d353da268fa9d" category="paragraph">向站点添加资源后，您可以创建资源组来将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以对某个应用程序的虚拟机进行分组，或对共享相似层级的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟启动顺序，以确保资源以正确的顺序启动。</block>
   <block id="0b3812b60ebe3c1059cea904557f00cb" category="paragraph">在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。添加生产站点和灾难恢复站点，以便 Disaster Recovery 可以协调用于恢复的资源。</block>
+  <block id="163f4744512c53baf24fa0cfd3a4e497" category="sidebar">所需 Trident 权限</block>
 </blocks>
