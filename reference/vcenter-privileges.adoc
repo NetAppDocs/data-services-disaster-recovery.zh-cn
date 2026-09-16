@@ -12,9 +12,9 @@ summary: vCenter 账户必须具备一组最少的 vCenter 权限，才能使 Ne
 
 
 [role="lead"]
-要使 NetApp Disaster Recovery 执行其服务，vCenter 帐户必须具有最低的 vCenter 权限集。这些权限包括注册和注销数据存储区、启动和停止虚拟机 (VM) 以及重新配置 VM。
+用于 NetApp Disaster Recovery 的 vCenter 帐户必须具有注册和注销数据存储、启动和停止虚拟机 (VM) 以及重新配置 VM 的最低权限集。
 
-下表列出了 Disaster Recovery 与 vCenter 集群接口所需的所有权限。
+下表列出了 Disaster Recovery 使用 vCenter 集群所需的权限。
 
 [cols="1,2,2,3"]
 |===

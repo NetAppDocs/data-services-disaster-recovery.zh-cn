@@ -242,4 +242,4 @@ NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可通过 Net
 == Kubernetes 特定问题
 
 .什么是 AppVault？
-AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。
+AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。您也可以在"设置"页面中管理 AppVaults。

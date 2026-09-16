@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: use/task-appvault.html 
+keywords: disaster recovery, appvault, update credentials, trident protect, kubernetes, edit endpoints 
+summary: 在 Disaster Recovery 中管理 AppVaults 使您能够查看 AppVaults 的连接状态以及 AppVaults 的凭据和端点，从而确保灾难恢复计划的连续性。 
+---
+= 管理 NetApp Disaster Recovery 中的 AppVaults
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Disaster Recovery 工作负载与 Kubernetes 配合使用 AppVault，这是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。管理 AppVaults 使您能够查看 AppVaults 的连接状态以及 AppVaults 的凭据和端点，以确保复制计划的运行状况。
+
+*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
+
+
+
+[[add-an-appvault]]
+== 添加 AppVault
+
+您可以在为 Kubernetes 创建复制计划时添加 AppVault，也可以从设置页面创建一个。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 在 AppVault 卡中，选择 *+ Add AppVault*。
+. 输入 *名称* 并选择 AppVault 应连接到的 *Console agent*。
+. 选择云*提供商*来托管*AppVault*。
+. 根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。
++
+对于 Azure，选择*订阅*、*资源组*和*存储帐户*。
+
++
+对于 AWS、ONTAP S3 和 StorageGRID，选择 *Account* 或 *Credentials* 和 *Bucket*。
+
+. 如果您选择了 ONTAP S3 或 StorageGRID，则可以选择添加凭据。选择 *Add credentials* 以展开选项，然后添加 *Credential name*、*Gateway node FQDN*、*Port* 号、*Access key* 和 *Secret key*。
+. 选择 **Add**。
+
+
+
+
+[[update-appvault-credentials]]
+== 更新 AppVault 凭据
+
+如果您的 AppVault 凭据已更改，请在"设置"页面中进行更新，以确保复制计划的连续性。更新凭据将替换共享此凭据的每个 AppVault 的密钥。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 选择*管理 AppVaults*。
+. 找到要更新的 AppVault。从操作菜单中选择 *Update*。
+. 查看受更改影响的 AppVaults 和复制计划的数量。
+. 输入新的 *Secret key* 和 *Access key*。
+. 选择*Update credentials*以应用更改。
+
+
+
+
+[[edit-an-appvault-endpoint]]
+== 编辑 AppVault 端点
+
+如果与 AppVault 的连接设置已更改，请更新这些设置，以确保 Kubernetes 工作负载复制计划的连续性。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 选择*管理 AppVaults*。
+. 找到要编辑的 AppVault。在操作菜单中，选择*编辑*。
+. 输入您的 AppVault 的新端点。
+. 选择*保存*以应用新端点。
+
+
+
+
+[[delete-an-appvault]]
+== 删除 AppVault
+
+如果您不再需要AppVault，可以将其删除。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 选择*管理 AppVaults*。
+. 找到要删除的 AppVault。从操作菜单中选择*删除*。
+. 在对话框窗口中，选择*删除*以确认操作。
+

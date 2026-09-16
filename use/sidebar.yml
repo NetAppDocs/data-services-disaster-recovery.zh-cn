@@ -2,7 +2,7 @@
 section: use
 title: 使用NetApp Disaster Recovery
 entries:
-- title: 在仪表板上查看灾难恢复计划的运行状况
+- title: 查看计划运行状况和保护状态
   url: "/use/dashboard-view.html"
 - title: 向站点添加资源
   url: "/use/sites-add.html"
@@ -18,6 +18,10 @@ entries:
   url: "/use/failover.html"
 - title: 将应用程序故障恢复到原始源站点
   url: "/use/failback.html"
+- title: 管理 AppVaults
+  url: "/use/task-appvault.html"
+- title: 管理资源转换模板
+  url: "/use/task-resource-transformation.html"
 - title: 管理站点、计划、数据存储和虚拟机信息
   url: "/use/manage.html"
 - title: 监控灾难恢复作业

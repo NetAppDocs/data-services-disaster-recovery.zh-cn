@@ -9,14 +9,12 @@ summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster R
 
 
 [role="lead"]
-使用NetApp Disaster Recovery与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行以下操作：故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用/启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。
+在 NetApp Disaster Recovery 中配置复制计划后，您可以执行故障转移、测试故障转移、刷新资源、迁移以及管理快照和复制计划。除维护外，主要执行的操作是在发生故障时进行故障转移。
 
 
 
 [[fail-over]]
 == 故障转移
-
-您可能需要执行的主要操作是您希望永远不会发生的操作：在生产本地站点发生灾难性故障时故障转移到 DR（目标）数据中心。
 
 故障转移是一个手动启动的过程。
 
@@ -63,8 +61,7 @@ image:evs-rp-failover-dialog.png["故障转移对话框"]
 +
 image:evs-rp-menu-test-failover.png["测试故障转移菜单选项"]
 
-. 决定是否要获取生产环境的最新状态（立即拍摄快照）或使用先前创建的复制计划备份（选择）
-. 如果您选择了之前创建的备份，则选择要用于恢复的备份。
+. 选择要使用的快照。要创建生产环境的最新副本，请选择*立即拍摄快照*。要使用以前捕获的快照，请选择*选择*，然后选择现有快照。
 . 输入“测试故障转移”一词来验证您是否要继续。
 . 选择*测试故障转移*。
 +
@@ -93,7 +90,7 @@ image:evs-rp-menu-compliance-check.png["运行合规性检查菜单选项"]
 [[refresh-resources]]
 == 刷新资源
 
-每次对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，都需要在NetApp Disaster Recovery服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次此操作，但手动刷新可确保最新的虚拟基础设施信息可用并考虑到 DR 保护。
+每当您对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，您都需要在灾难恢复中刷新受影响的 vCenter 集群。默认情况下，灾难恢复每 24 小时自动刷新一次，但手动刷新可确保最新的虚拟基础架构信息可用，并在灾难恢复保护中得到考虑。
 
 有两种情况需要刷新：
 
@@ -108,7 +105,7 @@ image::evs-rp-menu-refresh-resources.png[刷新资源菜单选项]
 [[migrate]]
 == 迁移
 
-虽然NetApp Disaster Recovery主要用于灾难恢复用例，但它也可以将一组虚拟机从源站点一次性移动到目标站点。这可能是为了协调迁移到云项目，也可能是为了避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时灾难性事件。
+除了使用 NetApp Disaster Recovery 来管理灾难时的复制和故障转移之外，它还可以支持从源站点到目标站点的一次性 VM 迁移。在应对极端天气或政治动荡等灾难性事件时，您可能会执行一次性迁移，以此作为迁移到云端或灾难避免程序的一部分。
 
 . 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要将复制计划中的虚拟机移动到目标 Amazon EVS 集群，请从复制计划的操作菜单中选择“迁移”：
@@ -168,7 +165,7 @@ image::evs-rp-menu-cleanup-old-snapshots.png[清理旧快照菜单选项]
 [[reconcile-snapshots]]
 == 协调快照
 
-由于该服务协调ONTAP卷快照，因此ONTAP存储管理员可以在服务不知情的情况下使用ONTAP系统管理器、 ONTAP CLI 或ONTAP REST API 直接删除快照。该服务每 24 小时自动删除源上不在目标集群上的任何快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。
+由于 NetApp Disaster Recovery 协调 ONTAP 卷快照，因此 ONTAP 存储管理员可以在服务不知情的情况下，使用 ONTAP System Manager、ONTAP CLI 或 ONTAP REST API 直接删除快照。Disaster Recovery 每 24 小时自动删除源集群上所有不在目标集群上的快照。您可以根据需要手动删除快照。此功能可确保所有站点的快照保持一致。
 
 . 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]复制计划旁边。
 . 要从源集群中删除目标集群上不存在的快照，请从复制计划的操作菜单中选择*协调快照*。
@@ -236,7 +233,7 @@ image::evs-rp-edit-compliance-check-schedule.png[合规性检查时间表]
 
 
 . 选择运行测试故障转移的时间
-. 选择开始日期。
+. 请选择开始日期。
 . 决定是否希望服务自动清理测试环境，以及在清理过程开始之前希望测试环境运行多长时间。
 . 选择*保存*。
 +

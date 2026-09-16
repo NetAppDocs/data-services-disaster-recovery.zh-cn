@@ -11,7 +11,7 @@ summary: NetApp Console 代理协调 NetApp Console 与云或本地存储资源�
 [role="lead"]
 NetApp Console 代理使您能够将 NetApp Console 部署连接到基础架构，以便在 AWS、Azure、Google Cloud 或本地环境中安全地编排解决方案。Console 代理执行 NetApp Console 需要执行的操作，以管理您的数据基础架构。Console 代理会不断轮询 NetApp Disaster Recovery 软件作为服务层，以了解需要采取的任何操作。
 
-对于 NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 群集和 ONTAP 存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然可以在任何网络位置安装 Console 代理，但建议您在灾难恢复站点中安装 Console 代理以进行 NetApp Disaster Recovery。在 DR 站点中安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与 Console 代理的连接，并可以在该 DR 站点中协调恢复过程。
+对于灾难恢复，这些操作通过使用每个服务的本机 API 来协调 VMware vCenter 集群和 ONTAP 存储实例，从而为在本地位置运行的生产虚拟机提供保护。尽管控制台代理可以安装在任何网络位置，但我们建议您在灾难恢复站点安装控制台代理以进行灾难恢复。在灾难恢复站点安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与控制台代理的连接，并可以在该灾难恢复站点内协调恢复过程。
 
 
 

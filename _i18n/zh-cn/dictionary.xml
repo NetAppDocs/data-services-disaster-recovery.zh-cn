@@ -444,7 +444,6 @@
   <block id="0da98ea5899daa91a1bbac1ea476d6cf" category="paragraph">现在您已经创建了一个生产（源）站点和一个 DR（目标）站点。</block>
   <block id="421926d9ca2273c09575ed09e0cd288a" category="summary">使用 Amazon EVS 和 Amazon FSxN 介绍NetApp Disaster Recovery。创建站点后，您现在可以将 vCenter 集群添加到NetApp Disaster Recovery中的每个站点。当我们创建每个站点时，我们都会指出每个站点的类型。这会告诉NetApp Disaster Recovery每种站点类型中托管的 vCenter 需要什么类型的访问。 Amazon EVS 的优势之一是 Amazon EVS vCenter 和本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。</block>
   <block id="c0b13507b7c62a7122f6d5ccf83fd444" category="doc">在NetApp Disaster Recovery中添加本地和 Amazon EVS vCenter 集群</block>
-  <block id="05eb762d9c545c9d987d4037685aab39" category="paragraph">创建站点后，您现在可以将 vCenter 集群添加到NetApp Disaster Recovery中的每个站点。当我们创建每个站点时，我们都会指出每种站点的类型。这会告诉NetApp Disaster Recovery每种站点类型中托管的 vCenter 需要什么类型的访问。 Amazon EVS 的优势之一是 Amazon EVS vCenter 和本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。</block>
   <block id="3ac596c5aa435dd12f683335e2d27760" category="list-title">向每个站点添加 vCenter 的步骤</block>
   <block id="0a5e3ecee9c072036a5677fe4818dae4" category="list-text">从“*站点*”选项中，选择所需站点的“*添加 vCenter*”。</block>
   <block id="59662aacba84700bcc666a989987c405" category="inline-image-macro">添加 vCenter 选项</block>
@@ -452,9 +451,7 @@
   <block id="744f4f3b56736e13f1a146b4bfbfbd67" category="list-text">在添加 vCenter 服务器对话框中，选择或提供以下信息：</block>
   <block id="47c94f41bc590e72427adc9289473101" category="list-text">托管在您的 AWS VPC 内的NetApp Console代理。</block>
   <block id="8bf4e0d4e225ffb8df46f2ccff910a1e" category="list-text">要添加的 vCenter 的 IP 地址或 FQDN。</block>
-  <block id="5b89f24b8876b95ec77cbbec46ac7f03" category="list-text">如果不同，请将端口值更改为 vCenter 集群管理器使用的 TCP 端口。</block>
   <block id="62f5ea2637ecf9c5928f94b372bde923" category="list-text">先前创建的帐户的 vCenter 用户名， NetApp Disaster Recovery将使用该用户名来管理 vCenter。</block>
-  <block id="090ccdeb67b025c4f8b7081fde3f9701" category="list-text">如果您的公司使用外部证书颁发机构 (CA) 或 vCenter Endpoint 证书存储来访问您的 vCenter，请取消选中 *使用自签名证书* 复选框。否则，请保留此框的选中状态。</block>
   <block id="b3a5c8845f853fe3c75c53b6ba4b310a" category="inline-image-macro">添加 vCenter 对话框</block>
   <block id="34fdfb7ad906ce66a12a8da2c109d447" category="paragraph"><block ref="34fdfb7ad906ce66a12a8da2c109d447" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f5cc47067a5c4b536ab91f1a843de82" category="inline-link">Amazon FSx for NetApp ONTAP入门</block>
@@ -518,13 +515,11 @@
   <block id="fa1610ddfa2152b9e8f5778144e74473" category="inline-image-macro">创建复制计划，资源映射页面</block>
   <block id="fe4f9d685407c3d061ae56d4bb07c056" category="paragraph"><block ref="fe4f9d685407c3d061ae56d4bb07c056" category="inline-image-macro-rx" type="image"></block></block>
   <block id="740199b79705af0b0465a7ac59ab8f62" category="list-text">要打开所需的每个映射类别，请选择该部分旁边的向下箭头（*v*）。</block>
-  <block id="0a235ac401a30cfb7078a7aa681d6763" category="paragraph">由于一个站点可以托管多个虚拟数据中心和多个 vCenter 集群，因此您需要确定在发生故障转移时在哪个 vCenter 集群上恢复虚拟机。</block>
   <block id="5f284173a4e05543b1d3f4f96396fe44" category="list-text">从位于 DR 站点的数据中心列表中选择虚拟数据中心。</block>
   <block id="98b8fc331440708a4300daf2feca158c" category="list-text">从所选虚拟数据中心内的集群列表中选择用于托管数据存储区和虚拟机的集群。</block>
   <block id="b98800e8cefd33a1732635723a78893e" category="inline-image-macro">创建复制计划、计算资源</block>
   <block id="7e7f922d36944c2c720506b1664eb3a6" category="paragraph"><block ref="7e7f922d36944c2c720506b1664eb3a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5bb09905caece74967f31a8b9acdfec6" category="section-title">映射虚拟网络资源</block>
-  <block id="735422ecadbce7a10ea51451e2684498" category="paragraph">每个虚拟机可以有一个或多个虚拟网卡连接到 vCenter 网络基础架构内的虚拟网络。为了确保每个虚拟机在 DR 站点重新启动时都能正确连接到所需的网络，请确定哪些 DR 站点虚拟网络可连接这些虚拟机。通过将本地站点中的每个虚拟网络映射到 DR 站点上的关联网络来实现此目的。</block>
   <block id="be8a0f52b3f89ec52898a687a46d98d3" category="list-text">从下拉列表中选择目标段。</block>
   <block id="ffbce16aa92393c36f22c436fb54ba16" category="list-text">对列出的每个源虚拟网络重复上一步。</block>
   <block id="579a4f796bf2b17e04e79c92ced90e7c" category="inline-image-macro">创建复制计划、网络资源</block>
@@ -536,8 +531,6 @@
   <block id="7ab1e4417fd162d1f894cc7ff7d92781" category="list-text">*与源相同*：顾名思义，该服务在目标虚拟机上使用的 IP 地址与源站点虚拟机上使用的 IP 地址相同。这要求您为上一步中映射的虚拟网络配置相同的子网设置。</block>
   <block id="f8711a934a3ad5b6455a62a3295f6b92" category="list-text">*与源不同*：该服务为每个 VM 提供了一组 IP 地址字段，这些字段必须针对目标虚拟网络上使用的适当子网进行配置，您在上一节中已映射该子网。对于每个虚拟机，您必须提供 IP 地址、子网掩码、DNS 和默认网关值。或者，对所有虚拟机使用相同的子网掩码、DNS 和网关设置，以简化所有虚拟机连接到同一子网时的过程。</block>
   <block id="d435df5e27b24704914a2630c0742190" category="list-text">*子网映射*：此选项根据目标虚拟网络的 CIDR 配置重新配置每个 VM 的 IP 地址。要使用此功能，请确保每个 vCenter 的虚拟网络在服务内都有定义的 CIDR 设置，如“站点”页面中的 vCenter 信息中所更改的那样。</block>
-  <block id="9878b8f9706d43985e2e2c7735cc56d9" category="paragraph">配置子网后，子网映射对源和目标 VM 配置使用相同的 IP 地址单元组件，但根据提供的 CIDR 信息替换 IP 地址的子网组件。此功能还要求源虚拟网络和目标虚拟网络具有相同的 IP 地址类别（<block ref="0b93165f79d16271b738282c36905f88" prefix=" " category="inline-code"></block> CIDR 的组成部分）。这可确保目标站点有足够的 IP 地址来托管所有受保护的虚拟机。</block>
-  <block id="ae5627da5802cb3e1a62f67e6b52b520" category="paragraph">对于此 EVS 设置，我们假设源和目标 IP 配置相同，不需要任何额外的重新配置。</block>
   <block id="8faacc5c62c7b4f41379c86745cf1320" category="list-text">选择故障转移虚拟机使用的 IP 寻址类型。</block>
   <block id="ee8fa5ed67895f2bd56b15818f6ba9db" category="paragraph"><block ref="ee8fa5ed67895f2bd56b15818f6ba9db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a31bffcdbc06bba08556f1bcdb9efd4e" category="section-title">VM 计算资源重新配置</block>
@@ -565,7 +558,6 @@
   <block id="02a14a8411578842546f29f1aa48aa03" category="inline-image-macro">复制计划设置审查</block>
   <block id="a6028cc77f12edef30126bf564d7e12c" category="paragraph">复制计划设置审查<block ref="039af1de0de6af1a755c0ff0c52a0bf3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="757cef28e3476de7d28c90536bc73e0f" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。在您需要保护本地站点上的 vCenter 并且配置了 Amazon EVS 站点以使用Amazon FSx for NetApp ONTAP（可将其用作 DR 目标）之后，您现在可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。</block>
-  <block id="fef9019000b5b750b8ceb6b358e2b27d" category="paragraph">在本地站点上有要保护的 vCenter 并且您有一个配置为使用Amazon FSx for NetApp ONTAP 的Amazon EVS 站点（可将其用作 DR 目标）后，您可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。</block>
   <block id="36de448f666bdfe4bd89443569f9f5b9" category="list-text">从任何NetApp Disaster Recovery屏幕中，选择“复制计划”选项。</block>
   <block id="a26e72d9112ba38f2aeaa80403f2d3b7" category="inline-image-macro">复制计划选项</block>
   <block id="fc5423008088d428d5d5288b6d926901" category="paragraph"><block ref="fc5423008088d428d5d5288b6d926901" category="inline-image-macro-rx" type="image"></block></block>
@@ -591,16 +583,11 @@
   <block id="cdda12340d624273bd9002f62fb54d72" category="list-text">注意每个卷的“总物理使用量”值。这是NetApp Disaster Recovery需要保护的数据量，也是您将用来确定需要许可多少容量的值。</block>
   <block id="eafff2953feecf7337f42b0ed8618a50" category="doc">安装用于NetApp Disaster Recovery的NetApp Console代理</block>
   <block id="06034a243ae2009d8ded7acc9689b052" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。</block>
-  <block id="562ef4025c5a60ba97f47d8285729a0b" category="paragraph">客户越来越依赖虚拟化基础架构来处理生产计算工作负载，例如基于 VMware vSphere 的工作负载。由于这些虚拟机 (VM) 对业务变得越来越重要，客户需要保护这些 VM 免受与物理计算资源相同类型的灾难的影响。目前提供的灾难恢复 (DR) 解决方案复杂、昂贵且资源密集。 NetApp是用于虚拟化基础架构的最大存储提供商，它有既得利益确保其客户的虚拟机受到保护，就像我们保护任何类型的ONTAP存储托管数据一样。为了实现这一目标， NetApp创建了NetApp Disaster Recovery服务。</block>
   <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">任何 DR 解决方案面临的主要挑战之一是管理购买、配置和维护额外计算、网络和存储资源的增量成本，以提供 DR 复制和恢复基础设施。保护关键内部虚拟资源的一个流行选择是使用云托管虚拟资源作为 DR 复制和恢复基础设施。亚马逊就是此类解决方案的一个例子，它可以提供与NetApp ONTAP托管 VM 基础架构兼容的经济高效的资源。</block>
-  <block id="9139aacb33b5be42b71413b7de021e19" category="paragraph">亚马逊推出了 Amazon Elastic VMware Service（Amazon EVS），可在您的虚拟私有云（VPC）内支持 VMware Cloud Foundation。  Amazon EVS 提供 AWS 的弹性和性能以及熟悉的 VMware 软件和工具，使 Amazon EVS vCenters 能够作为本地虚拟化基础设施的扩展进行集成。</block>
-  <block id="79a48534a0ca0e870aba3fff8407f860" category="paragraph">虽然 Amazon EVS 附带了存储资源，但对于存储工作负载繁重的组织来说，使用本机存储可能会降低其效率。在这些情况下，将 Amazon EVS 与Amazon FSx for NetApp ONTAP存储 (Amazon FSxN) 结合使用可以提供更灵活的存储解决方案。此外，当您在本地使用NetApp ONTAP存储解决方案来托管您的 VMware 基础架构时，使用带有 FSx for ONTAP 的Amazon EVS 意味着您可以在本地和云托管基础架构之间获得一流的数据互操作性和保护功能。</block>
   <block id="0f1d73d6c66361ba80e19cc22b86a1b5" category="paragraph">有关Amazon FSx for NetApp ONTAP 的信息，请参阅<block ref="ec78c81b4b092cfc0332e21528365cfc" category="inline-link-rx"></block>。</block>
   <block id="2ca136729f14575e6999f91c84785e1d" category="summary">使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。使用NetApp Disaster Recovery与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用或启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。</block>
   <block id="fd30825a98b1ed8317f4a62bec299dd1" category="doc">使用NetApp Disaster Recovery执行复制计划操作</block>
-  <block id="4a9c8258cba65aa77d6f8dca4c094113" category="paragraph">使用NetApp Disaster Recovery与 Amazon EVS 和Amazon FSx for NetApp ONTAP执行以下操作：故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用/启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。</block>
   <block id="568e662aeb6cb5f3abafa0083f29082f" category="section-title">故障转移</block>
-  <block id="06345068bbff395a98cb1b4d92fd19f4" category="paragraph">您可能需要执行的主要操作是您希望永远不会发生的操作：在生产本地站点发生灾难性故障时故障转移到 DR（目标）数据中心。</block>
   <block id="929f8200b5d5745bf0922d67a7aeb702" category="paragraph">故障转移是一个手动启动的过程。</block>
   <block id="033c7809cb7db2bd9967ed41da27d653" category="list-title">访问故障转移操作的步骤</block>
   <block id="ebab169037e03975ece39ea0831d6b78" category="list-text">从NetApp Disaster Recovery菜单中，选择 *复制计划*。</block>
@@ -629,8 +616,6 @@
   <block id="40e274aabe3c10540248c941dbd05cb8" category="list-text">从菜单中选择*测试故障转移*。</block>
   <block id="1a559345b987e0575e0a1c51e219c16d" category="inline-image-macro">测试故障转移菜单选项</block>
   <block id="c32e1e17085ed0ca2906e246ecc689ec" category="paragraph"><block ref="c32e1e17085ed0ca2906e246ecc689ec" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e3806a4f1466635f7c69ffd13c31e9dc" category="list-text">决定是否要获取生产环境的最新状态（立即拍摄快照）或使用先前创建的复制计划备份（选择）</block>
-  <block id="96f32afb6fcdd8b721d52f9a62dc7958" category="list-text">如果您选择了之前创建的备份，则选择要用于恢复的备份。</block>
   <block id="8d7c2e2984f4134b60d86fd761b977b7" category="list-text">输入“测试故障转移”一词来验证您是否要继续。</block>
   <block id="bf63515cf285de8238ef0309a2d05678" category="list-text">选择*测试故障转移*。</block>
   <block id="a8c93ee4438aec7783049b88778065db" category="inline-image-macro">测试故障转移对话框</block>
@@ -644,13 +629,11 @@
   <block id="6cba37ba047ae347eaaaaf21a41e3c59" category="paragraph"><block ref="6cba37ba047ae347eaaaaf21a41e3c59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6e6dd687bfc58aa6ad75e4f0d6a942ba" category="list-text">要更改NetApp Disaster Recovery自动运行合规性检查的频率，请从复制计划的操作菜单中选择“编辑计划”选项。</block>
   <block id="5a3b6e2d03ca148a71790459c4bc4819" category="section-title">刷新资源</block>
-  <block id="76bfdec4208306ad8bd268e084473f8a" category="paragraph">每次对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，都需要在NetApp Disaster Recovery服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次此操作，但手动刷新可确保最新的虚拟基础设施信息可用并考虑到 DR 保护。</block>
   <block id="2a713d2af75a9ff3c8198a63eadd3dd6" category="paragraph">有两种情况需要刷新：</block>
   <block id="8f6b3dc59a290a90778b85f93d204e04" category="list-text">vCenter 刷新：每当在 vCenter 群集中添加、删除或移出虚拟机时，执行 vCenter 刷新：</block>
   <block id="bb2c5ba75ada770045e8e19979f779ff" category="list-text">复制计划刷新：每当虚拟机在同一源 vCenter 集群中的数据存储之间移动时，执行复制计划刷新。</block>
   <block id="53172f45c3f78e0f0a061b9894edb469" category="image-alt">刷新资源菜单选项</block>
   <block id="10b5b21ed1ee90eca305b558caf7d03b" category="section-title">迁移</block>
-  <block id="707279c74e5d0b109cc1736b818641cd" category="paragraph">虽然NetApp Disaster Recovery主要用于灾难恢复用例，但它也可以将一组虚拟机从源站点一次性移动到目标站点。这可能是为了协调迁移到云项目，也可能是为了避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时灾难性事件。</block>
   <block id="36a6fe238d0277d3060c69841bde3fef" category="list-text">要将复制计划中的虚拟机移动到目标 Amazon EVS 集群，请从复制计划的操作菜单中选择“迁移”：</block>
   <block id="b90eea17869e8ebbc46d383dec36f3ea" category="image-alt">迁移菜单选项</block>
   <block id="11e33978297a963679c0024ac124cb29" category="list-text">在“迁移”对话框中输入信息。</block>
@@ -667,7 +650,6 @@
   <block id="fb5d4ab92a440f8da6d5245c90702cd8" category="paragraph">您可能想要清理保留在源站点和目标站点上的旧快照。如果复制计划的快照保留计数发生改变，就会发生这种情况。</block>
   <block id="9ead1435f555cbe5194ac03aa3f14153" category="list-text">要手动删除这些旧快照，请从复制计划的操作菜单中选择*清理旧快照*。</block>
   <block id="776f371e9915a30a6e7a35215c9f6a31" category="image-alt">清理旧快照菜单选项</block>
-  <block id="931f869d33d2ed4eb4467347cbb6c599" category="paragraph">由于该服务协调ONTAP卷快照，因此ONTAP存储管理员可以在服务不知情的情况下使用ONTAP系统管理器、 ONTAP CLI 或ONTAP REST API 直接删除快照。该服务每 24 小时自动删除源上不在目标集群上的任何快照。但是，您可以根据需要执行此操作。此功能使您能够确保快照在所有站点上都是一致的。</block>
   <block id="2aea80cc7878ee06ac853bd5825acb61" category="list-text">要从源集群中删除目标集群上不存在的快照，请从复制计划的操作菜单中选择*协调快照*。</block>
   <block id="910e6231110d3f8f9c342ffd45869c29" category="image-alt">协调快照菜单选项</block>
   <block id="1a6a6c930de0933fd7db6de4d1dc477e" category="section-title">删除复制计划</block>
@@ -694,7 +676,6 @@
   <block id="6466fec301c85db6711549707f814c6d" category="list-text">每周：选择星期几</block>
   <block id="9bdde146f3734db431d846a9b67c14be" category="list-text">每月：选择月份中的日期</block>
   <block id="1a45def86f00623d408295cfcdeaf9c7" category="list-text">选择运行测试故障转移的时间</block>
-  <block id="d286831c6fab295be218cee5293be970" category="list-text">选择开始日期。</block>
   <block id="9662b1330eade6367225de0265b6ab4c" category="list-text">决定是否希望服务自动清理测试环境，以及在清理过程开始之前希望测试环境运行多长时间。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">选择*保存*。</block>
   <block id="fd859d2ad3a0f7f4658b9ab4b3f761a3" category="image-alt">编辑计划测试故障转移</block>
@@ -715,11 +696,8 @@
   <block id="985c57a0f69609e3f52a7bbdc2a8a859" category="list-text">NetApp Disaster Recovery代理激活 FSx for ONTAP托管的数据保护卷。</block>
   <block id="e49a8f44b1507573b41346a957317fdc" category="list-text">该代理向 Amazon EVS vCenter 注册每个已激活的 FSx for ONTAP卷，向 Amazon EVS vCenter 注册每个受保护的虚拟机，并根据复制计划中包含的预定义规则启动每个虚拟机。</block>
   <block id="eb6c0c43103073262c1565e450f8e0e7" category="doc">验证NetApp Disaster Recovery中一切正常</block>
-  <block id="1588932fef32db9cecf00de8dfcc7b0e" category="paragraph">在NetApp Disaster Recovery中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于*健康*状态。如果不是，您应该检查复制计划的状态并在继续之前纠正任何问题。</block>
   <block id="2a52c80686f82be8aa2a3e4f3ff7df31" category="inline-image-macro">复制计划页面</block>
   <block id="d257cabecabcc55ca3f6b7a3cd75ac7b" category="paragraph">图：复制计划页面<block ref="de37ff63ad6c037e77db1184d40c66f9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dd4ff418fd543998853ac03ab3dfed69" category="paragraph">NetApp Disaster Recovery执行一系列测试，以验证所有组件（ONTAP集群、vCenter 集群和虚拟机）是否可访问且处于正确状态，以便服务保护虚拟机。这被称为合规性检查，并且会定期进行。</block>
-  <block id="cfd75699026c8ccf116d7cc822922048" category="paragraph">在复制计划页面中，您可以看到以下信息：</block>
   <block id="ccb238eb4af46f131c1c95298789caf9" category="list-text">上次合规性检查的状态</block>
   <block id="ff73ef921a2595317c8ebcfd745b9525" category="list-text">复制计划的复制状态</block>
   <block id="dae6a888dd76ab8af615bbd14bb0d970" category="list-text">受保护（源）站点的名称</block>
@@ -1568,8 +1546,6 @@
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">如果您需要刷新登录凭证令牌，还有一个*更新凭证*选项<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜单。</block>
   <block id="7102eb8b8134f163222e26a148b28643" category="summary">vCenter 账户必须具备一组最少的 vCenter 权限，才能使 NetApp Disaster Recovery 正常运行。</block>
   <block id="e239f3cf124fb9fe9b97d14be5debcf2" category="doc">用于 NetApp Disaster Recovery 的必需 vCenter 权限</block>
-  <block id="f9f5a8cb091b3974f4efdfb4cb8ec9fc" category="paragraph">要使 NetApp Disaster Recovery 执行其服务，vCenter 帐户必须具有最低的 vCenter 权限集。这些权限包括注册和注销数据存储区、启动和停止虚拟机 (VM) 以及重新配置 VM。</block>
-  <block id="bbca177b8f73de5ad1de8c9771bd1ce1" category="paragraph">下表列出了 Disaster Recovery 与 vCenter 集群接口所需的所有权限。</block>
   <block id="484c3cceb97fa36a8403330f3c74a89b" category="cell">权限名称（vSphere 客户端）</block>
   <block id="a08e86514b21b7a12a5bf45fd2a99a3f" category="cell">权限名称 (API)</block>
   <block id="8a5227cc82d14862956938caffc1acf2" category="cell">数据存储库</block>
@@ -1736,7 +1712,6 @@
   <block id="e3685e9b39c4dbfec3a5462455b43f7d" category="cell">API 调用、脚本执行</block>
   <block id="ca5d68ad717b18cefbfd5ba03db7fc9c" category="summary">NetApp Console 代理协调 NetApp Console 与云或本地存储资源之间的连接和管理。</block>
   <block id="54c585a071d1c4db16522ba27cc6a191" category="paragraph">NetApp Console 代理使您能够将 NetApp Console 部署连接到基础架构，以便在 AWS、Azure、Google Cloud 或本地环境中安全地编排解决方案。Console 代理执行 NetApp Console 需要执行的操作，以管理您的数据基础架构。Console 代理会不断轮询 NetApp Disaster Recovery 软件作为服务层，以了解需要采取的任何操作。</block>
-  <block id="0ed93f213541543ce11a5a41955fdb61" category="paragraph">对于 NetApp Disaster Recovery，执行的操作使用每个相应服务的本机 API 来协调 VMware vCenter 群集和 ONTAP 存储实例，以便为在本地位置运行的生产虚拟机提供保护。虽然可以在任何网络位置安装 Console 代理，但建议您在灾难恢复站点中安装 Console 代理以进行 NetApp Disaster Recovery。在 DR 站点中安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与 Console 代理的连接，并可以在该 DR 站点中协调恢复过程。</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">安装</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">了解 NetApp Console 部署模式</block>
   <block id="9787e79ead7b319f8e8361fc7821dd0c" category="list-text">要使用 Disaster Recovery，请在标准模式下安装 Console 代理。要了解有关 Console 代理安装类型的更多信息，请访问<block ref="176f6de3ac91258383588e87ceb2df5f" category="inline-link-rx"></block>。</block>
@@ -1803,7 +1778,6 @@
   <block id="7d40af2723bf06859de76af9f198b76a" category="summary">使用 NetApp Disaster Recovery 时，请确保在 ONTAP 中配置了正确的权限以确保正常运行。</block>
   <block id="bee0de6585ac1ea0ad35e287ab014c6f" category="doc">为 NetApp Disaster Recovery 配置 ONTAP 权限</block>
   <block id="8ad67216cdaef40fdcfdf442f9880d1a" category="section-title">最低 ONTAP 权限</block>
-  <block id="f53cfaf12220d1479bd7bc98f8fc61ae" category="paragraph">Disaster Recovery 需要以下 ONTAP 权限：</block>
   <block id="db974238714ca8de634a7ce1d083a14f" category="cell">API</block>
   <block id="72eb6abf9272757a5494f0d1f1c91658" category="cell">访问级别</block>
   <block id="944da21c517df0c48dfbef7af28f3093" category="cell">/api</block>
@@ -1839,7 +1813,6 @@
   <block id="b4d1abd13d22d7089694589c8b97f79b" category="cell">/api/svm/peers</block>
   <block id="9c52661d131f07face38ff3baa271d09" category="cell">/api/svm/svms</block>
   <block id="7376f33a273ec46f0b7a7d1460916640" category="section-title">在 ONTAP 中添加权限</block>
-  <block id="b295025ee0faa762a112e8b1ff4f6106" category="paragraph">在 ONTAP 中添加权限需要创建具有所需权限的角色并将角色分配给用户。您可以使用 System Manager 或 ONTAP CLI 在 ONTAP 中执行此任务。</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="open-title">System Manager</block>
   <block id="27623f36a095b5f5626aa6693f9f0545" category="paragraph">必须为源和目标集群单独执行此过程。</block>
   <block id="6598a6676741a382a437fbcee1a07f47" category="list-title">创建角色</block>
@@ -1995,15 +1968,12 @@
   <block id="ecc5c96e34177e9acd36b6d5a19b4316" category="admonition">在命名空间上运行 CLI 命令<block ref="958b58c53e75bae5abeaed4b1e734f52" prefix=" " category="inline-code"></block>以查看存储类。</block>
   <block id="cecdc246749a954a3b820b31bc008db6" category="list-text">设置快照计划：</block>
   <block id="67b20a828985dfc5812f5168da4250b9" category="paragraph">选择 *Snapshots and retention start time*（日历日期和时间）、*Snapshot and retention frequency*（启动快照的频率）和 *Snapshot retention count*（保存多少个快照）。</block>
-  <block id="7b7b4d8ed4d1bbf8a314fd5ccaa6477f" category="paragraph">设置快照频率时，允许的最小时间为 5 分钟。</block>
   <block id="f60addf61c3485b1599b66a8eada52ab" category="list-text">选择*添加 AppVault* 以创建要保存保护数据的 AppVault。</block>
   <block id="f57e34b9733857c90f118e2860fdc560" category="list-text">输入 *名称* 并选择 AppVault 应连接到的 *Console agent*。</block>
   <block id="aefecf255872cb18999d61ebae9d0cdc" category="list-text">选择云*提供商*来托管*AppVault*。</block>
-  <block id="5ba549307f769710df5b050816497d71" category="list-text">根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。选择云提供商的 *订阅*、*资源组* 和 *存储帐户*。</block>
   <block id="7174ea6988f438d85266f06a4d178a79" category="list-text">选择 **Add**。</block>
   <block id="f7f4a1655d3cbed36a9f4a3ac84a092d" category="list-text">查看故障转移映射，然后选择 **添加** 以创建复制计划。</block>
   <block id="c96445b8b9cefea59b8c554a58c1449a" category="paragraph">选择添加后，您可以在 **作业监控** 中监控不同的作业。</block>
-  <block id="f8facadd6b1d552f3f648dc3bfbdb8fc" category="admonition">对于 Kubernetes，这是创建复制的最后一步。对于 vCenters，请继续阅读 <block ref="fc900fdf57ed4db8c225ca75259b8e72" category="inline-xref-macro-rx"></block>。</block>
   <block id="b24fddbb2c061e7def99de8fb873e946" category="admonition">此部分仅为 vCenters 必填。您无需为 Kubernetes 完成它。</block>
   <block id="38024e76a2b64efa68a6d51d33e31f6e" category="paragraph">*网络设置* Disaster Recovery 支持 VM 网络的大量配置选项。如果目标站点的虚拟网络使用与源站点上的生产虚拟网络不同的 TCP/IP 设置，则可能需要更改这些设置。</block>
   <block id="b60fe3207297f056bd4af1c6f6939a13" category="paragraph">要在 VM 来宾操作系统中启用脚本执行，必须满足以下条件：</block>
@@ -2233,20 +2203,15 @@
   <block id="6fec06276146c70a7a05bb5e6d3afe94" category="section-title">启动复制计划向导</block>
   <block id="73d967450f10f13278437132d4cb0661" category="section-title">选择 vCenters</block>
   <block id="9d53e3e062f307bbb17738485cd6463c" category="section-title">选择要保护的虚拟机资源</block>
-  <block id="667b950c66ec5238ca6fff8f3c48c6c6" category="paragraph">有多种方法可以选择要保护的虚拟机。接下来的步骤展示了如何保护整个 vCenter 数据存储区，但您应该选择最适合您需求的方法。</block>
   <block id="126d953ce220133258b7a58131031eb4" category="list-text">*选择单个虚拟机*：选择*虚拟机*按钮可让您选择要保护的单个虚拟机。当您选择每个虚拟机时，服务会将其添加到位于屏幕右侧的默认资源组。</block>
-  <block id="0c33e768499cbef6bd2e25498c6d8ae0" category="list-text">*选择先前创建的资源组*：您可以使用 NetApp Disaster Recovery 菜单中的资源组选项预先创建自定义资源组。这不是必需的，因为您可以使用其他两种方法在复制计划过程中创建资源组。有关详细信息，请参见 <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
-  <block id="48b9ef7f729168b7f56d7a1c10fd43f1" category="list-text">*选择整个 vCenter 数据存储区*：如果使用此复制计划需要保护大量虚拟机，则选择单个虚拟机的效率可能不高。由于 Disaster Recovery 使用基于卷的 SnapMirror 复制来保护虚拟机，因此驻留在数据存储区上的所有虚拟机都将作为卷的一部分进行复制。在大多数情况下，您应该使用 Disaster Recovery 保护并重新启动数据存储区上的所有虚拟机。使用此选项可告知服务将所选数据存储区上托管的任何虚拟机添加到受保护虚拟机列表中。</block>
   <block id="6a9ad2fb807955122e3d7197c383f842" category="list-text">（可选）通过选择资源组名称旁边的铅笔图标，将资源组重命名为合适的名称。</block>
   <block id="b12e2cc8ccedb2d7fa48d398d66b40d0" category="section-title">映射资源</block>
   <block id="b1e5a14d73152372a2f84f7374118db9" category="paragraph">在选择要保护的虚拟机后，您必须执行网络映射。网络映射有四个区域：</block>
   <block id="87bd8f99883f9c35edff3a256ea36921" category="inline-image-macro">20.20</block>
   <block id="5e196ec310096e08b0b54d207418ff50" category="list-text">带有警告图标(<block ref="74ca4987fc979f01749ba054e9b5eb9d" category="inline-image-macro-rx" type="image"></block>)的部分要求您提供映射信息。</block>
-  <block id="9303be731aa0c82e0b1787f8bb52799f" category="list-text">标有复选图标（<block ref="b6227c7fd70a2d5c9ad9bd2ab002dc96" category="inline-image-macro-rx" type="image"></block>）的部分已映射或具有默认映射。请检查这些部分，以确保当前配置符合您的要求。</block>
   <block id="400943a5b6d32b75f6db148c48672392" category="list-title">访问资源映射</block>
   <block id="fbb82fdd08993c05060b83654da39246" category="section-title">计算资源映射</block>
   <block id="18daba455efe3cbca30237efaa3fe041" category="list-text">（可选）选择目标集群中的目标主机。</block>
-  <block id="e840940eda6adffdacdc879001961052" category="paragraph">此步骤不是必需的，因为 NetApp Disaster Recovery 会选择添加到 vCenter 中集群的第一台主机。此时，虚拟机要么继续在该 ESXi 主机上运行，要么 VMware DRS 根据配置的 DRS 规则将虚拟机移动到不同的 ESXi 主机。</block>
   <block id="514bb139449c90b48b32bc9d959132c7" category="list-text">（可选）提供要将虚拟机注册放入的顶级 vCenter 文件夹的名称。此步骤可以满足组织需求，但不是必需的。</block>
   <block id="e0674048365d95ca72db3eee850572e1" category="paragraph">默认情况下，NetApp Disaster Recovery 对每个 VM 使用与源本地站点相同的设置。这假设 VM 将使用相同的 IP 地址、虚拟 CPU 和虚拟 DRAM 配置。</block>
   <block id="8ea2553b27f1d6b34e28df398c876c11" category="list-title">更改网络设置重新配置</block>
@@ -2262,10 +2227,8 @@
   <block id="61e580496b602cb5f536fb10be855093" category="list-text">可选择提供每次 VM 重启之间的延迟时间。此时间在此 VM 重启完成后、具有下一个更高引导顺序号的 VM 启动之前注入。此数字以分钟为单位。</block>
   <block id="5da60ca1e4dab36a6c71df1d560a2227" category="paragraph">灾难恢复支持为每个虚拟机执行一些来宾操作系统操作：</block>
   <block id="e0b38f33c7a8ada147d88c0c0bf934c6" category="list-text">灾难恢复可以为运行 Oracle 数据库和 Microsoft SQL Server 数据库的虚拟机执行应用程序一致的虚拟机备份。</block>
-  <block id="08e6090cd415877dfaa3efe4f5e5ae95" category="list-text">Disaster Recovery 可以为每个虚拟机执行适合来宾操作系统的自定义脚本。执行此类脚本需要来宾操作系统可接受的用户凭据，且该凭据须具有足够的权限来执行脚本中列出的操作。</block>
   <block id="1dbb0069d4d63f8e24c63448be1bf8f5" category="list-text">（可选）如果虚拟机托管的是 Oracle 或 SQL Server 数据库，请选中*创建应用程序一致性副本*复选框。</block>
   <block id="1714db5d674206e35649fdb12eb303ed" category="list-text">或者，要在启动过程中在访客操作系统内执行自定义操作，请上传任何虚拟机的脚本。要在所有虚拟机中运行单个脚本，请使用突出显示的复选框并填写字段。</block>
-  <block id="dd0685633c27a3c85dd734cdd68c1224" category="paragraph">创建复制计划的最后一步是确定 ONTAP 应如何保护数据存储。这些设置定义了复制计划恢复点目标 (RPO)、应维护多少个备份以及在何处复制每个 vCenter 数据存储的托管 ONTAP 卷。</block>
   <block id="3a0f24e5e7210137a18af44e6c9941f0" category="paragraph">默认情况下，Disaster Recovery 管理其自己的快照复制计划；但是，您也可以选择指定使用现有 SnapMirror 复制策略计划进行数据存储保护。</block>
   <block id="44aaa0be508b78275977f2bc707c953e" category="paragraph">此外，您还可以选择自定义要使用的数据 LIF（逻辑接口）和导出策略。如果不提供这些设置，Disaster Recovery 将使用与相应协议（NFS、iSCSI 或 FC）关联的所有数据 LIF，并使用 NFS 卷的默认导出策略。</block>
   <block id="b6105c030b2f70ecdf4ebb23a57cb9cd" category="list-title">配置数据存储库（卷）映射</block>
@@ -2359,8 +2322,6 @@
   <block id="8e4dba18199645dbcad533f0a3acf0c3" category="inline-link-macro">快照 CRD 和快照控制器</block>
   <block id="bc5f6fc21f6a94d180764bb6c6a4cd7d" category="paragraph">安装 <block ref="eec6190e0599877ad03e04b40eef0c58" category="inline-link-macro-rx"></block>。这些安装是 Trident Protect 中的卷快照所必需的。</block>
   <block id="918fa72b18f488b31c1a63283c4f2148" category="paragraph"><block ref="4569567eb3ca20d8c53676753a511f69" prefix="" category="inline-code"></block></block>
-  <block id="a53eb6648d9aed67745bf8a9653ab7af" category="doc">在 NetApp Disaster Recovery 中查看灾难恢复计划运行状况</block>
-  <block id="b8982e9a7225d5e51f0ca1ce12eefcf5" category="paragraph">使用 NetApp 灾难恢复仪表板检查灾难恢复站点和复制计划的运行状况。您可以查看站点和计划是否正常、断开连接或降级，查看最近的警告和失败的作业，识别受保护和未受保护的工作负载，并一目了然地查看容量。</block>
   <block id="d601ac6a8739700584fe1f4c446d9754" category="list-text">*Down*：站点无法访问或存在连接问题。</block>
   <block id="6026e48cd116a5cbacecfc8da06638ea" category="paragraph">添加资源和站点后，创建_复制计划_以保护您的数据。该计划定义应用程序的源站点和目标站点、资源组、恢复映射和开机行为。您还可以配置合规性和测试计划，并在不影响生产数据的情况下执行测试故障转移。</block>
   <block id="1c4de46c0cd1d0a73f4e3432ea708002" category="paragraph">您可以保护多个数据存储区上的多个虚拟机。NetApp Disaster Recovery 为托管受保护虚拟机数据存储区的所有 ONTAP 卷创建 ONTAP 一致性组。</block>
@@ -2544,7 +2505,6 @@
   <block id="6945173f0edcde5ee35ab045a8d2e7c6" category="paragraph">您可以生成适用于 VMware、Kubernetes 或所有工作负载的报告，包括复制计划详细信息、合规性状态和作业摘要。报告可以下载为 PDF、HTML 或 JSON 文件。它们涵盖一到七天的时间段。有关详细信息，请参见 <block ref="5bffefa9db1727e92010e150d30d9a1b" category="inline-link-macro-rx"></block>。</block>
   <block id="344e4080c182fb26bcaae9b4aafcff09" category="section-title">Kubernetes 特定问题</block>
   <block id="6c529b0fa4de29d8b96719f5eb415629" category="paragraph-title">什么是 AppVault？</block>
-  <block id="3d6bb738851a3bfae62f8c75b1ffb531" category="paragraph">AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。</block>
   <block id="2f5122e05c45ffd052c98ecc0e6d46cf" category="list-text">通过 Amazon Web Services (AWS) Marketplace、Azure Marketplace 或 Google Cloud Marketplace 购买按需付费 (PAYGO) 订阅。此许可证允许您购买固定受保护容量许可证，而无需任何长期承诺。</block>
   <block id="3339edb028f501d54393ca849ca0f55b" category="admonition">NetApp Disaster Recovery 费用基于源站点上数据存储的已用容量（当至少有一个虚拟机或 Kubernetes 资源具有复制计划时）。故障转移数据存储的容量不包含在容量限额中。对于 BYOL，如果数据超出允许的容量，则在您获得额外的容量许可证或在 NetApp Console 中升级许可证之前，服务中的操作将受到限制。</block>
   <block id="c9dcf9057588b19f1d398446f68f093d" category="admonition">选择特定快照基线时，默认情况下会隐藏 SnapMirror 传输快照，因为它们可能在故障转移过程中被删除。此删除会导致故障转移后由于"未找到公共快照"错误而无法重新保护工作负载。您仍然可以使用 SnapMirror 传输快照，但必须完成额外的确认提示以确认相关风险。</block>
@@ -2567,4 +2527,159 @@
   <block id="2c9e00774620c5f83c48800d39a8e3a1" category="list-text">选择 *Take snapshot now* 以创建将复制到目标集群的全新快照。</block>
   <block id="15816348d7ed6eb8ac7c5354e5a1aa49" category="list-text">如果您希望 Disaster Recovery 在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在将还原的站点恢复联机之前在 NetApp Disaster Recovery 中对其执行其他操作，此功能非常有用。</block>
   <block id="d4fd90d5c03a49a34d58a0210e1f6a1b" category="paragraph">监控 NetApp Disaster Recovery 作业以查看其历史记录、状态和详细信息。跟踪作业状态和进度，可让您在失败或停滞的操作影响恢复就绪状态之前及时发现这些操作。</block>
+  <block id="bc084b415a20851b8e676913db93fcd2" category="doc">Kubernetes 支持现已在 NetApp Disaster Recovery 中正式发布 (GA)</block>
+  <block id="9324db17e670e1369640c556f71a1423" category="paragraph">NetApp Disaster Recovery 中对基于 Kubernetes 的工作负载的支持现已正式商用 (GA)。通过对基于 Kubernetes 的工作负载的支持，您可以保护在 Kubernetes 集群上运行的应用程序，包括 OpenShift Virtualization 环境。Disaster Recovery 支持 Trident Protect 当前支持的任何 Kubernetes 版本，从而确保为容器化应用程序提供无缝集成和强大的灾难恢复能力。</block>
+  <block id="09aa82bf41a96669e2e7ab72fce53b68" category="paragraph">要开始保护基于 Kubernetes 的工作负载，请参见 <block ref="d1415fee440f8c1c4acbcf4ee7535778" category="inline-link-macro-rx"></block>。</block>
+  <block id="8bbea59fb56a0e0b18eb0dbc87a3e911" category="section-title">资源转换</block>
+  <block id="23ec139ada546bb40b0037293927926e" category="paragraph">灾难恢复现在支持资源转换，允许您在故障转移期间修改工作负载的任何方面。此功能提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。</block>
+  <block id="1cb71dc0319186e8a5ef959445ae26e6" category="inline-link-macro">管理资源转换</block>
+  <block id="5dc97329134aa1a46a95297e199ee57a" category="paragraph">创建复制计划时会应用资源转换。您可以在新的"设置"页面中创建、编辑和删除资源转换。有关详细信息，请参见<block ref="1e2c857c3180265548c388e582cc81c4" category="inline-link-macro-rx"></block>。</block>
+  <block id="0005eb91a417f10c94b24edc1e676ea5" category="section-title">脚本执行</block>
+  <block id="ad16d4c0c6b04f812d8564ab531bda48" category="paragraph">现在，您可以将自定义脚本注入故障转移工作流，以协调应用程序的静默和恢复。此功能有助于确保在复制和还原快照之前正确准备应用程序，从而在故障转移后无缝恢复操作。</block>
+  <block id="d95a404e2a85810893af45ecfb3ef7b0" category="paragraph">要了解如何注入自定义脚本，请参见 <block ref="5e71e4e6b8c5e7bff47e3e8fc9f8f4a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ac0cf25fb19b7466972d2b8ef97537e" category="section-title">新建工作负载页面</block>
+  <block id="babaac79e8e47c52ae80323ebd24d838" category="paragraph">Disaster Recovery 已将"工作负载"页面添加到 UI，可提供所有已发现工作负载及其保护状态的综合视图。"工作负载"页面使您能够更有效地监控和管理工作负载。</block>
+  <block id="7c969269e165a2fc615e6e844ac581c4" category="inline-link-macro">在 Disaster Recovery 中查看运行状况和保护状态</block>
+  <block id="62cca7f4abc63d606056cd2842c6540f" category="paragraph">有关详细信息，请参见<block ref="97bec68dd22e6068edf69b3149251ef2" category="inline-link-macro-rx"></block>。</block>
+  <block id="cb212c0e367b7e5f6090b19e7f1473eb" category="section-title">"设置"页面</block>
+  <block id="7d4c91b69e54df2f702e8579ef0febe4" category="inline-link-macro">管理 AppVaults</block>
+  <block id="492b98a527a1b4e6495db2e0303f0c2a" category="paragraph">灾难恢复现在提供了一个"设置"页面，用于集中管理资源转换模板和AppVaults。此页面提供单一界面来配置和管理灾难恢复计划的这些关键组件。要了解有关"设置"页面中选项的更多信息，请参阅<block ref="1e2c857c3180265548c388e582cc81c4" category="inline-link-macro-rx"></block>和<block ref="798f6a1b892593cf81f8f5b5eaacd21a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e4c84482ee4555ae482d96b91322224c" category="section-title">常规改进</block>
+  <block id="8904eb8da011894f529ca214813ca630" category="paragraph">Disaster Recovery 在复制计划创建页面中引入了增强的验证，以确保更流畅、无错误的用户体验。</block>
+  <block id="d0a5cb5d70546b098b3c7c48225d6234" category="paragraph">Disaster Recovery 还提高了服务的弹性，以容忍间歇性请求超时，从而提升了 UI 的整体性能和可靠性。</block>
+  <block id="e8c488b8e85a77fbb17126d0f6c9e50a" category="paragraph">AppVault 是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。您在配置 Kubernetes 复制计划时创建 AppVault。您也可以在"设置"页面中管理 AppVaults。</block>
+  <block id="b9cf3453b35a3e8ee5fab283850b27ae" category="paragraph">创建站点后，在 NetApp Disaster Recovery 中为每个站点添加 vCenter 集群。站点类型决定了 NetApp Disaster Recovery 对该站点中的 vCenters 所需的访问权限。Amazon EVS vCenters 和本地 vCenters 使用相同的连接和身份验证信息。</block>
+  <block id="2f452f8938f62826ec56b3056a810704" category="list-text">如果需要，请将端口更改为 vCenter 服务器使用的 TCP 端口。</block>
+  <block id="43b6a263490ee7c0adb8f876febdcfe0" category="list-text">如果您的组织使用外部证书颁发机构 (CA) 或 vCenter 端点证书存储，请取消选中*使用自签名证书*。否则，请保持勾选此框。</block>
+  <block id="28bf7ee75691ea41515be2651c52c5e0" category="paragraph">确定要保护的本地 vCenters，并配置以 Amazon FSx for NetApp ONTAP 作为灾难恢复目标的 Amazon EVS 站点后，创建复制计划以保护本地 vCenter 集群上的虚拟机。</block>
+  <block id="29a56c2c629acc000f2164ff994661b5" category="paragraph">有多种方法可以选择要保护的虚拟机。以下步骤展示了如何保护整个 vCenter 数据存储区，但您应该选择最适合您需求的方法。</block>
+  <block id="ca6598a0ea316873c844e035cdc44ae1" category="list-text">*选择先前创建的资源组*：您可以使用 Disaster Recovery 菜单中的资源组选项预先创建自定义资源组。这是可选的，因为您可以使用其他两种方法在创建复制计划期间创建资源组。有关详细信息，请参见 <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="5b27aebb5387bd7d609757afa62eb232" category="list-text">*选择整个 vCenter 数据存储区*：使用此选项，驻留在数据存储区上的所有虚拟机将作为卷的一部分进行复制。如果您有多个虚拟机需要通过复制计划进行保护，请使用此选项以避免逐一选择各个虚拟机。在大多数情况下，您应让 Disaster Recovery 保护并重新启动数据存储区上的所有虚拟机。使用此选项可告知服务将所选数据存储区上托管的任何虚拟机添加到受保护虚拟机列表中。</block>
+  <block id="26e9d8bde290501b42e417f1e11fe9b1" category="list-text">标有选中图标（<block ref="b6227c7fd70a2d5c9ad9bd2ab002dc96" category="inline-image-macro-rx" type="image"></block>）的部分使用默认映射或已完成映射。请查看映射，以确保当前配置满足您的要求。</block>
+  <block id="d3da15a7bd61a03f762442414ec5e267" category="paragraph">由于一个站点可以托管多个虚拟数据中心和多个 vCenter 集群，因此需要确定在发生故障转移时要将虚拟机恢复到哪个 vCenter 集群。</block>
+  <block id="84958f73308c70c26a8c7baf5c3504db" category="paragraph">此步骤不是必需的，因为 Disaster Recovery 会选择添加到 vCenter 中的集群中的第一台主机。虚拟机要么继续在该 ESXi 主机上运行，要么 VMware DRS 根据配置的 DRS 规则将其移动到另一台 ESXi 主机。</block>
+  <block id="af9db459ff217bbf9c08e7ce23a5dcae" category="paragraph">每个 VM 可以具有一个或多个连接到 vCenter 网络基础设施内虚拟网络的虚拟 NIC。为了确保每个 VM 在灾难恢复站点重新启动时能够正确连接到所需的网络，请确定要将这些 VM 连接到哪些灾难恢复站点虚拟网络。为此，请将本地站点中的每个虚拟网络映射到灾难恢复站点上的关联网络。</block>
+  <block id="d0dd9123b9515d955654ecbda3a3d52a" category="paragraph">配置子网后，子网映射将 IP 地址的相同主机部分用于源和目标 VM 配置，但会根据提供的 CIDR 信息替换 IP 地址的子网组件。此功能还要求源和目标虚拟网络具有相同的 IP 地址类（CIDR 的<block ref="0b93165f79d16271b738282c36905f88" prefix=" " category="inline-code"></block>组件）。这可确保目标站点上有足够的 IP 地址来托管所有受保护的虚拟机。</block>
+  <block id="c322b53db90ff32661a1b4ab954899ec" category="paragraph">对于此 Amazon EVS 设置，我们假设源和目标 IP 配置相同，不需要任何额外的重新配置。</block>
+  <block id="4c568706efc1d4b61a71bbb71fe033b0" category="list-text">Disaster Recovery 可以为每个虚拟机的来宾操作系统运行自定义脚本。执行此类脚本需要来宾操作系统可接受的用户凭据，且该凭据须具有足够权限以执行脚本中列出的操作。</block>
+  <block id="52ae27c468647802e0190252ad9b22a8" category="paragraph">创建复制计划的最后一步是确定 ONTAP 应如何保护数据存储。这些设置定义了复制计划的恢复点目标 (RPO)、应维护的备份数量以及在何处复制每个 vCenter 数据存储的托管 ONTAP 卷。</block>
+  <block id="3e49edee823ada0665614ad54d421e6b" category="paragraph">对于灾难恢复，这些操作通过使用每个服务的本机 API 来协调 VMware vCenter 集群和 ONTAP 存储实例，从而为在本地位置运行的生产虚拟机提供保护。尽管控制台代理可以安装在任何网络位置，但我们建议您在灾难恢复站点安装控制台代理以进行灾难恢复。在灾难恢复站点安装可确保在主站点发生故障时，NetApp 控制台 UI 保持与控制台代理的连接，并可以在该灾难恢复站点内协调恢复过程。</block>
+  <block id="406d28ff72e0ae9421b13706f77b9133" category="paragraph">NetApp Disaster Recovery 通过将数据从本地环境复制到 Amazon EVS 和 Amazon FSx for NetApp ONTAP，帮助保护 VMware 工作负载以实现灾难恢复。</block>
+  <block id="7bb3fd1d7d6421aeada4b228bf830892" category="paragraph">亚马逊推出了 Amazon Elastic VMware Service (Amazon EVS)，可在您的虚拟私有云 (VPC) 中启用 VMware Cloud Foundation。Amazon EVS 提供 AWS 的弹性和性能以及熟悉的 VMware 软件和工具，使 Amazon EVS vCenters 能够与您的本地虚拟化基础架构集成。</block>
+  <block id="d0d1e1f9bce58ff6443e8655c8b4c896" category="paragraph">虽然 Amazon EVS 附带了内置存储资源，但使用本机存储可能会降低其对存储密集型工作负载组织的有效性。在这些情况下，将 Amazon EVS 与 Amazon FSx for NetApp ONTAP 存储（Amazon FSxN）结合使用可以提供更灵活的存储解决方案。此外，当您在本地使用 NetApp ONTAP 存储解决方案托管 VMware 基础架构时，将 Amazon EVS 与 FSx for ONTAP 结合使用可在本地和云环境中提供数据互操作性和保护功能。</block>
+  <block id="9d2c896b461225d28993aa1dd9047fcf" category="paragraph">在 NetApp Disaster Recovery 中配置复制计划后，您可以执行故障转移、测试故障转移、刷新资源、迁移以及管理快照和复制计划。除维护外，主要执行的操作是在发生故障时进行故障转移。</block>
+  <block id="cb284df818207f06d9f621ed22750436" category="list-text">选择要使用的快照。要创建生产环境的最新副本，请选择*立即拍摄快照*。要使用以前捕获的快照，请选择*选择*，然后选择现有快照。</block>
+  <block id="b1e71cd413e56509440638415c2d43da" category="paragraph">每当您对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区或在数据存储区之间移动虚拟机）时，您都需要在灾难恢复中刷新受影响的 vCenter 集群。默认情况下，灾难恢复每 24 小时自动刷新一次，但手动刷新可确保最新的虚拟基础架构信息可用，并在灾难恢复保护中得到考虑。</block>
+  <block id="95b50cd52d840a47bd1a8f061957797e" category="paragraph">除了使用 NetApp Disaster Recovery 来管理灾难时的复制和故障转移之外，它还可以支持从源站点到目标站点的一次性 VM 迁移。在应对极端天气或政治动荡等灾难性事件时，您可能会执行一次性迁移，以此作为迁移到云端或灾难避免程序的一部分。</block>
+  <block id="d2e29a13905cbef527e4e2570884b690" category="paragraph">由于 NetApp Disaster Recovery 协调 ONTAP 卷快照，因此 ONTAP 存储管理员可以在服务不知情的情况下，使用 ONTAP System Manager、ONTAP CLI 或 ONTAP REST API 直接删除快照。Disaster Recovery 每 24 小时自动删除源集群上所有不在目标集群上的快照。您可以根据需要手动删除快照。此功能可确保所有站点的快照保持一致。</block>
+  <block id="bcadaaf780e6fd58e057b2958789c893" category="list-text">请选择开始日期。</block>
+  <block id="4608904b2a5a97d3dc9a6c4ed3f8d2ad" category="paragraph">在 NetApp Disaster Recovery 中添加复制计划后，请验证该计划处于 *Healthy* 状态，然后继续。</block>
+  <block id="762904458bbfb6ea9676cc302dae8654" category="paragraph">NetApp Disaster Recovery 会运行一系列测试，以验证所有组件（包括 ONTAP 集群、vCenter 集群和虚拟机）都可访问并准备好进行保护。这称为合规性检查，并定期运行。</block>
+  <block id="77c2410fbbd5da673d4e983bc249d839" category="paragraph">复制计划页面显示以下信息：</block>
+  <block id="1067d584a6e992c0589d1f92aafe7858" category="paragraph">配置所需的 ONTAP 权限，以便 NetApp Disaster Recovery 可以正常运行。</block>
+  <block id="3ea48d658291a75ed85e415311766759" category="paragraph">灾难恢复需要以下 ONTAP 权限：</block>
+  <block id="514d10c4471c787f55eb1c42a520282a" category="paragraph">要在 ONTAP 中添加权限，请创建具有所需权限的角色并将其分配给用户。您可以使用 System Manager 或 ONTAP CLI 在 ONTAP 中完成此任务。</block>
+  <block id="c32dabaa5413a89c876153c92d4dec95" category="paragraph">用于 NetApp Disaster Recovery 的 vCenter 帐户必须具有注册和注销数据存储、启动和停止虚拟机 (VM) 以及重新配置 VM 的最低权限集。</block>
+  <block id="a255af9b80b5d09c6f6e91eb6e1e5dac" category="paragraph">下表列出了 Disaster Recovery 使用 vCenter 集群所需的权限。</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026年9月16日</block>
+  <block id="c6c8e0f1a10eed471b7e7d1806abe885" category="paragraph">版本 4.3.7</block>
+  <block id="e05396b05c416565eca286e7ee65892c" category="doc">在 NetApp Disaster Recovery 中查看计划运行状况和工作负载保护状态</block>
+  <block id="b28e483364e08ab1575de89a1b2704fe" category="paragraph">NetApp Disaster Recovery 提供了多种方法来深入了解 Disaster Recovery 发现的工作负载以及站点的运行状况和复制计划。</block>
+  <block id="011581ffba54f9302ee02a6afa13eb0a" category="paragraph">*仪表板*提供有关站点和计划运行状况的信息，显示正常、断开或降级状态。它还显示最近的警告和失败的作业。它还提供容量和保护状态的概述。使用仪表板查看运行状况并了解工作负载概述。</block>
+  <block id="44a675e7d055dacb3e18389d5f05f213" category="paragraph">*工作负载*页面提供了由 Disaster Recovery 发现的每个 VMware 和 Kubernetes 工作负载的详细列表。它提供与工作负载及其保护状态关联的信息。使用"工作负载"页面可查看有关工作负载的详细信息并查看保护状态。</block>
+  <block id="f53b3ea4d70c1fab87c459ffdda580b0" category="section-title">在控制面板中查看运行状况和保护状态</block>
+  <block id="9d16dce094ba2af815cfe3894bae8a75" category="section-title">查看工作负载的保护状态</block>
+  <block id="875bbab879cdc6f202ed770fc12feb52" category="paragraph">使用"工作负载"页面可以通过 Disaster Recovery 查看单个已发现工作负载的保护状态。除了保护状态之外，Disaster Recovery 还显示有关每种工作负载类型的以下信息：</block>
+  <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="cell">Kubernetes 工作负载</block>
+  <block id="337399b28f1404bcce820e887245de0a" category="cell">vCenter 工作负载</block>
+  <block id="249694a485fc5d3289c38986b4f8e887" category="list-text">集群</block>
+  <block id="49ee3087348e8d44e1feda1917443987" category="list-text">名称</block>
+  <block id="92c09e667f418bada7b3ecae154a6ab1" category="list-text">受保护的命名空间</block>
+  <block id="3a3bcdce1192defd6bf56e93bffb6b6f" category="list-text">复制计划（如果已分配）</block>
+  <block id="a7d6475ec8993b7224d6facc8cb0ead6" category="list-text">站点</block>
+  <block id="0306f309d85c77b515e2062211ad3b92" category="list-text">保护状态</block>
+  <block id="be70a8462e76377bf6617032c00c4811" category="list-text">CPU</block>
+  <block id="5da9d8dd34bb2acaf82c45ecfdc5fcbd" category="list-text">数据中心名称</block>
+  <block id="02dc05740dd95ec7dcb34f77aca1c852" category="list-text">数据存储库名称</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="list-text">内存</block>
+  <block id="224b68acf165b8c44bcf445590682641" category="list-text">资源组（如果已存在）</block>
+  <block id="5991ccf52a2d511815f4c5f13a0f8e66" category="list-text">vCenter IP 地址</block>
+  <block id="d75412b8b9738ae1c1ebf28afef115d7" category="list-text">工作负载名称</block>
+  <block id="45790168574698232cc9574fc7035915" category="list-text">在 NetApp Disaster Recovery 菜单中，选择 *工作负载*。</block>
+  <block id="0105572a6094a48d4da6a8689f6fc4e5" category="list-text">在下拉菜单中，选择筛选器以查看 *vCenter* 或 *Kubernetes* 工作负载。</block>
+  <block id="13047f1ca24815ab708baea59cd26348" category="list-text">您可以选择搜索特定工作负载或按保护状态筛选工作负载：受保护或未受保护。</block>
+  <block id="3259c90ef9fe8915d680844c8bbd1caf" category="list-text">查看与工作负载和保护状态相关的信息。受保护的工作负载会标记为绿色复选标记。未受保护的工作负载带有灰色破折号。</block>
+  <block id="c027507b89ae4164d30ec50fb735c759" category="paragraph">在设置快照频率时，您必须选择至少每五分钟一次的频率。</block>
+  <block id="6f5d85e29b59aa4625f3ad14a37077cd" category="list-text">根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。</block>
+  <block id="8d57596f9b796b61e90df9540d12cc03" category="paragraph">对于 Azure，选择云提供商的*订阅*、*资源组*和*存储帐户*。</block>
+  <block id="d575618a014f5e9564ca37f19e47ce57" category="paragraph">对于 AWS、ONTAP S3 和 StorageGRID，请选择 *Acount*、*Credentials* 和 *Bucket*。</block>
+  <block id="5a5927bde0ac7465b00ff420f8ccdb8c" category="list-text">如果您选择了 ONTAP S3 或 StorageGRID，则可以选择添加凭据。选择 *Add credentials* 以展开选项，然后添加 *Credential name*、*Gateway node FQDN*、*Port* 号、*Access key* 和 *Secret key*。</block>
+  <block id="796c589626154baa50e1f1b1c6b6ff97" category="section-title">资源转换和脚本执行</block>
+  <block id="bb9e542c041adb6fce43a5550a447aee" category="paragraph">对于 Kubernetes 复制计划，您可以应用资源转换和脚本执行。这些步骤是可选的。</block>
+  <block id="89fd45000e9691421f0cd2d2422f2098" category="paragraph-title">添加资源转换</block>
+  <block id="daac935d0f9259f469bdeb6216a7bedd" category="inline-link-macro">了解如何创建和管理资源转换。</block>
+  <block id="0c4a14974502f9daa46b26f0f2ad91af" category="paragraph">添加资源转换使您能够在故障转移期间修改工作负载的任何方面。资源转换提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。 <block ref="3dabf3282929fee49f60b75761c255a7" category="inline-link-macro-rx"></block></block>
+  <block id="e205d695b91bf2e7c538d79e949032cf" category="paragraph">资源转换按列出的顺序应用。</block>
+  <block id="3c1b80402134e1bcf4d562332133349d" category="list-text">从下拉列表中，选择要添加的资源转换。</block>
+  <block id="fcb3c8f6cc48c49276cecf84a984d4e3" category="list-text">选择要应用转换的资源，然后添加所需的值</block>
+  <block id="cbec0809085850277568c1bd54c193fd" category="list-text">审查转换的顺序，以确保操作将以适当的顺序执行。</block>
+  <block id="8cb4231adcba0ade99c6e505e976ffe5" category="paragraph-title">添加脚本执行</block>
+  <block id="5c46d471bbbf250802741c4dba10129f" category="paragraph">NetApp Disaster Recovery 可以在创建快照之前或之后执行脚本，以管理应用程序的静默和恢复。执行此操作可确保在复制和还原快照之前正确准备应用程序，并可在故障转移后无缝恢复操作。</block>
+  <block id="3675e17b3371ca5d66b47ca3e188c192" category="list-text">选择 *+ Add script*。</block>
+  <block id="2cb4c5ea3f0dbc03f52c086f51c9c0c9" category="list-text">选择*上传*以选择脚本文件。</block>
+  <block id="7605c81f8da3d277fdcf1a41e0fa8b5b" category="list-text">选择*执行阶段*：*快照前*在创建快照前执行，或*快照后*在创建后执行。</block>
+  <block id="c72b4f4535f2247a2eb6d04e4d80d806" category="summary">在 Disaster Recovery 中管理 AppVaults 使您能够查看 AppVaults 的连接状态以及 AppVaults 的凭据和端点，从而确保灾难恢复计划的连续性。</block>
+  <block id="653c6c62d27e4a4915da09b6cc9380ae" category="doc">管理 NetApp Disaster Recovery 中的 AppVaults</block>
+  <block id="4f3b0db26a003addfb4485b781fe2cba" category="paragraph">NetApp Disaster Recovery 工作负载与 Kubernetes 配合使用 AppVault，这是 Trident Protect 保存 Kubernetes 保护数据的云存储目标。管理 AppVaults 使您能够查看 AppVaults 的连接状态以及 AppVaults 的凭据和端点，以确保复制计划的运行状况。</block>
+  <block id="6bd42ee2a8b45f038ad8af98f78d98c6" category="section-title">添加 AppVault</block>
+  <block id="94140e82a3c7e458b3dd52cdb64e0030" category="paragraph">您可以在为 Kubernetes 创建复制计划时添加 AppVault，也可以从设置页面创建一个。</block>
+  <block id="4f54930c26983a7ccc9a16101ad36d80" category="list-text">在 Disaster Recovery 中，从侧边栏中选择*设置*。</block>
+  <block id="439d69f6e41a85669ad615afcbc08fb1" category="list-text">在 AppVault 卡中，选择 *+ Add AppVault*。</block>
+  <block id="68219dbc6c8ebc8883ba623a6a84265a" category="paragraph">对于 Azure，选择*订阅*、*资源组*和*存储帐户*。</block>
+  <block id="83221edc743997ff4ec1c49412993380" category="paragraph">对于 AWS、ONTAP S3 和 StorageGRID，选择 *Account* 或 *Credentials* 和 *Bucket*。</block>
+  <block id="f0c064ed074050cac00931b0b0d14ba7" category="section-title">更新 AppVault 凭据</block>
+  <block id="0cd91dc2023fb4803e0a3b8f2e2b25c4" category="paragraph">如果您的 AppVault 凭据已更改，请在"设置"页面中进行更新，以确保复制计划的连续性。更新凭据将替换共享此凭据的每个 AppVault 的密钥。</block>
+  <block id="852a2b6c78b0e0f79e67163b8c49c973" category="list-text">选择*管理 AppVaults*。</block>
+  <block id="3cdb76c786d818a49b68faddbe3f46e6" category="list-text">找到要更新的 AppVault。从操作菜单中选择 *Update*。</block>
+  <block id="7fb80b7c22c4c01aaf22daf33618a7d5" category="list-text">查看受更改影响的 AppVaults 和复制计划的数量。</block>
+  <block id="71ba65ccfaa9da5e2b100d10725ceaa6" category="list-text">输入新的 *Secret key* 和 *Access key*。</block>
+  <block id="c7b73e8ceda2ecd544916d1b74b1270f" category="list-text">选择*Update credentials*以应用更改。</block>
+  <block id="4fbece5fde2f096f32fd66b2ff9a6b55" category="section-title">编辑 AppVault 端点</block>
+  <block id="f6bcef5db7536caa23fd5b0d7b2fce29" category="paragraph">如果与 AppVault 的连接设置已更改，请更新这些设置，以确保 Kubernetes 工作负载复制计划的连续性。</block>
+  <block id="19a1d7fbf2c278e075d10a7e0aeba0ed" category="list-text">找到要编辑的 AppVault。在操作菜单中，选择*编辑*。</block>
+  <block id="757aeadac45d4b21ab2e8cda038dd7c9" category="list-text">输入您的 AppVault 的新端点。</block>
+  <block id="46bfcd2d10e924e8cfea700da679abd8" category="list-text">选择*保存*以应用新端点。</block>
+  <block id="dd6070b7dfdd053704200446affd4a91" category="section-title">删除 AppVault</block>
+  <block id="350fbf86613e0144162dda691b4673f2" category="paragraph">如果您不再需要AppVault，可以将其删除。</block>
+  <block id="27f574474a9870d7c30357f956705d61" category="list-text">找到要删除的 AppVault。从操作菜单中选择*删除*。</block>
+  <block id="e203df84d6c012e5c2537c2624e64896" category="list-text">在对话框窗口中，选择*删除*以确认操作。</block>
+  <block id="d6de3255b3701b50a54b31377ec88b74" category="summary">资源转换使您能够在故障转移期间修改工作负载的任何方面。此功能提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。</block>
+  <block id="596225757a35c9c6c33c5bad227a0407" category="doc">在 NetApp Disaster Recovery 中管理资源转换</block>
+  <block id="0b1e889c9ce8c94f1051f26332cea70b" category="paragraph">对于 NetApp Disaster Recovery 中的 Kubernetes 工作负载，您可以创建资源转换。资源转换使您能够在故障转移期间修改工作负载的任何方面。资源转换提供了在灾难恢复事件期间使工作负载适应不同环境和配置的灵活性。</block>
+  <block id="3dbd9c4d3265c8373f61d3c5d2c2acd4" category="paragraph">当您为 Kubernetes 创建复制计划时，会添加资源转换。</block>
+  <block id="93f09445bf39151008d23c3879496d00" category="section-title">创建资源转换模板</block>
+  <block id="d07cfbf2de391e4155f7b1555ca56ca3" category="list-text">在资源转换卡中，选择 *+ Add template*。</block>
+  <block id="a398f727581b305ad1515f6249e8a6ad" category="list-text">请输入资源转换的*名称*。</block>
+  <block id="45fbc6e5c0ad4dd62784cff77826f98a" category="list-text">选择*操作*：添加、复制、移动、删除、替换或测试。</block>
+  <block id="747616591e931585d7be5d918252c7ed" category="list-text">输入 *JSON path* 和 *Variable name*。（可选）添加 *Default value*。</block>
+  <block id="63c94ba39f5f0beaa677a085e2fb5018" category="image-alt">资源转换模板截图</block>
+  <block id="74e5d0e1a3c167a6352e81de9d55e499" category="list-text">要向模板中添加更多操作，请选择 *+ Add operation*。重复前两个步骤，然后按执行顺序对操作进行排序。</block>
+  <block id="f64efb31fd2448628eed66846283d7b2" category="list-text">选择*添加*以创建模板。</block>
+  <block id="29b9aabbca2091b4eaa4d3b399f8a2be" category="section-title">编辑资源转换</block>
+  <block id="5ad9d221cdc1124d456442c7e12aa089" category="list-text">在资源转换卡中，选择*管理资源转换*。</block>
+  <block id="a04c86ad43e8b7f2cd01741c0002c416" category="list-text">找到要编辑的资源转换。在行尾的操作菜单中，选择*编辑*。</block>
+  <block id="e9fc8d1833952a59befcd9be00b89b50" category="list-text">您可以编辑模板的任何字段。编辑*名称*、*操作*（添加、复制、移动、删除、替换或测试）及其附加值：*JSON 路径*和*变量名称*，或*默认值*。您还可以添加操作或编辑操作的执行顺序。</block>
+  <block id="c4dd1d5a864013b2befb02d8c6b6b9de" category="section-title">克隆资源转换</block>
+  <block id="fdde1c69fbc3247781c756c3ed30f054" category="paragraph">您可以克隆资源转换以用作新资源转换模板的基础。克隆的模板使用源模板的名称，并附加"-v1"。例如，如果克隆了模板"scale up deployment"，则克隆名为"scale up deployment-v1"。</block>
+  <block id="40fbc454476ec7b656299c1a10dff5b5" category="list-text">找到要克隆的资源转换。从该行末尾的操作菜单中，选择*Clone*。</block>
+  <block id="c812dcceb8496cbb3e5865703fbcb7f6" category="list-text">操作成功后，Disaster Recovery 会在 UI 中显示确认对话框。</block>
+  <block id="718d9c14186b79c126a6b2f91855e952" category="paragraph">您可以在资源转换列表中查看克隆的模板。</block>
+  <block id="310749d7b7c3773588566b4e91c684a1" category="section-title">删除资源转换</block>
+  <block id="bdf7fe5e8b7cf046401c2a299e4d3227" category="paragraph">如果您不再需要资源转换，则可以将其删除。</block>
+  <block id="e5d18dce024af8414f8d5bd8098764a1" category="list-text">查找要删除的资源转换。从行尾的操作菜单中选择*删除*。</block>
+  <block id="76ab4b23be9ab76ef362392d04eff80f" category="list-text">在对话框中，选择*删除*以确认操作。</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">后续步骤</block>
+  <block id="808c9323236f2ed48bff12970a5f1c49" category="list-text"><block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block></block>
+  <block id="005c3fd782ef9a703a22a6405758e8d0" category="sidebar">查看计划运行状况和保护状态</block>
+  <block id="8b2d90137c20f81f88555e65f6c0467a" category="sidebar">管理资源转换模板</block>
 </blocks>

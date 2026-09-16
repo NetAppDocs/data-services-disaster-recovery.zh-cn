@@ -16,6 +16,65 @@ summary: NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可�
 
 
 
+[[16-september-2026]]
+== 2026年9月16日
+
+版本 4.3.7
+
+
+
+[[kubernetes-support-in-netapp-disaster-recovery-is-now-generally-available-ga]]
+=== Kubernetes 支持现已在 NetApp Disaster Recovery 中正式发布 (GA)
+
+NetApp Disaster Recovery 中对基于 Kubernetes 的工作负载的支持现已正式商用 (GA)。通过对基于 Kubernetes 的工作负载的支持，您可以保护在 Kubernetes 集群上运行的应用程序，包括 OpenShift Virtualization 环境。Disaster Recovery 支持 Trident Protect 当前支持的任何 Kubernetes 版本，从而确保为容器化应用程序提供无缝集成和强大的灾难恢复能力。
+
+要开始保护基于 Kubernetes 的工作负载，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/task-kubernetes-requirements.html["NetApp Disaster Recovery 的 Kubernetes 要求"^]。
+
+
+
+[[resource-transformations]]
+=== 资源转换
+
+灾难恢复现在支持资源转换，允许您在故障转移期间修改工作负载的任何方面。此功能提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。
+
+创建复制计划时会应用资源转换。您可以在新的"设置"页面中创建、编辑和删除资源转换。有关详细信息，请参见link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-resource-transformation.html["管理资源转换"^]。
+
+
+
+[[script-execution]]
+=== 脚本执行
+
+现在，您可以将自定义脚本注入故障转移工作流，以协调应用程序的静默和恢复。此功能有助于确保在复制和还原快照之前正确准备应用程序，从而在故障转移后无缝恢复操作。
+
+要了解如何注入自定义脚本，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"^]。
+
+
+
+[[new-workloads-page]]
+=== 新建工作负载页面
+
+Disaster Recovery 已将"工作负载"页面添加到 UI，可提供所有已发现工作负载及其保护状态的综合视图。"工作负载"页面使您能够更有效地监控和管理工作负载。
+
+有关详细信息，请参见link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["在 Disaster Recovery 中查看运行状况和保护状态"^]。
+
+
+
+[[settings-page]]
+=== "设置"页面
+
+灾难恢复现在提供了一个"设置"页面，用于集中管理资源转换模板和AppVaults。此页面提供单一界面来配置和管理灾难恢复计划的这些关键组件。要了解有关"设置"页面中选项的更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-resource-transformation.html["管理资源转换"^]和link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-appvault.html["管理 AppVaults"^]。
+
+
+
+[[general-improvements]]
+=== 常规改进
+
+Disaster Recovery 在复制计划创建页面中引入了增强的验证，以确保更流畅、无错误的用户体验。
+
+Disaster Recovery 还提高了服务的弹性，以容忍间歇性请求超时，从而提升了 UI 的整体性能和可靠性。
+
+
+
 [[31-august-2026]]
 == 2026年8月31日
 

@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: use/task-resource-transformation.html 
+keywords: disaster recovery, resource transformation, kubernetes, templates 
+summary: 资源转换使您能够在故障转移期间修改工作负载的任何方面。此功能提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。 
+---
+= 在 NetApp Disaster Recovery 中管理资源转换
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+对于 NetApp Disaster Recovery 中的 Kubernetes 工作负载，您可以创建资源转换。资源转换使您能够在故障转移期间修改工作负载的任何方面。资源转换提供了在灾难恢复事件期间使工作负载适应不同环境和配置的灵活性。
+
+当您为 Kubernetes 创建复制计划时，会添加资源转换。
+
+*需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
+
+
+
+[[create-a-resource-transformation-template]]
+== 创建资源转换模板
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 在资源转换卡中，选择 *+ Add template*。
+. 请输入资源转换的*名称*。
+. 选择*操作*：添加、复制、移动、删除、替换或测试。
+. 输入 *JSON path* 和 *Variable name*。（可选）添加 *Default value*。
++
+image::resource-transformation-template.png[资源转换模板截图]
+
+. 要向模板中添加更多操作，请选择 *+ Add operation*。重复前两个步骤，然后按执行顺序对操作进行排序。
+. 选择*添加*以创建模板。
+
+
+
+
+[[edit-a-resource-transformation]]
+== 编辑资源转换
+
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 在资源转换卡中，选择*管理资源转换*。
+. 找到要编辑的资源转换。在行尾的操作菜单中，选择*编辑*。
+. 您可以编辑模板的任何字段。编辑*名称*、*操作*（添加、复制、移动、删除、替换或测试）及其附加值：*JSON 路径*和*变量名称*，或*默认值*。您还可以添加操作或编辑操作的执行顺序。
+. 选择*保存*。
+
+
+
+
+[[clone-a-resource-transformation]]
+== 克隆资源转换
+
+您可以克隆资源转换以用作新资源转换模板的基础。克隆的模板使用源模板的名称，并附加"-v1"。例如，如果克隆了模板"scale up deployment"，则克隆名为"scale up deployment-v1"。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 在资源转换卡中，选择*管理资源转换*。
+. 找到要克隆的资源转换。从该行末尾的操作菜单中，选择*Clone*。
+. 操作成功后，Disaster Recovery 会在 UI 中显示确认对话框。
++
+您可以在资源转换列表中查看克隆的模板。
+
+
+
+
+
+[[delete-a-resource-transformation]]
+== 删除资源转换
+
+如果您不再需要资源转换，则可以将其删除。
+
+.步骤
+. 在 Disaster Recovery 中，从侧边栏中选择*设置*。
+. 在资源转换卡中，选择*管理资源转换*。
+. 查找要删除的资源转换。从行尾的操作菜单中选择*删除*。
+. 在对话框中，选择*删除*以确认操作。
+
+
+
+
+[[next-steps]]
+== 后续步骤
+
+* link:drplan-create.html["创建复制计划"]
+

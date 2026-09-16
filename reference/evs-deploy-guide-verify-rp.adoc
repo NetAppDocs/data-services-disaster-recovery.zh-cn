@@ -9,13 +9,13 @@ summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster R
 
 
 [role="lead"]
-在NetApp Disaster Recovery中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于*健康*状态。如果不是，您应该检查复制计划的状态并在继续之前纠正任何问题。
+在 NetApp Disaster Recovery 中添加复制计划后，请验证该计划处于 *Healthy* 状态，然后继续。
 
 图：复制计划页面image:evs-replication-plan-post-create.png["复制计划页面"]
 
-NetApp Disaster Recovery执行一系列测试，以验证所有组件（ONTAP集群、vCenter 集群和虚拟机）是否可访问且处于正确状态，以便服务保护虚拟机。这被称为合规性检查，并且会定期进行。
+NetApp Disaster Recovery 会运行一系列测试，以验证所有组件（包括 ONTAP 集群、vCenter 集群和虚拟机）都可访问并准备好进行保护。这称为合规性检查，并定期运行。
 
-在复制计划页面中，您可以看到以下信息：
+复制计划页面显示以下信息：
 
 * 上次合规性检查的状态
 * 复制计划的复制状态

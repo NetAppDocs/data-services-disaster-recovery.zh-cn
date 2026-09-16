@@ -12,14 +12,14 @@ summary: 使用 NetApp Disaster Recovery 时，请确保在 ONTAP 中配置了�
 
 
 [role="lead"]
-使用 NetApp Disaster Recovery 时，请确保在 ONTAP 中配置了正确的权限以确保正常运行。
+配置所需的 ONTAP 权限，以便 NetApp Disaster Recovery 可以正常运行。
 
 
 
 [[minimum-ontap-permissions]]
 == 最低 ONTAP 权限
 
-Disaster Recovery 需要以下 ONTAP 权限：
+灾难恢复需要以下 ONTAP 权限：
 
 [cols="3,1"]
 |===
@@ -111,7 +111,7 @@ Disaster Recovery 需要以下 ONTAP 权限：
 [[add-permissions-in-ontap]]
 == 在 ONTAP 中添加权限
 
-在 ONTAP 中添加权限需要创建具有所需权限的角色并将角色分配给用户。您可以使用 System Manager 或 ONTAP CLI 在 ONTAP 中执行此任务。
+要在 ONTAP 中添加权限，请创建具有所需权限的角色并将其分配给用户。您可以使用 System Manager 或 ONTAP CLI 在 ONTAP 中完成此任务。
 
 [role="tabbed-block"]
 ====

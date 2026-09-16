@@ -259,13 +259,20 @@ TIP: 在命名空间上运行 CLI 命令 `kubectl get pvc -n <namespace>`以查�
 选择 *Snapshots and retention start time*（日历日期和时间）、*Snapshot and retention frequency*（启动快照的频率）和 *Snapshot retention count*（保存多少个快照）。
 
 +
-设置快照频率时，允许的最小时间为 5 分钟。
+在设置快照频率时，您必须选择至少每五分钟一次的频率。
 
 . 选择*添加 AppVault* 以创建要保存保护数据的 AppVault。
 +
 .. 输入 *名称* 并选择 AppVault 应连接到的 *Console agent*。
 .. 选择云*提供商*来托管*AppVault*。
-.. 根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。选择云提供商的 *订阅*、*资源组* 和 *存储帐户*。
+.. 根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。
++
+对于 Azure，选择云提供商的*订阅*、*资源组*和*存储帐户*。
+
++
+对于 AWS、ONTAP S3 和 StorageGRID，请选择 *Acount*、*Credentials* 和 *Bucket*。
+
+.. 如果您选择了 ONTAP S3 或 StorageGRID，则可以选择添加凭据。选择 *Add credentials* 以展开选项，然后添加 *Credential name*、*Gateway node FQDN*、*Port* 号、*Access key* 和 *Secret key*。
 .. 选择 **Add**。
 +
 image:kubernetes-mapping.png["Kubernetes 存储类映射的屏幕截图"]
@@ -282,7 +289,29 @@ image:kubernetes-mapping.png["Kubernetes 存储类映射的屏幕截图"]
 --
 ====
 
-NOTE: 对于 Kubernetes，这是创建复制的最后一步。对于 vCenters，请继续阅读 <<计算资源部分>>。
+
+==== 资源转换和脚本执行
+
+对于 Kubernetes 复制计划，您可以应用资源转换和脚本执行。这些步骤是可选的。
+
+.添加资源转换
+添加资源转换使您能够在故障转移期间修改工作负载的任何方面。资源转换提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。 link:task-resource-transformation.html["了解如何创建和管理资源转换。"^]
+
+资源转换按列出的顺序应用。
+
+. 从下拉列表中，选择要添加的资源转换。
+. 选择要应用转换的资源，然后添加所需的值
+. 审查转换的顺序，以确保操作将以适当的顺序执行。
+
+
+.添加脚本执行
+NetApp Disaster Recovery 可以在创建快照之前或之后执行脚本，以管理应用程序的静默和恢复。执行此操作可确保在复制和还原快照之前正确准备应用程序，并可在故障转移后无缝恢复操作。
+
+. 选择 *+ Add script*。
+. 选择*上传*以选择脚本文件。
+. 选择*执行阶段*：*快照前*在创建快照前执行，或*快照后*在创建后执行。
+. 选择*保存*。
+
 
 
 
