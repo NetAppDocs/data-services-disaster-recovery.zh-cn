@@ -12,7 +12,7 @@ summary: 只需几个步骤即可开始使用NetApp Disaster Recovery服务。
 
 
 [role="lead"]
-使用这些步骤开始使用 NetApp Disaster Recovery。每个步骤中的链接都会转到包含更多详细信息的页面。
+了解如何快速开始使用 NetApp Disaster Recovery，确保系统满足要求、发现工作负载以及配置复制计划以准备故障切换。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]审查先决条件
 [role="quick-margin-para"]

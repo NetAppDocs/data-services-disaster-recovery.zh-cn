@@ -12,7 +12,7 @@ summary: 在使用NetApp Disaster Recovery之前，请确保您的环境满足ON
 
 
 [role="lead"]
-在使用NetApp Disaster Recovery之前，请确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console的要求。
+在安装之前验证存储、vCenter 和控制台的先决条件，以便工作负载为复制和恢复做好准备。
 
 
 

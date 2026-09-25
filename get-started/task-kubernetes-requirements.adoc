@@ -12,7 +12,7 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的 Kubernetes 
 
 
 [role="lead"]
-在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群。保护通常适用于源集群和单独的目标集群，因此请在成对的每个集群上完成这些过程。
+在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群，以确保其为复制和故障转移做好准备。保护通常适用于源集群和单独的目标集群；在成对的每个集群上完成这些过程。
 
 
 

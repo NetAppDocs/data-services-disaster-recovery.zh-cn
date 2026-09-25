@@ -260,11 +260,8 @@
   <block id="894162c00c509cce4fa014b223b3ddeb" category="doc">访问NetApp Disaster Recovery</block>
   <block id="8e917942a77709dfd28c155f42a97553" category="inline-link">了解有关登录的更多信息</block>
   <block id="a5999c1155de9850d34ba60075be7171" category="inline-link">了解所有服务的NetApp Console访问角色</block>
-  <block id="6a65fb509b9c682f9df5eb122484e2f7" category="list-text">打开 Web 浏览器并转到<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
-  <block id="0daac1b9cd4c3a240bf2f6b44ba178a1" category="paragraph">出现NetApp Console登录页面。</block>
   <block id="83046549bdfbacafb1888d0467d8acc4" category="list-text">登录到NetApp Console。</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">如果这是您第一次登录此服务，则会出现登录页面，您可以注册免费试用。</block>
-  <block id="60df1204aca74059babd44a247508093" category="paragraph">否则，将出现NetApp Disaster Recovery仪表板。</block>
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">如果您已经在使用该服务，当您选择“灾难恢复”时，就会出现仪表板。</block>
   <block id="41fc27202bd95bf86c36faca5aa2292a" category="inline-image-macro">NetApp Disaster Recovery仪表板</block>
   <block id="9b4e9ca1e2c8ff4e1232f26bb61224ee" category="paragraph"><block ref="9b4e9ca1e2c8ff4e1232f26bb61224ee" category="inline-image-macro-rx" type="image"></block></block>
@@ -345,14 +342,11 @@
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="c266abec3014ef58af380dae0b855a81" category="admonition">审查<block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block>以确保您的系统已准备就绪。</block>
   <block id="414c3e433eb5c1851ae3a86b00f4ceb3" category="paragraph">您可以在以下基础架构中使用NetApp Disaster Recovery：</block>
-  <block id="d55e1af9ee418296c246b4085e868b14" category="list-text">私有云 DR 将本地 VMware 和ONTAP vCenter 复制到另一个本地 VMware 和ONTAP vCenter。</block>
   <block id="3a2292ce550693108458d6b2a70159a5" category="section-title">采用 VMware Cloud 和Amazon FSx for NetApp ONTAP 的混合云</block>
-  <block id="f95c7ab842d27a83ace1046a7ef13cba" category="paragraph">此方法包括使用 NFS 协议托管在ONTAP FlexVol卷上的数据存储区的本地生产 vCenter 基础架构。  DR 站点由一个或多个 VMware Cloud SDDC 实例组成，这些实例使用由一个或多个 FSx for ONTAP实例通过 NFS 协议提供的FlexVol卷上托管的数据存储。</block>
   <block id="b75bd33081eb3ed22808f61894156d53" category="paragraph">对于涉及 AWS 云基础设施的灾难恢复，您必须使用 AWS 的控制台代理。该代理应安装在与 FSx for ONTAP实例相同的 VPC 中。如果在其他 VPC 中部署了额外的 FSx for ONTAP实例，则托管代理的 VPC 必须能够访问其他 VPC。</block>
   <block id="1e8f73e81b609f921369b61db9962ba0" category="section-title">本地到 AWS</block>
   <block id="1b4220c693741db78edd086cf105c0a2" category="paragraph">AWS 提供了以下方法将私有数据中心连接到 AWS 云。每种解决方案都有其优点和成本考虑。</block>
   <block id="53e59c58dc937b1664dff508b4e63986" category="list-text">*AWS 互联网网关*：这提供了 AWS 云资源和外部计算资源之间的公共连接。这种类型的连接通常用于向外部客户提供服务，例如不需要安全性的 HTTP/HTTPS 服务。没有服务质量控制、安全性或连接性保证。因此，不建议使用此连接方法将生产数据中心连接到云。</block>
-  <block id="9a3de1fc98f937de84c79a7dd80dfcbd" category="paragraph">*最佳实践*：对于 AWS DR 站点配置， NetApp建议使用 AWS Direct Connect。该解决方案为企业应用程序提供最高的性能和安全性。如果不可用，则应使用高性能公共 ISP 连接以及 VPN。确保 ISP 提供商业 QoS 服务级别以确保足够的网络性能。</block>
   <block id="db765aadec4d1aeb065102f4b7b8b139" category="section-title">VPC 到 VPC 互连</block>
   <block id="5cc4b596e4f36712e12ccd6eb9c96042" category="paragraph">AWS 提供以下类型的 VPC 到 VPC 互连。每种解决方案都有其优点和成本考虑。</block>
   <block id="2710c060e7c666ba60d8667e82e81332" category="list-text">*VPC Peering*：这是两个 VPC 之间的私有连接。这是AWS提供的最直接、最有效的连接方式。  VPC 对等连接可用于连接相同或不同 AWS 区域中的 VPC。</block>
@@ -377,7 +371,6 @@
   <block id="cb38b39495aded16d3565297386a9c9e" category="section-title">私有云</block>
   <block id="7f644ce2b5624607d0411455768b8a3f" category="paragraph">您可以使用NetApp Disaster Recovery来保护托管在一个或多个 vCenter 集群上的 VMware VM，方法是将 VM 数据存储复制到同一私有数据中心或远程私有或共置数据中心的另一个 vCenter 集群。</block>
   <block id="2d5173c44bed7d94e4a1a4c7f08085be" category="paragraph">对于本地到本地的情况，请在其中一个物理站点安装控制台代理。</block>
-  <block id="2e21c8e50d60b3158f51faef12898bab" category="paragraph">灾难恢复支持使用以太网和 TCP/IP 进行站点到站点的复制。确保有足够的带宽来支持生产站点虚拟机上的数据变化率，以便所有更改都可以在恢复点目标 (RPO) 时间范围内复制到 DR 站点。</block>
   <block id="83e6b7ed81269663eb0d7ec5dd6eaa2e" category="section-title">为本地到本地保护做好准备</block>
   <block id="ac5b2964f36c97128db1cdd7fc3272ab" category="paragraph">在设置NetApp Disaster Recovery以进行本地到本地保护之前，请确保满足以下要求：</block>
   <block id="b2deae88b1a0357caaa51258ab1694e1" category="list-text">ONTAP存储</block>
@@ -1404,7 +1397,6 @@
   <block id="8a6e25252289a1daedac4f0edba496da" category="paragraph"><block ref="d5b487b8647d589ee708465fa8f6ee1a" category="inline-link-rx"></block>。</block>
   <block id="6b12a212016aaf0720b69178e6a86c8c" category="admonition">此消息也会出现在NetApp Console和<block ref="2355a5350c49a10d2ea41458fca03a98" category="inline-link-rx"></block>。</block>
   <block id="5ac6ac982b7e70ea7339a4a3b33bf830" category="paragraph"><block ref="e9f92cb99927db4b051f21efde07f04c" category="inline-link-rx"></block>。</block>
-  <block id="b94b95cfe5aca58d64e6ae08bf0d9e9d" category="paragraph">特定任务需要特定的用户角色。<block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>。<block ref="e704c98551e5f8acdbf19af28a86dcf3" category="inline-link-rx"></block>。</block>
   <block id="58da51d642fdf90e20b6bc81ffd17071" category="cell">使用Google Cloud NetApp Volumes 的Google Cloud VMware Engine</block>
   <block id="c16627d554485432d2c775a2396d8ad6" category="section-title">Google Cloud 的先决条件和注意事项</block>
   <block id="8c9cabeb12945e6dfce2d25647e6e557" category="list-text">同步 API，用于将快照从本地存储传输到Google Cloud NetApp Volumes。</block>
@@ -1766,10 +1758,6 @@
   <block id="4a8a0c3493007142356e2bab5b977e96" category="inline-link-macro">Disaster Recovery 支持的配置</block>
   <block id="fd6fb30ddd2582b6a9be2fbd297066cd" category="paragraph">有关 GCVE 支持的详细信息，请参见 <block ref="e93ab8cb254bacf15604af8d15ae8da4" category="inline-link-macro-rx"></block>。</block>
   <block id="cda0283bbd4a4fb561a454be42b95e79" category="section-title">支持的基础设施</block>
-  <block id="9753fdc07008742b97e2abeb69d97996" category="list-text">混合云灾难恢复，将本地 VMware 和 ONTAP 数据中心复制到基于 VMware Cloud on AWS 或 Elastic VMware Service (EVS) 和 Amazon FSx for NetApp ONTAP 的 AWS 灾难恢复基础架构。</block>
-  <block id="1a3b0e646655d3e634f506335377b274" category="list-text">云 DR，将基于 VMware Cloud on AWS 或 EVS 的 AWS DR 基础架构复制到另一个使用 FSx for NetApp ONTAP 的基于 AWS 的 DR 基础架构。</block>
-  <block id="9e44011b9e0a2de4c376eea05ca3b108" category="list-text">混合云 DR，将本地 VMware 和 ONTAP 数据中心复制到基于 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 的 Google DR 基础架构。</block>
-  <block id="1d1e533f25b0978157fd3d6581e3bfce" category="paragraph">生产和 DR 站点通过 AWS 兼容的安全连接进行连接。常见的连接类型包括安全 VPN（私有或 AWS 提供）、AWS Direct Connect 或其他已批准的互连方法。</block>
   <block id="6da123917575e59f72dab08a3d3c444b" category="list-text">*AWS Direct Connect*：这是 AWS 云互连，与您的私有数据中心位于同一地理区域，由 AWS 合作伙伴提供。此解决方案可在您的本地数据中心和 AWS 云之间提供安全的私有连接，而无需公共互联网连接。这是 AWS 提供的最直接、最有效的连接方法。</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
   <block id="7a220dd27e25e08bf2217cc7bebbf755" category="paragraph">版本 4.3.2</block>
@@ -2277,7 +2265,6 @@
   <block id="847e894891a8e4fc59a7564985bb691c" category="list-text">Azure VMware Solution 与 NetApp Cloud Volumes ONTAP (iSCSI)（私有预览）</block>
   <block id="c10f52436d024067a59463c5ea0c9966" category="list-text">另一个具有 ONTAP 存储的基于 NFS 和/或 VMFS (iSCSI/FC) 的本地 VMware 环境</block>
   <block id="562e98f7c1898c8d6ea19c51f719228b" category="list-text">另一个具有 ONTAP 存储的基于 NFS 的本地 VMware 环境，或本地 FC/iSCSI VMFS 环境</block>
-  <block id="d3de37316839676459c39019cbb52c48" category="paragraph">NetApp Disaster Recovery 提供多种许可选项，包括免费试用、按需购买订阅以及自带许可证 (BYOL)。</block>
   <block id="08ec25be97389edab02b4e5cbdc8edb5" category="section-title">许可选项</block>
   <block id="2e9455096be8b4965cdbde5e2161731b" category="paragraph">可以使用以下许可选项：</block>
   <block id="45be3177175ff486efed8b44ba90e43d" category="paragraph">或者，从 Disaster Recovery 菜单中选择 *查看付款方式*。</block>
@@ -2285,30 +2272,21 @@
   <block id="913e2efda8033c4d362537a49d9ee67b" category="section-title">将许可证添加到 NetApp Console</block>
   <block id="c981a82ac7d3c3de78fd59f637812ff4" category="paragraph">从 NetApp 销售代表处购买 NetApp Disaster Recovery 许可证后，您可以在控制台中管理该许可证。</block>
   <block id="d971a46f9cf04224e04cda7bfc19afc4" category="paragraph">如果您的许可期限已接近到期日期，或者您的许可容量已达到上限，您将在 NetApp Disaster Recovery UI 中收到通知。您可以在 NetApp Disaster Recovery 许可证到期前对其进行更新，以免中断您使用该服务的能力。</block>
-  <block id="3ea1fa975709109b97164317bb06281a" category="paragraph">通过 NetApp Console 登录到 NetApp Disaster Recovery。</block>
-  <block id="eba4f3ce2b4f45e6ca2cb200a4c5eb69" category="paragraph">要登录，请使用您的 NetApp 支持站点凭据或使用您的电子邮件地址和密码注册 NetApp 云登录<block ref="83012c4a40bb3321733997744c83daa9" category="inline-link-rx"></block>。</block>
   <block id="18f9f0670619f2309b415af512fe847c" category="list-text">如果您尚未添加 NetApp Console 代理，请添加一个。有关详细信息，请参阅<block ref="552a7d66ccd9c93a9dbc55fd8ef74d52" category="inline-link-rx"></block>。</block>
-  <block id="edde535a43612ec9fb38be8a33fcfa51" category="list-text">如果您是拥有现有代理的 NetApp Console 用户，当您选择*灾难恢复*时，将显示有关注册的消息。</block>
   <block id="e6d3951614e88937cbc3d9b3798d1c60" category="paragraph">当您将 NetApp Disaster Recovery 与 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 结合使用时，请确保配置正确的权限并查看以下注意事项。</block>
   <block id="1dc05b055f10ad30a0ff313460b26634" category="list-text">请联系 Google SRE 团队，将以下内容加入允许列表：</block>
   <block id="1a72702bea711f39b088ed0d4020a87c" category="paragraph">这些先决条件适用于 ONTAP 和 Amazon FSx for NetApp ONTAP 实例。</block>
   <block id="9beb22b2943c3a24a0fe864d1a41e546" category="inline-link">注册 NetApp Console 并创建组织</block>
   <block id="10a3aa4ddbdce4dbbdbe8c24197b32e1" category="paragraph">如果您尚未完成此操作，<block ref="1fb558a2395bd23df7d326ce1f18cd71" category="inline-link-rx"></block>。</block>
-  <block id="b6b43e50babb362754aaf7cc67cbe737" category="paragraph">使用这些步骤开始使用 NetApp Disaster Recovery。每个步骤中的链接都会转到包含更多详细信息的页面。</block>
   <block id="e173ccdbd07742f5e12ded0d5ceb4119" category="paragraph">设置服务后，您可以完成这些后续步骤。</block>
-  <block id="ec03af63f02570679b2c52949034c97a" category="paragraph">要使用 NetApp Disaster Recovery，请在 NetApp Console 和支持的灾难恢复环境中完成几个设置步骤。</block>
   <block id="5eee3cef11a4fc8d1e9f1807b868b72c" category="section-title">AWS 可用性区域</block>
   <block id="35fa6d73da1bc964f0127c1985e1ed16" category="paragraph">AWS 支持在一个区域内的一个或多个可用区 (AZ) 中部署解决方案。NetApp Disaster Recovery 使用两种 AWS 托管服务：VMware Cloud on AWS 和 Amazon FSx for NetApp ONTAP。</block>
   <block id="6a78d39d8c8decb76164d1c3cc7ba8c8" category="list-text">*VMware Cloud for AWS*：支持在单 AZ 或双 AZ 扩展集群 SDDC 环境中进行部署。NetApp Disaster Recovery 仅支持 VMware Cloud on AWS 的单 AZ SDDC 部署。</block>
   <block id="54533f05a60099c878642d463905f738" category="list-text">*AWS FSx for NetApp ONTAP*：在多 AZ 配置中部署 Amazon FSx for NetApp ONTAP 时，每个卷由一个 FSx for ONTAP 文件系统拥有，数据将镜像到第二个文件系统。FSx for ONTAP 可以部署在单 AZ 或多 AZ 配置中。NetApp Disaster Recovery 支持这两种部署模式。</block>
-  <block id="73d710b9e85058bf262c6bbf6a4ff19e" category="paragraph">*最佳实践*：对于 AWS DR 站点配置，NetApp 建议对 VMware Cloud 和 AWS FSx for ONTAP 实例使用单 AZ 部署。由于 AWS 用于灾难恢复，因此引入多个可用区没有优势。多 AZ 部署可能会增加成本和复杂性。</block>
-  <block id="a765cdc056dd08e96c8d6a927b212408" category="list-text">*AWS Site-to-Site VPN*：此虚拟专用网络连接可通过公共互联网服务提供商提供安全连接。VPN 对往返 AWS 云的所有数据进行加密和解密。VPN 可以是基于软件的，也可以是基于硬件的。对于企业应用程序，公共互联网服务提供商（ISP）应提供服务质量保证，以确保为灾难恢复复制提供足够的带宽和延迟。</block>
-  <block id="0f5c7830ffbd944b4edd120da88f4c98" category="paragraph">*最佳实践*：对于使用 VMware Cloud 和单个 FSx for ONTAP VPC 的灾难恢复解决方案，NetApp 建议使用 VPC 对等。如果部署了多个 FSx for ONTAP VPC，则建议使用 AWS Transit Gateway 来减少多个 VPC 对等连接的管理开销。</block>
   <block id="3f27908dd0e654aebc5eaac2860f3026" category="list-text">在 AWS FSx for ONTAP 实例中创建或验证您的目标 ONTAP SVM。</block>
   <block id="16570eb72e5d1c2fd4ae8860b2e48aad" category="paragraph">NetApp Disaster Recovery 代理实现需要控制台代理与使用 HTTPS 协议的任何 vCenter 服务器和 ONTAP 阵列之间进行端口 443 通信。控制台代理中的 NetApp Disaster Recovery 代理在执行操作时直接与 VMware vSphere、vCenter 服务器或 ONTAP 通信。</block>
   <block id="7bb121cdcae2c2832838e2f290a86bf5" category="list-text">所有由 NetApp Disaster Recovery 管理的 VMware 集群必须使用 ONTAP 卷来托管要保护的虚拟机。</block>
   <block id="dfb6f3404d01c2320e91dc82c3743342" category="list-text">将 VMware Cloud SDDC 与 Amazon FSx for NetApp ONTAP 实例链接。请参阅<block ref="703588ab376df01744e79984f081d5fd" category="inline-link-rx"></block>。</block>
-  <block id="652475d7336cd836411ec7d566842d60" category="paragraph">在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群。保护通常适用于源集群和单独的目标集群，因此请在成对的每个集群上完成这些过程。</block>
   <block id="0a4e25753cea4f154af0469ab230e9ba" category="list-text">运行安装命令时，可以使用 Helm 3。</block>
   <block id="538e8cc604d9acb8c54b11be5d28123e" category="list-text">**Management LIF**：由 Trident 用于管理 API 访问。</block>
   <block id="e8fe43ecd8f37d6c3b374d6267a0e1bc" category="list-text">**数据 (NFS) LIF**：用于卷的 NFS 流量。</block>
@@ -2725,4 +2703,35 @@
   <block id="08e23a6b35ef4e66680d353da268fa9d" category="paragraph">向站点添加资源后，您可以创建资源组来将虚拟机、数据存储区或 Kubernetes 集群组织为一个单元。资源组允许您将依赖资源组织成满足您要求的逻辑组。例如，您可以对某个应用程序的虚拟机进行分组，或对共享相似层级的应用程序进行分组。资源组还可以包括在恢复期间运行的延迟启动顺序，以确保资源以正确的顺序启动。</block>
   <block id="0b3812b60ebe3c1059cea904557f00cb" category="paragraph">在创建灾难恢复计划之前，请在 NetApp Disaster Recovery 中添加要保护的站点。站点是 vCenter 服务器或 Kubernetes 集群的集合，无论是在本地还是在云中。添加生产站点和灾难恢复站点，以便 Disaster Recovery 可以协调用于恢复的资源。</block>
   <block id="163f4744512c53baf24fa0cfd3a4e497" category="sidebar">所需 Trident 权限</block>
+  <block id="1153c95a8d407c454fc356499e80ce24" category="paragraph">NetApp Disaster Recovery 提供多种许可选项，包括免费试用、按需付费订阅以及自带许可证（BYOL）。在配置灾难恢复之前，请确认您的许可模式，以确保服务满足您的组织需求。</block>
+  <block id="2f10eb504784057b33920ac8cf9d39bc" category="paragraph">要登录 NetApp Disaster Recovery，请使用您的 NetApp 支持站点凭据或使用您的电子邮件地址和密码注册 NetApp 云登录<block ref="83012c4a40bb3321733997744c83daa9" category="inline-link-rx"></block>。</block>
+  <block id="f4040f71a7d553f2519487070892b115" category="section-title">用户角色</block>
+  <block id="6f3015e9c08dbe0a0c048cd314e0e8ea" category="paragraph">在灾难恢复中，特定任务需要特定的用户角色。请确保已将正确的角色分配给用户。</block>
+  <block id="bb91529f7ed6a88571b27d8e1ac73fcd" category="inline-link-macro">NetApp Disaster Recovery 中的用户角色和权限</block>
+  <block id="864663fab286d747fb67313339d4a6a3" category="inline-link-macro">NetApp Console 所有服务的访问角色</block>
+  <block id="d17878cff524ca0e56412d14d3033be6" category="paragraph">有关详细信息，请参见： * <block ref="c5e5299326c2f45c0bce3e6343021ca2" category="inline-link-macro-rx"></block> * <block ref="ac8a9d8d6bca78a52bdf47d9949c1df4" category="inline-link-macro-rx"></block></block>
+  <block id="97e4fbf5c270d963151711bff4103ba2" category="section-title">登录到 NetApp Disaster Recovery</block>
+  <block id="03875c3f0de2a98130bb9dfa1b7f8afb" category="list-text">打开 Web 浏览器。导航到<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
+  <block id="0f90d40f52124cc1ea0fddb212b47ef3" category="inline-image-macro">Disaster Recovery 的登录页面屏幕截图</block>
+  <block id="10bbb43332175a82cbd613c185c52932" category="paragraph"><block ref="10bbb43332175a82cbd613c185c52932" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61493fb7ce16e72db3c2cf4bb6a2c308" category="paragraph">否则，将显示灾难恢复仪表板。</block>
+  <block id="6f8eac83cd95ea0227f0b0d3e138f4f4" category="list-text">如果您是拥有现有代理的 Console 用户，当您选择 *Disaster recovery* 时，将显示有关注册的消息。</block>
+  <block id="56dba1a0fa6fc2322a683fe201c0ee47" category="inline-image-macro">灾难恢复仪表板</block>
+  <block id="e21367b623115dc2d573941e82450d18" category="paragraph"><block ref="e21367b623115dc2d573941e82450d18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d7437c3aaaf0629acc4ff530b980318" category="paragraph">在安装之前验证存储、vCenter 和控制台的先决条件，以便工作负载为复制和恢复做好准备。</block>
+  <block id="d5eebd68b04cfb5ee093006e8a051759" category="paragraph">了解如何快速开始使用 NetApp Disaster Recovery，确保系统满足要求、发现工作负载以及配置复制计划以准备故障切换。</block>
+  <block id="d05f28ac4af4437fc2d15ad33f1d60d9" category="paragraph">要使用 NetApp Disaster Recovery，请首先在中断之前准备好恢复环境，以便能够以最短的延迟配置和测试复制及故障转移。</block>
+  <block id="1d9e43693cfe15e882fe79c64ab0c709" category="list-text">混合云灾难恢复，将本地 VMware 加 ONTAP 数据中心复制到基于 VMware Cloud on AWS 或 Elastic VMware Service (EVS) 和 Amazon FSx for NetApp ONTAP 的 AWS 灾难恢复基础架构。</block>
+  <block id="5e9e30d9aff0f87a7bb097a63f5daea6" category="list-text">将本地 VMware 加 ONTAP vCenter 复制到另一个本地 VMware 加 ONTAP vCenter 的私有云灾难恢复。</block>
+  <block id="3b988d8a7bd7f69dd1a123441159e826" category="list-text">使用 FSx for NetApp ONTAP，将基于 VMware Cloud on AWS 或 EVS 的 AWS 灾难恢复基础架构复制到另一个基于 AWS 的灾难恢复基础架构的云灾难恢复解决方案。</block>
+  <block id="418bc5ed1d5f54ec6e42e1b630faa9d1" category="list-text">混合云灾难恢复，将本地 VMware 加 ONTAP 数据中心复制到基于 Google Cloud VMware Engine 和 Google Cloud NetApp Volumes 的 Google 灾难恢复基础设施。</block>
+  <block id="84d4949a8d1e4a83a3e1ed70d9b337f2" category="paragraph">此方法包含一个本地生产 vCenter 基础架构，该基础架构使用通过 NFS 协议托管在 ONTAP FlexVol 卷上的数据存储。灾难恢复站点包含一个或多个 VMware Cloud SDDC 实例，这些实例使用通过 NFS 协议托管在一个或多个 FSx for ONTAP 实例提供的 FlexVol 卷上的数据存储。</block>
+  <block id="4257c376490fcdeb2d85428bb69e098f" category="paragraph">生产和灾难恢复站点通过与 AWS 兼容的安全连接进行连接。常见的连接类型包括安全 VPN （私有或 AWS 提供）、AWS Direct Connect 或其他经批准的互连方法。</block>
+  <block id="98a98eb174df91339e38055b7c5c6130" category="paragraph">*最佳实践*：对于 AWS 灾难恢复站点配置，NetApp 建议对 VMware Cloud 和 AWS FSx for ONTAP 实例使用单 AZ 部署。由于 AWS 用于灾难恢复，因此引入多个可用区没有优势。多 AZ 部署可能会增加成本和复杂性。</block>
+  <block id="3e0c72c1eed706238450b329bda91672" category="list-text">*AWS Site-to-Site VPN*：此虚拟专用网络连接可通过公共互联网服务提供商提供安全连接。VPN 对往返 AWS 云的所有数据进行加密和解密。VPN 可以是基于软件的，也可以是基于硬件的。对于企业应用程序，公共互联网服务提供商（ISP）应提供服务质量保证，以确保为灾难恢复复制提供足够的带宽和延迟。</block>
+  <block id="925ec5407d9b04794a24d162e56ff698" category="paragraph">*最佳实践*：对于 AWS 灾难恢复站点配置，NetApp 建议使用 AWS Direct Connect。此解决方案为企业级应用程序提供最高的性能和安全性。如果不可用，则应使用高性能公共 ISP 连接以及 VPN。确保 ISP 提供商业 QoS 服务级别，以确保充足的网络性能。</block>
+  <block id="05a939b2aaaca6afbe6c35b25a72170e" category="paragraph">*最佳实践*：对于使用 VMware Cloud 和单个 FSx for ONTAP VPC 的灾难恢复解决方案，NetApp 建议使用 VPC 对等。如果部署了多个 FSx for ONTAP VPC，则建议使用 AWS Transit Gateway 来减少多个 VPC 对等连接的管理开销。</block>
+  <block id="2838fb3a8731afbc320b29a147b86e21" category="paragraph">灾难恢复支持使用以太网和 TCP/IP 的站点到站点复制。确保有足够的带宽来支持生产站点虚拟机上的数据更改率，以便在恢复点目标 （RPO） 时间范围内将所有更改复制到灾难恢复站点。</block>
+  <block id="022268024cea56e0a580165d587cd756" category="paragraph">在使用 NetApp Disaster Recovery 之前，请确保您的环境满足 VMware vCenter 集群要求，以便复制和恢复能够正常运行而不会出现兼容性问题。</block>
+  <block id="70de8fd72044fea5813c432b196646c1" category="paragraph">在为 Kubernetes 配置 NetApp Disaster Recovery 之前，请准备好每个 Kubernetes 集群，以确保其为复制和故障转移做好准备。保护通常适用于源集群和单独的目标集群；在成对的每个集群上完成这些过程。</block>
 </blocks>

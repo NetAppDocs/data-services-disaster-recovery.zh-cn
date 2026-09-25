@@ -22,8 +22,6 @@ summary: 有关适用于 VMware 和 Kubernetes 工作负载的 NetApp Disaster R
 本常见问题解答回答了有关 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 常见问题。本文重点介绍在实施灾难恢复配置以及管理复制、迁移、故障转移和故障恢复操作时所涉及的概念、术语、系统行为和约束条件。
 
 
-toc::[]
-
 
 [[getting-started]]
 == 入门指南
