@@ -12,29 +12,53 @@ summary: 只需几个步骤即可开始使用NetApp Disaster Recovery服务。
 
 
 [role="lead"]
-了解如何快速开始使用 NetApp Disaster Recovery，确保系统满足要求、发现工作负载以及配置复制计划以准备故障切换。
+了解如何配置 NetApp Disaster Recovery，确保您的系统满足成功发现工作负载和配置复制计划以准备故障转移的要求。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]审查先决条件
 [role="quick-margin-para"]
-link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"] 。
+部署 Console agent 和分配权限需要 _Super admin_ 或 _Organization admin_ 角色。
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["部署 Console 代理"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["查看 Disaster Recovery 用户角色并将权限分配给需要这些角色的用户"^]
+* link:../get-started/dr-prerequisites.html["确保您的系统满足这些要求"]
+* 确保您满足工作负载类型的相应要求：
++
+** link:../get-started/reference-vmware-prerequisites.html["VMware 先决条件"]
+** link:../get-started/task-kubernetes-requirements.html["Kubernetes 先决条件"]
+
+
+
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]设置NetApp Disaster Recovery
-[role="quick-margin-list"]
-* link:../get-started/dr-setup.html["设置服务的基础结构"] 。
-* link:../get-started/dr-licensing.html["设置许可"] 。
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]下一步是什么？
 [role="quick-margin-para"]
-设置服务后，您可以完成这些后续步骤。
+这些任务需要 _Super admin_ 或 _Disaster recovery admin_ 角色。
 
 [role="quick-margin-list"]
-* link:../use/sites-add.html["将您的 vCenter 站点添加到NetApp Disaster Recovery"] 。
-* link:../use/manage.html#manage-resource-groups["创建第一个资源组"] 。
-* link:../use/drplan-create.html["创建您的第一个复制计划"] 。
-* link:../use/replicate.html["将应用程序复制到另一个站点"] 。
-* link:../use/failover.html["将应用程序故障转移到远程站点"] 。
-* link:../use/failback.html["将应用程序故障恢复到原始源站点"] 。
-* link:../use/manage.html["管理站点、资源组和复制计划"] 。
-* link:../use/monitor-jobs.html["监控灾难恢复操作"] 。
+* link:../get-started/dr-setup.html["设置服务的基础结构"]
+* link:../get-started/dr-licensing.html["设置许可"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 配置灾难恢复计划
+[role="quick-margin-para"]
+这些任务需要 _Disaster recovery admin_ 角色。
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["将您的站点添加到 Disaster Recovery"]
+* link:../use/manage.html#manage-resource-groups["创建资源组"]
+* link:../use/task-appvault.html["对于 Kubernetes 工作负载，请添加 AppVault"]
+* link:../use/drplan-create.html["创建复制计划"]
+* link:../use/replicate.html["将应用程序复制到另一个站点"]
+* link:../use/task-resource-transformation.html["管理 Kubernetes 工作负载的资源转换"]
+* link:../use/manage.html["管理站点、资源组和复制计划"]
+* link:../use/monitor-jobs.html["监控灾难恢复操作"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] 从灾难中恢复
+[role="quick-margin-para"]
+这些任务需要 _Disaster Recovery admin_ 或 _Disaster Recovery failover admin role_。
+
+[role="quick-margin-para"]
+* link:../use/failover.html["将应用程序故障转移到远程站点"]
+* link:../use/failback.html["将应用程序故障恢复到原始源站点"]
 
