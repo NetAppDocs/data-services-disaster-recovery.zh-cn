@@ -58,7 +58,7 @@ summary: 只需几个步骤即可开始使用NetApp Disaster Recovery服务。
 [role="quick-margin-para"]
 这些任务需要 _Disaster Recovery admin_ 或 _Disaster Recovery failover admin role_。
 
-[role="quick-margin-para"]
+[role="quick-margin-list"]
 * link:../use/failover.html["将应用程序故障转移到远程站点"]
 * link:../use/failback.html["将应用程序故障恢复到原始源站点"]
 
