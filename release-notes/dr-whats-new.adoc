@@ -16,6 +16,45 @@ summary: NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可�
 
 
 
+[[12-october-2026]]
+== 2026年10月12日
+
+版本 4.3.8
+
+
+
+[[optional-boot-order-for-kubernetes-resource-groups]]
+=== Kubernetes 资源组的可选引导顺序
+
+NetApp Disaster Recovery 现在支持通过指定资源的优先级顺序和可选的延迟时间来为 Kubernetes 复制计划中的资源组设置可选的引导顺序。此选项使您能够在必要时同时启动资源，并延迟启动依赖于其他资源的资源，从而支持应用程序以健康的方式恢复联机。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"^]。
+
+
+
+[[snaplock-volume-support]]
+=== SnapLock 卷支持
+
+灾难恢复现在支持 SnapLock 卷，使您可以故障转移防篡改快照。对 SnapLock 卷执行故障恢复时，您必须使用 *立即拍摄快照* 选项以确保成功完成故障恢复。
+
+有关详细信息，请参见link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移"^]和link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failback.html["failback"^]的说明。
+
+
+
+[[simplified-refresh-and-compliance-runs]]
+=== 简化刷新和合规运行
+
+针对 vCenter、复制计划和法规遵从性的刷新运行已简化为单个作业，以加快执行速度。要查看此更改，请了解如何 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["监控作业"^]。
+
+
+
+[[kubernetes-compliance-checks]]
+=== Kubernetes 合规性检查
+
+灾难恢复添加了合规性检查，以识别 Kubernetes 工作负载缺少的工作环境。这些合规性检查有助于确保工作负载运行状况，以确保复制计划的完整性。
+
+
+
 [[16-september-2026]]
 == 2026年9月16日
 

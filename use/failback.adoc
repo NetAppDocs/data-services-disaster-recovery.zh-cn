@@ -56,6 +56,10 @@ image::site-type-toggle.png[站点类型切换的屏幕截图]
 . 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
 . 选择要从中恢复的数据存储区的快照。选择 *Take snapshot now* 以启动新快照，或 *Select* 从可用快照中进行选择。
 +
+
+NOTE: 如果您使用的是防篡改 SnapLock 快照，则必须使用*立即拍摄快照*选项。否则操作将失败。
+
++
 image:failback.png["故障恢复对话框的屏幕截图"]
 
 . 输入 "Failback" 确认操作，然后选择 *Failback*。

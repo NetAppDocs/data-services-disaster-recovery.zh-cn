@@ -2280,7 +2280,6 @@
   <block id="bc5f6fc21f6a94d180764bb6c6a4cd7d" category="paragraph">安装 <block ref="eec6190e0599877ad03e04b40eef0c58" category="inline-link-macro-rx"></block>。这些安装是 Trident Protect 中的卷快照所必需的。</block>
   <block id="918fa72b18f488b31c1a63283c4f2148" category="paragraph"><block ref="4569567eb3ca20d8c53676753a511f69" prefix="" category="inline-code"></block></block>
   <block id="d601ac6a8739700584fe1f4c446d9754" category="list-text">*Down*：站点无法访问或存在连接问题。</block>
-  <block id="6026e48cd116a5cbacecfc8da06638ea" category="paragraph">添加资源和站点后，创建_复制计划_以保护您的数据。该计划定义应用程序的源站点和目标站点、资源组、恢复映射和开机行为。您还可以配置合规性和测试计划，并在不影响生产数据的情况下执行测试故障转移。</block>
   <block id="1c4de46c0cd1d0a73f4e3432ea708002" category="paragraph">您可以保护多个数据存储区上的多个虚拟机。NetApp Disaster Recovery 为托管受保护虚拟机数据存储区的所有 ONTAP 卷创建 ONTAP 一致性组。</block>
   <block id="46224a4824d70ef03f0888359b806a9e" category="list-text">如果目标站点上缺少快照，则服务可能会在下一个计划快照协调过程中删除源站点上的相应快照，具体取决于关系的默认 SnapMirror 策略。</block>
   <block id="7e0f1183c0ae5c291e2245966bd03d67" category="paragraph">向导将引导您完成以下步骤：</block>
@@ -2568,7 +2567,6 @@
   <block id="8d57596f9b796b61e90df9540d12cc03" category="paragraph">对于 Azure，选择云提供商的*订阅*、*资源组*和*存储帐户*。</block>
   <block id="d575618a014f5e9564ca37f19e47ce57" category="paragraph">对于 AWS、ONTAP S3 和 StorageGRID，请选择 *Acount*、*Credentials* 和 *Bucket*。</block>
   <block id="5a5927bde0ac7465b00ff420f8ccdb8c" category="list-text">如果您选择了 ONTAP S3 或 StorageGRID，则可以选择添加凭据。选择 *Add credentials* 以展开选项，然后添加 *Credential name*、*Gateway node FQDN*、*Port* 号、*Access key* 和 *Secret key*。</block>
-  <block id="796c589626154baa50e1f1b1c6b6ff97" category="section-title">资源转换和脚本执行</block>
   <block id="bb9e542c041adb6fce43a5550a447aee" category="paragraph">对于 Kubernetes 复制计划，您可以应用资源转换和脚本执行。这些步骤是可选的。</block>
   <block id="89fd45000e9691421f0cd2d2422f2098" category="paragraph-title">添加资源转换</block>
   <block id="daac935d0f9259f469bdeb6216a7bedd" category="inline-link-macro">了解如何创建和管理资源转换。</block>
@@ -2749,4 +2747,28 @@
   <block id="524f5a32773e3e832b74877ecf58916f" category="list-text"><block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block></block>
   <block id="6fbeff9687fcc9f06bd89057c3ed5a34" category="list-text"><block ref="6fbeff9687fcc9f06bd89057c3ed5a34" category="inline-link-macro-rx"></block></block>
   <block id="57574b91a736e91f1b6149f9abdf3330" category="sidebar">管理站点、计划、数据存储和虚拟机信息</block>
+  <block id="02062d06535ce7696876b02309ed3f5e" category="admonition">如果您使用的是防篡改 SnapLock 快照，则必须使用*立即拍摄快照*选项。否则操作将失败。</block>
+  <block id="1c335a9c5603264a97d8d84cb6c6faf0" category="doc">Kubernetes 资源组的可选引导顺序</block>
+  <block id="84af32d37767e36e149339ec37e513b1" category="paragraph">NetApp Disaster Recovery 现在支持通过指定资源的优先级顺序和可选的延迟时间来为 Kubernetes 复制计划中的资源组设置可选的引导顺序。此选项使您能够在必要时同时启动资源，并延迟启动依赖于其他资源的资源，从而支持应用程序以健康的方式恢复联机。</block>
+  <block id="f2497ae428eba83b3f39732433d3cb44" category="inline-link-macro">创建复制计划</block>
+  <block id="9e29609c3bbaf3dd61657f73add99007" category="paragraph">有关详细信息，请参见 <block ref="b368f0a73ce8108f9547ecd0643b331f" category="inline-link-macro-rx"></block>。</block>
+  <block id="05316212411905c51cdd49deaf78a58e" category="section-title">SnapLock 卷支持</block>
+  <block id="a547512ac8a0a093f138ab19fb5f9c67" category="paragraph">灾难恢复现在支持 SnapLock 卷，使您可以故障转移防篡改快照。对 SnapLock 卷执行故障恢复时，您必须使用 *立即拍摄快照* 选项以确保成功完成故障恢复。</block>
+  <block id="3ad6e9988864aeae2ef386345946dc6d" category="inline-link-macro">故障转移</block>
+  <block id="a571d3783c8d552371d5e8b486416b18" category="inline-link-macro">failback</block>
+  <block id="374fdd2efa0670899dec57115b7ed99b" category="paragraph">有关详细信息，请参见<block ref="8fc81de61ce6b6f345351934ad55bc91" category="inline-link-macro-rx"></block>和<block ref="54d34f2cfe03dcbe402071f8f9beccd0" category="inline-link-macro-rx"></block>的说明。</block>
+  <block id="eec8280b12e61e71ed9a9f31e25a4cb6" category="section-title">简化刷新和合规运行</block>
+  <block id="196ba426ef1a0d15830e58f8ea71c405" category="inline-link-macro">监控作业</block>
+  <block id="844a671e46adc508ee852b03a616e916" category="paragraph">针对 vCenter、复制计划和法规遵从性的刷新运行已简化为单个作业，以加快执行速度。要查看此更改，请了解如何 <block ref="c4c673075f72fe052d440b509fb5db2d" category="inline-link-macro-rx"></block>。</block>
+  <block id="838e15ad2606430b761fae47ebb38dee" category="section-title">Kubernetes 合规性检查</block>
+  <block id="07de08b6dc69bbb77fbf2faa073882f2" category="paragraph">灾难恢复添加了合规性检查，以识别 Kubernetes 工作负载缺少的工作环境。这些合规性检查有助于确保工作负载运行状况，以确保复制计划的完整性。</block>
+  <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
+  <block id="644654fd24758e69ba70d0af50f707b2" category="paragraph">版本 4.3.8</block>
+  <block id="86ad5929405f6e7a459f3adf67f298e6" category="paragraph">添加资源和站点后，创建_复制计划_以通过 NetApp Disaster Recovery 保护您的数据。该计划定义应用程序的源和目标站点、资源组、恢复映射和开机行为。您还可以配置合规性和测试计划，并在不影响生产数据的情况下执行测试故障转移。</block>
+  <block id="e65bfba01c1dd06a7952b0d1a116ad70" category="section-title">资源转换、脚本执行和引导顺序</block>
+  <block id="5753c0f11c80b803bc47552e63a898cb" category="paragraph-title">设置启动顺序</block>
+  <block id="b5c34ed8fbc17ece1ce6b8ca13f9d672" category="paragraph">对于包含多个资源组的复制计划，您可以选择设置启动顺序，以确保需要一起联机的资源能够同时联机，而依赖于其他资源组的任何资源组在其依赖项联机之前都不会联机。</block>
+  <block id="b2784505a08cc196fdf2c01fb8722bbc" category="list-text">选择*启动顺序和延迟*部分。</block>
+  <block id="7b49064e2ebb0dab724dfae418ebec8e" category="list-text">为复制计划中的每个资源指定一个从 1 开始的启动 *Order* 值。任何应同时启动的资源都应分配相同的编号。</block>
+  <block id="9aae48d2077953d7be448b6a399f3b3c" category="list-text">以分钟为单位设置*延迟*时间。如果应延迟任何资源，请以分钟为单位设置延迟时间。</block>
 </blocks>
