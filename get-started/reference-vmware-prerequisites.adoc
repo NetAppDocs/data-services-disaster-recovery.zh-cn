@@ -40,5 +40,5 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的环境满足
 如果使用 VMware Cloud SDDC，则适用以下附加先决条件：
 
 * 在 VMware Cloud Console 中，使用管理员和 NSX Cloud 管理员的服务角色。还可以使用组织所有者作为组织角色。参考 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["将 VMware Cloud Foundations 与 AWS FSx for NetApp ONTAP文档结合使用"^]。
-* 将 VMware Cloud SDDC 与 Amazon FSx for NetApp ONTAP 实例链接。请参阅 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS 与Amazon FSx for NetApp ONTAP集成部署信息"^]。
+* 将 VMware Cloud SDDC 与 Amazon FSx for NetApp ONTAP 实例链接。请参阅 https://docs.netapp.com/us-en/workload-vmware/connect-sddc-to-fsx.html["将 FSx for ONTAP 文件系统连接到 VMware Cloud on AWS"^]。
 

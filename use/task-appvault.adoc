@@ -21,7 +21,7 @@ NetApp Disaster Recovery 工作负载与 Kubernetes 配合使用 AppVault，这�
 [[add-an-appvault]]
 == 添加 AppVault
 
-您可以在为 Kubernetes 创建复制计划时添加 AppVault，也可以从设置页面创建一个。
+您可以在link:task-replication-plan-kubernetes.html["为 Kubernetes 创建复制计划"]时添加 AppVault，也可以从“设置”页面创建一个。
 
 .步骤
 . 在 Disaster Recovery 中，从侧边栏中选择*设置*。

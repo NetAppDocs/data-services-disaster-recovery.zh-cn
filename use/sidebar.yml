@@ -8,8 +8,16 @@ entries:
   url: "/use/sites-add.html"
 - title: 创建资源组
   url: "/use/resource-group.html"
-- title: 创建复制计划
-  url: "/use/drplan-create.html"
+- title: 复制计划
+  entries:
+  - title: 了解复制计划
+    url: "/use/concept-replication-plan.html"
+  - title: 创建 VMware 复制计划
+    url: "/use/task-replication-plan-vmware.html"
+  - title: 创建 Kubernetes 复制计划
+    url: "/use/task-replication-plan-kubernetes.html"
+  - title: 修改复制计划
+    url: "/use/task-replication-plan-modify.html"
 - title: 复制到另一个站点
   url: "/use/replicate.html"
 - title: 迁移至其他站点

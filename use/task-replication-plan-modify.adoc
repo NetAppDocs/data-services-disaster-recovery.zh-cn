@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: use/task-replication-plan-modify.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, replication plan, modify, compliance time, test failover 
+summary: 修改复制计划以调整符合性时间或故障切换设置。 
+---
+= 在 NetApp Disaster Recovery 中修改复制计划
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+在 NetApp Disaster Recovery 中，您可以修改复制计划的合规性时间影响，并确保成功完成故障转移测试。
+
+您可以修改合规性时间和测试故障转移影响。要编辑计划重复周期、故障转移映射或虚拟机，请删除复制计划并创建一个新计划。
+
+
+
+[[modifiable-fields]]
+== 可修改字段
+
+* *合规时间影响*：创建复制计划时，服务默认创建合规计划。默认合规时间为 30 分钟。要更改此时间，您可以编辑复制计划中的时间表。
+* *测试故障转移影响*：您可以按需或按计划测试故障转移过程。这使您可以测试 VM 到复制计划中指定的目标的故障转移。
++
+测试故障转移会创建FlexClone卷、挂载数据存储库并在该数据存储库上移动工作负载。测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。
+
+
+
+根据计划，故障转移测试运行并确保工作负载移动到复制计划指定的目标。
+
+
+
+[[modify-a-replication-plan]]
+== 修改复制计划
+
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
++
+image:dr-plan-list.png["显示复制计划列表的屏幕截图"]
+
+. 选择*操作*image:icon-horizontal-dots.png["水平点操作菜单"]图标并选择*编辑时间表*。
+. 输入您希望NetApp Disaster Recovery检查测试合规性的频率（分钟）。
+. 要检查您的故障转移测试是否正常，请检查*按月度计划运行故障转移*。
++
+.. 选择您希望运行这些测试的日期和时间。
+.. 输入您希望测试开始的日期（yyyy-mm-dd 格式）。
++
+image:dr-plan-schedule-edit2.png["屏幕截图显示了您可以在哪里编辑时间表"]
+
+
+
+. *使用按需快照进行计划的测试故障转移*：要在启动自动测试故障转移之前创建新快照，请选中此框。
+. 要在故障转移测试完成后清理测试环境，请选中*测试故障转移后自动清理*并输入在清理开始前等待的分钟数。
++
+
+NOTE: 此过程从测试位置取消注册临时虚拟机，删除已创建的 FlexClone 卷，并卸载临时数据存储。
+
+. 选择*保存*。
+

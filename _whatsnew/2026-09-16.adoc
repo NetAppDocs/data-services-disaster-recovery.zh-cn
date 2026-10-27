@@ -27,7 +27,7 @@ NetApp Disaster Recovery 中对基于 Kubernetes 的工作负载的支持现已�
 
 现在，您可以将自定义脚本注入故障转移工作流，以协调应用程序的静默和恢复。此功能有助于确保在复制和还原快照之前正确准备应用程序，从而在故障转移后无缝恢复操作。
 
-要了解如何注入自定义脚本，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"^]。
+要了解如何注入自定义脚本，请参见 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-kubernetes.html["创建复制计划"^]。
 
 
 

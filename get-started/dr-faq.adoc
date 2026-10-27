@@ -5,17 +5,7 @@ keywords: disaster recovery faq, disaster recovery frequently asked questions, f
 summary: 有关适用于 VMware 和 Kubernetes 工作负载的 NetApp Disaster Recovery 的常见问题。 
 ---
 = NetApp Disaster Recovery 常见问题解答
-:toc: macro
-:hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ../media/
-:toc-position: content
 
 
 [role="lead"]

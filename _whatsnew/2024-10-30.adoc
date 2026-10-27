@@ -42,7 +42,7 @@
 
 当您创建复制计划并映射计算资源时，您现在可以映射文件夹，以便在您为数据中心、集群和主机指定的文件夹中恢复虚拟机。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
 
 
@@ -60,7 +60,7 @@
 
 创建复制计划时，您现在可以为计划中的每个 VM 设置启动延迟。这使您可以设置虚拟机的启动顺序，以确保所有优先级为一的虚拟机都在后续优先级虚拟机启动之前运行。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
 
 
@@ -69,7 +69,7 @@
 
 创建复制计划时，您现在可以看到计划中每个虚拟机的操作系统。这有助于决定如何将虚拟机分组到资源组中。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
 
 
@@ -78,7 +78,7 @@
 
 创建复制计划时，您现在可以向灾难恢复站点上的虚拟机名称添加前缀和后缀。这使您能够为计划中的虚拟机使用更具描述性的名称。
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
 
 

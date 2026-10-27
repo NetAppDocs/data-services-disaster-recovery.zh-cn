@@ -1,0 +1,192 @@
+---
+sidebar: sidebar 
+permalink: use/task-replication-plan-kubernetes.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, kubernetes, trident protect, namespace, replication plan, appvault, resource transformation, storage class, protection, disaster, recovery 
+summary: NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。添加 Kubernetes 集群后，您就可以创建复制计划来保护您的 Kubernetes 工作负载了。 
+---
+= 在 NetApp Disaster Recovery 中为 Kubernetes 工作负载创建复制计划
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+在添加 Kubernetes 资源和站点后，创建一个_复制计划_，以通过 NetApp Disaster Recovery 保护您的 Kubernetes 工作负载。该计划定义了应用程序的源和目标集群、资源组、命名空间和存储类映射、快照计划以及可选的资源转换和脚本。
+
+*必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
+
+
+NOTE: 要为 VMware 工作负载创建复制计划，请参见 link:task-replication-plan-vmware.html["创建 VMware 复制计划"]。
+
+
+
+[[before-you-begin]]
+== 开始之前
+
+* 在创建 SnapMirror 关系之前，请在灾难恢复之外设置集群和存储 VM（SVM）对等。
+* 在向资源组添加命名空间之前，请运行手动发现。这可确保在资源组中发现并列出命名空间。
+* 创建 Trident Protect 用于保存保护数据的 AppVault。您可以在创建复制计划时或提前创建 AppVault。有关详细信息，请参见link:task-appvault.html["管理 AppVaults"]。
+
+
+
+TIP: 在部署 NetApp Disaster Recovery 之前组织您的 Kubernetes 集群和命名空间，以最大限度地减少蔓延。要在创建复制计划之前组织资源组，请参见 link:resource-group.html["创建资源组"]。
+
+
+
+[[create-the-replication-plan]]
+== 创建复制计划
+
+创建计划时，请遵循以下指南：
+
+* 对计划中的所有 Kubernetes 集群使用相同的凭据。
+* 对计划中的所有 Kubernetes 集群使用相同的脚本。
+* 仅当复制计划处于以下状态之一时，才能启用保护：就绪、已提交故障恢复或已提交测试故障转移。
+
+
+
+
+[[select-kubernetes-clusters]]
+=== 选择 Kubernetes 集群
+
+首先，选择复制计划的源和目标集群。
+
+.步骤
+. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 在下拉菜单中，选择 *Kubernetes*。
++
+image::site-type-toggle.png[站点类型切换的屏幕截图]
+
+. 选择“*添加*”。
+. 输入复制计划的名称。
+. 对于 *Source*，选择要指定为源的 Kubernetes 集群。
+. 对于 *Target*，选择要用作灾难恢复目标的 Kubernetes 集群。
+. 选择“下一步”。
+
+
+
+
+[[select-resource-groups]]
+=== 选择资源组
+
+接下来，选择包含要保护的 Kubernetes 命名空间的资源组。资源组使您可以使用公共快照保护一组命名空间。
+
+选择资源组时，请考虑以下内容：
+
+* 在向资源组添加命名空间之前，请执行手动发现。这可确保在资源组中发现并列出资源。
+* 资源组中的 Kubernetes 命名空间必须属于同一个 ONTAP 集群。
+* 命名资源组时，仅支持小写字母和数字。
+
+
+.步骤
+. 如果您有现有资源组，请从列表中选择组。
++
+如果您没有现有资源组或需要向其中添加资源，请选择 *+ Create new resource group*。按照说明 link:resource-group.html["向资源组添加命名空间"]。
+
+. 在备选列中，查看选定的资源组。
+. 选择“下一步”。
+
+
+
+
+[[map-source-resources-to-the-target]]
+=== 将源资源映射到目标
+
+在资源映射步骤中，指定源集群的资源如何映射到目标集群。此外，设置快照计划以及用于存储数据的 AppVault。
+
+.开始之前
+如果要创建 SnapMirror 关系，请在 ONTAP 中设置对等关系。
+
+.步骤
+. 为每个资源组中的每个命名空间选择命名空间映射。默认情况下，Disaster Recovery 会选择与源相同的目标。您可以在目标集群中选择其他命名空间。
+. 为每个资源组指定存储类映射。存储类必须链接到与源环境对等的 ONTAP 存储 VM。如果未指定，则使用集群上的默认存储类。
++
+
+TIP: 要查看存储类，请在命名空间上运行 CLI 命令 `kubectl get pvc -n <namespace>`。
+
+. 设置快照计划。选择*快照和保留开始时间*（日历日期和时间）、*快照和保留频率*（启动快照的频率）和*快照保留计数*（保存多少个快照）。
++
+在设置快照频率时，您必须选择至少每五分钟一次的频率。
+
+. 选择*添加 AppVault*以创建将保存保护数据的 AppVault。您也可以从“设置”页面link:task-appvault.html["管理 AppVaults"]。
++
+.. 输入 *名称* 并选择 AppVault 应连接到的 *Console agent*。
+.. 选择云*提供商*来托管 AppVault。
+.. 根据提供程序选择，Disaster Recovery 将填充现有配置的云订阅。
++
+对于 Azure，选择云提供商的*订阅*、*资源组*和*存储帐户*。
+
++
+对于 AWS、ONTAP S3 和 StorageGRID，请选择 *Account*、*Credentials* 和 *Bucket*。
+
+.. 如果您选择了 ONTAP S3 或 StorageGRID，则可以选择添加凭据。选择 *Add credentials* 以展开选项，然后添加 *Credential name*、*Gateway node FQDN*、*Port* 号、*Access key* 和 *Secret key*。
+.. 选择“*添加*”。
++
+image:kubernetes-mapping.png["Kubernetes 存储类映射的屏幕截图"]
+
+
+
+. 选择“下一步”。
+
+
+
+
+[[add-resource-transformations-script-executions-and-boot-order]]
+=== 添加资源转换、脚本执行和启动顺序
+
+对于 Kubernetes 复制计划，您可以应用资源转换和脚本执行，并设置引导顺序。这些步骤是可选的。
+
+.添加资源转换
+通过添加资源转换，您可以在故障转移期间修改工作负载的任何方面。资源转换提供了在灾难恢复事件期间根据不同环境和配置调整工作负载的灵活性。 link:task-resource-transformation.html["了解如何创建资源转换。"^]
+
+资源转换按列出的顺序应用。
+
+. 从下拉列表中，选择要添加的资源转换。
+. 选择要应用转换的资源，然后添加所需的值。
+. 审查转换的顺序，以确保操作将以适当的顺序执行。
+
+
+.添加脚本执行
+NetApp Disaster Recovery 可以在创建快照之前或之后执行脚本，以管理应用程序的静默和恢复。执行此操作可确保在复制和还原快照之前正确准备应用程序，并可在故障转移后无缝恢复操作。
+
+. 选择 *+ Add script*。
+. 选择*上传*以选择脚本文件。
+. 选择*执行阶段*：*快照前*在创建快照前执行，或*快照后*在创建后执行。
+. 选择*保存*。
+
+
+.设置启动顺序
+对于包含多个资源组的复制计划，您可以选择设置引导顺序。引导顺序可确保需要一起上线的资源能够一起上线，并且依赖于其他组的任何资源组在其所依赖的组上线之前不会上线。
+
+. 选择*启动顺序和延迟*部分。
+. 为复制计划中的每个资源指定一个启动 *Order* 值，从 1 开始。将相同的编号分配给应同时启动的任何资源。
+. 以分钟为单位设置*延迟*时间。如果应延迟任何资源，请设置延迟的时间长度。
+
+
+
+
+[[review-and-create-the-replication-plan]]
+=== 查看并创建复制计划
+
+最后，检查并确认复制计划的设置。
+
+
+TIP: 您可以稍后禁用或删除复制计划。
+
+.步骤
+. 查看故障转移映射。
+. 选择*添加*以创建复制计划。
++
+选择*添加*后，您可以在*作业监控*中监控不同的作业。
+
+
+
+
+
+[[more-information]]
+== 更多信息
+
+* link:resource-group.html["创建资源组"]
+* link:task-appvault.html["管理 AppVaults"]
+* link:task-resource-transformation.html["管理资源转换模板"]
+
