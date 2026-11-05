@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
 summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
-= 在 NetApp Disaster Recovery 中查看计划运行状况和工作负载保护状态
+= 在 NetApp Disaster Recovery 中查看计划运行状况和保护状态
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -26,9 +26,9 @@ NetApp Disaster Recovery 提供了多种方法来深入了解 Disaster Recovery 
 == 在控制面板中查看运行状况和保护状态
 
 .步骤
-. 从NetApp Disaster Recovery菜单中，选择 *仪表板*。
+. 在灾难恢复菜单中，选择*仪表板*。
 +
-image:dr-dashboard.png["NetApp Disaster Recovery仪表板"]
+image:dr-dashboard.png["灾难恢复仪表板"]
 
 . 查看控制面板中的运行状况信息：
 +
@@ -91,7 +91,7 @@ image:dr-dashboard.png["NetApp Disaster Recovery仪表板"]
 
 |===
 .步骤
-. 在 NetApp Disaster Recovery 菜单中，选择 *工作负载*。
+. 在灾难恢复菜单中，选择*工作负载*。
 . 在下拉菜单中，选择筛选器以查看 *vCenter* 或 *Kubernetes* 工作负载。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]

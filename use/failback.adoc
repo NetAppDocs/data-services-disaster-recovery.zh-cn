@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: use/failback.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, kubernetes, trident protect, openshift 
 summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
-= 使用NetApp Disaster Recovery将应用程序故障恢复到原始源
+= 使用 NetApp Disaster Recovery 故障回复到源站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -21,14 +21,14 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[about-failback]]
 == 关于故障恢复
 
-在故障恢复中，NetApp Disaster Recovery 会在反转复制方向之前将任何更改复制（重新同步）回原始源虚拟机。此过程在关系故障切换到目标后开始，涉及以下步骤：
+在故障恢复中，NetApp Disaster Recovery 会在反转复制方向之前将任何更改复制（重新同步）回原始源工作负载。此过程在关系故障切换到目标后开始，涉及以下步骤。Kubernetes 工作负载遵循与 VMware 工作负载相同的顺序；特定于 VMware 的详细信息在括号中注明。
 
 * 对恢复的站点执行合规性检查。
-* 刷新已确定位于恢复站点中的每个 vCenter 群集的 vCenter 信息。
-* 在目标站点上，关闭并取消注册虚拟机，然后卸载卷。
+* 刷新在恢复站点中标识的每个 vCenter 集群或 Kubernetes 集群的发现信息。
+* 在目标站点上，停止受保护的工作负载（对于 VMware，关闭并注销虚拟机），并卸载卷。
 * 打破原始源上的SnapMirror关系以使其可读/写。
 * 重新同步SnapMirror关系以逆转复制。
-* 启动并注册源虚拟机，并在源上挂载卷。
+* 在源上启动受保护的工作负载（对于 VMware，开启并注册源虚拟机），并在源上挂载卷。
 
 
 
@@ -36,7 +36,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[before-you-begin]]
 == 开始之前
 
-如果使用基于数据存储的保护，虚拟机可能会在故障转移期间添加到数据存储中。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的其他映射信息。要编辑资源映射，请参阅 link:manage.html#manage-replication-plans["管理复制计划"]。
+对于 VMware 工作负载，如果使用基于数据存储的保护，则可能会在故障转移期间将虚拟机添加到数据存储。如果发生这种情况，请确保在启动故障恢复之前提供这些虚拟机的其他映射信息。要编辑资源映射，请参阅 link:manage.html#manage-replication-plans["管理复制计划"]。
 
 
 
@@ -48,12 +48,12 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 .vCenter
 --
 .步骤
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 在下拉菜单中，将过滤器设置为 *VMware*。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
-. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
+. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
 . 选择要从中恢复的数据存储区的快照。选择 *Take snapshot now* 以启动新快照，或 *Select* 从可用快照中进行选择。
 +
 
@@ -70,12 +70,12 @@ image:failback.png["故障恢复对话框的屏幕截图"]
 --
 .Kubernetes
 --
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 在下拉菜单中，过滤到 *Kubernetes* 复制计划。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
-. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
+. 确定要回切的复制计划。选择*操作*选项image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，将鼠标悬停在*恢复*上，然后选择*故障回切*。
 . 选择要从中恢复的集群的快照。选择 *Take snapshot now* 以启动新的快照，或 *Use latest snapshot* 以使用最新的成功快照。
 . 输入 "Failback" 确认操作，然后选择 *Failback*。
 

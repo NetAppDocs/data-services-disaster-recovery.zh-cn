@@ -21,9 +21,9 @@ summary: 在使用 NetApp Disaster Recovery 之前，请确保您的环境满足
 
 这些先决条件适用于本地 vCenter 集群和 VMware Cloud for AWS 软件定义数据中心 (SDDC)。
 
-* 审查link:../reference/vcenter-privileges.html["vCenter 权限"]NetApp Disaster Recovery所必需的。
-* 所有由 NetApp Disaster Recovery 管理的 VMware 集群必须使用 ONTAP 卷来托管要保护的虚拟机。
-* NetApp Disaster Recovery要管理的所有 VMware 数据存储库都必须使用以下协议之一：
+* 查看灾难恢复所需的link:../reference/vcenter-privileges.html["vCenter 权限"]。
+* 灾难恢复管理的所有 VMware 群集必须使用 ONTAP 卷来托管您要保护的虚拟机。
+* 所有由灾难恢复管理的 VMware 数据存储必须使用以下协议之一：
 +
 ** NFS
 ** 使用 iSCSI 或 FC 协议的 VMFS

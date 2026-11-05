@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: use/manage.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plans, resource groups 
-summary: 您可以快速浏览所有NetApp Disaster Recovery资源并管理 vCenter 站点、资源组和复制计划。 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, kubernetes, trident protect, replication plans, resource groups 
+summary: 您可以快速浏览所有 NetApp Disaster Recovery 资源，并管理 VMware 和 Kubernetes 工作负载的站点、资源组和复制计划。 
 ---
 = 使用 NetApp Disaster Recovery 管理站点、资源组和复制计划
 :hardbreaks:
@@ -14,29 +14,30 @@ summary: 您可以快速浏览所有NetApp Disaster Recovery资源并管理 vCen
 [role="lead"]
 NetApp Disaster Recovery提供所有资源的概览和更详细的视角：
 
-* 站点
+* 站点（vCenter 和 Kubernetes）
 * 资源组
 * 复制计划
-* 数据存储库
-* 虚拟机
+* 数据存储（VMware）
+* 虚拟机（VMware）
+* Kubernetes 集群和 Trident Protect
 
 
 任务需要不同的NetApp Console角色。有关详细信息，请参阅每个任务中的“所需的NetApp Console角色”部分。
 
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解灾难恢复中的用户角色和权限"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^]。
 
 
 
 [[manage-vcenter-sites]]
 == 管理 vCenter 站点
 
-您可以编辑 vCenter 站点名称和类型（本地或 AWS）。
+您可以编辑 vCenter 站点名称和类型（本地或 AWS）。要管理 Kubernetes 集群和站点，请参见 link:manage.html#manage-trident-protect["管理 Trident Protect"]。
 
 *必需的 NetApp Console 角色* 需要组织管理员、文件夹或项目管理员或灾难恢复管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
 .步骤
 . 从菜单中选择*站点*。
-. 选择“操作”选项image:../use/icon-vertical-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]在 vCenter 名称右侧，选择“*编辑*”。
+. 选择 vCenter 名称右侧的 *操作* 选项 image:../use/icon-vertical-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择 *编辑*。
 . 编辑 vCenter 站点名称和位置。
 
 
@@ -45,7 +46,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 [[manage-resource-groups]]
 == 管理资源组
 
-您可以按虚拟机或数据存储创建资源组。您可以在创建复制计划时或之后添加它们。
+您可以按虚拟机、数据存储或 Kubernetes 资源创建资源组。您可以在创建复制计划时或稍后添加它们。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复应用程序管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -68,7 +69,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 .步骤
 . 从菜单中选择*资源组*。
 . 要添加资源组，请选择“添加组”。
-. 您可以通过选择“操作”选项来修改或删除资源组。image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"] 。
+. 您可以通过选择 *操作* 选项来修改或删除资源组 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]。
 
 
 
@@ -89,7 +90,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 +
 image:../use/dr-plan-list.png["复制计划列表"]
 
-. 要查看计划详情，请选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*查看计划详情*。
+. 要查看计划详细信息，请选择*操作*选项，image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]然后选择*查看计划详细信息*。
 . 执行以下操作之一：
 +
 ** 要编辑计划详情（更改重复），请选择“计划详情”选项卡，然后选择右侧的“编辑”图标。
@@ -98,8 +99,8 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 
 . 通过选择左侧面包屑中的“复制计划”返回计划列表。
-. 要使用计划执行操作，请从复制计划列表中选择计划右侧的 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，然后选择一个操作：*Edit schedules*、*Test failover*、*Fail over*、*Fail back*、*Migrate*、*Take snapshot now*、*Clean up old snapshots*、*Disable*、*Enable* 或 *Delete*。
-. 要设置或更改测试故障转移计划或设置合规性频率检查，请选择“*操作*”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]在计划右侧，选择“编辑时间表”。
+. 要使用计划执行操作，请从复制计划列表中选择计划右侧的 *Actions* 选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择一个操作：*Edit schedules*、*Test failover*、*Fail over*、*Fail back*、*Migrate*、*Take snapshot now*、*Clean up old snapshots*、*Disable*、*Enable* 或 *Delete*。
+. 要设置或更改测试故障转移计划或设置合规频率检查，请选择计划右侧的*操作*选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择*编辑计划*。
 +
 .. 在“编辑计划”页面中，输入您希望故障转移合规性检查发生的频率（分钟）。
 .. 检查*按计划运行测试故障转移*。
@@ -123,7 +124,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 +
 image:../use/dr-plan-list.png["复制计划列表"]
 
-. 从复制计划列表中，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]然后*协调快照*。
+. 从复制计划列表中，选择*操作*选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"] 然后选择*协调快照*。
 . 审查对帐信息。
 . 选择*协调*。
 
@@ -139,7 +140,7 @@ image:../use/dr-plan-list.png["复制计划列表"]
 
 .步骤
 . 从菜单中选择*复制计划*。
-. 选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]在计划右侧，选择“*删除*”。
+. 选择计划右侧的*操作*选项image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择*删除*。
 . 选择要删除主快照、辅助快照，还是仅删除计划创建的元数据。
 . 输入“删除”以确认删除。
 . 选择*删除*。
@@ -200,7 +201,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 [[view-datastore-information]]
 == 查看数据存储信息
 
-您可以查看源站点和目标站点上存在多少个数据存储区。
+对于 VMware 工作负载，您可以查看源站点和目标站点上存在多少个数据存储。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -216,7 +217,7 @@ image:../use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 [[view-virtual-machines-information]]
 == 查看虚拟机信息
 
-您可以查看源站点和目标站点上存在的虚拟机数量，以及 CPU、内存和可用容量。
+对于 VMware 工作负载，您可以查看源站点和目标站点上存在的虚拟机数量，以及 CPU、内存和可用容量。
 
 *必需的 NetApp Console 角色* 需要超级管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 

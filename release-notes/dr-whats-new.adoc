@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: release-notes/dr-whats-new.html 
 keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas, disaster 
-summary: NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。借助 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 工作负载复制到公共云中的 VMware 软件定义数据中心，作为使用 NetApp 云存储的灾难恢复站点。 
+summary: NetApp Disaster Recovery 是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。使用 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 和 Kubernetes 工作负载复制到灾难恢复站点。 
 ---
 = NetApp Disaster Recovery的新功能
 :hardbreaks:
@@ -1079,7 +1079,7 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 [[05-july-2024]]
 == 2024年7月5日
 
-此NetApp Disaster Recovery版本包括以下更新：
+此灾难恢复版本包含以下更新：
 
 
 
@@ -1146,16 +1146,16 @@ NOTE: NetApp不会向您收取任何预览的工作负载容量的费用。
 [[updates-to-prerequisite-information]]
 === 先决条件信息的更新
 
-NetApp Disaster Recovery前提条件信息已更新。
+灾难恢复先决条件信息已更新。
 
-参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recovery前提条件"]。
+请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["灾难恢复先决条件"]。
 
 
 
 [[15-may-2024]]
 == 2024年5月15日
 
-此NetApp Disaster Recovery版本包括以下更新：
+此灾难恢复版本包含以下更新：
 
 
 
@@ -1169,27 +1169,27 @@ NetApp Disaster Recovery前提条件信息已更新。
 [[licensing-updates]]
 === 许可更新
 
-借助NetApp Disaster Recovery，您可以注册 90 天免费试用版、通过 Amazon Marketplace 购买即用即付 (PAYGO) 订阅或自带许可证 (BYOL)，后者是您从NetApp销售代表或NetApp支持站点 (NSS) 获得的NetApp许可证文件 (NLF)。
+借助灾难恢复，您可以注册 90 天免费试用，通过 Amazon Marketplace 购买现收现付（PAYGO）订阅，或者自带许可证（BYOL），这是一种 NetApp 许可证文件（NLF），您可以从 NetApp 销售代表或 NetApp 支持站点（NSS）处获取。
 
-有关设置NetApp Disaster Recovery许可的详细信息，请参阅link:../get-started/dr-licensing.html["设置许可"]。
+要了解有关设置灾难恢复许可的详细信息，请参阅 link:../get-started/dr-licensing.html["设置许可"]。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["详细了解灾难恢复"]。
 
 
 
 [[05-march-2024]]
 == 2024年3月5日
 
-这是NetApp Disaster Recovery的通用版本，其中包括以下更新。
+这是灾难恢复的正式发布版本，其中包括以下更新。
 
 
 
 [[licensing-updates]]
 === 许可更新
 
-使用NetApp Disaster Recovery，您可以注册 90 天免费试用或自带许可证 (BYOL)，即您从NetApp销售代表处获得的NetApp许可证文件 (NLF)。您可以使用许可证序列号在NetApp Console订阅中激活 BYOL。  NetApp Disaster Recovery费用基于数据存储区的配置容量。
+借助灾难恢复，您可以注册 90 天免费试用版或自带许可证（BYOL），即您从 NetApp 销售代表处获取的 NetApp 许可证文件（NLF）。您可以使用许可证序列号在 NetApp Console 订阅中激活 BYOL。灾难恢复费用基于数据存储的已配置容量。
 
-有关设置NetApp Disaster Recovery许可的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+要了解有关设置灾难恢复许可的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
 
 有关管理*所有* NetApp Console数据服务的许可证的详细信息，请参阅： https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["管理所有NetApp Console数据服务的许可证"^] 。
 
@@ -1207,7 +1207,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[01-february-2024]]
 == 2024年2月1日
 
-此NetApp Disaster Recovery预览版包括以下更新：
+此灾难恢复预览版本包含以下更新：
 
 
 
@@ -1227,7 +1227,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[custom-scripts]]
 === 自定义脚本
 
-现在可以将其作为故障转移后流程包括在内。使用自定义脚本，您可以让NetApp Disaster Recovery在故障转移过程后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。
+现在可以包含在故障转移后流程中。通过自定义脚本，您可以让灾难恢复在故障转移过程后运行您的脚本。例如，您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。
 
 有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["故障转移到远程站点"]。
 
@@ -1236,7 +1236,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[snapmirror-relationship]]
 === SnapMirror 关系
 
-您现在可以在制定复制计划时创建SnapMirror关系。以前，您必须在NetApp Disaster Recovery之外创建关系。
+您现在可以在制定复制计划的同时创建 SnapMirror 关系。以前，您必须在灾难恢复之外创建该关系。
 
 有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
@@ -1245,7 +1245,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[consistency-groups]]
 === 一致性组
 
-创建复制计划时，您可以包含来自不同卷和不同 SVM 的 VM。  NetApp Disaster Recovery通过包含所有卷来创建一致性组快照并更新所有辅助位置。
+创建复制计划时，您可以包括来自不同卷和不同 SVM 的 VM。灾难恢复通过包含所有卷来创建一致性组快照，并更新所有辅助位置。
 
 有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
@@ -1272,7 +1272,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[11-january-2024]]
 == 2024年1月11日
 
-NetApp Disaster Recovery的预览版本包括以下更新：
+此灾难恢复预览版本包含以下更新：
 
 
 
@@ -1281,33 +1281,33 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 
 通过此版本，您可以更快地从仪表板访问其他页面上的信息。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解NetApp Disaster Recovery"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解灾难恢复"]。
 
 
 
 [[20-october-2023]]
 == 2023年10月20日
 
-NetApp Disaster Recovery的预览版本包括以下更新。
+此灾难恢复预览版本包含以下更新。
 
 
 
 [[protect-on-premises-nfs-based-vmware-workloads]]
 === 保护本地基于 NFS 的 VMware 工作负载
 
-现在，借助NetApp Disaster Recovery，您可以保护本地基于 NFS 的 VMware 工作负载，使其免受公共云之外的另一个本地基于 NFS 的 VMware 环境的灾难影响。  NetApp Disaster Recovery负责协调灾难恢复计划的完成。
+现在，借助灾难恢复，除了公共云之外，您还可以将基于 NFS 的本地 VMware 工作负载保护到另一个基于 NFS 的本地 VMware 环境中，以防发生灾难。灾难恢复可协调完成灾难恢复计划。
 
 
 NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["详细了解灾难恢复"]。
 
 
 
 [[27-september-2023]]
 == 2023年9月27日
 
-NetApp Disaster Recovery的预览版本包括以下更新：
+此灾难恢复预览版本包含以下更新：
 
 
 
@@ -1327,7 +1327,7 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 +
 请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
-* *网络增强功能*：当您在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时， NetApp Disaster Recovery现在提供两个选项：DHCP 或静态 IP。以前，仅支持 DHCP。对于静态 IP，您可以配置子网、网关和 DNS 服务器。此外，您现在可以输入虚拟机的凭据。
+* *网络增强*：当您在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时，灾难恢复现在提供两个选项：DHCP 或静态 IP。以前，仅支持 DHCP。对于静态 IP，您可以配置子网、网关和 DNS 服务器。此外，现在您可以输入虚拟机的凭据。
 +
 请参阅 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["创建复制计划"]。
 
@@ -1355,15 +1355,15 @@ NetApp Disaster Recovery的预览版本包括以下更新：
 
 
 
-[[netapp-disaster-recovery-preview]]
-=== NetApp Disaster Recovery预览
+[[disaster-recovery-preview]]
+=== 灾难恢复预览
 
-NetApp Disaster Recovery预览版是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。
+灾难恢复预览是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，通过灾难恢复预览，您可以使用 Amazon FSx for ONTAP 将运行 NetApp 存储的本地、基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud （VMC）。
 
 
 NOTE: 对于此预览版产品， NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["详细了解灾难恢复"]。
 
 此版本包括以下更新：
 
@@ -1379,7 +1379,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[replication-verification]]
 === 复制验证
 
-创建灾难恢复或复制计划后，在向导中确定重复，并启动到灾难恢复站点的复制， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。参考 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["将应用程序复制到另一个站点"]。
+在创建灾难恢复或复制计划、在向导中标识重复周期并启动到灾难恢复站点的复制后，每隔 30 分钟，灾难恢复将验证复制是否真正按照计划进行。您可以在作业监视器页面中监控进度。请参阅  https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["将应用程序复制到另一个站点"]。
 
 
 
@@ -1400,13 +1400,13 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[18-may-2023]]
 == 2023年5月18日
 
-这是NetApp Disaster Recovery的初始版本。
+这是灾难恢复的初始版本。
 
 
 
 [[cloud-based-disaster-recovery-service]]
 === 基于云的灾难恢复服务
 
-NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，借助NetApp Disaster Recovery预览版，您可以使用Amazon FSx for ONTAP将运行NetApp存储的本地基于 NFS 的 VMware 工作负载保护到 AWS 上的 VMware Cloud (VMC)。
+灾难恢复是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。最初，通过灾难恢复预览版，您可以将运行 NetApp 存储的基于 NFS 的本地 VMware 工作负载保护到采用 Amazon FSx for ONTAP 的 AWS 上的 VMware Cloud （VMC）。
 
-link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["了解有关NetApp Disaster Recovery的更多信息"]。
+link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["详细了解灾难恢复"]。

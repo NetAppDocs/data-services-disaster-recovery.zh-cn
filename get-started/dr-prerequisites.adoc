@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
-keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery 
-summary: 在使用NetApp Disaster Recovery之前，请确保您的环境满足ONTAP存储、VMware vCenter 集群和NetApp Console的要求。 
+keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery, vmware, kubernetes, trident protect 
+summary: 在使用 NetApp Disaster Recovery 之前，请确保您的环境满足 ONTAP 存储、VMware vCenter 集群或 Kubernetes 集群以及 NetApp Console 要求。 
 ---
 = NetApp Disaster Recovery前提条件
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: 在使用NetApp Disaster Recovery之前，请确保您的环境满足ON
 
 
 [role="lead"]
-在安装之前验证存储、vCenter 和控制台的先决条件，以便工作负载为复制和恢复做好准备。
+在设置之前验证存储、vCenter 或 Kubernetes 集群以及控制台先决条件，以便工作负载为复制和恢复做好准备。
 
 
 
@@ -140,11 +140,12 @@ NetApp Console用户必须具有以下角色：
 [[gather-credentials-for-ontap-and-vmware]]
 === 收集ONTAP和 VMware 的凭证
 
-* 必须将Amazon FSx for ONTAP和 AWS 凭证添加到管理NetApp Disaster Recovery的NetApp Console项目中的系统中。
-* NetApp Disaster Recovery需要 vCenter 凭据。在NetApp Disaster Recovery中添加站点时，您需要输入 vCenter 凭据。
+* Amazon FSx for ONTAP 和 AWS 凭据必须添加到管理灾难恢复的 NetApp Console 项目中的系统中。
+* 灾难恢复需要 vCenter 凭据。在灾难恢复中添加站点时，您需要输入 vCenter 凭据。
 +
-有关所需 vCenter 权限的列表，请参阅link:../reference/vcenter-privileges.html["NetApp Disaster Recovery所需的 vCenter 权限"]。有关如何添加站点的说明，请参阅link:../use/sites-add.html["添加站点"]。
+有关所需 vCenter 权限的列表，请参阅link:../reference/vcenter-privileges.html["灾难恢复所需的 vCenter 权限"]。有关如何添加站点的说明，请参阅link:../use/sites-add.html["添加站点"]。
 
+* 对于 Kubernetes 集群，请在添加 Kubernetes 站点之前查看 link:task-kubernetes-requirements.html["Kubernetes 集群要求"]。
 
 
 
@@ -155,12 +156,12 @@ TIP: 要将灾难恢复与 Amazon Elastic VMware Service (EVS) 一起使用，�
 [[create-the-netapp-console-agent]]
 === 创建NetApp Console代理
 
-控制台代理是一个软件组件，它使控制台能够与您的ONTAP存储和 VMware vCenter 集群进行通信。它是灾难恢复正常运行所必需的。代理程序驻留在您的私有网络（本地数据中心或云 VPC）中，并与您的ONTAP存储实例以及任何其他服务器和应用程序组件进行通信。对于灾难恢复，这是对您管理的 vCenter 集群的访问。
+控制台代理是一个软件组件，使控制台能够与您的 ONTAP 存储和 VMware vCenter 集群或 Kubernetes 集群进行通信。它是灾难恢复正常运行所必需的。该代理驻留在您的专用网络（本地数据中心或云 VPC）中，并与您的 ONTAP 存储实例以及任何其他服务器和应用程序组件进行通信。对于灾难恢复，这是指访问您的托管 vCenter 集群或 Kubernetes 集群。
 
 必须在NetApp Console中设置控制台代理。当您使用该代理时，它将包含适合灾难恢复服务的功能。
 
-* NetApp Disaster Recovery仅适用于标准模式代理部署。看 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["在标准模式下开始使用NetApp Console"^]。
-* 确保源和目标 vCenter 集群都使用相同的 Console 代理。
+* 灾难恢复仅适用于标准模式代理部署。请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["在标准模式下开始使用NetApp Console"^]。
+* 确保源和目标 vCenter 集群或 Kubernetes 集群使用相同的 Console 代理。
 * 所需的控制台代理类型：
 +
 ** *本地到本地灾难恢复*：在灾难恢复站点中安装本地 Console 代理。使用此方法，主站点的故障不会阻止服务在 DR 站点重新启动虚拟资源。请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本地安装并设置控制台代理"^]。
@@ -172,14 +173,14 @@ TIP: 要将灾难恢复与 Amazon Elastic VMware Service (EVS) 一起使用，�
 
 TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AWS，使用 AWS 控制台代理，它可以访问源本地 vCenter 和目标本地 vCenter。
 
-** 已安装的控制台代理必须能够访问灾难恢复将要管理的任何 VMware vCenter 集群实例和由这些 vCenter 集群管理的 ESXi 主机。
+** 已安装的控制台代理必须能够访问灾难恢复将管理的任何 Kubernetes 集群。它还必须能够访问灾难恢复将管理的任何 VMware vCenter 集群实例以及由这些 vCenter 集群管理的 ESXi 主机。
 
 
-* 所有由NetApp Disaster Recovery管理的ONTAP阵列都必须添加到NetApp Console项目内用于管理NetApp Disaster Recovery的任何系统中。
+* 所有由灾难恢复管理的 ONTAP 阵列都必须添加到 NetApp Console 项目中将用于管理灾难恢复的任何系统。
 +
 看 https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["发现本地ONTAP集群"^]。
 
-* 有关为NetApp Disaster Recovery设置智能代理的信息，请参阅link:../get-started/dr-setup.html["为NetApp Disaster Recovery设置基础架构"]。
+* 有关为灾难恢复设置智能代理的信息，请参见link:../get-started/dr-setup.html["设置灾难恢复基础架构"]。
 
 
 
@@ -187,7 +188,7 @@ TIP: 对于本地到本地，请使用本地控制台代理。对于本地到 AW
 [[workload-prerequisites]]
 == 工作负载先决条件
 
-为了确保应用程序一致性流程成功，请满足以下先决条件：
+要确保 VMware 工作负载的应用程序一致性流程成功，请应用以下先决条件：
 
 * 确保 VMware 工具（或 Open VM 工具）正在要保护的虚拟机上运行。
 * 对于运行 Microsoft SQL Server、Oracle 数据库或两者的 Windows 虚拟机，必须启用数据库的 VSS 写入器。
@@ -203,5 +204,5 @@ IMPORTANT: 根据您的部署类型，查看 link:reference-vmware-prerequisites
 == 更多信息
 
 * xref:../reference/vcenter-privileges.html[所需 vCenter 权限]
-* xref:../reference/evs-deploy-guide-config-prereqs.html[Amazon EVS 与NetApp Disaster Recovery的先决条件]
+* xref:../reference/evs-deploy-guide-config-prereqs.html[具有灾难恢复功能的 Amazon EVS 的先决条件]
 

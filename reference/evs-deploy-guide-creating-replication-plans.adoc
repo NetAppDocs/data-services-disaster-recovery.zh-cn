@@ -254,7 +254,7 @@ image:evs-create-rp-wiz-c-datastore-mapping.png["创建复制计划、数据存�
 [[verify-settings]]
 == 验证设置
 
-在 NetApp Disaster Recovery 中添加复制计划信息后，请验证输入的信息是否正确。这是最后一步。
+在灾难恢复中添加复制计划信息后，请验证输入的信息是否正确。这是最后一步。
 
 .步骤
 . 在激活复制计划之前，选择“*保存*”来检查您的设置。

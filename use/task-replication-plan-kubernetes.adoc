@@ -30,7 +30,7 @@ NOTE: 要为 VMware 工作负载创建复制计划，请参见 link:task-replica
 
 
 
-TIP: 在部署 NetApp Disaster Recovery 之前组织您的 Kubernetes 集群和命名空间，以最大限度地减少蔓延。要在创建复制计划之前组织资源组，请参见 link:resource-group.html["创建资源组"]。
+TIP: 在部署灾难恢复之前组织 Kubernetes 集群和命名空间，以最大限度地减少蔓延。要在创建复制计划之前组织资源组，请参见 link:resource-group.html["创建资源组"]。
 
 
 
@@ -52,7 +52,7 @@ TIP: 在部署 NetApp Disaster Recovery 之前组织您的 Kubernetes 集群和�
 首先，选择复制计划的源和目标集群。
 
 .步骤
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 在下拉菜单中，选择 *Kubernetes*。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]

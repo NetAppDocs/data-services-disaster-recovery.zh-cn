@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/failover.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
+keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter, kubernetes, trident protect, openshift 
 summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可自动执行灾难恢复工作流程。 
 ---
 = 使用NetApp Disaster Recovery将应用程序故障转移到远程站点
@@ -23,15 +23,15 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[about-this-task]]
 == 关于此任务
 
-在故障切换期间，NetApp Disaster Recovery 默认使用最新的 SnapMirror 快照副本，但您可以从时间点快照中选择特定的快照（根据 SnapMirror 的保留策略）。如果最近的副本遭到破坏（例如在勒索软件攻击期间），请使用时间点选项。
+在故障切换期间，灾难恢复默认使用最新的 SnapMirror 快照副本，但您可以从时间点快照中选择特定的快照（根据 SnapMirror 的保留策略）。如果最近的副本遭到破坏（例如在勒索软件攻击期间），请使用时间点选项。
 
 此过程会有所不同，具体取决于生产站点是否健康以及您是否由于关键基础设施故障以外的原因执行到灾难恢复站点的故障转移：
 
-* 发生严重生产站点故障，导致无法访问源 vCenter 或ONTAP集群： NetApp Disaster Recovery允许您选择任何可用的快照进行恢复。
+* 源 vCenter 、 Kubernetes 集群或 ONTAP 集群无法访问的严重生产站点故障：灾难恢复允许您选择要从中恢复的任何可用快照。
 * 生产环境健康：您可以“立即拍摄快照”或选择之前创建的快照。
 
 
-此过程会中断复制关系，将 vCenter 源虚拟机置于脱机状态，将卷注册为灾难恢复 vCenter 中的数据存储区，使用计划中的故障转移规则重新启动受保护的虚拟机，并在目标站点上启用读/写功能。
+此过程中断复制关系，使源工作负载脱机，使复制的卷在灾难恢复站点可用，使用计划中的故障转移规则重新启动受保护的工作负载，并在目标站点上启用读/写。对于 VMware 工作负载，服务将 vCenter 源虚拟机脱机，在灾难恢复 vCenter 中将卷注册为数据存储，并重新启动受保护的虚拟机。Kubernetes 工作负载遵循其应用程序和持久卷的等效顺序。
 
 
 
@@ -40,15 +40,15 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 在进行实时故障转移之前，您可以执行测试以验证就绪性。在测试过程中，工作负载保持在线状态。
 
-在故障转移测试期间，Disaster Recovery 会暂时创建虚拟机。Disaster Recovery 将备份 FlexClone 卷的临时数据存储区映射到 ESXi 主机。
+在 VMware 工作负载的故障转移测试期间，灾难恢复会暂时创建虚拟机。灾难恢复将支持 FlexClone 卷的临时数据存储映射到 ESXi 主机。Kubernetes 工作负载的故障转移测试遵循目标集群上受保护应用程序和持久卷的等效序列。
 
 此过程不会占用本地ONTAP存储或 AWS 中NetApp ONTAP存储的 FSx 的额外物理容量。原始源卷不会被修改，即使在灾难恢复期间，副本作业也可以继续进行。
 
-完成测试后，应使用 *Clean up test* 选项重置虚拟机。虽然建议这样做，但不是必需的。
+完成测试后，建议您使用*清理测试*选项重置测试环境。
 
 测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。
 
-对于测试故障转移，灾难恢复执行以下操作：
+对于测试故障转移，灾难恢复执行以下操作。
 
 * 对目标集群和SnapMirror关系执行预检查。
 * 从选定的快照为目标站点ONTAP集群上的每个受保护的ONTAP卷创建一个新的FlexClone卷。
@@ -62,9 +62,9 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 .步骤
 . 登录 https://console.netapp.com/["NetApp Console"^]。
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]并选择*测试故障转移*。
+. 在右侧，选择*操作*选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择*测试故障转移*。
 . 在测试故障转移页面中，选择测试故障转移的快照：选择 **立即拍摄快照** 或 **选择** 以选择现有快照。如果选择 **选择**，请选择现有快照。
 +
 然后输入"Test failover"并选择 *Test failover*。
@@ -77,12 +77,12 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[clean-up-the-test-environment-after-a-failover-test]]
 == 故障转移测试后清理测试环境
 
-故障转移测试完成后，您应该清理测试环境。此过程将从测试位置、FlexClone 和临时数据存储区中删除临时虚拟机。
+故障转移测试完成后，您应清理测试环境。此过程将从测试位置删除临时测试资源和 FlexClones。对于 VMware 工作负载，这包括临时虚拟机和临时数据存储。
 
 .步骤
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 选择复制计划。
-. 在右侧，选择“操作”选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"] 然后*清理故障转移测试*。
+. 在右侧，选择*操作*选项，image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]然后选择*清理故障转移测试*。
 . 在“测试故障转移”页面中，输入“清理故障转移”，然后选择“清理故障转移测试”。
 
 
@@ -91,9 +91,9 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 [[fail-over-the-source-site-to-a-disaster-recovery-site]]
 == 将源站点故障转移到灾难恢复站点
 
-如果发生灾难，请按需将您的主要本地 VMware 站点故障转移到另一个本地 VMware 站点或 VMware Cloud on AWS with FSx for NetApp ONTAP。
+如果发生灾难，请按需将主站点故障转移到灾难恢复站点。对于 VMware 工作负载，您可以将主本地 VMware 站点故障转移到另一个本地 VMware 站点或使用 FSx for NetApp ONTAP 的 VMware Cloud on AWS。对于 Kubernetes 工作负载，您将故障转移到复制计划中的目标集群。
 
-故障转移过程涉及以下操作：
+故障转移过程涉及以下操作。涉及 vCenter、VM 或数据存储的操作适用于 VMware 工作负载；Kubernetes 工作负载遵循其应用程序和持久卷的等效操作：
 
 * 灾难恢复对目标集群和SnapMirror关系执行预检查。
 * 如果您选择了最新的快照，则会执行SnapMirror更新以复制最新的更改。
@@ -109,7 +109,7 @@ summary: NetApp Disaster Recovery是一种基于云的灾难恢复服务，可�
 
 
 
-TIP: 故障转移开始后，您可以在灾难恢复站点的 vCenter 中看到已恢复的虚拟机（虚拟机、网络和数据存储区）。默认情况下，虚拟机将恢复到 Workload 文件夹。
+TIP: 对于 VMware 工作负载，在故障转移开始后，您可以在灾难恢复站点的 vCenter 中看到已恢复的虚拟机（虚拟机、网络和数据存储）。默认情况下，虚拟机将恢复到 Workload 文件夹。
 
 [role="tabbed-block"]
 ====
@@ -118,13 +118,13 @@ TIP: 故障转移开始后，您可以在灾难恢复站点的 vCenter 中看到
 对于基于数据存储的复制计划，如果您已添加并发现了任何虚拟机，但未提供映射详细信息，则这些虚拟机将包含在故障转移中。故障转移失败后，作业中会发出通知。您必须提供映射详细信息才能成功完成故障转移。
 
 .步骤
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 在下拉菜单中，过滤到 *vCenter* 复制计划。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
 . 选择复制计划。
-. 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
+. 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
 +
 image:dr-plan-failover3.png["故障转移页面"]
 
@@ -140,7 +140,7 @@ NOTE: 选择特定快照基线时，默认情况下会隐藏 SnapMirror 传输�
 
 
 . 如果您希望故障转移继续，即使服务检测到通常会阻止它的错误，请选择*强制故障转移*。
-. 如果您希望服务在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在 NetApp Disaster Recovery 中将其恢复联机之前在还原的站点上执行其他操作，则此功能非常有用。
+. 如果您希望服务在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择 *跳过保护*。如果要在灾难恢复中将其恢复联机之前在还原的站点上执行其他操作，则此功能非常有用。
 +
 
 TIP: 您可以通过从复制计划操作菜单中选择*保护资源*来建立反向保护。这会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业，直到恢复保护。当保护恢复后，您可以按照通常的方式启动故障恢复。
@@ -153,13 +153,13 @@ TIP: 您可以通过从复制计划操作菜单中选择*保护资源*来建立�
 --
 .Kubernetes
 --
-. 从NetApp Disaster Recovery菜单中，选择 *复制计划*。
+. 从灾难恢复菜单中，选择*复制计划*。
 . 在下拉菜单中，过滤到 *Kubernetes* 复制计划。
 +
 image::site-type-toggle.png[站点类型切换的屏幕截图]
 
 . 选择复制计划。
-. 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
+. 在右侧，选择 *Actions* 选项 image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，将鼠标悬停在 *Recover* 上，然后选择 *Fail over*。
 . 选择要用于故障转移的快照副本：
 +
 ** 选择 *Take snapshot now* 以创建将复制到目标集群的全新快照。
@@ -171,7 +171,7 @@ NOTE: 选择特定快照基线时，默认情况下会隐藏 SnapMirror 传输�
 
 
 
-. 如果您希望 Disaster Recovery 在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择*跳过保护*。如果要在将还原的站点恢复联机之前在 NetApp Disaster Recovery 中对其执行其他操作，此功能非常有用。
+. 如果您希望灾难恢复在复制计划故障转移后不自动创建反向 SnapMirror 保护关系，请选择 *跳过保护*。如果要在灾难恢复中将其恢复联机之前在还原的站点上执行其他操作，则此功能非常有用。
 . 输入 "Failover" 确认操作，然后选择 *Failover*。
 
 

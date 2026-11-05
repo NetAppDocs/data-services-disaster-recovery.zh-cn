@@ -4,14 +4,14 @@ permalink: reference/evs-deploy-guide-enable-draas.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
 summary: 使用 Amazon EVS 和Amazon FSx for NetApp ONTAP介绍NetApp Disaster Recovery。 NetApp Disaster Recovery是一种许可产品，必须先购买才能使用。有多种类型的许可证，并且您可以通过多种方式购买许可证。 
 ---
-= 将NetApp Disaster Recovery服务添加到您的 Amazon EVS NetApp Console帐户
+= 将 NetApp Disaster Recovery 添加到 Amazon EVS 的控制台帐户
 :allow-uri-read: 
 
 
 [role="lead"]
 NetApp Disaster Recovery是一种许可产品，必须先购买才能使用。有多种类型的许可证，并且您可以通过多种方式购买许可证。许可证授权您在特定时间段内保护特定数量的数据。
 
-有关NetApp Disaster Recovery许可证的更多信息，请参阅link:../get-started/dr-licensing.html["设置NetApp Disaster Recovery许可"]。
+有关灾难恢复许可证的详细信息，请参见 link:../get-started/dr-licensing.html["设置灾难恢复许可"]。
 
 
 
@@ -20,8 +20,8 @@ NetApp Disaster Recovery是一种许可产品，必须先购买才能使用。�
 
 有两种主要的许可证类型：
 
-* NetApp提供link:../get-started/dr-licensing.html["30天试用许可证"]您可以使用它来评估使用ONTAP和 VMware 资源的NetApp Disaster Recovery。此许可证提供 30 天的使用期限，不受限制地使用受保护的容量。
-* 如果您希望在 30 天试用期之后获得 DR 保护，请购买生产许可证。您可以通过任何 NetApp 云合作伙伴的市场购买此许可证，但对于本指南，我们建议您使用 Amazon AWS Marketplace 购买NetApp Disaster Recovery的市场许可证。要了解有关通过 Amazon Marketplace 购买许可证的更多信息，请参阅link:../get-started/dr-licensing.html["通过 AWS Marketplace 订阅"]。
+* NetApp 提供 link:../get-started/dr-licensing.html["30天试用许可证"]，您可以使用 ONTAP 和 VMware 资源来评估灾难恢复。此许可证提供 30 天的使用时间，可提供无限量的受保护容量。
+* 如果您希望在 30 天试用期后获得灾难恢复保护，请购买生产许可证。此许可证可以通过任何 NetApp 云合作伙伴的市场购买，但对于本指南，我们建议您使用 Amazon AWS Marketplace 购买灾难恢复市场许可证。要了解有关通过 Amazon Marketplace 购买许可证的详细信息，请参阅link:../get-started/dr-licensing.html["通过 AWS Marketplace 订阅"]。
 
 
 
@@ -31,7 +31,7 @@ NetApp Disaster Recovery是一种许可产品，必须先购买才能使用。�
 
 在购买许可证之前，您应该了解需要保护多少ONTAP存储容量。使用NetApp ONTAP存储的优势之一是NetApp存储数据的效率很高。  ONTAP卷中存储的所有数据（例如托管虚拟机的 VMware 数据存储区）都是以高效的方式存储的数据。 ONTAP在将数据写入物理存储时默认采用三种存储效率：压缩、重复数据删除和压缩。最终结果是存储效率在 1.5:1 到 4:1 之间，具体取决于所存储的数据类型。事实上， NetApp提供了 https://www.netapp.com/media/79014-ng-937-Efficiency-Guarantee-Customer-Flyer.pdf["存储效率保证"^]对于某些工作负载。
 
-这对您有利，因为在应用所有ONTAP存储效率之后， NetApp Disaster Recovery会计算许可容量。例如，假设您在 vCenter 中配置了一个 100 TB (TiB) NFS 数据存储区来托管您想要使用该服务保护的 100 台虚拟机。此外，假设当数据写入ONTAP卷时，自动应用的存储效率技术会导致这些虚拟机仅消耗 33TiB（3：1 的存储效率）。 NetApp Disaster Recovery仅需要获得 33TiB 的许可，而不是 100TiB。与其他 DR 解决方案相比，这对于您的 DR 解决方案的总体拥有成本来说是一个非常大的好处。
+这可以使您受益，因为灾难恢复会在应用所有 ONTAP 存储效率后计算容量以进行许可。例如，假设您已在 vCenter 中配置了一个 100 TB（TiB）的 NFS 数据存储，以托管 100 个要使用该服务进行保护的虚拟机。此外，假设当数据写入 ONTAP 卷时，自动应用的存储效率技术导致这些虚拟机仅消耗 33 TiB（3:1 的存储效率）。灾难恢复只需要获得 33 TiB 的许可，而不是 100 TiB。与其他 DR 解决方案相比，这可以极大地降低您的 DR 解决方案的总拥有成本。
 
 .步骤
 . 要确定托管要保护的 VMware 数据存储库的每个卷上消耗的数据量，请通过对每个卷运行ONTAP CLI 命令来确定磁盘容量消耗： `volume show-space -volume < _volume name_ > -vserver < _SVM name_ >` 。

@@ -30,7 +30,7 @@ entries:
   url: "/use/task-appvault.html"
 - title: 管理资源转换模板
   url: "/use/task-resource-transformation.html"
-- title: 管理站点、计划、数据存储和虚拟机信息
+- title: 管理站点、资源组和复制计划
   url: "/use/manage.html"
 - title: 监控灾难恢复作业
   url: "/use/monitor-jobs.html"

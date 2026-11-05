@@ -21,7 +21,7 @@ summary: 通过访问NetApp Console中的服务开始使用NetApp Disaster Recov
 
 在灾难恢复中，特定任务需要特定的用户角色。请确保已将正确的角色分配给用户。
 
-有关详细信息，请参见： * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recovery 中的用户角色和权限"] * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console 所有服务的访问角色"^]
+有关详细信息，请参见： * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["灾难恢复中的用户角色和权限"] * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console 所有服务的访问角色"^]
 
 
 

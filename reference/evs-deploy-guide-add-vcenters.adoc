@@ -9,7 +9,7 @@ summary: 使用 Amazon EVS 和 Amazon FSxN 介绍NetApp Disaster Recovery。创�
 
 
 [role="lead"]
-创建站点后，在 NetApp Disaster Recovery 中为每个站点添加 vCenter 集群。站点类型决定了 NetApp Disaster Recovery 对该站点中的 vCenters 所需的访问权限。Amazon EVS vCenters 和本地 vCenters 使用相同的连接和身份验证信息。
+创建站点后，在 NetApp Disaster Recovery 中为每个站点添加 vCenter 集群。站点类型决定了 Disaster Recovery 访问该站点中 vCenters 所需的权限。Amazon EVS vCenters 和本地 vCenters 使用相同的连接和身份验证信息。
 
 .向每个站点添加 vCenter 的步骤
 . 从“*站点*”选项中，选择所需站点的“*添加 vCenter*”。
@@ -21,7 +21,7 @@ image:evs-add-vcenter-1.png["添加 vCenter 选项"]
 .. 托管在您的 AWS VPC 内的NetApp Console代理。
 .. 要添加的 vCenter 的 IP 地址或 FQDN。
 .. 如果需要，请将端口更改为 vCenter 服务器使用的 TCP 端口。
-.. 先前创建的帐户的 vCenter 用户名， NetApp Disaster Recovery将使用该用户名来管理 vCenter。
+.. 先前创建的帐户的 vCenter 用户名，将由灾难恢复用于管理 vCenter。
 
 
 

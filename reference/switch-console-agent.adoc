@@ -28,7 +28,7 @@ NetApp Console 支持在单个工作环境中使用多个 Console 代理。在�
 [[steps]]
 == 步骤
 
-. 在灾难恢复中，选择**站点**。
+. 在 NetApp Disaster Recovery 中，选择 **站点**。
 . 您必须更改源 vCenter 和目标 vCenter 的控制台代理。确定要修改的 vCenter。选择 vCenter 的操作菜单，然后选择**编辑**。
 +
 image:dr-sites-subnet-menu.png["网站控制面板截图"]

@@ -1,11 +1,12 @@
 ---
 indexpage:
   title: NetApp Disaster Recovery文档
-  summary: 借助 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 工作负载复制到公有云中的 VMware
-    软件定义数据中心，作为使用 NetApp 云存储的灾难恢复站点。
-  keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
-  lead: 云灾难恢复是保护工作负载免受站点中断和数据损坏事件（例如勒索软件）影响的一种弹性和经济高效的方式。借助 NetApp Disaster Recovery，您可以将运行
-    ONTAP 存储的本地 VMware 工作负载复制到公有云中的 VMware 软件定义数据中心，或复制到作为灾难恢复站点的其他本地站点。
+  summary: 使用 NetApp Disaster Recovery，您可以将运行 ONTAP 存储的本地 VMware 和 Kubernetes 工作负载复制到灾难恢复站点。
+  keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage,
+    vmware, kubernetes, trident protect, openshift
+  lead: 云灾难恢复是保护工作负载免受站点中断和数据损坏事件（例如勒索软件）影响的一种具有弹性且经济高效的方式。借助 NetApp Disaster Recovery，您可以通过将运行
+    ONTAP 存储的本地 VMware 和 Kubernetes 工作负载复制到灾难恢复站点（例如另一个本地站点，或者对于 VMware 工作负载，复制到公有云中的
+    VMware 软件定义数据中心）来保护这些工作负载。
   tiles:
   - title: 开始使用
     links:
@@ -23,7 +24,7 @@ indexpage:
       url: "/get-started/dr-faq.html"
   - title: 使用NetApp Disaster Recovery
     links:
-    - title: 将 vCenter 添加到站点
+    - title: 添加站点
       url: "/use/sites-add.html"
     - title: 创建 VMware 灾难恢复计划
       url: "/use/task-replication-plan-vmware.html"

@@ -89,7 +89,7 @@ summary: 在 NetApp Disaster Recovery 中部署复制之前，请先了解最佳
 [[disaster-recovery-managed-backups]]
 == 灾难恢复管理的备份
 
-使用 Disaster Recovery 托管备份时，以下指南适用于在 NetApp Disaster Recovery 之外创建的 SnapMirror 关系：
+使用灾难恢复托管备份时，以下准则适用于在灾难恢复之外创建的 SnapMirror 关系：
 
 * SnapMirror 关系可以支持 MirrorAll、MirrorVault、MirrorLatest 和异步复制策略。
 * 请勿为这些关系安排更新，因为它们将由 Disaster Recovery 服务管理。
@@ -104,7 +104,7 @@ summary: 在 NetApp Disaster Recovery 中部署复制之前，请先了解最佳
 
 应用程序一致性快照可确保在拍摄快照时数据库处于一致状态。这很重要，因为它可以确保数据库在故障转移或故障回复操作后能够恢复到一致状态。
 
-由数据库服务器管理的数据可能与托管数据库服务器的虚拟机在同一数据存储区上，或者可能在不同的数据存储区上。下表显示了 NetApp Disaster Recovery 中应用程序一致性快照的支持配置：
+由数据库服务器管理的数据可能与托管数据库服务器的虚拟机位于同一数据存储上，也可能位于不同的数据存储上。下表显示了灾难恢复中应用程序一致性快照受支持的配置：
 
 [cols="20,20,40a"]
 |===

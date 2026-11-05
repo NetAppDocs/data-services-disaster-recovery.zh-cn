@@ -15,7 +15,7 @@ summary: 使用 NetApp Disaster Recovery，您可以通过 SnapMirror 复制将 
 使用 NetApp Disaster Recovery，您可以使用 SnapMirror 复制将 VMware 应用程序从源站点复制到云中的远程灾难恢复站点。使远程站点的恢复数据保持最新，可确保受保护的应用程序能够从最新的 SnapMirror 快照中还原。
 
 
-TIP: 创建灾难恢复计划、在向导中确定重复并启动到灾难恢复站点的复制后， NetApp Disaster Recovery每 30 分钟验证一次复制是否确实按照计划进行。您可以在作业监视器页面中监视进度。
+TIP: 在创建灾难恢复计划、在向导中标识重复周期并启动到灾难恢复站点的复制后，每隔 30 分钟，Disaster Recovery 将验证复制是否真正按照计划进行。您可以在“作业监视器”页面中监控进度。
 
 *需要 NetApp Console 角色* 需要超级管理员、灾难恢复管理员或灾难恢复故障转移管理员角色才能执行此任务。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["了解NetApp Disaster Recovery中的用户角色和权限"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服务的NetApp Console访问角色"^].
 
@@ -27,5 +27,5 @@ TIP: 创建灾难恢复计划、在向导中确定重复并启动到灾难恢复
 . 从NetApp Console左侧导航中，选择 *保护* > *灾难恢复*。
 . 从菜单中选择*复制计划*。
 . 选择复制计划。
-. 在右侧，选择*操作*菜单image:../use/icon-horizontal-dots.png["NetApp Disaster Recovery服务中的操作菜单图标"]，然后选择*复制*。
+. 在右侧，选择*操作*菜单image:../use/icon-horizontal-dots.png["灾难恢复服务中的操作菜单图标"]，然后选择*复制*。
 
